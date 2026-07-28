@@ -27,7 +27,7 @@ function run(sourceDir, outputDir) {
 
   const lines = [
     '/* =================================================================',
-    '   Metanoia — Email Token Reference (generated — do not edit)',
+    '   Email Token Reference (generated — do not edit)',
     '   All {alias} references resolved to raw primitive values.',
     '   Use these values as inline style attributes in HTML email templates.',
     '   Regenerate: node sweden/engine/run-adapters.js',

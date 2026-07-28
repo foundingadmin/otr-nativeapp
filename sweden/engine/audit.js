@@ -2,7 +2,7 @@
 'use strict';
 
 /**
- * audit.js — token audit CLI for the Metanoia design system.
+ * audit.js — token audit CLI for the Sweden engine.
  *
  * Usage:
  *   node sweden/engine/audit.js --css           scan CSS for hardcoded values

@@ -115,7 +115,7 @@ for (const [name, { source, token }] of Object.entries(globalIndex)) {
   }
 
   // Check dark-mode extension aliases
-  const darkVal = token.$extensions?.['com.metanoia.modes']?.dark;
+  const darkVal = token.$extensions?.['com.sweden.modes']?.dark;
   if (darkVal && typeof darkVal === 'string' && ALIAS_RE.test(darkVal)) {
     const ref = darkVal.match(ALIAS_RE)[1];
     if (!globalIndex[ref]) {

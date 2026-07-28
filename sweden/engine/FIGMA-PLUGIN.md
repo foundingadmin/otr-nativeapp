@@ -845,7 +845,8 @@ frame.setExplicitVariableModeForCollection('VariableCollectionId:239:227', '239:
 frame.setExplicitVariableModeForCollection('VariableCollectionId:84:12', '84:1'); // Semantic only
 ```
 
-Collection and mode IDs (Metanoia file `c3ayt4AFrNKOmSkGBIyFi4`):
+Collection and mode IDs (example values from a previous deployment — always
+read the real IDs from `brand/BRAND.md`):
 - Semantic: `VariableCollectionId:84:12` — Light=`84:0`, Dark=`84:1`
 - Button: `VariableCollectionId:239:227` — Light=`239:0`, Dark=`239:1`
 
@@ -876,7 +877,8 @@ h1.fills = [figma.variables.setBoundVariableForPaint(
 )];
 ```
 
-Dark mode semantic token behavior (Metanoia Semantic collection):
+Dark mode semantic token behavior (example Semantic collection — real variable
+IDs live in `brand/BRAND.md`):
 | Token | VariableID | Light mode | Dark mode |
 |---|---|---|---|
 | Background/Canvas | 84:13 | white (#FFF) | near-black |
@@ -909,11 +911,12 @@ For FRAME children of FRAME parents, FILL works normally.
 ### Using DS atomics in organisms — required pattern
 
 Organism components must reference DS atomics — never construct UI elements from
-raw frames/text when an atomic exists. Detected violations from Phase 5 revision:
+raw frames/text when an atomic exists. Node IDs below are examples from a
+previous deployment — the live registry is `brand/BRAND.md` + `brand/component-map.js`:
 
-**Nav/Top Bar logo:** use `Logo/Metanoia` component set (`257:308`) — specifically
-`Type=Horizontal, Colorway=Full Color` variant (`257:238`) resized to ~110×21px.
-Do not hand-build a frame with an Icon + TEXT "metanoia".
+**Nav/Top Bar logo:** use the brand's `Logo/*` component set (node ID in
+`brand/BRAND.md`) — pick the horizontal full-color variant and resize to fit.
+Do not hand-build a frame with an Icon + TEXT wordmark.
 
 **Nav/Top Bar search:** use `Form/Text Input` (`106:387`) State=Default (`106:362`).
 For nav context (no visible label), hide the Label and Helper text nodes on the

@@ -71,8 +71,10 @@ Quality Check in FIGMA-PLUGIN.md.
   never hardcoded values.
 - Record every new Figma node ID, variable key, and style key in `brand/BRAND.md`
   before the session ends. BRAND.md is the persistent memory between sessions.
-- Engine code in `sweden/` stays brand-agnostic. Known cosmetic debt: some engine
-  scripts still print "Metanoia DS" in log lines and use the
-  `com.metanoia.modes` token extension namespace — functional, rename later.
+- Engine code in `sweden/` stays brand-agnostic. Dark-mode token extension
+  namespace: `com.sweden.modes`. Known engine debt: the `web-css` adapter
+  hardcodes the previous deployment's palette grouping (navy/aqua/grey token-name
+  arrays) and `pptx-json` special-cases old palette names — both must be
+  genericized or rewritten against real OTR token names during the first intake.
 
 Current version: **v0.1.0** (scaffold — no tokens extracted yet)

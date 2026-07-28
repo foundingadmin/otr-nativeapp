@@ -223,7 +223,7 @@ sweden generate-map   # AI reads both outputs and produces brand/token-map.js
                       # flags low-confidence matches for human review
 ```
 
-**Status:** These CLI commands are specified but not yet implemented. The scripts `sweden/engine/audit.js` and `sweden/engine/generate-map.js` are on the v3 roadmap. Until then, create `brand/token-map.js` manually by following the existing Metanoia implementation as a reference.
+**Status:** These CLI commands are specified but not yet implemented. The scripts `sweden/engine/audit.js` and `sweden/engine/generate-map.js` are on the v3 roadmap. Until then, create `brand/token-map.js` manually by following an existing Sweden deployment as a reference.
 
 ### What the output looks like
 

@@ -58,7 +58,7 @@ These are different workflows. Never conflate them.
 **Primary fetch method: Figma MCP (`use_figma` Plugin API).** The legacy REST path (`FIGMA_API_TOKEN` + `figma-rest.js`) is retained as a fallback for automated CI contexts but is not the default — the variables REST endpoint requires elevated token permissions not available in this repo's setup.
 
 **Multi-mode sync:** `sync-figma-to-repo.js` captures all variable modes when `figmaModes` is
-passed to `run()`. Light mode → `$value`. Additional modes → `$extensions.com.metanoia.modes.[modeName]`.
+passed to `run()`. Light mode → `$value`. Additional modes → `$extensions.com.sweden.modes.[modeName]`.
 Both raw-value and alias-value tokens are diffed in every mode.
 
 **ALIAS_BROKEN warning:** If Figma has a raw color where JSON expects an alias (or vice versa),

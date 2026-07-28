@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * sync-repo-to-figma.js
- * Metanoia Design System — JSON → Figma sync
+ * Sweden engine — JSON → Figma sync
  *
  * Reads all token files from brand/tokens/source/, resolves alias chains,
  * diffs against live Figma variables, and returns Figma plugin JS for
@@ -165,7 +165,7 @@ function run(figmaVars, tokenMap) {
   const resolvedMap = resolveAllToCssMap(SOURCE_DIR);
   const { updates, unchanged, warnings } = diffAndBuildUpdates(figmaVars, tokenMap, resolvedMap);
 
-  console.log('\n── Metanoia DS: JSON → Figma Sync ─────────────────────────────');
+  console.log('\n── Sweden DS: JSON → Figma Sync ─────────────────────────────');
 
   if (updates.length === 0) {
     console.log('✓ No differences found. Figma variables are in sync with source JSON.');
@@ -212,7 +212,7 @@ async function fetchAndRun(tokenMap) {
   const apiToken = process.env.FIGMA_API_TOKEN;
   const fileKey  = parseFigmaFileKey(BRAND_MD);
 
-  console.log('\n── Metanoia DS: JSON → Figma Sync (REST fetch) ─────────────────');
+  console.log('\n── Sweden DS: JSON → Figma Sync (REST fetch) ─────────────────');
   console.log(`  File: ${fileKey}`);
 
   const { figmaVars } = await fetchFigmaVariables(fileKey, apiToken);
@@ -231,7 +231,7 @@ if (require.main === module) {
     // MCP-first path: current Figma state pre-fetched via use_figma
     const { loadVarsFile } = require('./figma-mcp.js');
     const { figmaVars } = loadVarsFile(varsArg.split('=')[1]);
-    console.log('\n── Metanoia DS: JSON → Figma Sync (MCP vars) ──────────────────');
+    console.log('\n── Sweden DS: JSON → Figma Sync (MCP vars) ──────────────────');
     console.log(`  Variables loaded: ${figmaVars.length}`);
     run(figmaVars, tokenMap).catch(err => {
       console.error(`\n✗ ${err.message}`);

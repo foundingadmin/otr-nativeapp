@@ -10,7 +10,7 @@
  * Key format:  CSS custom property name including "--" prefix
  *   { "--color-navy": "#094B77", "--bg-canvas": "#FFFFFF", "--fw-bold": "700" }
  *
- * Dark mode: tokens with $extensions.com.metanoia.modes.dark also get a
+ * Dark mode: tokens with $extensions.com.sweden.modes.dark also get a
  * "--token-name--dark" key with the resolved dark value.
  *   { "--bg-canvas": "#FFFFFF", "--bg-canvas--dark": "#131A21" }
  *
@@ -43,8 +43,8 @@ function run(sourceDir, outputDir) {
       output[tokenKeyToCssVar(key)] = tokenValueToCss(token.$type, resolved);
     }
 
-    // Dark mode value (from $extensions.com.metanoia.modes.dark)
-    const darkVal = token.$extensions?.['com.metanoia.modes']?.dark;
+    // Dark mode value (from $extensions.com.sweden.modes.dark)
+    const darkVal = token.$extensions?.['com.sweden.modes']?.dark;
     if (darkVal !== undefined) {
       let resolvedDark;
       if (typeof darkVal === 'string' && darkVal.startsWith('{')) {

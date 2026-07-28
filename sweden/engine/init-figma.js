@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * sweden/engine/init-figma.js
- * Metanoia Design System — Bootstrap Figma variable collections.
+ * Sweden engine — Bootstrap Figma variable collections.
  *
  * Reads CSS tokens and generates three Figma plugin scripts to run
  * (in order) via the Figma MCP `use_figma` tool:

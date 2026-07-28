@@ -138,7 +138,7 @@ function tokenValueToCss(type, resolvedValue) {
     if (Array.isArray(resolvedValue)) {
       return resolvedValue.map(f => {
         if (GENERIC_FONT_KEYWORDS.has(f)) return f;
-        if (f.includes(' ') || f === 'Figtree') return `"${f}"`;
+        if (f.includes(' ')) return `"${f}"`;
         return f;
       }).join(', ');
     }

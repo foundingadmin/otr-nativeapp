@@ -31,7 +31,7 @@ function formatValue(token, primitives) {
     }
     return $value.map(f => {
       if (GENERIC_FONT_KEYWORDS.has(f)) return f;
-      if (f.includes(' ') || f === 'Figtree') return `"${f}"`;
+      if (f.includes(' ')) return `"${f}"`;
       return f;
     }).join(', ');
   }
@@ -88,9 +88,9 @@ function buildColorPrimitives(src) {
 
   return join([
     '/* ============================================================',
-    '   Metanoia — Color Primitives',
+    '   Color Primitives',
     '   Raw palette values only. No var() references.',
-    '   Source of truth: Metanoia Visual Identity Guide 2025 v1.',
+    '   Source of truth: brand identity guide (see brand/BRAND.md).',
     '   Use semantic aliases (color-semantic.css) in components.',
     '   ============================================================ */',
     '',
@@ -132,7 +132,7 @@ function buildColorSemantic(src) {
 
   const cssVal  = (n) => formatValue(tokens[n], primitives);
   const darkVal = (n) => {
-    const ext = tokens[n].$extensions?.['com.metanoia.modes']?.dark;
+    const ext = tokens[n].$extensions?.['com.sweden.modes']?.dark;
     return ext ? formatDark(ext) : cssVal(n);
   };
 
@@ -191,7 +191,7 @@ function buildColorSemantic(src) {
 
   return join([
     '/* ============================================================',
-    '   Metanoia — Color Semantic Aliases',
+    '   Color Semantic Aliases',
     '   Role-based tokens that reference color-primitives.css.',
     '   Always use these in components — never primitives directly.',
     '   Dark mode: apply [data-theme="dark"] to <html>.',
@@ -246,7 +246,7 @@ function buildTypography(src) {
 
   const lines = [
     '/* ============================================================',
-    '   Metanoia — Typography Tokens',
+    '   Typography Tokens',
     '   Families, weights, size scale, line-heights, letter-spacing.',
     '   Utility classes live in styles/typography-utilities.css.',
     '   ============================================================ */',
@@ -302,7 +302,7 @@ function buildSpacing(src) {
 
   return join([
     '/* ============================================================',
-    '   Metanoia — Spacing, Shape & Shadow Tokens',
+    '   Spacing, Shape & Shadow Tokens',
     '   4px space scale, border radii, elevation shadows,',
     '   and layout container widths.',
     '   ============================================================ */',
@@ -338,7 +338,7 @@ function buildMotion(src) {
 
   return join([
     '/* ============================================================',
-    '   Metanoia — Motion Tokens',
+    '   Motion Tokens',
     '   Easing curves and duration tiers.',
     '   120–200–320ms; no bounces or spring overshoots.',
     '   ============================================================ */',
