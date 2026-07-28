@@ -26,6 +26,8 @@ The hierarchy: **product → workflow → workstream**. Workflows (`cases/`, lat
 - `docs/` — the master `LEDGER.md` (decision roll-up across every workflow) + source for the root hub pages. Workflow-local docs live inside each workflow (`cases/_docs-cases/`).
 - `reference/` — source materials (screenshots, original PRD uploads)
 - `docs/roadmap/` — the ordered horizon line across all workstreams (`ROADMAP.md` canonical + `Roadmap.html` render)
+- `pipeline/` — the Figma print pipeline: `ir-extract.js` (DOM to Figma-ready IR), `token-resolve.js` (value to DS variable decision), `mounts/` (pages that mount board components nothing else mounts). Run it from `Canon Export.html` at the root.
+- `handoff/` — the canon pack handed to Claude Code: the extracted IR, the Figma variable map, the status registry, the unified case model, the protocol docs, and `Workflow.html` (the CEO-facing picture of the whole loop). Regenerate the IR after any board change.
 
 ## Naming standard
 

@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>OTR • How design gets made and shipped</title>
+<link rel="stylesheet" href="design/_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fonts.css">
+<link rel="stylesheet" href="design/_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/colors.css">
+<style>
+:root{--cd:var(--blue-600);--cd-bg:var(--blue-50);--cc:var(--neutral-900);--cc-bg:var(--neutral-50);--fg:var(--purple-600);--fg-bg:var(--purple-50);--ok:var(--green-700);--ok-bg:var(--green-50);--warn:var(--amber-900);--warn-bg:var(--amber-50)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--neutral-25);font-family:'Figtree',system-ui,sans-serif;color:var(--neutral-950);letter-spacing:.01em;-webkit-font-smoothing:antialiased}
+a{color:var(--blue-700);text-decoration:none}a:hover{color:var(--blue-800)}
+.page{width:1560px;margin:0 auto;padding:56px 48px 96px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--neutral-400)}
+h1{font-size:46px;line-height:1.05;font-weight:800;letter-spacing:-1.4px;margin:10px 0 14px;max-width:24ch}
+.lede{font-size:18px;line-height:1.55;color:var(--neutral-600);max-width:82ch;margin:0;text-wrap:pretty}
+h2{font-size:13px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--neutral-400);margin:0 0 18px}
+section{margin-top:64px}
+.hr{height:1px;background:var(--neutral-100);margin:64px 0 0}
+.card{background:#fff;border:1px solid var(--neutral-100);border-radius:18px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.pad{padding:24px 26px}
+/* three surfaces */
+.surfaces{display:grid;grid-template-columns:1fr 132px 1fr 132px 1fr;align-items:stretch;gap:0}
+.surf{border-radius:18px;border:1px solid var(--neutral-100);background:#fff;padding:24px 26px 26px;box-shadow:0 1px 2px rgba(16,24,40,.04);display:flex;flex-direction:column}
+.surf .tag{display:inline-flex;align-items:center;gap:7px;align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.surf h3{font-size:24px;font-weight:800;letter-spacing:-.5px;margin:14px 0 4px}
+.surf .who{font-size:13px;font-weight:700;color:var(--neutral-500);margin:0 0 14px}
+.surf ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+.surf li{font-size:14px;line-height:1.45;color:var(--neutral-700);display:flex;gap:9px}
+.surf li b{color:var(--neutral-950);font-weight:700}
+.dot{width:6px;height:6px;border-radius:50%;flex:none;margin-top:7px}
+.surf .foot{padding-top:18px;font-size:12.5px;line-height:1.5;color:var(--neutral-500);border-top:1px dashed var(--neutral-200);margin-top:auto}
+.s-cd{border-top:4px solid var(--cd)}.s-cc{border-top:4px solid var(--cc)}.s-fg{border-top:4px solid var(--fg)}
+.t-cd{background:var(--cd-bg);color:var(--blue-800)}.t-cc{background:var(--cc-bg);color:var(--neutral-800)}.t-fg{background:var(--fg-bg);color:var(--purple-800)}
+.d-cd{background:var(--cd)}.d-cc{background:var(--cc)}.d-fg{background:var(--fg)}
+/* connector column */
+.conn{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:22px;padding:0 12px}
+.arrow{width:100%;display:flex;flex-direction:column;align-items:center;gap:6px}
+.arrow .lbl{font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--neutral-400);text-align:center;line-height:1.3}
+.line{position:relative;width:100%;height:2px;background:var(--neutral-200)}
+.line.r::after,.line.l::after{content:"";position:absolute;top:-4px;width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}
+.line.r::after{right:-1px;border-left:8px solid var(--neutral-300)}
+.line.l::after{left:-1px;border-right:8px solid var(--neutral-300)}
+.line.hot{background:var(--blue-200)}.line.hot.r::after{border-left-color:var(--blue-400)}
+.line.warm{background:var(--purple-200)}.line.warm.l::after{border-right-color:var(--purple-300)}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.step{background:#fff;border:1px solid var(--neutral-100);border-radius:16px;padding:20px 18px;position:relative;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.step .n{width:26px;height:26px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#fff;margin-bottom:12px}
+.step h4{font-size:15.5px;font-weight:800;letter-spacing:-.2px;margin:0 0 6px}
+.step p{margin:0;font-size:13px;line-height:1.5;color:var(--neutral-600);text-wrap:pretty}
+.step .by{margin-top:12px;font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:4px 9px;border-radius:999px;display:inline-block}
+.step.machine .n{background:var(--cd)}.step.spine .n{background:var(--cc)}.step.human .n{background:var(--fg)}.step.gate .n{background:var(--ok)}
+.by.machine{background:var(--cd-bg);color:var(--blue-800)}.by.spine{background:var(--cc-bg);color:var(--neutral-700)}.by.human{background:var(--fg-bg);color:var(--purple-800)}.by.gate{background:var(--ok-bg);color:var(--ok)}
+/* where table */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-size:10.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--neutral-400);padding:0 14px 10px 0;border-bottom:1px solid var(--neutral-100)}
+td{padding:13px 14px 13px 0;border-bottom:1px solid var(--neutral-50);vertical-align:top;line-height:1.45;color:var(--neutral-700)}
+td:first-child{font-weight:700;color:var(--neutral-950);width:31%}
+tr:last-child td{border-bottom:none}
+.pill{display:inline-flex;align-items:center;font-size:10.5px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.p-cd{background:var(--cd-bg);color:var(--blue-800)}.p-cc{background:var(--cc-bg);color:var(--neutral-700)}.p-fg{background:var(--fg-bg);color:var(--purple-800)}.p-ok{background:var(--ok-bg);color:var(--ok)}.p-warn{background:var(--warn-bg);color:var(--warn)}
+/* pages */
+.pages{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.pg{border-radius:14px;padding:18px 16px;border:1px solid var(--neutral-100);background:#fff}
+.pg .num{font-size:20px;font-weight:800;color:var(--neutral-300);line-height:1}
+.pg h5{font-size:14.5px;font-weight:800;margin:8px 0 6px;letter-spacing:-.2px}
+.pg p{margin:0;font-size:12.5px;line-height:1.5;color:var(--neutral-600)}
+.pg.agent{background:var(--cd-bg);border-color:var(--blue-200)}
+.pg.human{background:var(--fg-bg);border-color:var(--purple-200)}
+.pg.gate{background:var(--ok-bg);border-color:var(--green-200)}
+/* feedback */
+.fb{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.fb .card{padding:24px 26px}
+.fb h4{font-size:17px;font-weight:800;letter-spacing:-.3px;margin:12px 0 8px}
+.fb p{margin:0;font-size:14px;line-height:1.55;color:var(--neutral-600)}
+.fb .k{font-size:11px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;color:var(--fg)}
+/* speed */
+.bars{display:flex;flex-direction:column;gap:16px}
+.bar{display:grid;grid-template-columns:190px 1fr;align-items:center;gap:18px}
+.bar .name{font-size:13.5px;font-weight:700;color:var(--neutral-700)}
+.track{display:flex;height:38px;border-radius:10px;overflow:hidden;border:1px solid var(--neutral-100)}
+.seg{display:flex;align-items:center;padding:0 12px;font-size:12px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.draw{background:var(--cd)}.seg.cov{background:var(--blue-300);color:var(--blue-900)}.seg.pol{background:var(--fg)}.seg.rev{background:var(--neutral-300);color:var(--neutral-800)}.seg.wait{background:var(--neutral-100);color:var(--neutral-500)}
+.note{margin-top:18px;font-size:13.5px;line-height:1.6;color:var(--neutral-600);max-width:96ch;text-wrap:pretty}
+.kicker{background:var(--neutral-950);color:#fff;border-radius:20px;padding:34px 38px;margin-top:64px}
+.kicker h3{font-size:26px;font-weight:800;letter-spacing:-.6px;margin:0 0 10px;max-width:44ch}
+.kicker p{margin:0;font-size:16px;line-height:1.6;color:rgba(255,255,255,.72);max-width:92ch;text-wrap:pretty}
+.kicker .row{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:28px;padding-top:26px;border-top:1px solid rgba(255,255,255,.14)}
+.kicker .row div b{display:block;font-size:13px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:#fff;margin-bottom:6px}
+.kicker .row div span{font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.62)}
+</style>
+</head>
+<body>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="18" fill="#155EEF"/><circle cx="26" cy="50" r="9" fill="#fff"/><circle cx="50" cy="50" r="9" fill="#fff" opacity=".8"/><circle cx="74" cy="50" r="9" fill="#fff" opacity=".6"/><path d="M35 50h6M59 50h6" stroke="#fff" stroke-width="3"/></svg>
+</template>
+<div class="page">
+
+<div class="eyebrow">Off The Record • native app design operations</div>
+<h1>How design gets made, reviewed, and shipped</h1>
+<p class="lede">Three places do work: an AI design surface, a source of truth repo, and Figma. Machines cover ground fast. Humans make it feel like OTR. The repo in the middle exists so those two never drift apart, and so nothing reaches engineering that a designer has not stamped.</p>
+
+<section>
+  <h2>The three surfaces</h2>
+  <div class="surfaces">
+    <div class="surf s-cd">
+      <span class="tag t-cd">Surface 1</span>
+      <h3>Design surface</h3>
+      <p class="who">Design, with AI • daily</p>
+      <ul>
+        <li><span class="dot d-cd"></span><span><b>Explores.</b> Many directions in hours, not weeks.</span></li>
+        <li><span class="dot d-cd"></span><span><b>Covers every state.</b> 18 case states, not the 3 anyone wants to draw.</span></li>
+        <li><span class="dot d-cd"></span><span><b>Writes decisions down.</b> Every exploration closes with a verdict.</span></li>
+      </ul>
+      <div class="foot">Strength: speed and coverage. Limit: it is wireframe grade. It is not the brand.</div>
+    </div>
+    <div class="conn">
+      <div class="arrow"><span class="lbl">Extract</span><div class="line hot r"></div></div>
+      <div class="arrow"><div class="line l"></div><span class="lbl">Brief the next session</span></div>
+    </div>
+    <div class="surf s-cc">
+      <span class="tag t-cc">Surface 2</span>
+      <h3>Source of truth</h3>
+      <p class="who">Claude Code • continuous</p>
+      <ul>
+        <li><span class="dot d-cc"></span><span><b>Holds canon.</b> One answer to "which version is real."</span></li>
+        <li><span class="dot d-cc"></span><span><b>Prints into Figma</b> with brand variables attached, not loose colors.</span></li>
+        <li><span class="dot d-cc"></span><span><b>Reads Figma back</b> so human polish is never overwritten.</span></li>
+        <li><span class="dot d-cc"></span><span><b>Reports drift</b> the moment two surfaces disagree.</span></li>
+      </ul>
+      <div class="foot">This is the new piece. Without it, the other two are two files nobody can reconcile.</div>
+    </div>
+    <div class="conn">
+      <div class="arrow"><span class="lbl">Print</span><div class="line hot r"></div></div>
+      <div class="arrow"><div class="line warm l"></div><span class="lbl">Read back</span></div>
+    </div>
+    <div class="surf s-fg">
+      <span class="tag t-fg">Surface 3</span>
+      <h3>Figma</h3>
+      <p class="who">Design and CEO • weekly</p>
+      <ul>
+        <li><span class="dot d-fg"></span><span><b>Polish.</b> Type, rhythm, optical balance, real OTR craft.</span></li>
+        <li><span class="dot d-fg"></span><span><b>Review.</b> Comments land on frames, in the tool you already use.</span></li>
+        <li><span class="dot d-fg"></span><span><b>Decide.</b> Open calls get made live, on canvas, together.</span></li>
+        <li><span class="dot d-fg"></span><span><b>Stamp.</b> A human marks a frame ready for dev.</span></li>
+      </ul>
+      <div class="foot">Strength: taste and authority. Limit: covering 18 states by hand is slow and nobody enjoys state 14.</div>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<section>
+  <h2>The loop, in order</h2>
+  <div class="steps">
+    <div class="step machine">
+      <div class="n">1</div><h4>Design</h4>
+      <p>Explore and diverge on the design surface. Ratify what is ready. Leave open what is not.</p>
+      <span class="by machine">Design + AI</span>
+    </div>
+    <div class="step spine">
+      <div class="n">2</div><h4>Extract</h4>
+      <p>The session is captured as structured data: layout, type, color, every state, every decision.</p>
+      <span class="by spine">Claude Code</span>
+    </div>
+    <div class="step spine">
+      <div class="n">3</div><h4>Print</h4>
+      <p>Frames appear in Figma with brand variables bound. Anything that has no brand token prints as a visible question, never a guess.</p>
+      <span class="by spine">Claude Code</span>
+    </div>
+    <div class="step human">
+      <div class="n">4</div><h4>Polish</h4>
+      <p>A designer fixes the craft the machine cannot judge, and cleans component structure.</p>
+      <span class="by human">Design</span>
+    </div>
+    <div class="step human">
+      <div class="n">5</div><h4>Review</h4>
+      <p>You comment on frames. Open decisions get settled on the canvas in the room.</p>
+      <span class="by human">CEO + Design</span>
+    </div>
+    <div class="step gate">
+      <div class="n">6</div><h4>Stamp</h4>
+      <p>The frame moves to Ready for dev. Engineering builds from that page and nothing else.</p>
+      <span class="by gate">Design only</span>
+    </div>
+  </div>
+  <div class="card pad" style="margin-top:18px">
+    <table>
+      <tr>
+        <td style="width:auto;border:none;padding-bottom:0">
+          <b>Then it closes.</b> Whatever changed in Figma gets read back into canon before the next design session starts, so the next round of exploration begins from what is actually true, including anything you decided in the room. No surface is ever working from a stale copy.
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<section>
+  <h2>Where each thing happens</h2>
+  <div class="grid2">
+    <div class="card pad">
+      <table>
+        <thead><tr><th>Activity</th><th>Where</th><th>Why there</th></tr></thead>
+        <tbody>
+          <tr><td>Exploration and state coverage</td><td><span class="pill p-cd">Design surface</span></td><td>Cheapest place to be wrong</td></tr>
+          <tr><td>Product logic decisions</td><td><span class="pill p-cd">Design surface</span></td><td>Closed with a written verdict</td></tr>
+          <tr><td>Unresolved decisions</td><td><span class="pill p-fg">Figma</span></td><td>Settled live, with you, on canvas</td></tr>
+          <tr><td>Brand craft and polish</td><td><span class="pill p-fg">Figma</span></td><td>Only a human can judge it</td></tr>
+          <tr><td>Feedback and comments</td><td><span class="pill p-fg">Figma</span></td><td>Pinned to the frame, in your tool</td></tr>
+          <tr><td>Ready for dev</td><td><span class="pill p-ok">Figma, stamped</span></td><td>One page, one meaning</td></tr>
+          <tr><td>Canon and drift reports</td><td><span class="pill p-cc">Repo</span></td><td>Neither surface can be trusted alone</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card pad">
+      <table>
+        <thead><tr><th>If two surfaces disagree</th><th>Who wins</th></tr></thead>
+        <tbody>
+          <tr><td>Spacing, type, color, geometry, feel</td><td><span class="pill p-fg">Human in Figma</span> Always. Polish is never overwritten.</td></tr>
+          <tr><td>Which states exist, what a badge means, what the primary action is</td><td><span class="pill p-cd">Design surface</span> That is where product logic is ratified.</td></tr>
+          <tr><td>Both edited the same frame</td><td><span class="pill p-warn">Nobody yet</span> A side by side gets printed and someone chooses. Never a silent merge.</td></tr>
+          <tr><td>A brand color has no token</td><td><span class="pill p-warn">Open question</span> It prints as a visible diff, and design decides: adopt the token or correct the design.</td></tr>
+        </tbody>
+      </table>
+      <p class="note" style="margin-top:22px"><b>The rule that prevents drift:</b> nobody starts UI work, human or agent, without reading canon first. That preflight takes minutes and it is the entire reason two fast surfaces can run in parallel without producing two products.</p>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<section>
+  <h2>How the Figma file is organised, so feedback lands cleanly</h2>
+  <div class="pages">
+    <div class="pg agent"><div class="num">1</div><h5>Components</h5><p>The machine's workshop. Buttons, badges, cards, built once and reused.</p></div>
+    <div class="pg agent"><div class="num">2</div><h5>Screens</h5><p>Assembled screens, every state. This is what you look at most.</p></div>
+    <div class="pg agent"><div class="num">3</div><h5>Proposed</h5><p>Anything still open. Marked, so you know it is a question and not a claim.</p></div>
+    <div class="pg"><div class="num">4</div><h5>Diffs</h5><p>Colors and tokens with no brand answer yet. Design's to do list, not yours.</p></div>
+    <div class="pg gate"><div class="num">5</div><h5>Ready for dev</h5><p>Human only. Stamped, polished, final. Engineering reads this page and nothing else.</p></div>
+  </div>
+  <p class="note">Agents write to pages 1 to 4. Only a designer moves a frame to page 5. That single rule is what keeps machine output from reaching engineering raw, and it is why speed upstream does not cost quality downstream.</p>
+</section>
+
+<div class="hr"></div>
+
+<section>
+  <h2>How you give feedback</h2>
+  <div class="fb">
+    <div class="card">
+      <div class="k">Step 1</div>
+      <h4>Open the Screens page</h4>
+      <p>Every state of every screen, side by side, freshly printed that week. Nothing to install, nothing to download.</p>
+    </div>
+    <div class="card">
+      <div class="k">Step 2</div>
+      <h4>Comment on the frame</h4>
+      <p>Pin a comment to the exact element. That is the whole protocol. Comments become decision records; nothing gets lost in a thread.</p>
+    </div>
+    <div class="card">
+      <div class="k">Step 3</div>
+      <h4>Settle the open calls</h4>
+      <p>The Proposed page holds what design could not decide alone. Fifteen minutes on canvas closes several at once.</p>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<section>
+  <h2>Why this is faster</h2>
+  <div class="card pad">
+    <div class="bars">
+      <div class="bar">
+        <div class="name">Traditional</div>
+        <div class="track">
+          <div class="seg wait" style="flex:.7">Brief</div>
+          <div class="seg pol" style="flex:3.4">Draw every state by hand in Figma</div>
+          <div class="seg rev" style="flex:1.2">Review</div>
+          <div class="seg pol" style="flex:1.5">Rework</div>
+          <div class="seg rev" style="flex:1">Review</div>
+          <div class="seg wait" style="flex:.8">Handoff</div>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="name">This pipeline</div>
+        <div class="track" style="width:64%">
+          <div class="seg draw" style="flex:1.1">Explore, all states</div>
+          <div class="seg cov" style="flex:.5">Print</div>
+          <div class="seg pol" style="flex:1.5">Human polish</div>
+          <div class="seg rev" style="flex:.9">Review on canvas</div>
+          <div class="seg wait" style="flex:.5">Stamp</div>
+        </div>
+      </div>
+    </div>
+    <p class="note"><b>Where the time actually comes from.</b> Coverage is the expensive part of this product, not craft. A feed and a detail screen across 18 case states is days of drawing rectangles, and it is the work most likely to be skipped, which is how half finished states reach engineering. Machines do that breadth in minutes and never lose patience. The designer's hours then go where they are worth the most: making it look like OTR, and catching the things only a person catches. Review happens earlier because there is more to react to sooner, and rework is cheaper because a decision is recorded the moment it is made.</p>
+  </div>
+</section>
+
+<div class="kicker">
+  <h3>The trade in one line</h3>
+  <p>Machines do breadth, humans do taste, and the repo in the middle makes sure that trade never turns into two divergent files. Nothing reaches engineering that a designer has not stamped.</p>
+  <div class="row">
+    <div><b>Faster</b><span>Full state coverage in a session instead of a sprint.</span></div>
+    <div><b>Still ours</b><span>Every frame passes through a designer before it counts.</span></div>
+    <div><b>No drift</b><span>Canon is read before any work starts, on either surface.</span></div>
+    <div><b>Traceable</b><span>Every decision names the frame and the version it was made on.</span></div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mount · Detail Screens</title>
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fig-tokens.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fonts.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/colors.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/typography.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/spacing.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/radius.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/base.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+  html, body { margin:0; padding:0; height:100%; background:#f0eee9; }
+  #root { height:100vh; }
+  /* 64px breathing room inside every artboard frame; inner mobile content
+     stays fixed (content-box so the padding adds around the 390px screen) */
+  .dc-card { box-sizing:content-box !important; padding:64px !important; }
+  a { color: var(--otr-blue, #2e6bff); text-decoration: none; }
+  a:hover { color: oklch(0.55 0.18 255); }
+  /* WIP explore pins: hidden on this page for now (kept in the exploration files) */
+  .explore-pin{ display:none !important; }
+  .explore-pin-off{ position:absolute; z-index:6; display:inline-flex; align-items:center; gap:6px;
+    font-family:'Figtree',var(--font-sans),sans-serif; font-size:10.5px; font-weight:800; letter-spacing:.02em;
+    color:#fff; background:rgba(46,107,255,.94); border:1px solid rgba(255,255,255,.28);
+    padding:6px 10px; border-radius:999px; text-decoration:none; box-shadow:0 4px 12px rgba(20,30,60,.26);
+    -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px); cursor:pointer; white-space:nowrap; }
+  .explore-pin:hover{ background:rgba(30,82,204,.98); color:#fff; }
+  .thero .explore-pin{ top:46px; left:50%; transform:translateX(-50%); }
+  .rtabs-zone{ position:relative; }
+  .rtabs-zone .explore-pin{ top:7px; right:12px; }
+  .zone-ph{ position:relative; margin:18px 14px 4px; border:1.5px dashed var(--wf-line); border-radius:16px;
+    background:#fbfcff; padding:26px 16px 20px; display:flex; flex-direction:column; align-items:center; gap:7px; text-align:center; }
+  .zone-ph .zph-t{ font-size:13px; font-weight:800; color:var(--wf-muted); }
+  .zone-ph .zph-s{ font-size:11.5px; color:var(--wf-faint); max-width:250px; line-height:1.45; }
+  .zone-ph .explore-pin{ top:10px; right:10px; }
+</style>
+</head>
+<body>
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" rx="18" fill="#2e6bff"/>
+    <rect x="24" y="18" width="52" height="22" rx="5" fill="#fff" opacity="0.92"/>
+    <circle cx="33" cy="29" r="5" fill="#2e6bff"/>
+    <rect x="42" y="25" width="28" height="3.4" rx="1.7" fill="#cfd6e6"/>
+    <rect x="42" y="32" width="20" height="3.4" rx="1.7" fill="#cfd6e6"/>
+    <rect x="24" y="46" width="52" height="9" rx="3" fill="#f6b3a8"/>
+    <rect x="24" y="60" width="52" height="6" rx="3" fill="#fff" opacity="0.78"/>
+    <rect x="24" y="70" width="38" height="6" rx="3" fill="#fff" opacity="0.6"/>
+  </svg>
+</template>
+<!-- board-path chip: auto-updates from the file's own location -->
+<div id="__boardPath" aria-hidden="true" style="position:fixed;top:0;left:0;z-index:2147483000;font-family:'Figtree',var(--font-sans),sans-serif;font-size:11px;line-height:1;letter-spacing:.02em;color:var(--text-tertiary,#667085);background:rgba(255,255,255,.82);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:6px 11px;border:1px solid var(--border-secondary,#ECECED);border-top:none;border-left:none;border-radius:0 0 10px 0;pointer-events:none;user-select:none;white-space:nowrap;max-width:80vw;overflow:hidden;text-overflow:ellipsis;">&nbsp;</div>
+<script>(function(){var p=decodeURIComponent(location.pathname).split('/serve/');var rel=p.length>1?p[1]:(location.pathname.split('/').pop()||'');var el=document.getElementById('__boardPath');if(el)el.textContent=rel;})();</script>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/_ds_bundle.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="../../cases/_ds-cases/kits/design-canvas.jsx"></script>
+<script type="text/babel" src="../../cases/_ds-cases/kits/core-kit.jsx"></script>
+<script type="text/babel" src="../../cases/_ds-cases/kits/cpc.jsx"></script>
+<script type="text/babel" src="../../cases/_ds-cases/kits/card-kit.jsx"></script>
+<script type="text/babel" src="../../cases/screen-single_case_details/kits/detail-kit.jsx"></script>
+<script type="text/babel" src="../../cases/screen-single_case_details/kits/detail-record.jsx"></script>
+<script type="text/babel" src="../../cases/screen-single_case_details/kits/detail-screens.jsx"></script>
+<script type="text/babel" src="../../cases/screen-single_case_details/kits/status-reps.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+;(function(){
+  const { DesignCanvas } = window;
+  function App() {
+    return (
+      <DesignCanvas style={{ background:'#f0eee9' }}>
+        {window.DetailScreens && <window.DetailScreens />}
+      </DesignCanvas>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+})();
+</script>
+</body>
+</html>

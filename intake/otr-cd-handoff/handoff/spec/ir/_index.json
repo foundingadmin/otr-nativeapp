@@ -1,0 +1,1588 @@
+{
+ "generated": "2026-07-28T17:40:43.482Z",
+ "extractor": "pipeline/ir-extract.js via Canon Export.html",
+ "variableMapSummary": {
+  "total": 119,
+  "exact": 5,
+  "near": 35,
+  "drift": 40,
+  "divergent": 29,
+  "scaffolding": 10
+ },
+ "totals": {
+  "boards": 17,
+  "artboards": 147,
+  "nodes": 16522,
+  "megabytes": 12.5
+ },
+ "notExtracted": [
+  {
+   "title": "Archive · 02 Divergence pass 1",
+   "reason": "pre-canvas board, nothing to walk"
+  },
+  {
+   "title": "Archive · 03 Variants A-D",
+   "reason": "pre-canvas board, nothing to walk"
+  },
+  {
+   "title": "Archive · Board C detail pages",
+   "reason": "pre-canvas board, nothing to walk"
+  },
+  {
+   "title": "Archive · Board D flow moments",
+   "reason": "pre-canvas board, nothing to walk"
+  }
+ ],
+ "boards": [
+  {
+   "id": "system-case_status_and_action",
+   "stage": "canon",
+   "title": "Case Status and Action",
+   "path": "cases/system-case_status_and_action/Case Status and Action.html",
+   "note": null,
+   "stats": {
+    "nodes": 320,
+    "textNodes": 119,
+    "paintDecisions": {
+     "BIND": 51,
+     "BIND_NEAREST": 31,
+     "BIND_NEAREST_AND_FLAG": 102,
+     "DS_REQUEST": 14,
+     "RAW_OK": 0
+    },
+    "artboards": 2
+   },
+   "bytes": 202476,
+   "artboards": [
+    {
+     "section": "ba-system",
+     "sectionTitle": "Case Status and Action",
+     "id": "fa-lifecycle",
+     "label": "The badge rule",
+     "w": 620,
+     "h": 1000
+    },
+    {
+     "section": "ba-system",
+     "sectionTitle": "Case Status and Action",
+     "id": "fa-alertsys",
+     "label": "Action signals",
+     "w": 620,
+     "h": 1520
+    }
+   ]
+  },
+  {
+   "id": "component-case_preview_cards",
+   "stage": "canon",
+   "title": "Case Preview Cards",
+   "path": "cases/component-case_preview_cards/Case Preview Cards.html",
+   "note": null,
+   "stats": {
+    "nodes": 1040,
+    "textNodes": 341,
+    "paintDecisions": {
+     "BIND": 158,
+     "BIND_NEAREST": 74,
+     "BIND_NEAREST_AND_FLAG": 303,
+     "DS_REQUEST": 32,
+     "RAW_OK": 0
+    },
+    "artboards": 5
+   },
+   "bytes": 1263218,
+   "artboards": [
+    {
+     "section": "ba-pairing",
+     "sectionTitle": "Case Preview Cards",
+     "id": "pair-incomplete",
+     "label": "Incomplete",
+     "w": 720,
+     "h": 840
+    },
+    {
+     "section": "ba-pairing",
+     "sectionTitle": "Case Preview Cards",
+     "id": "pair-active",
+     "label": "Active",
+     "w": 720,
+     "h": 1960
+    },
+    {
+     "section": "ba-pairing",
+     "sectionTitle": "Case Preview Cards",
+     "id": "pair-resolved",
+     "label": "Resolved",
+     "w": 720,
+     "h": 1040
+    },
+    {
+     "section": "ba-pairing",
+     "sectionTitle": "Case Preview Cards",
+     "id": "pair-dismissed",
+     "label": "Dismissed",
+     "w": 720,
+     "h": 1320
+    },
+    {
+     "section": "ba-pairing",
+     "sectionTitle": "Case Preview Cards",
+     "id": "pair-cancelled",
+     "label": "Cancelled",
+     "w": 720,
+     "h": 1240
+    }
+   ]
+  },
+  {
+   "id": "screen-all_cases_feed",
+   "stage": "canon",
+   "title": "All Cases Feed",
+   "path": "cases/screen-all_cases_feed/All Cases Feed.html",
+   "note": null,
+   "stats": {
+    "nodes": 910,
+    "textNodes": 277,
+    "paintDecisions": {
+     "BIND": 169,
+     "BIND_NEAREST": 101,
+     "BIND_NEAREST_AND_FLAG": 295,
+     "DS_REQUEST": 82,
+     "RAW_OK": 0
+    },
+    "artboards": 4
+   },
+   "bytes": 1240578,
+   "artboards": [
+    {
+     "section": "feed-assembled",
+     "sectionTitle": "All Cases Feed",
+     "id": "p-solo",
+     "label": "Single case • one active matter",
+     "w": 390,
+     "h": 884
+    },
+    {
+     "section": "feed-assembled",
+     "sectionTitle": "All Cases Feed",
+     "id": "p-light",
+     "label": "1 active • 3 resolved",
+     "w": 390,
+     "h": 1620
+    },
+    {
+     "section": "feed-assembled",
+     "sectionTitle": "All Cases Feed",
+     "id": "p-heavy",
+     "label": "5 active • 1 incomplete • 8 resolved • 2 cancelled",
+     "w": 390,
+     "h": 4740
+    },
+    {
+     "section": "feed-assembled",
+     "sectionTitle": "All Cases Feed",
+     "id": "v-empty",
+     "label": "Empty state • no cases yet",
+     "w": 390,
+     "h": 844
+    }
+   ]
+  },
+  {
+   "id": "screen-single_case_details",
+   "stage": "canon",
+   "title": "Single Case Details",
+   "path": "cases/screen-single_case_details/Single Case Details.html",
+   "note": null,
+   "stats": {
+    "nodes": 144,
+    "textNodes": 45,
+    "paintDecisions": {
+     "BIND": 17,
+     "BIND_NEAREST": 28,
+     "BIND_NEAREST_AND_FLAG": 46,
+     "DS_REQUEST": 9,
+     "RAW_OK": 0
+    },
+    "artboards": 1
+   },
+   "bytes": 119734,
+   "artboards": [
+    {
+     "section": "case-anatomy",
+     "sectionTitle": "Single Case Details",
+     "id": "pattern-active",
+     "label": "Active",
+     "w": 518,
+     "h": 1316
+    }
+   ]
+  },
+  {
+   "id": "ds-cases-atomic-system",
+   "stage": "canon",
+   "title": "Atomic System",
+   "path": "cases/_ds-cases/Atomic System.html",
+   "note": null,
+   "stats": {
+    "nodes": 703,
+    "textNodes": 297,
+    "paintDecisions": {
+     "BIND": 70,
+     "BIND_NEAREST": 64,
+     "BIND_NEAREST_AND_FLAG": 201,
+     "DS_REQUEST": 124,
+     "RAW_OK": 92
+    },
+    "artboards": 9
+   },
+   "bytes": 551573,
+   "artboards": [
+    {
+     "section": "atoms-foundations",
+     "sectionTitle": "Atomic system · foundations",
+     "id": "at-color",
+     "label": "Color tokens",
+     "w": 620,
+     "h": 744
+    },
+    {
+     "section": "atoms-foundations",
+     "sectionTitle": "Atomic system · foundations",
+     "id": "at-text",
+     "label": "Text & shape",
+     "w": 620,
+     "h": 654
+    },
+    {
+     "section": "atoms-components",
+     "sectionTitle": "Atomic system · components",
+     "id": "at-badge",
+     "label": "Status badge",
+     "w": 620,
+     "h": 578
+    },
+    {
+     "section": "atoms-components",
+     "sectionTitle": "Atomic system · components",
+     "id": "at-buttons",
+     "label": "Buttons · the one-blue rule",
+     "w": 620,
+     "h": 536
+    },
+    {
+     "section": "atoms-components",
+     "sectionTitle": "Atomic system · components",
+     "id": "at-toast",
+     "label": "Action toast",
+     "w": 620,
+     "h": 526
+    },
+    {
+     "section": "atoms-components",
+     "sectionTitle": "Atomic system · components",
+     "id": "at-attorney",
+     "label": "Attorney lockup",
+     "w": 620,
+     "h": 524
+    },
+    {
+     "section": "atoms-components",
+     "sectionTitle": "Atomic system · components",
+     "id": "at-ticket",
+     "label": "The ticket element",
+     "w": 620,
+     "h": 1432
+    },
+    {
+     "section": "atoms-components",
+     "sectionTitle": "Atomic system · components",
+     "id": "at-card",
+     "label": "Case card · anatomy",
+     "w": 440,
+     "h": 640
+    },
+    {
+     "section": "atoms-components",
+     "sectionTitle": "Atomic system · components",
+     "id": "at-motion",
+     "label": "Motion atoms",
+     "w": 620,
+     "h": 300
+    }
+   ]
+  },
+  {
+   "id": "mount-detail-screens",
+   "stage": "canon",
+   "title": "Detail Screens (pipeline mount)",
+   "path": "pipeline/mounts/detail-screens.html",
+   "note": null,
+   "stats": {
+    "nodes": 1366,
+    "textNodes": 406,
+    "paintDecisions": {
+     "BIND": 184,
+     "BIND_NEAREST": 281,
+     "BIND_NEAREST_AND_FLAG": 399,
+     "DS_REQUEST": 82,
+     "RAW_OK": 0
+    },
+    "artboards": 9
+   },
+   "bytes": 867164,
+   "artboards": [
+    {
+     "section": "detail-anatomy",
+     "sectionTitle": "Case Details · the zone anatomy",
+     "id": "anatomy-active",
+     "label": "Active · annotated zones",
+     "w": 518,
+     "h": 1578
+    },
+    {
+     "section": "detail-anatomy",
+     "sectionTitle": "Case Details · the zone anatomy",
+     "id": "active-clean",
+     "label": "Active · clean (no annotations)",
+     "w": 518,
+     "h": 1480
+    },
+    {
+     "section": "detail-anatomy",
+     "sectionTitle": "Case Details · the zone anatomy",
+     "id": "loe",
+     "label": "Needs signature · amber action",
+     "w": 518,
+     "h": 1746
+    },
+    {
+     "section": "detail-anatomy",
+     "sectionTitle": "Case Details · the zone anatomy",
+     "id": "counter",
+     "label": "Counter offer · amber action",
+     "w": 518,
+     "h": 1620
+    },
+    {
+     "section": "detail-lifecycle",
+     "sectionTitle": "Lifecycle coverage · landmark states",
+     "id": "concurrent",
+     "label": "LOE + counter offer · concurrency",
+     "w": 518,
+     "h": 1991
+    },
+    {
+     "section": "detail-lifecycle",
+     "sectionTitle": "Lifecycle coverage · landmark states",
+     "id": "overdue",
+     "label": "Past-due · critical + account rail",
+     "w": 518,
+     "h": 1754
+    },
+    {
+     "section": "detail-lifecycle",
+     "sectionTitle": "Lifecycle coverage · landmark states",
+     "id": "remarket",
+     "label": "Rematching · reassurance, no attorney",
+     "w": 518,
+     "h": 1351
+    },
+    {
+     "section": "detail-lifecycle",
+     "sectionTitle": "Lifecycle coverage · landmark states",
+     "id": "dismissed",
+     "label": "Resolved · dismissed (celebration)",
+     "w": 518,
+     "h": 1566
+    },
+    {
+     "section": "detail-lifecycle",
+     "sectionTitle": "Lifecycle coverage · landmark states",
+     "id": "notbooked",
+     "label": "Not booked · drive booking",
+     "w": 518,
+     "h": 1148
+    }
+   ]
+  },
+  {
+   "id": "exp-01-feed-exploration",
+   "stage": "exploration",
+   "title": "01 Feed exploration",
+   "path": "cases/screen-all_cases_feed/explorations/01-feed-exploration/01-feed-exploration.html",
+   "note": null,
+   "stats": {
+    "nodes": 3174,
+    "textNodes": 979,
+    "paintDecisions": {
+     "BIND": 217,
+     "BIND_NEAREST": 450,
+     "BIND_NEAREST_AND_FLAG": 1069,
+     "DS_REQUEST": 293,
+     "RAW_OK": 0
+    },
+    "artboards": 12
+   },
+   "bytes": 1842660,
+   "artboards": [
+    {
+     "section": "feed-layouts",
+     "sectionTitle": "Feed layouts",
+     "id": "seg-tabs",
+     "label": "1 • Segmented tabs",
+     "w": 390,
+     "h": 844
+    },
+    {
+     "section": "feed-layouts",
+     "sectionTitle": "Feed layouts",
+     "id": "triage",
+     "label": "2 • Priority triage",
+     "w": 390,
+     "h": 844
+    },
+    {
+     "section": "feed-layouts",
+     "sectionTitle": "Feed layouts",
+     "id": "grouped",
+     "label": "3 • Grouped by status",
+     "w": 390,
+     "h": 844
+    },
+    {
+     "section": "feed-layouts",
+     "sectionTitle": "Feed layouts",
+     "id": "dense",
+     "label": "4 • Dense list",
+     "w": 390,
+     "h": 844
+    },
+    {
+     "section": "feed-mechanics",
+     "sectionTitle": "Filter and sort mechanics",
+     "id": "m-searchfilter",
+     "label": "Filter • search bar and filter",
+     "w": 390,
+     "h": 844
+    },
+    {
+     "section": "feed-mechanics",
+     "sectionTitle": "Filter and sort mechanics",
+     "id": "m-filtersheet",
+     "label": "Filter • bottom sheet, status and location",
+     "w": 390,
+     "h": 844
+    },
+    {
+     "section": "feed-mechanics",
+     "sectionTitle": "Filter and sort mechanics",
+     "id": "m-segmented",
+     "label": "Filter • segmented control",
+     "w": 390,
+     "h": 844
+    },
+    {
+     "section": "feed-mechanics",
+     "sectionTitle": "Filter and sort mechanics",
+     "id": "m-inlinesort",
+     "label": "Sort • inline toggle",
+     "w": 390,
+     "h": 844
+    },
+    {
+     "section": "feed-mechanics",
+     "sectionTitle": "Filter and sort mechanics",
+     "id": "m-sortmenu",
+     "label": "Sort • dropdown menu",
+     "w": 390,
+     "h": 844
+    },
+    {
+     "section": "feed-actions",
+     "sectionTitle": "Screen actions",
+     "id": "a-add",
+     "label": "Add a ticket • action sheet",
+     "w": 390,
+     "h": 844
+    },
+    {
+     "section": "feed-actions",
+     "sectionTitle": "Screen actions",
+     "id": "a-empty",
+     "label": "Empty state • no cases yet",
+     "w": 390,
+     "h": 844
+    },
+    {
+     "section": "feed-actions",
+     "sectionTitle": "Screen actions",
+     "id": "a-search",
+     "label": "Search • dedicated screen",
+     "w": 390,
+     "h": 844
+    }
+   ]
+  },
+  {
+   "id": "exp-03-record-content",
+   "stage": "exploration",
+   "title": "03 Record content",
+   "path": "cases/screen-single_case_details/explorations/03-record-content/Record Content.html",
+   "note": null,
+   "stats": {
+    "nodes": 532,
+    "textNodes": 147,
+    "paintDecisions": {
+     "BIND": 44,
+     "BIND_NEAREST": 82,
+     "BIND_NEAREST_AND_FLAG": 157,
+     "DS_REQUEST": 6,
+     "RAW_OK": 0
+    },
+    "artboards": 9
+   },
+   "bytes": 332017,
+   "artboards": [
+    {
+     "section": "rc-fields",
+     "sectionTitle": "Case record · field set + Show more",
+     "id": "rc-collapsed",
+     "label": "Record · collapsed",
+     "w": 390,
+     "h": 664
+    },
+    {
+     "section": "rc-fields",
+     "sectionTitle": "Case record · field set + Show more",
+     "id": "rc-expanded",
+     "label": "Record · Show more expanded",
+     "w": 390,
+     "h": 980
+    },
+    {
+     "section": "rc-firm",
+     "sectionTitle": "Law firm data block",
+     "id": "rc-firm-block",
+     "label": "Firm profile · tapped from Law firm",
+     "w": 356,
+     "h": 430
+    },
+    {
+     "section": "rc-money",
+     "sectionTitle": "Two money modules · Receipt vs Transactions",
+     "id": "rc-receipt-paid",
+     "label": "Receipt · paid in full",
+     "w": 356,
+     "h": 264
+    },
+    {
+     "section": "rc-money",
+     "sectionTitle": "Two money modules · Receipt vs Transactions",
+     "id": "rc-receipt-plan",
+     "label": "Receipt · payment plan + overdue",
+     "w": 356,
+     "h": 400
+    },
+    {
+     "section": "rc-money",
+     "sectionTitle": "Two money modules · Receipt vs Transactions",
+     "id": "rc-txns",
+     "label": "Transactions · statement charges",
+     "w": 356,
+     "h": 330
+    },
+    {
+     "section": "rc-money",
+     "sectionTitle": "Two money modules · Receipt vs Transactions",
+     "id": "rc-txn-detail",
+     "label": "Transaction · invoice detail",
+     "w": 356,
+     "h": 344
+    },
+    {
+     "section": "rc-participants",
+     "sectionTitle": "Participants module",
+     "id": "rc-participants-card",
+     "label": "Participants · view",
+     "w": 356,
+     "h": 300
+    },
+    {
+     "section": "rc-participants",
+     "sectionTitle": "Participants module",
+     "id": "rc-participants-manage",
+     "label": "Participants · manage & remove",
+     "w": 356,
+     "h": 404
+    }
+   ]
+  },
+  {
+   "id": "exp-04-case-chat",
+   "stage": "exploration",
+   "title": "04 Case chat",
+   "path": "cases/screen-single_case_details/explorations/04-case-chat/Case Chat.html",
+   "note": null,
+   "stats": {
+    "nodes": 790,
+    "textNodes": 251,
+    "paintDecisions": {
+     "BIND": 150,
+     "BIND_NEAREST": 93,
+     "BIND_NEAREST_AND_FLAG": 222,
+     "DS_REQUEST": 136,
+     "RAW_OK": 0
+    },
+    "artboards": 17
+   },
+   "bytes": 1275623,
+   "artboards": [
+    {
+     "section": "cc-approaches",
+     "sectionTitle": "Case chat · surface approaches",
+     "id": "a",
+     "label": "A · Unified thread",
+     "w": 390,
+     "h": 936
+    },
+    {
+     "section": "cc-approaches",
+     "sectionTitle": "Case chat · surface approaches",
+     "id": "b",
+     "label": "B · Log-led, day dividers",
+     "w": 390,
+     "h": 936
+    },
+    {
+     "section": "cc-approaches",
+     "sectionTitle": "Case chat · surface approaches",
+     "id": "c",
+     "label": "C · Split · pinned + log",
+     "w": 390,
+     "h": 936
+    },
+    {
+     "section": "cc-approaches",
+     "sectionTitle": "Case chat · surface approaches",
+     "id": "d",
+     "label": "D · Compact system chips",
+     "w": 390,
+     "h": 936
+    },
+    {
+     "section": "cc-approaches",
+     "sectionTitle": "Case chat · surface approaches",
+     "id": "e",
+     "label": "E · Compact chips + pinned toast",
+     "w": 390,
+     "h": 936
+    },
+    {
+     "section": "cc-gallery",
+     "sectionTitle": "One component · the case-action variant set",
+     "id": "g-accepted",
+     "label": "Case accepted",
+     "w": 352,
+     "h": 210
+    },
+    {
+     "section": "cc-gallery",
+     "sectionTitle": "One component · the case-action variant set",
+     "id": "g-declined",
+     "label": "Case declined",
+     "w": 352,
+     "h": 268
+    },
+    {
+     "section": "cc-gallery",
+     "sectionTitle": "One component · the case-action variant set",
+     "id": "g-cancelled",
+     "label": "Case cancelled",
+     "w": 352,
+     "h": 268
+    },
+    {
+     "section": "cc-gallery",
+     "sectionTitle": "One component · the case-action variant set",
+     "id": "g-counterSent",
+     "label": "Counter offer sent",
+     "w": 352,
+     "h": 330
+    },
+    {
+     "section": "cc-gallery",
+     "sectionTitle": "One component · the case-action variant set",
+     "id": "g-counterAccepted",
+     "label": "Counter offer accepted",
+     "w": 352,
+     "h": 210
+    },
+    {
+     "section": "cc-gallery",
+     "sectionTitle": "One component · the case-action variant set",
+     "id": "g-counterDeclined",
+     "label": "Counter offer declined",
+     "w": 352,
+     "h": 268
+    },
+    {
+     "section": "cc-gallery",
+     "sectionTitle": "One component · the case-action variant set",
+     "id": "g-counterWithdrawn",
+     "label": "Counter offer withdrawn",
+     "w": 352,
+     "h": 210
+    },
+    {
+     "section": "cc-gallery",
+     "sectionTitle": "One component · the case-action variant set",
+     "id": "g-resolved",
+     "label": "Case resolved",
+     "w": 352,
+     "h": 210
+    },
+    {
+     "section": "cc-gallery",
+     "sectionTitle": "One component · the case-action variant set",
+     "id": "g-paymentFailed",
+     "label": "Payment failed · automated",
+     "w": 352,
+     "h": 268
+    },
+    {
+     "section": "cc-gallery",
+     "sectionTitle": "One component · the case-action variant set",
+     "id": "g-optionality",
+     "label": "Optionality · same action, three levels",
+     "w": 352,
+     "h": 470
+    },
+    {
+     "section": "cc-persistent",
+     "sectionTitle": "Persistent resolving surface · item G",
+     "id": "g-pin-counter",
+     "label": "Counter offer · resolve from the top",
+     "w": 390,
+     "h": 668
+    },
+    {
+     "section": "cc-persistent",
+     "sectionTitle": "Persistent resolving surface · item G",
+     "id": "g-pin-payment",
+     "label": "Failed payment · automated + pinned pay",
+     "w": 390,
+     "h": 668
+    }
+   ]
+  },
+  {
+   "id": "exp-05-status-coverage",
+   "stage": "exploration",
+   "title": "05 Status coverage",
+   "path": "cases/screen-single_case_details/explorations/05-status-coverage/Status Coverage.html",
+   "note": null,
+   "stats": {
+    "nodes": 2431,
+    "textNodes": 738,
+    "paintDecisions": {
+     "BIND": 339,
+     "BIND_NEAREST": 456,
+     "BIND_NEAREST_AND_FLAG": 740,
+     "DS_REQUEST": 195,
+     "RAW_OK": 0
+    },
+    "artboards": 13
+   },
+   "bytes": 1933919,
+   "artboards": [
+    {
+     "section": "case-statuses",
+     "sectionTitle": "Status coverage · one case, every status",
+     "id": "incomplete",
+     "label": "Incomplete • not booked",
+     "w": 518,
+     "h": 1441
+    },
+    {
+     "section": "case-statuses",
+     "sectionTitle": "Status coverage · one case, every status",
+     "id": "analyzing",
+     "label": "SmartMatching",
+     "w": 518,
+     "h": 1611
+    },
+    {
+     "section": "case-statuses",
+     "sectionTitle": "Status coverage · one case, every status",
+     "id": "smartmatchd",
+     "label": "SmartMatch’d • quote ready",
+     "w": 518,
+     "h": 1882
+    },
+    {
+     "section": "case-statuses",
+     "sectionTitle": "Status coverage · one case, every status",
+     "id": "counter",
+     "label": "Counter offer",
+     "w": 518,
+     "h": 1882
+    },
+    {
+     "section": "case-statuses",
+     "sectionTitle": "Status coverage · one case, every status",
+     "id": "loe",
+     "label": "Needs signature",
+     "w": 518,
+     "h": 2000
+    },
+    {
+     "section": "case-statuses",
+     "sectionTitle": "Status coverage · one case, every status",
+     "id": "active",
+     "label": "Active",
+     "w": 518,
+     "h": 1688
+    },
+    {
+     "section": "case-statuses",
+     "sectionTitle": "Status coverage · one case, every status",
+     "id": "unread",
+     "label": "Active • unread update",
+     "w": 518,
+     "h": 1865
+    },
+    {
+     "section": "case-statuses",
+     "sectionTitle": "Status coverage · one case, every status",
+     "id": "deadline",
+     "label": "Court date imminent",
+     "w": 518,
+     "h": 1882
+    },
+    {
+     "section": "case-statuses",
+     "sectionTitle": "Status coverage · one case, every status",
+     "id": "overdue",
+     "label": "Past due payment",
+     "w": 518,
+     "h": 1977
+    },
+    {
+     "section": "case-statuses",
+     "sectionTitle": "Status coverage · one case, every status",
+     "id": "disputed",
+     "label": "Payment disputed",
+     "w": 518,
+     "h": 1882
+    },
+    {
+     "section": "case-statuses",
+     "sectionTitle": "Status coverage · one case, every status",
+     "id": "dismissed",
+     "label": "Resolved • dismissed",
+     "w": 518,
+     "h": 1817
+    },
+    {
+     "section": "case-statuses",
+     "sectionTitle": "Status coverage · one case, every status",
+     "id": "resolved",
+     "label": "Resolved • reduced",
+     "w": 518,
+     "h": 1873
+    },
+    {
+     "section": "case-statuses",
+     "sectionTitle": "Status coverage · one case, every status",
+     "id": "cancelled",
+     "label": "Cancelled",
+     "w": 518,
+     "h": 1616
+    }
+   ]
+  },
+  {
+   "id": "exp-01-status-series",
+   "stage": "exploration",
+   "title": "01 Status series",
+   "path": "cases/system-case_status_and_action/explorations/01-status-series/01-status-series.html",
+   "note": null,
+   "stats": {
+    "nodes": 624,
+    "textNodes": 190,
+    "paintDecisions": {
+     "BIND": 121,
+     "BIND_NEAREST": 105,
+     "BIND_NEAREST_AND_FLAG": 186,
+     "DS_REQUEST": 103,
+     "RAW_OK": 0
+    },
+    "artboards": 18
+   },
+   "bytes": 398027,
+   "artboards": [
+    {
+     "section": "ba-s1",
+     "sectionTitle": "Series 1 • Unfinished business",
+     "id": "fa-incomplete",
+     "label": "Incomplete • booking unfinished",
+     "w": 390,
+     "h": 300
+    },
+    {
+     "section": "ba-s1",
+     "sectionTitle": "Series 1 • Unfinished business",
+     "id": "fa-deadline",
+     "label": "Deadline • booking almost due",
+     "w": 390,
+     "h": 302
+    },
+    {
+     "section": "ba-s1",
+     "sectionTitle": "Series 1 • Unfinished business",
+     "id": "fa-missed",
+     "label": "Court missed • warrant risk",
+     "w": 390,
+     "h": 288
+    },
+    {
+     "section": "ba-s2",
+     "sectionTitle": "Series 2 • Matching and quote",
+     "id": "fa-analyzing",
+     "label": "Matching • finding an attorney",
+     "w": 390,
+     "h": 236
+    },
+    {
+     "section": "ba-s2",
+     "sectionTitle": "Series 2 • Matching and quote",
+     "id": "fa-smart",
+     "label": "SmartMatch'd • quote ready",
+     "w": 390,
+     "h": 320
+    },
+    {
+     "section": "ba-s2",
+     "sectionTitle": "Series 2 • Matching and quote",
+     "id": "fa-almost",
+     "label": "Last chance • quote expiring",
+     "w": 390,
+     "h": 320
+    },
+    {
+     "section": "ba-s2",
+     "sectionTitle": "Series 2 • Matching and quote",
+     "id": "fa-counter",
+     "label": "Counter offer",
+     "w": 390,
+     "h": 356
+    },
+    {
+     "section": "ba-s2",
+     "sectionTitle": "Series 2 • Matching and quote",
+     "id": "fa-expired",
+     "label": "Quote expired",
+     "w": 390,
+     "h": 300
+    },
+    {
+     "section": "ba-s2",
+     "sectionTitle": "Series 2 • Matching and quote",
+     "id": "fa-remarket",
+     "label": "Rematching attorney",
+     "w": 390,
+     "h": 296
+    },
+    {
+     "section": "ba-s3",
+     "sectionTitle": "Series 3 • Active management",
+     "id": "fa-active",
+     "label": "Active • all on track",
+     "w": 390,
+     "h": 276
+    },
+    {
+     "section": "ba-s3",
+     "sectionTitle": "Series 3 • Active management",
+     "id": "fa-unread",
+     "label": "Unread updates",
+     "w": 390,
+     "h": 356
+    },
+    {
+     "section": "ba-s3",
+     "sectionTitle": "Series 3 • Active management",
+     "id": "fa-loe",
+     "label": "Needs signature",
+     "w": 390,
+     "h": 356
+    },
+    {
+     "section": "ba-s3",
+     "sectionTitle": "Series 3 • Active management",
+     "id": "fa-overdue",
+     "label": "Payment overdue",
+     "w": 390,
+     "h": 392
+    },
+    {
+     "section": "ba-s3",
+     "sectionTitle": "Series 3 • Active management",
+     "id": "fa-reassign",
+     "label": "Attorney reassigned",
+     "w": 390,
+     "h": 360
+    },
+    {
+     "section": "ba-s4",
+     "sectionTitle": "Series 4 • Concluded",
+     "id": "fa-resolved",
+     "label": "Resolved • charge reduced",
+     "w": 390,
+     "h": 360
+    },
+    {
+     "section": "ba-s4",
+     "sectionTitle": "Series 4 • Concluded",
+     "id": "fa-dismissed",
+     "label": "Dismissed • the win",
+     "w": 390,
+     "h": 344
+    },
+    {
+     "section": "ba-s4",
+     "sectionTitle": "Series 4 • Concluded",
+     "id": "fa-dismisspay",
+     "label": "Dismissed • balance still due",
+     "w": 390,
+     "h": 372
+    },
+    {
+     "section": "ba-s4",
+     "sectionTitle": "Series 4 • Concluded",
+     "id": "fa-cancelled",
+     "label": "Cancelled • no blame",
+     "w": 390,
+     "h": 300
+    }
+   ]
+  },
+  {
+   "id": "arc-cpc-01-header-divergences",
+   "stage": "archive",
+   "title": "Archive · 01 Header divergences",
+   "path": "cases/component-case_preview_cards/archive/01-header-divergences/01-header-divergences.html",
+   "note": null,
+   "stats": {
+    "nodes": 160,
+    "textNodes": 60,
+    "paintDecisions": {
+     "BIND": 47,
+     "BIND_NEAREST": 15,
+     "BIND_NEAREST_AND_FLAG": 54,
+     "DS_REQUEST": 4,
+     "RAW_OK": 0
+    },
+    "artboards": 4
+   },
+   "bytes": 104007,
+   "artboards": [
+    {
+     "section": "hdr-div",
+     "sectionTitle": "Header Divergences",
+     "id": "d1",
+     "label": "D1 • filled pills",
+     "w": 390,
+     "h": 470
+    },
+    {
+     "section": "hdr-div",
+     "sectionTitle": "Header Divergences",
+     "id": "d2",
+     "label": "D2 • severity tinted pills",
+     "w": 390,
+     "h": 470
+    },
+    {
+     "section": "hdr-div",
+     "sectionTitle": "Header Divergences",
+     "id": "d3",
+     "label": "D3 • two line pills",
+     "w": 390,
+     "h": 470
+    },
+    {
+     "section": "hdr-div",
+     "sectionTitle": "Header Divergences",
+     "id": "d4",
+     "label": "D4 • court date chip",
+     "w": 390,
+     "h": 470
+    }
+   ]
+  },
+  {
+   "id": "arc-cpc-02-alert-cta-sizing",
+   "stage": "archive",
+   "title": "Archive · 02 Alert CTA sizing",
+   "path": "cases/component-case_preview_cards/archive/02-alert-cta-sizing/02-alert-cta-sizing.html",
+   "note": null,
+   "stats": {
+    "nodes": 288,
+    "textNodes": 93,
+    "paintDecisions": {
+     "BIND": 81,
+     "BIND_NEAREST": 24,
+     "BIND_NEAREST_AND_FLAG": 82,
+     "DS_REQUEST": 8,
+     "RAW_OK": 0
+    },
+    "artboards": 8
+   },
+   "bytes": 534744,
+   "artboards": [
+    {
+     "section": "cta-sizing",
+     "sectionTitle": "Alert CTA Sizing",
+     "id": "v0",
+     "label": "V0 • no toast, no button",
+     "w": 390,
+     "h": 270
+    },
+    {
+     "section": "cta-sizing",
+     "sectionTitle": "Alert CTA Sizing",
+     "id": "v1",
+     "label": "V1 • shorter pill",
+     "w": 390,
+     "h": 340
+    },
+    {
+     "section": "cta-sizing",
+     "sectionTitle": "Alert CTA Sizing",
+     "id": "v2",
+     "label": "V2 • compact, on the headline row",
+     "w": 390,
+     "h": 340
+    },
+    {
+     "section": "cta-sizing",
+     "sectionTitle": "Alert CTA Sizing",
+     "id": "v3",
+     "label": "V3 • text-link CTA",
+     "w": 390,
+     "h": 340
+    },
+    {
+     "section": "cta-sizing",
+     "sectionTitle": "Alert CTA Sizing",
+     "id": "v4",
+     "label": "V4 • whole block taps",
+     "w": 390,
+     "h": 340
+    },
+    {
+     "section": "cta-sizing",
+     "sectionTitle": "Alert CTA Sizing",
+     "id": "v4b",
+     "label": "V4b • LOE signature, with support line",
+     "w": 390,
+     "h": 372
+    },
+    {
+     "section": "cta-sizing",
+     "sectionTitle": "Alert CTA Sizing",
+     "id": "v4c",
+     "label": "V4c • counter offer, with support line",
+     "w": 390,
+     "h": 372
+    },
+    {
+     "section": "cta-sizing",
+     "sectionTitle": "Alert CTA Sizing",
+     "id": "v4d",
+     "label": "V4d • payment overdue, critical",
+     "w": 390,
+     "h": 372
+    }
+   ]
+  },
+  {
+   "id": "arc-feed-00-early-divergence",
+   "stage": "archive",
+   "title": "Archive · 00 Early divergence",
+   "path": "cases/screen-all_cases_feed/archive/00-early-divergence/Exploration.html",
+   "note": null,
+   "stats": {
+    "nodes": 3181,
+    "textNodes": 1143,
+    "paintDecisions": {
+     "BIND": 361,
+     "BIND_NEAREST": 491,
+     "BIND_NEAREST_AND_FLAG": 1150,
+     "DS_REQUEST": 491,
+     "RAW_OK": 30
+    },
+    "artboards": 26
+   },
+   "bytes": 1890841,
+   "artboards": [
+    {
+     "section": "board-f",
+     "sectionTitle": "Board F · Consistent CTA + ticket aesthetic (new direction)",
+     "id": "f-quote",
+     "label": "SmartMatch'd quote — ticket + clean solution + one blue CTA",
+     "w": 390,
+     "h": 696
+    },
+    {
+     "section": "board-f",
+     "sectionTitle": "Board F · Consistent CTA + ticket aesthetic (new direction)",
+     "id": "f-tickets",
+     "label": "Ticket pattern library (cream · California pink · photo)",
+     "w": 430,
+     "h": 884
+    },
+    {
+     "section": "board-f",
+     "sectionTitle": "Board F · Consistent CTA + ticket aesthetic (new direction)",
+     "id": "f-feed",
+     "label": "Consistent-CTA feed — every primary action is one blue",
+     "w": 390,
+     "h": 2046
+    },
+    {
+     "section": "board-f",
+     "sectionTitle": "Board F · Consistent CTA + ticket aesthetic (new direction)",
+     "id": "f-incomplete",
+     "label": "Incomplete — full ticket as evidence + blue CTA",
+     "w": 390,
+     "h": 524
+    },
+    {
+     "section": "board-b",
+     "sectionTitle": "Board B · Feed variants — the hero deliverable",
+     "id": "b1",
+     "label": "Variant 1 · Baseline 4-zone (the §8.4 hypothesis)",
+     "w": 390,
+     "h": 2064
+    },
+    {
+     "section": "board-b",
+     "sectionTitle": "Board B · Feed variants — the hero deliverable",
+     "id": "b2",
+     "label": "Variant 2 · Minimal, badge-led, zoneless",
+     "w": 390,
+     "h": 1156
+    },
+    {
+     "section": "board-b",
+     "sectionTitle": "Board B · Feed variants — the hero deliverable",
+     "id": "b3",
+     "label": "Variant 3 · Rich, attorney-prominent + progress",
+     "w": 390,
+     "h": 2204
+    },
+    {
+     "section": "board-b",
+     "sectionTitle": "Board B · Feed variants — the hero deliverable",
+     "id": "b4",
+     "label": "Variant 4 · Color-field status manifestation",
+     "w": 390,
+     "h": 1264
+    },
+    {
+     "section": "board-b",
+     "sectionTitle": "Board B · Feed variants — the hero deliverable",
+     "id": "b5",
+     "label": "Variant 5 · Action-first reading order",
+     "w": 390,
+     "h": 1520
+    },
+    {
+     "section": "board-b",
+     "sectionTitle": "Board B · Feed variants — the hero deliverable",
+     "id": "b6",
+     "label": "Variant 6 · Identity-led, attorney absent",
+     "w": 390,
+     "h": 1532
+    },
+    {
+     "section": "board-b",
+     "sectionTitle": "Board B · Feed variants — the hero deliverable",
+     "id": "b7",
+     "label": "Variant 7 · Dense list, 2-zone",
+     "w": 390,
+     "h": 992
+    },
+    {
+     "section": "boardf-c",
+     "sectionTitle": "Board C · Case detail pages (F-direction)",
+     "id": "fc-smart",
+     "label": "Detail · SmartMatch'd (ticket + AttLockup + blue CTA)",
+     "w": 390,
+     "h": 1196
+    },
+    {
+     "section": "boardf-c",
+     "sectionTitle": "Board C · Case detail pages (F-direction)",
+     "id": "fc-active",
+     "label": "Detail · Active (revealed AttLockup + timeline)",
+     "w": 390,
+     "h": 946
+    },
+    {
+     "section": "boardf-c",
+     "sectionTitle": "Board C · Case detail pages (F-direction)",
+     "id": "fc-overdue",
+     "label": "Detail · Overdue (red alert, blue button)",
+     "w": 390,
+     "h": 850
+    },
+    {
+     "section": "boardf-c",
+     "sectionTitle": "Board C · Case detail pages (F-direction)",
+     "id": "fc-dismissed",
+     "label": "Detail · Dismissed! (the win + GradWord)",
+     "w": 390,
+     "h": 902
+    },
+    {
+     "section": "boardf-c",
+     "sectionTitle": "Board C · Case detail pages (F-direction)",
+     "id": "fc-incomplete",
+     "label": "Detail · Incomplete (draft ticket as evidence)",
+     "w": 390,
+     "h": 856
+    },
+    {
+     "section": "boardf-d",
+     "sectionTitle": "Board D · Flow-moment variants (F-direction)",
+     "id": "fd-quote",
+     "label": "Moment · Quote accept (ticket → blurred → revealed)",
+     "w": 736,
+     "h": 692
+    },
+    {
+     "section": "boardf-d",
+     "sectionTitle": "Board D · Flow-moment variants (F-direction)",
+     "id": "fd-loe",
+     "label": "Moment · LOE one-tap e-sign",
+     "w": 736,
+     "h": 502
+    },
+    {
+     "section": "boardf-d",
+     "sectionTitle": "Board D · Flow-moment variants (F-direction)",
+     "id": "fd-resign",
+     "label": "Moment · Re-sign on reassignment (re-confirm, not restart)",
+     "w": 736,
+     "h": 556
+    },
+    {
+     "section": "boardf-d",
+     "sectionTitle": "Board D · Flow-moment variants (F-direction)",
+     "id": "fd-end",
+     "label": "Moment · Dismissed! celebration vs Resolved recovery",
+     "w": 736,
+     "h": 496
+    },
+    {
+     "section": "board-e",
+     "sectionTitle": "Board E · Unbadged-branch proposals (open questions)",
+     "id": "e-counter-1",
+     "label": "Counter offer · P1 — New badge",
+     "w": 390,
+     "h": 388
+    },
+    {
+     "section": "board-e",
+     "sectionTitle": "Board E · Unbadged-branch proposals (open questions)",
+     "id": "e-counter-2",
+     "label": "Counter offer · P2 — Action-callout (no new badge)",
+     "w": 390,
+     "h": 388
+    },
+    {
+     "section": "board-e",
+     "sectionTitle": "Board E · Unbadged-branch proposals (open questions)",
+     "id": "e-remarket-1",
+     "label": "Remarketing · P1 — Reuse Analyzing… (silent)",
+     "w": 390,
+     "h": 368
+    },
+    {
+     "section": "board-e",
+     "sectionTitle": "Board E · Unbadged-branch proposals (open questions)",
+     "id": "e-remarket-2",
+     "label": "Remarketing · P2 — New \"Rematching\" badge",
+     "w": 390,
+     "h": 368
+    },
+    {
+     "section": "board-e",
+     "sectionTitle": "Board E · Unbadged-branch proposals (open questions)",
+     "id": "e-cancel-1",
+     "label": "Cancelled · P1 — New terminal badge",
+     "w": 390,
+     "h": 338
+    },
+    {
+     "section": "board-e",
+     "sectionTitle": "Board E · Unbadged-branch proposals (open questions)",
+     "id": "e-cancel-2",
+     "label": "Cancelled · P2 — Silent transition (no badge)",
+     "w": 390,
+     "h": 448
+    }
+   ]
+  },
+  {
+   "id": "arc-feed-01-prototype",
+   "stage": "archive",
+   "title": "Archive · 01 Prototype",
+   "path": "cases/screen-all_cases_feed/archive/01-prototype/Prototype.html",
+   "note": null,
+   "stats": {
+    "nodes": 43,
+    "textNodes": 18,
+    "paintDecisions": {
+     "BIND": 8,
+     "BIND_NEAREST": 9,
+     "BIND_NEAREST_AND_FLAG": 18,
+     "DS_REQUEST": 0,
+     "RAW_OK": 0
+    },
+    "artboards": 1
+   },
+   "bytes": 33542,
+   "artboards": [
+    {
+     "section": "prototype",
+     "sectionTitle": "Prototype",
+     "id": "proto-stub",
+     "label": "Planned flow",
+     "w": 920,
+     "h": 560
+    }
+   ]
+  },
+  {
+   "id": "arc-detail-02-timeline-lab",
+   "stage": "archive",
+   "title": "Archive · Timeline lab",
+   "path": "cases/screen-single_case_details/archive/02-timeline-lab/Timeline Lab.html",
+   "note": null,
+   "stats": {
+    "nodes": 199,
+    "textNodes": 59,
+    "paintDecisions": {
+     "BIND": 34,
+     "BIND_NEAREST": 41,
+     "BIND_NEAREST_AND_FLAG": 63,
+     "DS_REQUEST": 2,
+     "RAW_OK": 0
+    },
+    "artboards": 3
+   },
+   "bytes": 122421,
+   "artboards": [
+    {
+     "section": "tl-default",
+     "sectionTitle": "Timeline · the default tracker",
+     "id": "opt-stages",
+     "label": "A · Five-stage tracker (recommended)",
+     "w": 520,
+     "h": 484
+    },
+    {
+     "section": "tl-default",
+     "sectionTitle": "Timeline · the default tracker",
+     "id": "opt-granular",
+     "label": "B · Granular expansion within the stages",
+     "w": 520,
+     "h": 816
+    },
+    {
+     "section": "tl-legend",
+     "sectionTitle": "States & tones",
+     "id": "legend",
+     "label": "States & tones",
+     "w": 648,
+     "h": 428
+    }
+   ]
+  },
+  {
+   "id": "arc-detail-03-details-exploration",
+   "stage": "archive",
+   "title": "Archive · 03 Details exploration",
+   "path": "cases/screen-single_case_details/archive/03-details-exploration/01-details-exploration.html",
+   "note": null,
+   "stats": {
+    "nodes": 617,
+    "textNodes": 182,
+    "paintDecisions": {
+     "BIND": 93,
+     "BIND_NEAREST": 137,
+     "BIND_NEAREST_AND_FLAG": 174,
+     "DS_REQUEST": 89,
+     "RAW_OK": 29
+    },
+    "artboards": 6
+   },
+   "bytes": 411891,
+   "artboards": [
+    {
+     "section": "hero-ticket",
+     "sectionTitle": "Ticket display in the hero",
+     "id": "ticket-photo",
+     "label": "A · Photo of the uploaded ticket",
+     "w": 520,
+     "h": 510
+    },
+    {
+     "section": "hero-ticket",
+     "sectionTitle": "Ticket display in the hero",
+     "id": "ticket-component",
+     "label": "B · Ticket UI component (scalloped, state color)",
+     "w": 520,
+     "h": 688
+    },
+    {
+     "section": "hero-attorney",
+     "sectionTitle": "Attorney card in the hero",
+     "id": "att-overlap",
+     "label": "A · Card overlapping the hero",
+     "w": 520,
+     "h": 1216
+    },
+    {
+     "section": "hero-attorney",
+     "sectionTitle": "Attorney card in the hero",
+     "id": "att-inline",
+     "label": "B · Inline band below the hero",
+     "w": 520,
+     "h": 1260
+    },
+    {
+     "section": "record-layout",
+     "sectionTitle": "Overview, documents, and payments",
+     "id": "rec-stacked",
+     "label": "A · Stacked cards, always open",
+     "w": 520,
+     "h": 1224
+    },
+    {
+     "section": "record-layout",
+     "sectionTitle": "Overview, documents, and payments",
+     "id": "rec-tabbed",
+     "label": "B · Tabbed sections",
+     "w": 520,
+     "h": 940
+    }
+   ]
+  }
+ ]
+}

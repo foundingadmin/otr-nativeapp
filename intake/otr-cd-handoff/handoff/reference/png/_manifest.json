@@ -1,0 +1,222 @@
+{
+ "generated": "2026-07-28T17:46:47.183Z",
+ "how": "One PNG per canon artboard, captured from the live board with the canvas chrome removed and the artboard scaled to fit the capture viewport. Fidelity reference for the second Figma pass, not a pixel source. Single-artboard boards have no numeric prefix.",
+ "boards": [
+  {
+   "id": "system-case_status_and_action",
+   "dir": "reference/png/system-case_status_and_action/",
+   "files": [
+    {
+     "file": "01-artboard.png",
+     "artboardId": "fa-lifecycle",
+     "label": "The badge rule",
+     "designSize": "620x1000"
+    },
+    {
+     "file": "02-artboard.png",
+     "artboardId": "fa-alertsys",
+     "label": "Action signals",
+     "designSize": "620x1520"
+    }
+   ]
+  },
+  {
+   "id": "component-case_preview_cards",
+   "dir": "reference/png/component-case_preview_cards/",
+   "files": [
+    {
+     "file": "01-artboard.png",
+     "artboardId": "pair-incomplete",
+     "label": "Incomplete",
+     "designSize": "720x840"
+    },
+    {
+     "file": "02-artboard.png",
+     "artboardId": "pair-active",
+     "label": "Active",
+     "designSize": "720x1960"
+    },
+    {
+     "file": "03-artboard.png",
+     "artboardId": "pair-resolved",
+     "label": "Resolved",
+     "designSize": "720x1040"
+    },
+    {
+     "file": "04-artboard.png",
+     "artboardId": "pair-dismissed",
+     "label": "Dismissed",
+     "designSize": "720x1320"
+    },
+    {
+     "file": "05-artboard.png",
+     "artboardId": "pair-cancelled",
+     "label": "Cancelled",
+     "designSize": "720x1240"
+    }
+   ]
+  },
+  {
+   "id": "screen-all_cases_feed",
+   "dir": "reference/png/screen-all_cases_feed/",
+   "files": [
+    {
+     "file": "01-artboard.png",
+     "artboardId": "p-solo",
+     "label": "Single case • one active matter",
+     "designSize": "390x884"
+    },
+    {
+     "file": "02-artboard.png",
+     "artboardId": "p-light",
+     "label": "1 active • 3 resolved",
+     "designSize": "390x1620"
+    },
+    {
+     "file": "03-artboard.png",
+     "artboardId": "p-heavy",
+     "label": "5 active • 1 incomplete • 8 resolved • 2 cancelled",
+     "designSize": "390x4740"
+    },
+    {
+     "file": "04-artboard.png",
+     "artboardId": "v-empty",
+     "label": "Empty state • no cases yet",
+     "designSize": "390x844"
+    }
+   ]
+  },
+  {
+   "id": "screen-single_case_details",
+   "dir": "reference/png/screen-single_case_details/",
+   "files": [
+    {
+     "file": "artboard.png",
+     "artboardId": "pattern-active",
+     "label": "Active",
+     "designSize": "518x1316"
+    }
+   ]
+  },
+  {
+   "id": "ds-cases-atomic-system",
+   "dir": "reference/png/ds-cases-atomic-system/",
+   "files": [
+    {
+     "file": "01-artboard.png",
+     "artboardId": "at-color",
+     "label": "Color tokens",
+     "designSize": "620x744"
+    },
+    {
+     "file": "02-artboard.png",
+     "artboardId": "at-text",
+     "label": "Text & shape",
+     "designSize": "620x654"
+    },
+    {
+     "file": "03-artboard.png",
+     "artboardId": "at-badge",
+     "label": "Status badge",
+     "designSize": "620x578"
+    },
+    {
+     "file": "04-artboard.png",
+     "artboardId": "at-buttons",
+     "label": "Buttons · the one-blue rule",
+     "designSize": "620x536"
+    },
+    {
+     "file": "05-artboard.png",
+     "artboardId": "at-toast",
+     "label": "Action toast",
+     "designSize": "620x526"
+    },
+    {
+     "file": "06-artboard.png",
+     "artboardId": "at-attorney",
+     "label": "Attorney lockup",
+     "designSize": "620x524"
+    },
+    {
+     "file": "07-artboard.png",
+     "artboardId": "at-ticket",
+     "label": "The ticket element",
+     "designSize": "620x1432"
+    },
+    {
+     "file": "08-artboard.png",
+     "artboardId": "at-card",
+     "label": "Case card · anatomy",
+     "designSize": "440x640"
+    },
+    {
+     "file": "09-artboard.png",
+     "artboardId": "at-motion",
+     "label": "Motion atoms",
+     "designSize": "620x300"
+    }
+   ]
+  },
+  {
+   "id": "mount-detail-screens",
+   "dir": "reference/png/mount-detail-screens/",
+   "files": [
+    {
+     "file": "01-artboard.png",
+     "artboardId": "anatomy-active",
+     "label": "Active · annotated zones",
+     "designSize": "518x1578"
+    },
+    {
+     "file": "02-artboard.png",
+     "artboardId": "active-clean",
+     "label": "Active · clean (no annotations)",
+     "designSize": "518x1480"
+    },
+    {
+     "file": "03-artboard.png",
+     "artboardId": "loe",
+     "label": "Needs signature · amber action",
+     "designSize": "518x1746"
+    },
+    {
+     "file": "04-artboard.png",
+     "artboardId": "counter",
+     "label": "Counter offer · amber action",
+     "designSize": "518x1620"
+    },
+    {
+     "file": "05-artboard.png",
+     "artboardId": "concurrent",
+     "label": "LOE + counter offer · concurrency",
+     "designSize": "518x1991"
+    },
+    {
+     "file": "06-artboard.png",
+     "artboardId": "overdue",
+     "label": "Past-due · critical + account rail",
+     "designSize": "518x1754"
+    },
+    {
+     "file": "07-artboard.png",
+     "artboardId": "remarket",
+     "label": "Rematching · reassurance, no attorney",
+     "designSize": "518x1351"
+    },
+    {
+     "file": "08-artboard.png",
+     "artboardId": "dismissed",
+     "label": "Resolved · dismissed (celebration)",
+     "designSize": "518x1566"
+    },
+    {
+     "file": "09-artboard.png",
+     "artboardId": "notbooked",
+     "label": "Not booked · drive booking",
+     "designSize": "518x1148"
+    }
+   ]
+  }
+ ]
+}
