@@ -27,8 +27,16 @@ the UI into a Figma file** via the Figma MCP.
 │   ├── fonts/               ← Brand font files
 │   └── assets/              ← Logos, identity guides
 ├── intake/                  ← CD package drop zone (see intake/README.md)
+├── docs/                    ← Canon docs: OPERATING-MODEL.md, decisions.md, prds/
 └── sample-metanoia/         ← Reference deployment (Metanoia) — delete when no longer needed
 ```
+
+**Read `docs/OPERATING-MODEL.md` first.** It defines the whole workflow: CC is
+the canon between two disconnected design surfaces (Claude Design and Figma),
+with a forward print pipeline (two-pass: JSON build → PNG fidelity check),
+a backward read-back pipeline (Figma state → repo before every session), a
+variable-binding policy (best-guess bind; no match → raw value + on-canvas diff
+annotation), and decision frames for open questions.
 
 ## The core workflow — CD package → Figma
 

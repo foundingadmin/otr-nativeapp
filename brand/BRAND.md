@@ -15,6 +15,15 @@ Claude Design package intake and the first Figma print session.**
 | Brand name | Off The Record |
 | Wordmark casing | TBD (confirm from CD package) |
 | Visual tool file key | TBD (from the Figma file URL: figma.com/design/[FILE-KEY]/...) |
+| Target file | "The Native App / Design" |
+| Variables source | **Guidelines library** (team library, not local to the target file) |
+
+**Library caveat:** the target file consumes variables from the Guidelines
+library. Library variables cannot be created from the consuming file — new
+variables require a DS update request to the design team (see the variable
+binding policy in `docs/OPERATING-MODEL.md`). Binding uses
+`figma.variables.importVariableByKeyAsync(key)` with keys recorded in the
+Semantic Variable Reference below after the first DS assessment.
 
 ---
 
