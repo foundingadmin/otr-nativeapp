@@ -204,6 +204,25 @@
   "numericPolicy": "RATIFIED BY USER: never hard-code numerics; snap to nearest DS token (ties round down). Swept 492 radius + 282 spacing fields incl. value shifts (r3->6 ticket-excluded... r7->6, s10->8, s5->4, r22->20, s11->12 etc.). Ticket component excluded: protected custom paper radii.",
   "typeBoard": "Printed on Proposed: Product ramp specimen (10 styles, bound to live library styles) + Proposal A Native/compact (9 styles, 24/16/13/11/10 scale) + Proposal B Native/six-step (12 styles, keeps CD density). Decision pending; on ratification agent creates /Native collection, rebinds 283 nodes, deletes OTR/Cases working styles.",
   "dsButtonFinding": "Guidelines library HAS a variant-rich Button set (key 624f386331f5011ab67eba8f318994a7fbff4369, 219 variants: type x state x size, icon slots, token-bound fills, style-bound labels; sizes small=40 medium=44 match CD exactly). OTR/Cases/ActionButton duplicated it. Older 27-variant Button set also published (legacy drift). Kind mapping: blue->Solid-brand, money->Solid-error, ghost->Outline-neutral, grad->Gradient-brand (gradient value TBC vs SmartMatch indigo), primary(ink)->no obvious DS equivalent. Remediation pending user call.",
-  "componentReusePolicy": "NEW POLICY: before printing any component, audit the DS library inventory (search_design_system) and instance/wrap existing DS components where they map honestly; print divergences as diffs. Candidates to re-audit: Chip vs White pills, tap rows vs Link text, search field vs Inputs, portraits vs placeholder avatar."
+  "componentReusePolicy": "NEW POLICY: before printing any component, audit the DS library inventory (search_design_system) and instance/wrap existing DS components where they map honestly; print divergences as diffs. Candidates to re-audit: Chip vs White pills, tap rows vs Link text, search field vs Inputs, portraits vs placeholder avatar.",
+  "dsButtonAdoption": {
+   "decision": "USER: use DS Button directly",
+   "swapped": "11 ActionButton instances (CPC + screens) + ActionItem cta + HelpZone cta -> DS Button (key 624f386331f5011ab67eba8f318994a7fbff4369)",
+   "mapping": {
+    "blue": "Solid-brand",
+    "primary": "Solid-brand (no ink type in DS)",
+    "money": "Solid-error",
+    "ghost": "Outline-neutral",
+    "grad": "Gradient-brand"
+   },
+   "deltas": [
+    "SmartMatch indigo-purple gradient lost: DS Gradient-brand is #155eef->#0f4bc4",
+    "ink primary lost -> blue",
+    "labels Bold 14 -> SemiBold via Product/Small Action Text",
+    "money #e5463a -> error #d92d20"
+   ],
+   "archived": "OTR/Cases/ActionButton moved to Archive page 11158:8460",
+   "diffCard": "11307:1766"
+  }
  }
 }

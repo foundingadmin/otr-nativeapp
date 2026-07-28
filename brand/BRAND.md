@@ -70,7 +70,7 @@ the client's existing file structure:
 | Component | Node ID | Variants |
 |---|---|---|
 | OTR/Cases/StatusBadge | `11262:1769` | 60 (status × form × size; no unread axis yet) |
-| OTR/Cases/ActionButton | `11274:1577` | 20 (kind × size × full) |
+| ~~OTR/Cases/ActionButton~~ | archived (Archive page) | superseded by DS Button `624f386331f5011ab67eba8f318994a7fbff4369` (Solid-brand / Solid-error / Outline-neutral / Gradient-brand; see DS Button adoption diff) |
 | OTR/Cases/Chip | `11276:1553` | 8 (on × count × alert) |
 | OTR/Cases/ClassifTag | `11276:1558` | 2 (classif, charge) |
 | OTR/Cases/AttorneyLockup | `11278:295` | 8 (blurred × quote × size 38/52) |
