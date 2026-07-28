@@ -26,10 +26,10 @@ the UI into a Figma file** via the Figma MCP.
 │   ├── components/html/     ← Normalized component HTML (print source for Figma)
 │   ├── fonts/               ← Brand font files
 │   └── assets/              ← Logos, identity guides
+├── canon/                   ← Session memory: INDEX.md (read first), figma-state, decisions, print-log
 ├── intake/                  ← CD package drop zone (see intake/README.md)
 ├── docs/                    ← Canon docs: OPERATING-MODEL.md, decisions.md, prds/
-├── sweden-starter/          ← Whitelabel install kit for future client deployments
-└── sample-metanoia/         ← Reference deployment (Metanoia) — delete when no longer needed
+└── sweden-starter/          ← Whitelabel install kit for future client deployments
 ```
 
 **Read `docs/OPERATING-MODEL.md` first.** It defines the whole workflow: CC is
@@ -78,4 +78,12 @@ Quality Check in FIGMA-PLUGIN.md.
   arrays) and `pptx-json` special-cases old palette names — both must be
   genericized or rewritten against real OTR token names during the first intake.
 
-Current version: **v0.1.0** (scaffold — no tokens extracted yet)
+**Preflight for every session: read `canon/INDEX.md` first.** It carries the
+standing policies (DS-first reuse, numeric snapping, Native type binding,
+layout QA) and the open items. Note: this deployment binds directly against
+the **Customer side / Guidelines** team library (variables, text styles,
+components) rather than generating local tokens — `brand/tokens/` remains an
+empty scaffold until a token-generation need appears.
+
+Current version: **v0.2.0** (first full print + binding integrity + ratified
+Native type collection; sample-metanoia removed)

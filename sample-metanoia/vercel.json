@@ -1,9 +1,0 @@
-{
-  "buildCommand": "cd showcase && npm install && npm run build",
-  "outputDirectory": "showcase/dist",
-  "installCommand": "echo 'skip'",
-  "redirects": [
-    { "source": "/manual", "destination": "/", "permanent": false },
-    { "source": "/manual/", "destination": "/", "permanent": false }
-  ]
-}

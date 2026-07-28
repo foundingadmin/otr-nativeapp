@@ -1,0 +1,58 @@
+{
+  "decisions": [
+    {
+      "id": "D-001",
+      "title": "DR-CPC-001 applied to the printed set",
+      "verdict": "adopt",
+      "detail": "CPC header = uppercase eyebrow + location headline + hollow violation pill; firm-name identity; ink rating stars. Applied during pass 2 after finding the ratified record in the CPC ledger.",
+      "decidedBy": "CD ledger (pre-existing), applied by agent",
+      "commit": "06f16f7"
+    },
+    {
+      "id": "D-002",
+      "title": "Numeric binding policy",
+      "verdict": "adopt",
+      "detail": "Never hard-code numerics; snap to nearest DS token, ties round down. Ticket paper radii exempt as protected custom design.",
+      "decidedBy": "user",
+      "commit": "session 3"
+    },
+    {
+      "id": "D-003",
+      "title": "DS Button adopted directly",
+      "verdict": "adopt",
+      "detail": "All button usages instance the Guidelines Button set (key 624f386331f5011ab67eba8f318994a7fbff4369). OTR/Cases/ActionButton archived. Kind map: blue/primary to Solid-brand, money to Solid-error, ghost to Outline-neutral, grad to Gradient-brand. SmartMatch gradient and ink primary have no DS types; asks live on the Diffs section.",
+      "decidedBy": "user",
+      "commit": "session 3"
+    },
+    {
+      "id": "D-004",
+      "title": "Component-reuse policy",
+      "verdict": "adopt",
+      "detail": "Audit the DS library component inventory before printing any component; instance or wrap DS components where they map honestly; print divergences as diffs.",
+      "decidedBy": "user",
+      "commit": "session 3"
+    },
+    {
+      "id": "D-005",
+      "title": "Native type collection (Proposal C, amended)",
+      "verdict": "adopt",
+      "detail": "13 styles, built and bound. Title placed (Page EB25, Hero EB20, Section B16, Subsection EB14); Text sized then emphasized (Large/Regular/Small/Caption folders, Standard/Action/Highlight leaves); Caption styles uppercase via textCase; integer ladder only; facts keys fold into Caption/Note; Ticket mono protected as Native/Ticket. OTR/Cases working styles deleted after rebind (187 nodes).",
+      "decidedBy": "user, iterated on canvas",
+      "commit": "session 3"
+    },
+    {
+      "id": "D-006",
+      "title": "Proposals A and B",
+      "verdict": "reject",
+      "detail": "Superseded by C. Panels stay on the Proposed section as the decision record.",
+      "decidedBy": "user"
+    },
+    {
+      "id": "D-007",
+      "title": "Metanoia reference deployment",
+      "verdict": "adopt",
+      "detail": "sample-metanoia/ deleted per root CLAUDE.md provision, first OTR deployment being complete.",
+      "decidedBy": "user cleanup directive"
+    }
+  ]
+}

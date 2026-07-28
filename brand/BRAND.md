@@ -3,7 +3,7 @@
 This file is the **instance configuration** for running Sweden in this repo.
 It contains every value that is specific to the Off The Record brand.
 
-Status: **LIVE — first print session completed (pass 1 + DR-aligned pass 2).**
+Status: **LIVE — print + binding integrity complete; Native type collection ratified and bound. Preflight: canon/INDEX.md.**
 
 ---
 
