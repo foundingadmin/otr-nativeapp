@@ -1,0 +1,184 @@
+/* ============================================================
+   Off The Record — Color tokens
+   Authoritative palette from the brand Colour Palette page.
+   Base scales (25–950) + semantic aliases.
+   ============================================================ */
+:root {
+  /* ---- Base / neutrals ---- */
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* Neutral (cool gray) — text, borders, surfaces. 950 is the brand ink. */
+  --neutral-25:  #F9FAFB;
+  --neutral-50:  #F5F5F6;
+  --neutral-100: #ECECED;
+  --neutral-200: #CECFD2;
+  --neutral-300: #B9BBC0;
+  --neutral-400: #85888E;
+  --neutral-500: #61646C;
+  --neutral-600: #4A4D55;
+  --neutral-700: #333741;
+  --neutral-800: #1F242F;
+  --neutral-900: #161B26;
+  --neutral-950: #0C111D;
+
+  /* ---- Core: Blue (primary brand) — #155EEF ---- */
+  --blue-25:  #F5F8FF;
+  --blue-50:  #EFF4FF;
+  --blue-100: #D1E0FF;
+  --blue-200: #B2CCFF;
+  --blue-300: #84ADFF;
+  --blue-400: #528BFF;
+  --blue-500: #2970FF;
+  --blue-600: #155EEF;
+  --blue-700: #004EEB;
+  --blue-800: #0040C1;
+  --blue-900: #00359E;
+  --blue-950: #002266;
+
+  /* ---- Core: Blue Gray — #4E5BA6 ---- */
+  --bluegray-25:  #FCFCFD;
+  --bluegray-50:  #F8F9FC;
+  --bluegray-100: #EAECF5;
+  --bluegray-200: #D5D9EB;
+  --bluegray-300: #B3B8DB;
+  --bluegray-400: #717BBC;
+  --bluegray-500: #4E5BA6;
+  --bluegray-600: #3E4784;
+  --bluegray-700: #363F72;
+  --bluegray-800: #293056;
+  --bluegray-900: #101323;
+
+  /* ---- Secondary: Purple — #662FE5 ---- */
+  --purple-25:  #F6F2FF;
+  --purple-50:  #EFE8FF;
+  --purple-100: #D5C2FF;
+  --purple-200: #C0A6FF;
+  --purple-300: #A685FF;
+  --purple-400: #8A5DF5;
+  --purple-500: #7641EE;
+  --purple-600: #662FE5;
+  --purple-700: #5620C4;
+  --purple-800: #431A98;
+  --purple-900: #2E1268;
+
+  /* ---- Secondary: Coral — #F34822 ---- */
+  --coral-25:  #FFF4F0;
+  --coral-50:  #FEEDE9;
+  --coral-100: #FFE0D5;
+  --coral-200: #FFD0BF;
+  --coral-300: #FFB19C;
+  --coral-400: #FF8F70;
+  --coral-500: #FF6F49;
+  --coral-600: #F34822;
+  --coral-700: #D23E1F;
+  --coral-800: #942F17;
+  --coral-900: #57200D;
+  --coral-950: #3E1709;
+
+  /* ---- Tertiary: Pink — #F1335C ---- */
+  --pink-25:  #FEF1F4;
+  --pink-50:  #FEE4EA;
+  --pink-100: #FECDD6;
+  --pink-200: #FEA3B4;
+  --pink-300: #FD6F8E;
+  --pink-400: #F4527A;
+  --pink-500: #F1335C;
+  --pink-600: #D81A49;
+  --pink-700: #B3123F;
+  --pink-800: #8D113A;
+  --pink-900: #510B27;
+
+  /* ---- Sentiment: Positive (green) — #66C61C ---- */
+  --green-25:  #F2FDE8;
+  --green-50:  #ECFDD9;
+  --green-100: #E3FBCC;
+  --green-200: #D0F8AB;
+  --green-300: #A6EF67;
+  --green-400: #85E13A;
+  --green-500: #66C61C;
+  --green-600: #4CA30D;
+  --green-700: #3B7C0F;
+  --green-800: #326212;
+  --green-900: #2B5314;
+
+  /* ---- Sentiment: Warning (amber) — #FDB022 ---- */
+  --amber-25:  #FFFCF5;
+  --amber-50:  #FFFAEB;
+  --amber-100: #FEF0C7;
+  --amber-200: #FEDF89;
+  --amber-300: #FEC84B;
+  --amber-400: #FDB022;
+  --amber-500: #F79009;
+  --amber-600: #DC6803;
+  --amber-700: #B54708;
+  --amber-800: #93370D;
+  --amber-900: #7A2E0E;
+
+  /* ---- Sentiment: Negative (red) — #D92D20 ---- */
+  --red-25:  #FFFBFA;
+  --red-50:  #FEF3F2;
+  --red-100: #FEE4E2;
+  --red-200: #FECDCA;
+  --red-300: #FDA29B;
+  --red-400: #F97066;
+  --red-500: #F04438;
+  --red-600: #D92D20;
+  --red-700: #B42318;
+  --red-800: #912018;
+  --red-900: #7A271A;
+
+  /* ============================================================
+     Semantic aliases — reference these in components.
+     ============================================================ */
+
+  /* Brand */
+  --brand-primary: var(--blue-600);
+  --brand-primary-hover: var(--blue-700);
+  --brand-primary-active: var(--blue-800);
+  --brand-secondary: var(--bluegray-500);
+  --brand-accent: var(--coral-600);
+  --brand-ink: var(--neutral-950);          /* logo wordmark navy is #002340; UI ink is 950 */
+
+  /* Text */
+  --text-primary:   var(--neutral-950);
+  --text-secondary: var(--neutral-700);
+  --text-tertiary:  var(--neutral-500);
+  --text-quaternary: var(--neutral-400);
+  --text-placeholder: var(--neutral-400);
+  --text-disabled:  var(--neutral-300);
+  --text-on-brand:  var(--white);
+  --text-brand:     var(--blue-700);
+  --text-link:      var(--blue-700);
+  --text-error:     var(--red-600);
+  --text-success:   var(--green-700);
+  --text-warning:   var(--amber-700);
+
+  /* Surfaces */
+  --surface-page:      var(--white);
+  --surface-subtle:    var(--neutral-25);
+  --surface-secondary: var(--neutral-50);
+  --surface-card:      var(--white);
+  --surface-disabled:  var(--neutral-100);
+  --surface-brand-subtle: var(--blue-50);
+  --surface-success-subtle: var(--green-50);
+  --surface-warning-subtle: var(--amber-50);
+  --surface-error-subtle:   var(--red-50);
+  --surface-overlay:   rgba(12, 17, 29, 0.7);
+
+  /* Borders */
+  --border-primary:   var(--neutral-200);   /* #CECFD2 */
+  --border-secondary: var(--neutral-100);   /* #ECECED */
+  --border-strong:    var(--neutral-300);
+  --border-brand:     var(--blue-600);
+  --border-error:     var(--red-500);
+  --border-focus:     var(--blue-600);
+
+  /* Icon */
+  --icon-primary:   var(--neutral-950);
+  --icon-secondary: var(--neutral-500);
+  --icon-brand:     var(--blue-600);
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 4px rgba(21, 94, 239, 0.24);
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OTR Cases — Board C · Case detail pages</title>
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fig-tokens.css">
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fonts.css">
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/colors.css">
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/typography.css">
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/spacing.css">
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/radius.css">
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/base.css">
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+  html, body { margin:0; padding:0; height:100%; background:#eef2fc; }
+  #root { height:100vh; }
+  .cpc.unfinished { border:1.6px dashed #c4c9d2 !important; background:#fcfcfd !important; }
+  .cpc.concluded .ttl { color:var(--wf-faint); }
+</style>
+</head>
+<body>
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" rx="18" fill="#2e6bff"/>
+    <rect x="30" y="20" width="40" height="60" rx="8" fill="#fff"/>
+    <rect x="37" y="30" width="26" height="6" rx="3" fill="#cdd6e8"/>
+    <rect x="37" y="42" width="20" height="5" rx="2.5" fill="#e3e8f2"/>
+    <rect x="37" y="62" width="26" height="9" rx="4.5" fill="#2e6bff"/>
+  </svg>
+</template>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/_ds_bundle.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="otr-kit.jsx"></script>
+<script type="text/babel" src="otr-cpc.jsx"></script>
+<script type="text/babel" src="otr-f-kit.jsx"></script>
+<script type="text/babel" src="boardf-c.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+;(function(){
+  const { DesignCanvas } = window;
+  function App() {
+    return (
+      <DesignCanvas style={{ background:'#eef2fc' }}>
+        {window.BoardFC && <window.BoardFC />}
+      </DesignCanvas>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+})();
+</script>
+</body>
+</html>

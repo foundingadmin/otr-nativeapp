@@ -1,0 +1,60 @@
+/* ============================================================
+   Off The Record — Typography
+   Brand font: Figtree. Scale from the Product Typography page.
+   Tokens + ready-to-use .ds-text-* classes.
+   Letter spacing: 1% on product text, 0% on marketing display.
+   ============================================================ */
+:root {
+  /* Font sizes */
+  --fs-display-2xl: 64px;  /* marketing desktop headline */
+  --fs-display-xl:  40px;  /* marketing desktop subheadline */
+  --fs-display-lg:  36px;  /* marketing mobile headline / desktop primary headline */
+  --fs-display-md:  32px;  /* marketing mobile secondary / mobile primary headline */
+  --fs-heading-xl:  28px;  /* secondary headline */
+  --fs-heading-lg:  24px;  /* primary section heading */
+  --fs-heading-md:  20px;  /* secondary section heading */
+  --fs-heading-sm:  18px;  /* subheading / action large / standard large */
+  --fs-body-lg:     16px;  /* content heading / standard text (most common) */
+  --fs-body-md:     14px;  /* subsection heading / small text / caption */
+  --fs-body-sm:     12px;  /* fine print */
+
+  /* Line heights (px) */
+  --lh-display-2xl: 80px;
+  --lh-display-xl:  48px;
+  --lh-display-lg:  44px;
+  --lh-display-md:  40px;
+  --lh-heading-xl:  36px;
+  --lh-heading-lg:  32px;
+  --lh-heading-md:  24px;
+  --lh-heading-sm:  24px;
+  --lh-body-lg:     24px;
+  --lh-body-md:     20px;
+  --lh-body-sm:     18px;
+
+  --tracking-tight: 0;       /* marketing display */
+  --tracking-normal: 0.01em; /* product text (1%) */
+}
+
+/* ---- Marketing display ---- */
+.ds-text-display-2xl { font-family: var(--font-sans); font-weight: 800; font-size: var(--fs-display-2xl); line-height: var(--lh-display-2xl); letter-spacing: var(--tracking-tight); color: var(--text-primary); }
+.ds-text-display-xl  { font-family: var(--font-sans); font-weight: 700; font-size: var(--fs-display-xl);  line-height: var(--lh-display-xl);  letter-spacing: var(--tracking-tight); color: var(--text-primary); }
+.ds-text-display-lg  { font-family: var(--font-sans); font-weight: 800; font-size: var(--fs-display-lg);  line-height: var(--lh-display-lg);  letter-spacing: var(--tracking-tight); color: var(--text-primary); }
+.ds-text-display-md  { font-family: var(--font-sans); font-weight: 800; font-size: var(--fs-display-md);  line-height: var(--lh-display-md);  letter-spacing: var(--tracking-tight); color: var(--text-primary); }
+
+/* ---- Product headings ---- */
+.ds-text-h1 { font-family: var(--font-sans); font-weight: 700; font-size: var(--fs-display-lg); line-height: var(--lh-display-lg); letter-spacing: var(--tracking-tight); color: var(--text-primary); }
+.ds-text-h2 { font-family: var(--font-sans); font-weight: 700; font-size: var(--fs-heading-xl); line-height: var(--lh-heading-xl); letter-spacing: var(--tracking-normal); color: var(--text-primary); }
+.ds-text-h3 { font-family: var(--font-sans); font-weight: 700; font-size: var(--fs-heading-lg); line-height: var(--lh-heading-lg); letter-spacing: var(--tracking-normal); color: var(--text-primary); }
+.ds-text-h4 { font-family: var(--font-sans); font-weight: 700; font-size: var(--fs-heading-md); line-height: var(--lh-heading-md); letter-spacing: var(--tracking-normal); color: var(--text-primary); }
+.ds-text-h5 { font-family: var(--font-sans); font-weight: 700; font-size: var(--fs-heading-sm); line-height: var(--lh-heading-sm); letter-spacing: var(--tracking-normal); color: var(--text-primary); }
+
+/* ---- Body ---- */
+.ds-text-body-lg     { font-family: var(--font-sans); font-weight: 400; font-size: var(--fs-body-lg); line-height: var(--lh-body-lg); letter-spacing: var(--tracking-normal); color: var(--text-primary); }
+.ds-text-body-lg-strong { font-family: var(--font-sans); font-weight: 600; font-size: var(--fs-body-lg); line-height: var(--lh-body-lg); letter-spacing: var(--tracking-normal); color: var(--text-primary); }
+.ds-text-body        { font-family: var(--font-sans); font-weight: 400; font-size: var(--fs-body-md); line-height: var(--lh-body-md); letter-spacing: var(--tracking-normal); color: var(--text-primary); }
+.ds-text-body-strong { font-family: var(--font-sans); font-weight: 600; font-size: var(--fs-body-md); line-height: var(--lh-body-md); letter-spacing: var(--tracking-normal); color: var(--text-primary); }
+.ds-text-caption     { font-family: var(--font-sans); font-weight: 500; font-size: var(--fs-body-md); line-height: var(--lh-body-md); letter-spacing: var(--tracking-normal); text-transform: uppercase; color: var(--text-tertiary); }
+.ds-text-fine        { font-family: var(--font-sans); font-weight: 400; font-size: var(--fs-body-sm); line-height: var(--lh-body-sm); letter-spacing: var(--tracking-normal); color: var(--text-tertiary); }
+
+/* ---- Links ---- */
+.ds-text-link { font-family: var(--font-sans); font-weight: 600; font-size: var(--fs-body-lg); line-height: var(--lh-body-lg); letter-spacing: var(--tracking-normal); color: var(--text-link); text-decoration: underline; }

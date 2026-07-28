@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Case Chat · migration frame</title>
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fig-tokens.css">
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fonts.css">
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/colors.css">
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/typography.css">
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/spacing.css">
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/radius.css">
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/base.css">
+<link rel="stylesheet" href="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>html,body{margin:0;padding:0;background:#f0eee9}#root{padding:40px;display:flex;justify-content:center}</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="../../../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/_ds_bundle.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="core-kit.jsx"></script>
+<script type="text/babel" src="case-chat-kit.jsx"></script>
+<script type="text/babel" data-presets="react">
+;(function(){
+  const { ChatScreen, ActionEntry, Message, DayDivider } = window;
+  const FIRM='Park & Vance', ID='OTR-48144';
+  const OFFER={ from:299, to:349, terms:'Adds a second appearance for the added reckless-driving count.' };
+  function App(){
+    return (
+      <ChatScreen firm={FIRM} caseId={ID} height={812}>
+        <DayDivider>Mar 14</DayDivider>
+        <ActionEntry kind="accepted" firm={FIRM} time="9:12 AM" />
+        <Message side="firm" text="Hi, I'm Helen at Park & Vance. I've taken your case and I'll handle everything from here." time="9:13 AM" />
+        <Message side="me" text="Thank you. Do I need to show up to court?" time="9:20 AM" />
+        <Message side="firm" text="No, I appear for you. You don't attend unless I tell you otherwise." time="9:24 AM" firstOfGroup={false} />
+        <DayDivider>Mar 18</DayDivider>
+        <ActionEntry kind="counterSent" firm={FIRM} time="2:02 PM" offer={OFFER} />
+        <Message side="firm" text="After reading the citation I adjusted the quote a little. The details are on the offer above, happy to explain." time="2:03 PM" />
+      </ChatScreen>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+})();
+</script>
+</body>
+</html>

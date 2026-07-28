@@ -1,0 +1,20 @@
+/* Off The Record — Brand typeface: Figtree
+   Figtree is the brand font, freely available on Google Fonts.
+   Shipped here via the Google Fonts CDN. Swap for self-hosted woff2
+   if you need offline/embedded builds. */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+/* Nunito Sans — secondary family referenced by the imported Figma tokens
+   (--font-family-font-3). Brand font is Figtree; this satisfies legacy token refs. */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --font-sans: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-brand: var(--font-sans);
+
+  /* Weights used across the system */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+}
