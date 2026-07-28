@@ -1,0 +1,120 @@
+## semantic variables
+components/button/brand/solid/fg - pressed|COLOR|56dd0e2dff5cf040de8fa06c4e44153ec708075e
+global/foreground/dark/tertiary|COLOR|1e056d0f465c79084ec1984bf9285fdde8ce45ae
+components/button/neutral/ghost/bg - hover|COLOR|9ece2647de187085e911732ba90abdd0ce5de788
+components/button/brand/solid/bg - hover|COLOR|85e60a3ce40402385641ce108e1a710189a63497
+components/button/brand/solid/fg - inactive|COLOR|76e0bec5f47fa7a354c9bae25adbbcbb6f5f45c3
+components/button/brand/solid/fg - default|COLOR|88a1117dfc4d114400be1f7b2f12480e951ddc2c
+global/foreground/dark/quinary|COLOR|7c72ee4bdb2f67dbc25bff8a069d009e3c8033f3
+global/border/neutral/default|COLOR|bee2429384afeb37061af72682c5c8e035b54b17
+components/button/neutral/ghost/focused|COLOR|f761abdd3319be403587ec6244fcabb565cb3427
+components/button/brand/solid/focused|COLOR|69e9a03d58f92a433acdb47e1d42ab65d3df81f0
+components/button/brand/solid/bg - pressed|COLOR|ed9950cea4c454597cc2a229b0cb560c69f370a7
+components/button/neutral/ghost/fg - inactive|COLOR|81890bb7332495aae4a2ecbd395423d3be7520bc
+global/foreground/dark/secondary|COLOR|7a0bc428cc7d5c31321e9d35754747c8ac8c958d
+components/button/neutral/outline/bg - pressed|COLOR|463ef38ef60c1f00579d80b99ade043fa83b62d0
+components/button/neutral/outline/border - pressed|COLOR|87e7fb424f40baead0f2986091171995abab6003
+components/button/brand/solid/bg - inactive|COLOR|4080635ad716c4f25378e96d75a69a063afc68f4
+global/foreground/dark/quaternary|COLOR|b6fb57b805b83eab3a3c5fa1e2a8d71539f7fbfc
+components/button/neutral/outline/bg - hover|COLOR|d27d9bc496468fae62f08cc667bf84316cb2a9d1
+components/button/brand/outline/fg - default|COLOR|68ea95d209612b943104e5b07affba8c06a472a8
+components/button/neutral/ghost/fg - default|COLOR|e4e0d8aff4f6878064fa2e4ee690191936f94889
+components/button/brand/outline/fg - inactive|COLOR|e0214f3be1458ae680b984075d52e9f681f63587
+components/button/neutral/outline/fg - default|COLOR|0ca1ecd490d7ea2c06fbd74b10eaabd071e5b7d8
+components/button/neutral/outline/border - inactive|COLOR|0df1986f7951885d902c8d62c4c686307e2d4b3c
+components/button/neutral/ghost/border - inactive|COLOR|6ad42acfa76d911d8abad32e70692f1bb850ccb4
+global/border/neutral/light|COLOR|2e9b5493c4e28758f74749adf58583d41a04d42d
+components/button/brand/outline/bg - pressed|COLOR|96522c67bf2cfc8867fa9f0d2457fad506ecc351
+components/button/neutral/outline/focused|COLOR|5bf9145545897affe6b15fa2abe3d78022368a22
+components/button/brand/outline/border - default|COLOR|bf2590f1cb90ee4fe72aefbb7996b3d6f5e9d16b
+components/button/neutral/outline/border - default|COLOR|bec932fc52095c2d5adb72cffa9292076b6c74c1
+global/foreground/dark/primary|COLOR|8939924c69631ed6029ce1e9cd53c10687361083
+components/button/neutral/outline/bg - default|COLOR|57778d7bec8e6ec1cb45c2e7d138e06bf706409c
+components/button/neutral/ghost/bg - pressed|COLOR|c0152455289936880d76f948da034be4cae1b292
+components/button/brand/outline/bg - default|COLOR|a7937b177083cf5e2dc233d2707ee527f78bb2e9
+components/button/neutral/outline/fg - inactive|COLOR|a52ebf7a87cbb41c71a0cb95ce53d923b0eafc7b
+components/button/brand/outline/bg - hover|COLOR|0abac1afa432a6b9b433d6bdeceab662fd14cb18
+global/background/default|COLOR|90a77fdcd2961eb79eb3d5c8b8159f453d80d849
+components/button/brand/solid/bg - default|COLOR|fcbe280a8398da795f6f9e91e47ec41f1d2cbfaa
+components/button/brand/outline/border - inactive|COLOR|3ef006173437072ab54b5fc2abf82718fbaf304e
+components/button/brand/outline/border - hover|COLOR|1f8492faef676b38080965f63af7c66609650ebd
+components/button/neutral/outline/border - hover|COLOR|0e53b462158b43831e65e725b1ed89639c516f51
+components/button/brand/outline/focused|COLOR|f1e63a1af9c30f80df25f8cf8e79d4a7e403419f
+components/button/brand/outline/border - pressed|COLOR|7cfcd074bc7f52061a71cbd5e83a71203372cbe4
+global/foreground/light/primary|COLOR|e05d77c21b08df7ca3ce80e39baf026cf3b73840
+global/foreground/light/quinary|COLOR|623b0ac7b573369307b9c4753611c6f9f7b17781
+global/foreground/light/quaternary|COLOR|309d41f31a9b8b55ab3ea9538ea086510b41d294
+global/foreground/light/secondary|COLOR|33559e6692a2f4cf777f0498fe7d3a25bad82ee5
+global/foreground/light/tertiary|COLOR|c52bd9d1d5cd06ae785b134266f0e26a7be9638f
+components/button/error/solid/bg - default|COLOR|0eb5db12009444f8906efcb41275557b7d871d9a
+components/button/error/solid/bg - inactive|COLOR|5e02ca4323a949e693197bb8d731204de7ee0c5b
+components/button/error/solid/bg - pressed|COLOR|546ceaa87e228782818b367235bf283ddcf5947a
+components/button/error/solid/fg - default|COLOR|d47ddfe3927098aa67eed1831e7a036f315a17f8
+components/button/error/solid/focused|COLOR|37f05114040b7e4239f49b888d6c215355d9cead
+components/button/error/solid/bg - hover|COLOR|f978b4d917ea16194f26c2d66068b21132b476ff
+components/button/error/solid/fg - pressed|COLOR|0e6e69cddf3c6b7c71f7bb3e2f12879ee19286bf
+components/button/error/solid/fg - inactive|COLOR|410620d352e5e99f176e1f426c8b1a4fa5ff563a
+global/background/strong|COLOR|94ec2f99f4d126ad77f9f94b8c93f15c0b85766b
+components/button/neutral/clear/fg - inactive|COLOR|58e3ca5953b0ea67a834095b56a86ae08a54e3ab
+global/focus-ring/neutral|COLOR|65139783825ec8f58ce0cc49b8ebbbb7cb37d923
+global/focus-ring/brand|COLOR|38b676f77f3a586e9fb51e0819105003146a549f
+global/focus-ring/accent-2|COLOR|5b4e41b6236e19b5f9fa017c9a25dd9d2c3d578a
+global/focus-ring/highlight|COLOR|d1471110e2c3a9bbb3b85daa715ae2ab405ed056
+components/button/neutral/clear/fg - default|COLOR|32a917c5cd789207909a674b5f38f6f4331ec5e1
+components/button/neutral/clear/border - focused|COLOR|eacfc8e371d6870adfcbab6be2b0474d4db29f5f
+global/border/brand|COLOR|f67bd89834f592036d8f1f064db25b39368b5fd5
+global/border/error/light|COLOR|b59b7e298bdd20b2d2c83f3a5a8827bcb9f3f3c5
+components/button/neutral/clear/bg - pressed|COLOR|7be5ef38f40c0e65fdacf1d2234a35edf5d4aba2
+global/focus-ring/warning|COLOR|a289f8f0ed67ad8d94c0a6e92ee22f4155db47e9
+global/focus-ring/error|COLOR|6584f7e3f26de69ca15d07992d514267c35bf7aa
+global/focus-ring/highlight-2|COLOR|10187529371064c9cd149bea286506ba578baa5a
+components/button/neutral/clear/bg - default|COLOR|e63ffb346f287be0acad4635991a4e1f47847c3d
+global/focus-ring/success|COLOR|4fdf55c200f8ab7f04a0685cefe6a71634b19cef
+components/button/neutral/clear/focused|COLOR|4d99ca8698600266b258bb48356073146fda4bee
+components/button/neutral/clear/bg - inactive|COLOR|f4f8c4d4101e80339c7dc2d2cbf4d92f70735077
+components/button/neutral/clear/bg - hover|COLOR|fe607e02696ad02ccf0092272a79c8270e6aced2
+global/focus-ring/accent|COLOR|1bf5b0456b8d120a90dd607e1074c780dc7720a2
+components/button/accent/ghost/fg - inactive|COLOR|52204f4ba0bd5ca653a2a0b3b29bc8ffd657b69c
+components/button/accent/ghost/fg - default|COLOR|7be695e6940a372adf788d86ec5362053d0c2bc8
+components/button/accent/ghost/border - inactive|COLOR|5915aad399ebc39297aa4d3a662f75eeec4db299
+components/button/accent/ghost/bg - hover|COLOR|a49b36c911b66e25f818741fd2182106a4bde09f
+components/button/accent/ghost/bg - pressed|COLOR|e2b12f520ef8a7316315a52588d995fb8b3a2778
+components/button/accent/ghost/focused|COLOR|28c7e669fae3b5a0feb946d7cda59ba605e706d8
+global/border/error/default|COLOR|c02c1473a437bb0356b91b580793c6ccf7713758
+## radius
+FULL|FLOAT|a95f485680b5d91600397f3608161b1f6e64ee47
+2XL|FLOAT|b88dec1bf45b4f85a9d0c2d7282b0784568d4e8b
+MD|FLOAT|55464a75e9a1557ced53101ff071478b130e5b51
+XL|FLOAT|2ed187a999743cb3ca8f727c0e5858e0325a6a55
+XS|FLOAT|4d768c1cf1fc1c105fddbd862ac0c2cd55c14663
+4XL|FLOAT|639921c149b4e9f9b6d4e2f26ce046e37aa51e51
+2XS|FLOAT|a80bba8c071a35059ec61ed36ea35aebd36e2273
+5XL|FLOAT|6c6e488574e107b846c094b5bf9a3c566901cd8c
+LG|FLOAT|1b148a1a95d0a8710f967e7c8da0e1365d782426
+SM|FLOAT|f0d32d9029347ebc7e964b5538b1c4a077d1bacd
+3XS|FLOAT|c6fd93cec82dcd955f38ae66af2637297ae87321
+## spacing
+spacing/4xs|FLOAT|a47d2887549a267d25696f5802a087c832a3dfb6
+spacing/13xl|FLOAT|2ee930a279348584b3201a2e766d06352cf806e1
+spacing/sxl|FLOAT|d3a5534b61fd74fab321ee38943c7598ba5bb297
+spacing/6xl|FLOAT|1b1c1447445fa229dbed4531da2b1df6de7c6343
+spacing/5xs|FLOAT|0acb06388509228821ce5e9056318efb7d87c098
+spacing/12xl|FLOAT|4791dd9913ee449bd2c04ba1d239d70d3adc5648
+spacing/sm|FLOAT|8964067f2f50e9a49f530b7db913dcef3b4b6089
+spacing/2xs|FLOAT|43df441bd53acf01a7e93cfcbd3a393aba4afae2
+spacing/xl|FLOAT|27c15b5f5b2de8f39c40b90303f8f7da9694e27a
+spacing/2xl|FLOAT|67cca52a628d64b362eeb1b3d121583b7765a35a
+spacing/11xl|FLOAT|b988fbbe1b6ffe58b641f3f134bda43ae29f2295
+spacing/none|FLOAT|bdc1de8fc64611b83886b433a4a39529cbe6ebe3
+spacing/3xs|FLOAT|6459000beb980b104bd83208abbf52433b51ea8f
+spacing/xs|FLOAT|d1c9c214694066908dd2546990f32b4fd3f65647
+spacing/4xl|FLOAT|df11182c44be366e25f0895f4a1684d6602388e1
+spacing/7xl|FLOAT|db6b3a02ebc2e2d1d44bb84b0b78a3feeb71966b
+spacing/14xl|FLOAT|5a32838c02d5bc5506c2d8d7d07e5aacefef27e2
+spacing/8xl|FLOAT|82a97643723972811f636bdfdd70e1a02e5df845
+spacing/5xl|FLOAT|7f2ae751f3f059a64487dcffbe22391257c6cff4
+spacing/lg|FLOAT|ebe4b012b58445d64914e7e1736493dc710f502d
+spacing/md|FLOAT|be36ab2a18f52aa02e826953537e76c187592836
+spacing/9xl|FLOAT|41657f4ce1a23c2db599fd7ec5be255a8a317d0d
+spacing/10xl|FLOAT|5aa5212c358ce9c83b6f4f6e3d407aa35718f982
+spacing/15xl|FLOAT|93026106b86318c4b9bd4615e8cb3bfda84600cd

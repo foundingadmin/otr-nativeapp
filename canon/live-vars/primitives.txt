@@ -1,0 +1,216 @@
+colors/periwinkle/600|COLOR|c1cf5c7fe4a88dd9ea2ebfea007a7a434a9154f2
+colors/blueberry/600|COLOR|3b53a40f14634740bc01803352e80e4410c565ee
+colors/archived/background/Neutral (archived)|COLOR|be3cd526bc3ce4b51c13b824f7f1544ff8ddc544
+colors/archived/Content (archived)/Dark  (archived)/Quinary (archived)|COLOR|077ddee982791a12f36ed957d2120720cf6deafe
+colors/archived/Border (archived)/Neutral (archived)|COLOR|681789a5d1690735d32438ee18dfcd498e02c61d
+colors/archived/Content (archived)/Dark  (archived)/Tertiary (archived)|COLOR|f8104a8ba722e9aad942d7ffbbe7e85958eb5af6
+colors/archived/Content (archived)/Dark  (archived)/Secondary (archived)|COLOR|6e925c8432ecb3be737e049523313e0cbbdd724f
+colors/archived/background/Screen (archived)|COLOR|751dea2cf0bc8e85ec7cf83e797e942c6eb48650
+colors/archived/Content (archived)/Dark  (archived)/Quaternary (archived)|COLOR|5b501b3e393e1fd2c059a35e591110430690c21d
+colors/archived/Content (archived)/Dark  (archived)/Primary (archived)|COLOR|b10057089aad59ad336212063dae88c0d742ed4e
+colors/coral/600|COLOR|79b31a6116c84f7979cdef8b736cd7ee19df8971
+colors/honey/600|COLOR|b92cc691defa3e17da84a4d9081421ed93614e2f
+colors/archived/Border (archived)/Overlay (archived)|COLOR|101162ffaa859740ea37eb60d9a2e9c101891484
+colors/lime/25|COLOR|dbec43ede0a70829c22385e187c68c0f01790d2e
+colors/lime/200|COLOR|799ebb6179d3dc4e14cdfaddac5cc2bcf8a60057
+colors/lime/500|COLOR|7fe83709b0437163efe03888f39d0696470febc7
+colors/cherry/200|COLOR|1ef60077db20a8d6d8a8b923a56f771300f27000
+colors/lime/700|COLOR|d8ff76bc24db79d0f9a149f497cb6c2ec9269db4
+colors/cherry/25|COLOR|b798ae4c47bcfe6a66824be4a548ac5a172b7690
+colors/cherry/700|COLOR|1728611e4a235efc55ebc5c11fd69811db2abc5b
+colors/cherry/500|COLOR|dbb04fd92aaf6e6cd4f39bd09fb3f0002b7ee957
+colors/honey/50|COLOR|49235480e36cc5399f45f800d67e8166be879a8a
+colors/archived/Interactive (archived)/Blue|COLOR|c05471db33f6b5a194de5b75d186fe7447db3243
+colors/periwinkle/800|COLOR|7ccd31e373905960001edabebdc0f530644571a6
+colors/honey/900|COLOR|9019ba7e8bed79db565f1e18ec1bde8f727cb33c
+colors/cherry/400|COLOR|bcc6b62db73e1b02669071d05e56c3ac5a80644d
+colors/lime/600|COLOR|2d2694fcdbed222fccd0dde9ec81305d2d611a9b
+colors/honey/100|COLOR|667c11d46bdcbe6df0b0607f9bf5138864597de5
+colors/blueberry/300|COLOR|71204170c109adf1cca443ecd2dff2384acb3c91
+colors/lime/400|COLOR|6a4a6443d430e039141308dd84b05e4fd8af93c5
+colors/lime/300|COLOR|631f56661b7d5f7e2b470d69df5a0a418c7c6e56
+colors/lime/100|COLOR|bde3ec6b0d483dda62ee40467b68b7afc41d83b6
+colors/lime/50|COLOR|50a392396b05a1985920cd8ff43bcae6a3d3cff8
+colors/honey/950|COLOR|55a45d79413e36344bf2ab80bd1116f26ddd841c
+colors/honey/800|COLOR|d2810b98e1e81c6941d42fe486c27630f59f4dd5
+colors/blueberry/100|COLOR|ded6d1fa5bc8277a3cad0cb10b89d954dd7d8edc
+colors/honey/700|COLOR|90e0a5be2dfe99c4266894f667a1bf9b41b0420b
+colors/blueberry/50|COLOR|104dcd28099ac36d294655a4bcbbe3fe04c63488
+colors/coral/800|COLOR|97f67f607fd94aae9772b5c7a250359601c64d1c
+colors/archived/Content (archived)/Light  (archived)/Primary (archived)|COLOR|1d3117a5b4d2c9c567e205d82dde79c58a05b90c
+colors/honey/25|COLOR|ca09fc8197ade94557b92d4dc0c871837e5c8f72
+colors/blueberry/200|COLOR|610e86828205f50f17fc782fb0a8ba5f9cb48e47
+colors/coral/900|COLOR|f015401f2d09692d779e05b71320a76f005cc3ed
+colors/cherry/300|COLOR|6ecca3952f888bf1ba7783fafb6a6e43f6065b85
+colors/coral/950|COLOR|e8b4196b716bbfc0fd0c9df7e4c83df0682d8084
+colors/cherry/100|COLOR|2a218e9c492d06d5eb9b85774c6a9be25c4ab8a5
+colors/coral/700|COLOR|11424207907ed142b0dac7d49b07fe246b8ac916
+colors/cherry/950|COLOR|e9e1de1a704968b1eb9286d363e5eca4e6019a17
+colors/coral/500|COLOR|e454e9031f7c800259ca5c3d7b2dbd5fdf103ace
+colors/cherry/900|COLOR|46de08f2ceeccad0f8f553e2934eb354476997eb
+colors/coral/400|COLOR|634e210212041ba5bf62f1625ca07ea6e6997df4
+colors/coral/300|COLOR|d4d3cca08721989a1db1464b76efc07299fed8bd
+colors/coral/200|COLOR|9d699ad6e37c281626c5050b68ee95e7441ce883
+colors/coral/100|COLOR|25a11e60e6b5711bc46b4bde34e3d1c194065ce7
+colors/periwinkle/900|COLOR|3f9be39b8c98caade7573ef3765c378be15309ae
+colors/periwinkle/500|COLOR|4d7b631a19b46176e4be25e4ffff911d9102c86e
+colors/periwinkle/400|COLOR|9ff2601b488053088413b3023bad70b1d8fb2ad5
+colors/periwinkle/300|COLOR|be20948148f328b8f2baf0c450b80c10f4a6faeb
+colors/blueberry/950|COLOR|ac41bca3aba58983b3aef503cf022cb6765307bc
+colors/blueberry/900|COLOR|786668b2806e2e251a3f13542bb29ddfff06eb97
+colors/blueberry/800|COLOR|f582f2a4c5d478dab6bee36c97fb50dd8dada0dc
+colors/blueberry/500|COLOR|6bee5bc7aaa4ed722a98b991283187fda9a57c36
+colors/blueberry/400|COLOR|25f1f193650bdcf48c4700e1d4908bf081eb07db
+colors/periwinkle/50|COLOR|15755b1d28ac1038f112569eb7319e4a6633531d
+colors/archived/Interactive (archived)/Primary|COLOR|25dee9cc0df25717fa494ca49a285fd267255dc3
+colors/honey/300|COLOR|b7040988f7db391c893c5dae74f1cfd669ee9f44
+colors/honey/400|COLOR|3cfa58f37cd26b07a76c875c65d6cbad321f822e
+colors/honey/200|COLOR|0fbf5ef20a921c9a6963dbe5e45559c51a73ad8f
+colors/honey/500|COLOR|3336374a685cf65b610e975c35b2e3f446e84b94
+colors/periwinkle/950|COLOR|210d0a8e01dc07eb716360679b40e1ead119dbf7
+colors/cherry/600|COLOR|dc9d6d7d5e379f1cc21396f5b138e5ea1cbf2c03
+colors/periwinkle/100|COLOR|18ff504aa4949e519ba8d768844d56ec10f64786
+colors/archived/Interactive (archived)/Secondary|COLOR|eff152169913e0c558d3d11de912d07e33df07d5
+colors/lime/800|COLOR|f933fd0fe52fde9670ddec25cc9cb9622a906cf8
+colors/periwinkle/200|COLOR|cd3c5cceb842e17d5452fe309d1f55ddc48223b5
+colors/coral/50|COLOR|397d5f98b077a0cad79c496a4b17ac99ae15be32
+colors/lime/900|COLOR|615ca7caf846a8335bd0d2fb36f930fb50fdae2c
+colors/periwinkle/700|COLOR|15e83588644b398ace7321f8896f21c94645791f
+colors/archived/Content (archived)/Light  (archived)/Secondary (archived)|COLOR|715ee5fb21f7c950ae34e0a8f62a02d2341a80f4
+colors/cherry/50|COLOR|9f3398aad970a919d984bd3b46eadbb47558c458
+colors/blueberry/25|COLOR|013264d1f4304e1d992fd22fcff9f5c2aeb41247
+colors/blueberry/700|COLOR|1cd02964dbfa7f1080be1221311be77712f3696a
+colors/lime/950|COLOR|e85d6c26c919ec473302dd7835ba940b335669d1
+colors/periwinkle/25|COLOR|bca704fb982c9112238cc7af354fe1a6f46bde32
+colors/coral/25|COLOR|c38285b99cbabf1d0dfc949aed3a791b6b3ac79c
+colors/cherry/800|COLOR|4d9c08dc29cfe183013aede6e16cf017e2bba044
+colors/grape/500|COLOR|4545830a40c810240133dc45f660bee1af417c8e
+colors/grape/25|COLOR|0a1c4a8396d0bdea949d975cecaf8d0fa28211b3
+colors/grape/400|COLOR|ee42bb9364dbf607d9d1028632b361e964f25f15
+colors/grape/300|COLOR|37d48c42b352f3aaa1dc2030f60dcb89f34b1c24
+colors/grape/800|COLOR|0b36752944b37a62c368090b8835b5e7d5cdcc86
+colors/grape/700|COLOR|f39d3afb83cc5f37c0736c3cdac7aa2b67bfa08a
+colors/grape/600|COLOR|34e7ae5d8260707cecfbfeb8e87efeec5f73d2ac
+colors/grape/50|COLOR|9984976ab190feca17760105b6bd2cb16f981797
+colors/grape/900|COLOR|77b939ad6dc7c851d1daa80115e7fe1c41ab3318
+colors/grape/100|COLOR|1542e03ffc6560313c59b7640dfda21865e568ce
+colors/grape/950|COLOR|5c64aa26f1a4c1104e0ac4ce38b0c0929cdc1e7c
+colors/grape/200|COLOR|f5d69773e36f5754c7e00e4191d16b0351a36820
+colors/archived/marketing archived)/Negative (archived)/500|COLOR|1620ada8e86a42c47630fc52ef50c6f0f9cef35d
+colors/archived/marketing archived)/Negative (archived)/400|COLOR|e2389f5e2735e16bc2e48ddf1388c0bb2ad22e13
+colors/archived/marketing archived)/Positive (archived)/500|COLOR|6b1c8585918dddbbb4553fb53a83499dbf217381
+colors/archived/marketing archived)/Blue (archived)/200|COLOR|7b1b97491b8b07ca9c8cd468cfc270fcd0258589
+colors/archived/marketing archived)/Orange (archived)/400|COLOR|8e275f240c51c11bdcff644ec9829ea86f6fdff5
+colors/archived/marketing archived)/Blue (archived)/100|COLOR|41ef1af94dea12a0144d1b273032ffaa81e61226
+colors/archived/marketing archived)/Blue (archived)/300|COLOR|6e2103215f905ed167f9cdc2fbed426aceab9785
+colors/archived/marketing archived)/Purple (archived)/100|COLOR|9bda66354d40d76db96b37f8e9cd22e5fad528fb
+colors/archived/marketing archived)/Negative (archived)/100|COLOR|463711eb0c06747ff2640eaaf99194c8ab408a1f
+colors/archived/marketing archived)/Purple (archived)/500|COLOR|75475a97a24979bfd29ded08d57493279f715b5e
+colors/archived/marketing archived)/Blue (archived)/500|COLOR|359ac433e80e29eed7f6aea083cead108fdb64e8
+colors/archived/marketing archived)/Purple (archived)/200|COLOR|b0e3e17736aa8de2cc41529517a495c0904738e6
+colors/archived/marketing archived)/Purple (archived)/300|COLOR|0f7f43dec13fde8d794083fa548234c55b3225ee
+colors/archived/marketing archived)/Blue (archived)/400|COLOR|17fb62f962f81587c8451c42ecb024b51e37b105
+colors/archived/marketing archived)/Purple (archived)/400|COLOR|9d68f55120aed2e0b99a297046d7aa02ec7336fb
+colors/archived/marketing archived)/Orange (archived)/100|COLOR|39fa6a231ed4700f539936445ca1211c92d92815
+colors/archived/marketing archived)/Orange (archived)/200|COLOR|5ac8c534815dd9c35bb637caefdc830c920e6ea5
+colors/archived/marketing archived)/Orange (archived)/500|COLOR|fe54abfce5b8b7683241551d6029bf61f2e2b208
+colors/archived/marketing archived)/Orange (archived)/300|COLOR|9ed9e8ec3fe7a4eb769eb232317be987f4e35644
+colors/archived/marketing archived)/Positive (archived)/100|COLOR|93f272a6c11eefe2170d5d204739a718b9efb9b3
+colors/archived/marketing archived)/Positive (archived)/200|COLOR|21f90a6e8b4c130bf7ae2c849c84e101a18bb581
+colors/archived/marketing archived)/Negative (archived)/300|COLOR|ad125e58396cacb811b71478e1d7b15882e55db1
+colors/archived/marketing archived)/Positive (archived)/400|COLOR|bccbac54c827de8baf3786e31671cc9f45b0af72
+colors/archived/marketing archived)/Negative (archived)/200|COLOR|99032437d09ecf797134e4ceb67ff1323c5f8e46
+colors/archived/marketing archived)/Positive (archived)/300|COLOR|f6f1f4f6e9313ab1316f19bf45787f975b1b266a
+colors/ink/200|COLOR|6eeb00118c1daa2bc407c3d9c26582bbd6b3b3fa
+colors/ink/600|COLOR|af636c456e595a7b521c6946543abd91f582f4f5
+colors/watermelon/500|COLOR|422c8fbfb35a2ea5f98517ddf17d476b0c238eff
+colors/watermelon/800|COLOR|3bc8eef713b3cfb0e554f2259ce1f919498751e1
+colors/watermelon/50|COLOR|4e98ecc68c5b052b39e7eb7e84da1aedb045c59f
+colors/ink/50|COLOR|36b9540f7ed23261f3a8702b8af32470f90f8013
+colors/ink/300|COLOR|8127ec9a256b88b334d52494c4a748386675c9ce
+colors/watermelon/400|COLOR|9394ea8e43db1059ae83aea4280eea81f648601f
+colors/watermelon/300|COLOR|3dfa622135c60d270e651adfca574c130ed1c3fc
+colors/watermelon/25|COLOR|98a6f56944f1f189ef681958069bdfbab597f6bd
+colors/watermelon/700|COLOR|f9a3d29f98c5cbdc4b43553ff0757d4451da7c15
+colors/ink/White|COLOR|33d26273a14c9266941d01d0c61c3d00be2558e7
+colors/ink/100|COLOR|e789d73b65b654d22ed349d3035f9ad2b1f36a6b
+colors/ink/25|COLOR|0ad63aac8bd1d1bd3baf1bdf5d9e278588310f3c
+colors/ink/400|COLOR|2dc6c79e0c15f4bf24d910e110ab9496f819e1be
+colors/watermelon/950|COLOR|7e1aa68e1026cede4ae5b8e634777d43ef12203c
+colors/ink/700|COLOR|6c228983483b4d3c265720106738323b75f5629f
+colors/ink/950|COLOR|d3d7ff7919807dfd72a4dc4911ec87b33d603e73
+colors/ink/Black|COLOR|6883e6139d75bc6b046e901cba8e23143749496c
+colors/watermelon/200|COLOR|40f58ec907b9efb8a0ca325b144a0f5ec485ddf9
+colors/ink/500|COLOR|40209841af801309cd89e5223e77a010b4f53570
+colors/ink/900|COLOR|50c810f7b680be56d80e28c54572c28b2bc47038
+colors/ink/800|COLOR|dde96eac00002b25e4df80eb5db40cc095e202b6
+colors/watermelon/900|COLOR|e55c4c9c8ca6925587ef69fae560908aa0f49f18
+colors/watermelon/600|COLOR|1ce0faf9c8bbd79f53b7029de88aa178767f71e8
+colors/watermelon/100|COLOR|b2ad7c0e638244211cab16701d0a516c035d8e6a
+breakpoints width/tablet/lg|FLOAT|0e6cdc4be609671ae22edcb7d36b172c9b5dd604
+sizing chart/17|FLOAT|4c5540e19d4db0f6d9a23da428280af4a3ed0d0a
+colors/alpha/dark/30|COLOR|673302f719abeb7dc0455a1ca91778c084082624
+font weight/medium|FLOAT|7d29934de9ec1f4d58ee56904badfbc9858aa99d
+breakpoints width/tablet/sm|FLOAT|cf044e2cb0b8425ea72f533ddfba217e594c4031
+sizing chart/19|FLOAT|b0aeedae57a36778d0180fe3adff2439194d75e5
+sizing chart/10|FLOAT|ac36487ad8a39624194fa85934d411f2a6de1d80
+sizing chart/4|FLOAT|27baff66495fe953d601e371a4acd4b168d4b2bc
+sizing chart/11|FLOAT|8717773e38db8aa95af127dd847fa5b191c72e3a
+sizing chart/7|FLOAT|344d5c6d6bcdb8eeedc0eb2b00a331e30f8b133a
+sizing chart/9|FLOAT|4825e87cb274008dd24222e0343ff44ec9dcbea1
+colors/alpha/dark/15|COLOR|873a5f273f2601d755cb7625f5b4c7aee9a04972
+font weight/regular|FLOAT|19929b6443d2104f164c3c14a09985701ada0952
+sizing chart/20|FLOAT|718641a13c881510bef1c8d5c7410039895ef5e5
+font weight/bold|FLOAT|767f13ddb54dacbc3443c673133913293ef253db
+breakpoints width/desktop/xl|FLOAT|fb142777da3f7513d6ffbcfb6b29a830e47c41af
+breakpoints width/mobile/md|FLOAT|1f71f958a1d9c261dcb89490b4dd7650b2c6961a
+breakpoints width/desktop/md|FLOAT|9fbd2119f8338a8130978cebff09aee25a36ca78
+font weight/semibold|FLOAT|fb62803b9ccec9474605d56cca790fa6c4251f58
+breakpoints width/mobile/sm|FLOAT|3028b09051fd23b071abe8dd53e3382ae73d0599
+sizing chart/23|FLOAT|37b7ab2543ea252eada713be8c72a0535d8dddbb
+sizing chart/0|FLOAT|7067dda08ba0af4db757efe0072ab8f109b2e3d4
+breakpoints width/mobile/lg|FLOAT|3eac1b4eb2dddc9d75aafab9cf6cdc4b9a912779
+colors/alpha/tooltip copy|STRING|d8c7a2a9fb3b1aef161642a78bed0584780c6b25
+sizing chart/16|FLOAT|054b7df0c94703d8251e8919d9d8b898c848e48f
+sizing chart/21|FLOAT|ec0bad0a8ce816ff582d881cc27976e82e29bb8b
+sizing chart/2|FLOAT|b7c4d8c315661aa4125bd648a9a5ee5195710d95
+sizing chart/15|FLOAT|aaa903b134e2e15b8322351e2034f52d8427f6c8
+breakpoints width/desktop/sm|FLOAT|4ae6b7169282b6690c5624d555abdaf256ef8760
+breakpoints width/desktop/lg|FLOAT|1756f06593e69516da2f4ab66618492cf85e3666
+sizing chart/1|FLOAT|ad2822d8c2d712d0fb8376ed317e42a0912e473c
+breakpoints width/desktop/deprecated|FLOAT|2e7e650683cec93702b9bd3c7d7b1f340e7496d5
+sizing chart/24|FLOAT|b7246594543064512a6c6bf935a16ef4672fa54b
+colors/alpha/dark/5|COLOR|04fcf5dedde5c45180e1803dae12f592ff2f431e
+sizing chart/12|FLOAT|2c05a6133c51096df34f107880c35d4b11e1da99
+colors/alpha/light/20|COLOR|fbb02f910c0ebbbe92cd0ab30487d6ce8915304a
+sizing chart/5|FLOAT|0943d64cbbb4a1571b391d7f12ebbfbd079a2477
+sizing chart/8|FLOAT|e3134b80898b8755013a32ab75ba4f8cede2c7a9
+sizing chart/13|FLOAT|165fd1eeb288c3e5be7de62ff36a60f966080281
+sizing chart/18|FLOAT|3b469af8ba3c420001babf14e11328ed0ac5a587
+colors/alpha/dark/80|COLOR|80cd210423839e805aa3f3c00f4f7b06e88b4a2f
+colors/alpha/dark/60|COLOR|f5a9969b4d0693536085e3bc8dbdf1e598b41073
+sizing chart/22|FLOAT|9f708df5f4f6687e79dbf9d890a04ab630dd0ef7
+font weight/heavy|FLOAT|65056efd1596583fafcf3495b69b7aaf7c765112
+colors/alpha/light/80|COLOR|b6f4f3b0243d27ed0534eda78e09037ea7267f32
+sizing chart/6|FLOAT|88afbe5bcfe1553cd09da235e83a08d3c8584c8a
+breakpoints width/desktop/2xl|FLOAT|498cff2d4602558297eab95de3732ee6d3c39625
+sizing chart/3|FLOAT|3fda8bfe9adb50a195451fb2a8f779a82db3dbb4
+sizing chart/14|FLOAT|20765e09e110d88cc6a2fb58834a36d90de8e020
+font weight/extrabold|FLOAT|9858e4faf93afbfa234fd76420db913b27dff456
+max width/328|FLOAT|9b83f2274e2304e87b22c020c3e68fcbab4569bf
+max width/1608|FLOAT|d1fbbc7db9d057ecffa89ff503e9c77e6e04d5c1
+max width/1352|FLOAT|fe40004012a174d65cc6b0601a5c82325f2bf2af
+max width/600|FLOAT|6d9c714266e2961059e619bd1654a5e44605a66c
+max width/1320 (new)|FLOAT|5ea2b66bf4c4fbb35ddd18e688e4cd7600e44a5f
+max width/1216|FLOAT|d57daf710feabbbe0e6620a5efb7a8be8f6871ec
+max width/1416|FLOAT|7c81b1ff4187ed3f12401def80d9a24c0087039b
+max width/1512 (new)|FLOAT|04ae4799de0aed9a7b964e9d4cc25802c89a2163
+max width/1080 (new)|FLOAT|1a703edc4fcddb242069c7de17597392088f75f9
+max width/936|FLOAT|5552983ab064b01ec74fe10cef8b1cf81d90ef07
+max width/816 (new)|FLOAT|b6f7b2dcb17b20336046075d110c7875f88939d3
+max width/358|FLOAT|0939b2ff85f6e97298134adba13c07ad679ea843
+max width/456|FLOAT|7a570f7f65e38ad47ba50d8a597f5f4b13a77874
+max width/720|FLOAT|2215a46509c7d7ea8ff812f9b1b23f254163d822
+max width/696|FLOAT|d56fce8f6aa794aec50a4e6f49c5b3e54fbb721e
+max width/398|FLOAT|db4860a80c18705fc313561201e529ea45dcb15a
+max width/576 (new)|FLOAT|4cc1d78287ef4585c229cb500ba35cb8032caf63
