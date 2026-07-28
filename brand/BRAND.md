@@ -142,21 +142,31 @@ silhouettes `#545c6a` @50%.
 
 ## Text Style Reference
 
-Every agent text node binds a text style. One published library style is an
-exact match and is bound where used: **Product/Small Standard Text**
-(Figtree Regular 14, key `409e1d0392f30911c2cd1d7f3ac31f28005c259a`). The
-published Figtree ramp starts at 14px, so the Cases card language
-(10.5–15.5px) has no honest published matches; it lives as **34 local
-semantic working styles** under `OTR/Cases/`:
-`Title/` (Page 25, Hero 21, Quote 19, App bar 15) · `Card/` (Title 15.5,
-Eyebrow 11) · `Zone/` (Action title 13.5, Header 13, Help title 12.5, CTA
-label 12) · `Button/Label` 14 · `Badge/Label` 13 · `Text/` (Strong 13.5,
-Label 12.5, Chip label 12.5, Timer 12, Device time 13, Standard 13, Meta
-12.5, Note 12, Note strong 12, Sub 11.5, Sub strong 11.5, Caption 11) ·
-`Micro/` (Label 11, Tag 10.5, Counter 10, Watermark 10) · `Ticket/`
-(Violation 11.5, Row strong 11, Row 11, Note 9.5, Cap 9, Stamp 8.5, in
-Roboto Mono). Consolidation ask lives on ④ as TYPE DIFF cards; when the DS
-team publishes a ratified ramp, the agent rebinds and deletes the local set.
+**RATIFIED: the Native collection** (local to this file; publish-to-library
+ask pending with the design team). One axis per level, integer ladder
+25 / 20 / 16 / 14 / 13 / 12 / 11 / 10, Figtree throughout:
+
+| Style | Spec | Carries |
+|---|---|---|
+| Native/Title/Page | ExtraBold 25, ls -0.3 | page titles |
+| Native/Title/Hero | ExtraBold 20, ls -0.3 | hero locations, quotes |
+| Native/Title/Section | Bold 16, ls -0.2 | card titles, app bar |
+| Native/Title/Subsection | ExtraBold 14 | zone and action headers |
+| Native/Text/Large/Standard | Regular 13 | prominent running text |
+| Native/Text/Large/Action | Bold 13 | badges, values, taps |
+| Native/Text/Regular/Standard | Regular 12 | metalines, notes |
+| Native/Text/Regular/Action | Bold 12 | tabs, timers |
+| Native/Text/Regular/Highlight | SemiBold 12 | chips, medium emphasis |
+| Native/Text/Small/Standard | Regular 11 | subs, captions |
+| Native/Text/Small/Action | Bold 11 | strong subs, pills, micro labels |
+| Native/Text/Caption/Note | SemiBold 11, ls 0.2, UPPER | eyebrows, progress micro, facts keys |
+| Native/Text/Caption/Small Note | Bold 10, ls 0.4, UPPER | tags, counters, watermarks |
+
+Plus `Native/Ticket/*` (6 protected mono styles, Roboto Mono) and the
+library-bound `Product/Small Standard Text` (Figtree Regular 14) where it
+was an exact match. Buttons carry their own bound Product styles via the DS
+Button. The `OTR/Cases` working set is deleted; every agent text node binds
+a Native, Ticket, Product, or DS-component style.
 
 ## Icons
 
