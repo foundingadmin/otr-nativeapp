@@ -4,7 +4,7 @@ Push token changes from the repo's source JSON into the Figma file. Always dry-r
 
 Read `sweden/engine/figma-mcp.js` to get the `FETCH_VARS_SCRIPT` string.
 
-Call `use_figma` with that script (targeting file key from `brand/BRAND.md`: `c3ayt4AFrNKOmSkGBIyFi4`). The script returns `{ figmaVars, figmaModes }` — the current live state of all variables in Figma.
+Call `use_figma` with that script (targeting file key from `brand/BRAND.md`). The script returns `{ figmaVars, figmaModes }` — the current live state of all variables in Figma.
 
 Write the result JSON to `brand/.figma-vars-tmp.json`.
 

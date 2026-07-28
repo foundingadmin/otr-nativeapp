@@ -1,0 +1,70 @@
+# CLAUDE.md — Off The Record Design System
+
+This repo is the **Sweden engine deployed for Off The Record (OTR)**, the brand
+behind the OTR native app. Its primary job right now: receive Claude Design (CD)
+packages in `intake/`, tokenize and componentize them into `brand/`, and **print
+the UI into a Figma file** via the Figma MCP.
+
+## Repo structure
+
+```
+/
+├── sweden/                  ← Sync engine (brand-agnostic — never put brand values here)
+│   ├── engine/              ← Sync scripts + engine docs
+│   │   ├── SYNC-MASTER.md   ← Architecture overview + routing table (start here)
+│   │   ├── FIGMA-PLUGIN.md  ← Figma Plugin API reference (component printing)
+│   │   └── CONTRIBUTING.md  ← Engine contribution rules
+│   ├── adapters/            ← Token output adapters (web-css default)
+│   ├── translators/         ← HTML → Astro / React translators
+│   └── INSTALL.md           ← Brand contract + onboarding guide
+├── brand/                   ← Off The Record brand layer (all OTR-specific values)
+│   ├── BRAND.md             ← Instance config: file key, styles, node IDs (TBDs until first print)
+│   ├── token-map.js         ← CSS var ↔ Figma variable mapping (empty scaffold)
+│   ├── component-map.js     ← Component sync registry (empty scaffold)
+│   ├── tokens/source/       ← W3C Design Tokens JSON — the ONLY hand-editable token files
+│   ├── tokens/output/       ← Generated adapter outputs (never hand-edit)
+│   ├── components/html/     ← Normalized component HTML (print source for Figma)
+│   ├── fonts/               ← Brand font files
+│   └── assets/              ← Logos, identity guides
+├── intake/                  ← CD package drop zone (see intake/README.md)
+└── sample-metanoia/         ← Reference deployment (Metanoia) — delete when no longer needed
+```
+
+## The core workflow — CD package → Figma
+
+| Step | What happens | Doc |
+|---|---|---|
+| 1. Intake | CD package lands in `intake/<name>/` | `intake/README.md` |
+| 2. Tokenize | Extract tokens → `brand/tokens/source/*.tokens.json`, fill `brand/token-map.js` + `BRAND.md` | `sweden/INSTALL.md` §A |
+| 3. Bootstrap Figma | `node sweden/engine/init-figma.js` creates variable collections in the target file | `sweden/engine/SYNC-MASTER.md` |
+| 4. Componentize | Normalize UI into `brand/components/html/*.html` using `var(--token)` only | `sweden/engine/FIGMA-PLUGIN.md` |
+| 5. Print | Generate + run `use_figma` plugin scripts to draw components with variable bindings | `sweden/engine/FIGMA-PLUGIN.md` |
+
+Before any print session: read `brand/BRAND.md` (needs the Figma file key) and
+`sweden/engine/FIGMA-PLUGIN.md`. After any `use_figma` call: run the Build
+Quality Check in FIGMA-PLUGIN.md.
+
+## Routing
+
+| What you say | Read this doc |
+|---|---|
+| "print this design into Figma", "push component to Figma" | `sweden/engine/FIGMA-PLUGIN.md` |
+| "process this CD package", "tokenize the intake" | `intake/README.md`, then `sweden/INSTALL.md` §A |
+| "sync figma → repo" / "sync repo → figma" (tokens) | `sweden/engine/SYNC-MASTER.md` |
+| "add a new token" | `sweden/engine/SYNC-MASTER.md` |
+| "new brand setup" | `sweden/INSTALL.md` |
+
+## Rules
+
+- `brand/tokens/source/*.tokens.json` is the **only hand-editable token layer**.
+  Regenerate outputs with `node sweden/engine/run-adapters.js`.
+- Component printing is always AI-mediated and human-triggered — never automatic.
+- All Figma fills/strokes/text in generated scripts use **variable bindings**,
+  never hardcoded values.
+- Record every new Figma node ID, variable key, and style key in `brand/BRAND.md`
+  before the session ends. BRAND.md is the persistent memory between sessions.
+- Engine code in `sweden/` stays brand-agnostic. Known cosmetic debt: some engine
+  scripts still print "Metanoia DS" in log lines and use the
+  `com.metanoia.modes` token extension namespace — functional, rename later.
+
+Current version: **v0.1.0** (scaffold — no tokens extracted yet)

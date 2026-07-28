@@ -4,7 +4,7 @@ Pull token changes from the Figma file into the repo's source JSON. Always dry-r
 
 Read `sweden/engine/figma-mcp.js` to get the `FETCH_VARS_SCRIPT` string.
 
-Call `use_figma` with that script (targeting file key from `brand/BRAND.md`: `c3ayt4AFrNKOmSkGBIyFi4`). The script runs `figma.variables.getLocalVariablesAsync()` and `figma.variables.getLocalVariableCollectionsAsync()` and returns `{ figmaVars, figmaModes }`.
+Call `use_figma` with that script (targeting file key from `brand/BRAND.md`). The script runs `figma.variables.getLocalVariablesAsync()` and `figma.variables.getLocalVariableCollectionsAsync()` and returns `{ figmaVars, figmaModes }`.
 
 Write the result JSON to `brand/.figma-vars-tmp.json`.
 
