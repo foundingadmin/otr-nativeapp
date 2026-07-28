@@ -35,6 +35,8 @@ collections bootstrapped, and the standing print/read-back loop documented.
 
 - `ACTIVATE.md` — one-prompt activation playbook (the brain of the install)
 - `install-sweden.command` — double-click installer (macOS)
+- `cd-kit/` — Claude Design startup install: dictated project scaffold brief
+  + canon seed, so CD never starts from a blank slate
 - `sweden/` — the engine (brand-agnostic)
 - `brand/` — blank brand layer, filled during activation
 - `intake/` — CD package drop zone

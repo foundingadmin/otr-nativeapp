@@ -62,7 +62,11 @@ Route by the answers:
    for review — see `sweden/INSTALL.md` §C).
 3. Translate priority components Figma → HTML into `brand/components/html/`
    per `sweden/engine/FIGMA-PLUGIN.md` (Component Sync).
-4. Canon is now live. Future CD work flows through Path A's intake pipeline.
+4. **Generate the CD seed:** fill `cd-kit/seed/` from canon (tokens CSS,
+   component HTML, condensed brand rules — see `cd-kit/seed/README.md`).
+   The operator uploads `cd-kit/CD-PROJECT-BRIEF.md` + the seed into a new
+   CD project so CD starts from the dictated scaffold with real brand values.
+5. Canon is now live. Future CD work flows through Path A's intake pipeline.
 
 ## Path C — Reconcile (both exist)
 
