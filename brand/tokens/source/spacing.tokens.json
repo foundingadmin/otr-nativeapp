@@ -1,0 +1,46 @@
+{
+  "$description": "Metanoia — Spacing, Shape & Shadow Tokens. 4px space scale, border radii, elevation shadows, layout container widths.",
+
+  "space-0":  { "$value": "0",     "$type": "dimension" },
+  "space-1":  { "$value": "4px",   "$type": "dimension" },
+  "space-2":  { "$value": "8px",   "$type": "dimension" },
+  "space-3":  { "$value": "12px",  "$type": "dimension" },
+  "space-4":  { "$value": "16px",  "$type": "dimension" },
+  "space-5":  { "$value": "20px",  "$type": "dimension" },
+  "space-6":  { "$value": "24px",  "$type": "dimension" },
+  "space-8":  { "$value": "32px",  "$type": "dimension" },
+  "space-10": { "$value": "40px",  "$type": "dimension" },
+  "space-12": { "$value": "48px",  "$type": "dimension" },
+  "space-16": { "$value": "64px",  "$type": "dimension" },
+  "space-20": { "$value": "80px",  "$type": "dimension" },
+  "space-24": { "$value": "96px",  "$type": "dimension" },
+  "space-32": { "$value": "128px", "$type": "dimension" },
+
+  "radius-xs":   { "$value": "2px",   "$type": "dimension" },
+  "radius-sm":   { "$value": "4px",   "$type": "dimension" },
+  "radius-md":   { "$value": "8px",   "$type": "dimension" },
+  "radius-lg":   { "$value": "12px",  "$type": "dimension" },
+  "radius-xl":   { "$value": "16px",  "$type": "dimension" },
+  "radius-2xl":  { "$value": "24px",  "$type": "dimension" },
+  "radius-pill": { "$value": "999px", "$type": "dimension" },
+
+  "shadow-xs":    { "$value": "0 1px 2px rgba(9,75,119,0.06)", "$type": "shadow" },
+  "shadow-sm":    { "$value": "0 2px 4px rgba(9,75,119,0.08), 0 1px 2px rgba(9,75,119,0.04)", "$type": "shadow" },
+  "shadow-md":    { "$value": "0 6px 14px rgba(9,75,119,0.10), 0 2px 4px rgba(9,75,119,0.06)", "$type": "shadow" },
+  "shadow-lg":    { "$value": "0 16px 32px rgba(9,75,119,0.12), 0 4px 8px rgba(9,75,119,0.06)", "$type": "shadow" },
+  "shadow-xl":    { "$value": "0 28px 56px rgba(9,75,119,0.18), 0 8px 16px rgba(9,75,119,0.08)", "$type": "shadow" },
+  "shadow-focus": { "$value": "0 0 0 3px rgba(50,203,237,0.45)", "$type": "shadow" },
+
+  "container-narrow":  { "$value": "720px",  "$type": "dimension" },
+  "container-default": { "$value": "1120px", "$type": "dimension" },
+  "container-wide":    { "$value": "1440px", "$type": "dimension" },
+
+  "icon-stroke-sm": { "$value": 2, "$type": "number" },
+  "icon-stroke-md": { "$value": 2, "$type": "number" },
+  "icon-stroke-lg": { "$value": 2, "$type": "number" },
+
+  "border-thin":    { "$value": "0.5px", "$type": "dimension" },
+  "border-regular": { "$value": "1px",   "$type": "dimension" },
+  "border-thick":   { "$value": "2px",   "$type": "dimension" },
+  "border-bar":     { "$value": "12px",  "$type": "dimension" }
+}

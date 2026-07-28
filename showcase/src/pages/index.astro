@@ -1,0 +1,231 @@
+---
+import Base from '../layouts/Base.astro';
+
+const CARDS = [
+  {
+    icon: '✦',
+    title: 'Generate',
+    summary: 'Tell the AI what you need and who it\'s for. Brandforge handles every visual decision automatically.',
+    href: '/ai-guide/generate',
+  },
+  {
+    icon: '↺',
+    title: 'Update',
+    summary: 'Change one thing. Name exactly what it is. Say explicitly what stays the same.',
+    href: '/ai-guide/update',
+  },
+  {
+    icon: '◈',
+    title: 'Explore',
+    summary: 'Browse live experiments, templates, and components — all wired to the same brand values.',
+    href: '/lab',
+  },
+];
+---
+
+<Base title="Brandforge" currentPath="/">
+  <header class="page-header">
+    <h1>Every AI output starts here.</h1>
+    <p class="lead">
+      Brandforge is Metanoia's brand made machine-readable. It gives any AI tool instant access to the exact colors, type, spacing, and rules — not a description of them, the actual values. Every asset generated through Brandforge starts on-brand and stays there.
+    </p>
+  </header>
+
+  <section class="body-section">
+    <p class="body-copy">
+      Most AI-generated work drifts because the AI is guessing. It doesn't know your exact navy, your type scale, or which components exist. Brandforge fixes that at the source — before the first word of a prompt is written.
+    </p>
+  </section>
+
+  <section class="callout-section">
+    <h2>The only rule worth memorizing</h2>
+    <div class="two-col-table">
+      <div class="table-row table-head">
+        <span>You bring</span>
+        <span>Brandforge brings</span>
+      </div>
+      <div class="table-row">
+        <span>Your goal</span>
+        <span>Colors, typography, spacing — exact values</span>
+      </div>
+      <div class="table-row">
+        <span>Your audience</span>
+        <span>Component rules and layout patterns</span>
+      </div>
+      <div class="table-row">
+        <span>Your message</span>
+        <span>Everything else the brand requires</span>
+      </div>
+    </div>
+    <p class="table-note">If you're pasting colors, copying CSS, or looking up font names — stop. That's Brandforge's job, not yours.</p>
+  </section>
+
+  <section class="paths-section">
+    <h2>Where do you want to start?</h2>
+    <div class="paths-grid">
+      {CARDS.map(card => (
+        <a href={card.href} class="path-card">
+          <div class="path-icon">{card.icon}</div>
+          <h3>{card.title}</h3>
+          <p class="path-summary">{card.summary}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page-header {
+    padding-bottom: var(--space-10);
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: var(--space-10);
+  }
+
+  h1 {
+    font-size: var(--fs-36);
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--ls-tight);
+    line-height: var(--lh-tight);
+    margin: 0 0 var(--space-5);
+    color: var(--fg-1);
+  }
+
+  .lead {
+    font-size: var(--fs-18);
+    color: var(--fg-2);
+    line-height: var(--lh-relaxed);
+    max-width: 620px;
+    margin: 0;
+  }
+
+  .body-section {
+    margin-bottom: var(--space-10);
+  }
+
+  .body-copy {
+    font-size: var(--fs-16);
+    color: var(--fg-2);
+    line-height: var(--lh-relaxed);
+    max-width: 620px;
+    margin: 0;
+  }
+
+  .callout-section {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    margin-bottom: var(--space-14);
+  }
+
+  h2 {
+    font-size: var(--fs-20);
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--ls-snug);
+    margin: 0 0 var(--space-5);
+    color: var(--fg-1);
+  }
+
+  .two-col-table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: var(--space-5);
+  }
+
+  .table-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .table-row span {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--fs-14);
+    color: var(--fg-2);
+    border-bottom: 1px solid var(--border-subtle);
+    line-height: var(--lh-snug);
+  }
+
+  .table-row span:first-child {
+    border-right: 1px solid var(--border-subtle);
+  }
+
+  .table-row:last-child span {
+    border-bottom: none;
+  }
+
+  .table-head span {
+    font-size: var(--fs-12);
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wide);
+    color: var(--fg-3);
+    background: var(--bg-canvas);
+  }
+
+  .table-note {
+    font-size: var(--fs-13);
+    color: var(--fg-3);
+    margin: 0;
+    line-height: var(--lh-relaxed);
+  }
+
+  .paths-section { margin-bottom: var(--space-16); }
+
+  .paths-section h2 {
+    font-size: var(--fs-24);
+    margin-bottom: var(--space-6);
+  }
+
+  .paths-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-5);
+  }
+
+  .path-card {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    text-decoration: none;
+    transition: border-color 120ms, background 120ms;
+  }
+
+  .path-card:hover {
+    border-color: var(--border-accent);
+    background: var(--bg-accent-soft);
+    text-decoration: none;
+  }
+
+  .path-icon {
+    font-size: var(--fs-24);
+    color: var(--fg-accent);
+    line-height: 1;
+  }
+
+  .path-card h3 {
+    font-size: var(--fs-18);
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--ls-snug);
+    margin: 0;
+    color: var(--fg-1);
+  }
+
+  .path-summary {
+    font-size: var(--fs-14);
+    color: var(--fg-2);
+    line-height: var(--lh-relaxed);
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .paths-grid { grid-template-columns: 1fr; }
+  }
+</style>

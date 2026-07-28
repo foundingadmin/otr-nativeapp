@@ -1,0 +1,171 @@
+/* ============================================================
+   Metanoia User Manual — Shared Page Layout
+   Page chrome, demo scaffolding, and token reference tables
+   shared across all manual pages. NOT a DS component file —
+   these are user manual conventions only.
+   ============================================================ */
+
+/* ── Page header ─────────────────────────────────────────────── */
+
+.page-header {
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: var(--space-8);
+}
+
+.eyebrow {
+  font-size: var(--fs-12);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--fg-accent);
+  margin: 0 0 var(--space-3);
+}
+
+.page-header h1 {
+  font-size: var(--fs-36);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-tight);
+  line-height: var(--lh-tight);
+  margin: 0 0 var(--space-4);
+}
+
+.lead {
+  font-size: var(--fs-16);
+  color: var(--fg-2);
+  line-height: var(--lh-relaxed);
+  max-width: 580px;
+  margin: 0;
+}
+
+/* ── Token section (foundations pages) ──────────────────────── */
+
+.token-section {
+  margin-bottom: var(--space-16);
+}
+
+.token-section h2 {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--fg-3);
+  margin: 0 0 var(--space-5);
+}
+
+/* ── Demo section (component pages) ─────────────────────────── */
+
+.demo-section {
+  margin-bottom: var(--space-12);
+}
+
+.demo-section h2 {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--fg-3);
+  margin: 0 0 var(--space-5);
+}
+
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding: var(--space-8);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+  align-items: center;
+}
+
+.align-end { align-items: flex-end; }
+
+.demo-surface {
+  padding: var(--space-8);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+}
+
+.demo-note {
+  font-size: var(--fs-14);
+  color: var(--fg-3);
+  margin: var(--space-3) 0 0;
+}
+
+.section-desc {
+  font-size: var(--fs-15);
+  color: var(--fg-2);
+  margin: 0 0 var(--space-6);
+  max-width: 540px;
+}
+
+.code-block {
+  font-size: var(--fs-13);
+  line-height: var(--lh-relaxed);
+}
+
+/* ── Rules grid (usage do/don't panels) ──────────────────────── */
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-4);
+}
+
+.rule-card {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.rule-card h3 {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-semibold);
+  margin: 0 0 var(--space-3);
+  color: var(--fg-1);
+}
+
+.rule-card ul {
+  margin: 0;
+  padding-left: var(--space-5);
+  font-size: var(--fs-14);
+  color: var(--fg-2);
+  line-height: var(--lh-relaxed);
+}
+
+/* ── Token reference table ───────────────────────────────────── */
+
+.token-table {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.token-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-5);
+  border-bottom: 1px solid var(--border-subtle);
+  align-items: center;
+  font-size: var(--fs-14);
+}
+
+.token-row:last-child { border-bottom: none; }
+.token-row:nth-child(even):not(.header-row) { background: var(--bg-subtle); }
+
+.header-row {
+  background: var(--bg-muted);
+  font-size: var(--fs-12);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--fg-3);
+}
+
+.token-row code { color: var(--fg-accent); font-size: var(--fs-13); }
+.token-row span { color: var(--fg-2); }

@@ -1,0 +1,183 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const GROUPS = [
+  {
+    label: 'Background',
+    tokens: ['--bg-canvas', '--bg-subtle', '--bg-muted', '--bg-accent-soft', '--bg-accent'],
+  },
+  {
+    label: 'Foreground',
+    tokens: ['--fg-1', '--fg-2', '--fg-3', '--fg-4', '--fg-link', '--fg-accent'],
+  },
+  {
+    label: 'Border',
+    tokens: ['--border-subtle', '--border-default', '--border-strong', '--border-accent'],
+  },
+  {
+    label: 'Button — primary',
+    tokens: ['--btn-primary-bg', '--btn-primary-bg-hover', '--btn-primary-bg-active', '--btn-primary-text'],
+  },
+  {
+    label: 'Button — secondary',
+    tokens: ['--btn-secondary-bg', '--btn-secondary-text', '--btn-secondary-border'],
+  },
+  {
+    label: 'Button — ghost',
+    tokens: ['--btn-ghost-text', '--btn-ghost-border'],
+  },
+];
+---
+
+<Base title="Colors" currentPath="/foundations/colors">
+  <header class="page-header">
+    <p class="eyebrow">Foundations</p>
+    <h1>Colors</h1>
+    <p class="lead">
+      Semantic color tokens define the visual roles — background, foreground, border — not raw values.
+      Always use semantic tokens in component code. Raw primitives are for building the semantic layer only.
+    </p>
+    <p class="mode-hint">Use the ☽ toggle in the sidebar to preview dark mode token values.</p>
+  </header>
+
+  <div id="swatch-surface">
+    {GROUPS.map(group => (
+      <section class="swatch-group">
+        <h2>{group.label}</h2>
+        <div class="swatch-grid">
+          {group.tokens.map(token => (
+            <button
+              class="swatch-card"
+              data-token={token}
+              aria-label={`Copy token name ${token}`}
+              title="Click to copy"
+            >
+              <div class="swatch-color" style={`background: var(${token})`}></div>
+              <div class="swatch-meta">
+                <code class="swatch-name">{token}</code>
+                <span class="swatch-hint">Click to copy</span>
+              </div>
+              <span class="swatch-copied" aria-hidden="true">Copied</span>
+            </button>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</Base>
+
+<style>
+  .lead { margin-bottom: var(--space-3); }
+
+  .mode-hint {
+    font-size: var(--fs-13);
+    color: var(--fg-3);
+    margin: 0 0 var(--space-6);
+  }
+
+  .swatch-group {
+    margin-bottom: var(--space-10);
+  }
+
+  .swatch-group h2 {
+    font-size: var(--fs-14);
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wide);
+    color: var(--fg-3);
+    margin: 0 0 var(--space-4);
+  }
+
+  .swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: var(--space-3);
+  }
+
+  .swatch-card {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    transition: box-shadow 120ms, border-color 120ms;
+    font-family: var(--font-sans);
+  }
+  .swatch-card:hover {
+    border-color: var(--border-default);
+    box-shadow: var(--shadow-sm);
+  }
+  .swatch-card:focus-visible {
+    outline: 2px solid var(--border-accent);
+    outline-offset: 2px;
+  }
+
+  .swatch-color {
+    height: 72px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .swatch-meta {
+    padding: var(--space-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .swatch-name {
+    font-size: var(--fs-12);
+    color: var(--fg-1);
+    word-break: break-all;
+  }
+
+  .swatch-hint {
+    font-size: var(--fs-12);
+    color: var(--fg-3);
+  }
+
+  .swatch-copied {
+    position: absolute;
+    top: var(--space-2);
+    right: var(--space-2);
+    background: var(--bg-accent);
+    color: var(--fg-1);
+    font-size: var(--fs-12);
+    font-weight: var(--fw-semibold);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-xs);
+    opacity: 0;
+    transition: opacity 120ms;
+    pointer-events: none;
+  }
+
+  .swatch-card.just-copied .swatch-copied { opacity: 1; }
+
+
+  @media (max-width: 600px) {
+    .swatch-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+
+<script>
+  // Copy to clipboard
+  document.querySelectorAll<HTMLButtonElement>('.swatch-card').forEach(card => {
+    card.addEventListener('click', async () => {
+      const token = card.dataset.token ?? '';
+      try {
+        await navigator.clipboard.writeText(token);
+      } catch {
+        const ta = document.createElement('textarea');
+        ta.value = token;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      card.classList.add('just-copied');
+      setTimeout(() => card.classList.remove('just-copied'), 1200);
+    });
+  });
+</script>

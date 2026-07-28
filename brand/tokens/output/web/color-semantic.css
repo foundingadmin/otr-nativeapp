@@ -1,0 +1,166 @@
+/* ============================================================
+   Metanoia — Color Semantic Aliases
+   Role-based tokens that reference color-primitives.css.
+   Always use these in components — never primitives directly.
+   Dark mode: apply [data-theme="dark"] to <html>.
+   ============================================================ */
+
+:root {
+  /* ── Surfaces ───────────────────────────────────────────── */
+  --bg-canvas:      var(--color-white);
+  --bg-subtle:      var(--color-grey-50);
+  --bg-muted:       var(--color-grey-100);
+  --bg-accent-soft: var(--color-aqua-50);
+  --bg-accent:      var(--color-aqua);
+
+  /* ── Foreground / text ──────────────────────────────────── */
+  --fg-1:          var(--color-navy-900);
+  --fg-2:          var(--color-grey-800);
+  --fg-3:          var(--color-grey-600);
+  --fg-4:          var(--color-grey-400);
+  --fg-link:       var(--color-navy);
+  --fg-link-hover: var(--color-aqua-700);
+  --fg-accent:     var(--color-aqua-700);
+
+  /* ── Borders ────────────────────────────────────────────── */
+  --border-subtle:  var(--color-grey-200);
+  --border-default: var(--color-grey-300);
+  --border-strong:  var(--color-grey-600);
+  --border-accent:  var(--color-aqua);
+
+  /* ── Logo ───────────────────────────────────────────────── */
+  --logo-accent:    var(--color-aqua);
+  --logo-mark:      var(--color-navy-700);
+  --logo-wordmark:  var(--color-navy-700);
+
+  /* ── Button — Primary ───────────────────────────────────── */
+  --btn-primary-bg:           var(--color-navy-700);
+  --btn-primary-bg-hover:     var(--color-navy-500);
+  --btn-primary-bg-active:    var(--color-navy-900);
+  --btn-primary-bg-disabled:  var(--color-grey-50);
+  --btn-primary-text:         var(--color-white);
+  --btn-primary-text-disabled:var(--color-grey-400);
+
+  /* ── Button — Secondary ─────────────────────────────────── */
+  --btn-secondary-bg:              var(--color-white);
+  --btn-secondary-bg-hover:        var(--color-navy-100);
+  --btn-secondary-bg-active:       var(--color-navy-100);
+  --btn-secondary-bg-disabled:     var(--color-white);
+  --btn-secondary-text:            var(--color-navy-900);
+  --btn-secondary-text-disabled:   var(--color-grey-400);
+  --btn-secondary-border:          var(--color-navy-700);
+  --btn-secondary-border-hover:    var(--color-navy-900);
+  --btn-secondary-border-active:   var(--color-navy-900);
+  --btn-secondary-border-disabled: var(--color-grey-200);
+
+  /* ── Button — Ghost ─────────────────────────────────────── */
+  --btn-ghost-bg-hover:        var(--color-grey-100);
+  --btn-ghost-bg-active:       var(--color-grey-200);
+  --btn-ghost-text:            var(--color-navy-700);
+  --btn-ghost-text-disabled:   var(--color-grey-400);
+  --btn-ghost-border:          var(--color-grey-300);
+  --btn-ghost-border-disabled: var(--color-grey-200);
+}
+
+[data-theme="dark"] {
+  /* ── Surfaces ───────────────────────────────────────────── */
+  --bg-canvas:      var(--color-grey-900);
+  --bg-subtle:      var(--color-navy-900);
+  --bg-muted:       var(--color-navy-700);
+  --bg-accent-soft: rgba(50,203,237,0.12);
+  --bg-accent:      var(--color-aqua);
+
+  /* ── Foreground / text ──────────────────────────────────── */
+  --fg-1:          var(--color-white);
+  --fg-2:          rgba(255,255,255,0.88);
+  --fg-3:          rgba(255,255,255,0.72);
+  --fg-4:          rgba(255,255,255,0.48);
+  --fg-link:       var(--color-light-aqua);
+  --fg-link-hover: var(--color-aqua);
+  --fg-accent:     var(--color-aqua-300);
+
+  /* ── Borders ────────────────────────────────────────────── */
+  --border-subtle:  rgba(255,255,255,0.1);
+  --border-default: var(--color-grey-700);
+  --border-strong:  var(--color-grey-400);
+  --border-accent:  var(--color-aqua);
+
+  /* ── Logo ───────────────────────────────────────────────── */
+  --logo-accent:    var(--color-aqua);
+  --logo-mark:      var(--color-white);
+  --logo-wordmark:  var(--color-white);
+
+  /* ── Button — Primary ───────────────────────────────────── */
+  --btn-primary-bg:           var(--color-navy-500);
+  --btn-primary-bg-hover:     var(--color-aqua-700);
+  --btn-primary-bg-active:    var(--color-navy-700);
+  --btn-primary-bg-disabled:  var(--color-navy-900);
+  --btn-primary-text:         var(--color-white);
+  --btn-primary-text-disabled:#42677F;
+
+  /* ── Button — Secondary ─────────────────────────────────── */
+  --btn-secondary-bg:              var(--color-grey-800);
+  --btn-secondary-bg-hover:        var(--color-navy-900);
+  --btn-secondary-bg-active:       var(--color-navy-700);
+  --btn-secondary-bg-disabled:     var(--color-grey-800);
+  --btn-secondary-text:            var(--color-white);
+  --btn-secondary-text-disabled:   #3D6986;
+  --btn-secondary-border:          var(--color-navy-500);
+  --btn-secondary-border-hover:    var(--color-aqua-700);
+  --btn-secondary-border-active:   var(--color-aqua-500);
+  --btn-secondary-border-disabled: var(--color-navy-700);
+
+  /* ── Button — Ghost ─────────────────────────────────────── */
+  --btn-ghost-bg-hover:        var(--color-navy-900);
+  --btn-ghost-bg-active:       var(--color-navy-900);
+  --btn-ghost-text:            var(--color-white);
+  --btn-ghost-text-disabled:   #3D6986;
+  --btn-ghost-border:          var(--color-navy-700);
+  --btn-ghost-border-disabled: var(--color-navy-700);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-canvas:      var(--color-grey-900);
+    --bg-subtle:      var(--color-navy-900);
+    --bg-muted:       var(--color-navy-700);
+    --bg-accent-soft: rgba(50,203,237,0.12);
+    --bg-accent:      var(--color-aqua);
+    --fg-1:          var(--color-white);
+    --fg-2:          rgba(255,255,255,0.88);
+    --fg-3:          rgba(255,255,255,0.72);
+    --fg-4:          rgba(255,255,255,0.48);
+    --fg-link:       var(--color-light-aqua);
+    --fg-link-hover: var(--color-aqua);
+    --fg-accent:     var(--color-aqua-300);
+    --border-subtle:  rgba(255,255,255,0.1);
+    --border-default: var(--color-grey-700);
+    --border-strong:  var(--color-grey-400);
+    --border-accent:  var(--color-aqua);
+    --logo-accent:    var(--color-aqua);
+    --logo-mark:      var(--color-white);
+    --logo-wordmark:  var(--color-white);
+    --btn-primary-bg:           var(--color-navy-500);
+    --btn-primary-bg-hover:     var(--color-aqua-700);
+    --btn-primary-bg-active:    var(--color-navy-700);
+    --btn-primary-bg-disabled:  var(--color-navy-900);
+    --btn-primary-text:         var(--color-white);
+    --btn-primary-text-disabled:#42677F;
+    --btn-secondary-bg:              var(--color-grey-800);
+    --btn-secondary-bg-hover:        var(--color-navy-900);
+    --btn-secondary-bg-active:       var(--color-navy-700);
+    --btn-secondary-bg-disabled:     var(--color-grey-800);
+    --btn-secondary-text:            var(--color-white);
+    --btn-secondary-text-disabled:   #3D6986;
+    --btn-secondary-border:          var(--color-navy-500);
+    --btn-secondary-border-hover:    var(--color-aqua-700);
+    --btn-secondary-border-active:   var(--color-aqua-500);
+    --btn-secondary-border-disabled: var(--color-navy-700);
+    --btn-ghost-bg-hover:        var(--color-navy-900);
+    --btn-ghost-bg-active:       var(--color-navy-900);
+    --btn-ghost-text:            var(--color-white);
+    --btn-ghost-text-disabled:   #3D6986;
+    --btn-ghost-border:          var(--color-navy-700);
+    --btn-ghost-border-disabled: var(--color-navy-700);
+  }
+}

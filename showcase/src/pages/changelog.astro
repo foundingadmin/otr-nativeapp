@@ -1,0 +1,254 @@
+---
+import Base from '../layouts/Base.astro';
+
+const RELEASES = [
+  {
+    version: 'v3.6.0',
+    date: '2026-05-29',
+    type: 'minor',
+    changes: [
+      'New Molecules page: Alert (4 variants + dismiss), Breadcrumb, Pagination, Tabs (ARIA tabs with JS)',
+      'New Organisms page: Top nav bar, Hero, Modal (static open state), Data table, Empty state',
+      'Sidebar: Molecules group added (Molecules + Organisms pages)',
+    ],
+  },
+  {
+    version: 'v3.5.0',
+    date: '2026-05-29',
+    type: 'minor',
+    changes: [
+      'New Labels page: Badge (5 variants + dot indicator), Chip (filter chips with selected state), Tag (plain, dismissible, icon variants)',
+      'Toggle added to Forms page: checkbox-based switch input, all states (on, off, disabled)',
+      'Sidebar: Labels added to Atoms nav group',
+    ],
+  },
+  {
+    version: 'v3.4.0',
+    date: '2026-05-29',
+    type: 'minor',
+    changes: [
+      'Sidebar restructured: Foundations → Tokens, Components → Atoms',
+      'Dark/light mode toggle in sidebar — persists via localStorage',
+      'OS prefers-color-scheme respected on first visit',
+      'Colors page internal toggle now syncs with global theme on load',
+      'Desktop layout widened at 1280px+ (max-width 1020px, more padding)',
+      'Version badge in sidebar footer links to /changelog',
+      'New /changelog page added',
+      'Asset downloads: direct download links on Assets page',
+      'Adapters copy updated: accurately describes W3C JSON → run-adapters.js → outputs pipeline',
+      'AI guide: prerequisite callout on both Generate and Update pages',
+      'AI guide: email prompt path corrected to brand/tokens/output/email/inline.css',
+      'AI guide: Token vocabulary renamed to Token cheat sheet',
+    ],
+  },
+  {
+    version: 'v3.3.7',
+    date: '2026-05-29',
+    type: 'patch',
+    changes: [
+      'Fixed fg-accent token: now resolves to aqua-300 instead of error-600 (synced from Figma)',
+      'Added logo semantic tokens: --logo-accent, --logo-mark, --logo-wordmark with dark mode variants',
+      'Fixed lab page stylesheet paths to use relative URL — branch previews now serve correct tokens',
+      'CI workflow now commits showcase/public/colors_and_type.css barrel after adapter runs',
+      'run-adapters.js now rebuilds public CSS barrel automatically after every run',
+      'Deleted showcase/public/legacy/ — legacy single-page showcase retired',
+      'Deleted showcase/public/preview/ — preview iframe cards retired (orphaned by legacy deletion)',
+      'html-to-astro translator validated as canonical workflow for future component additions',
+    ],
+  },
+  {
+    version: 'v3.3.6',
+    date: '2026-05-27',
+    type: 'patch',
+    changes: [
+      'CLAUDE.md updated to reflect current repo structure and component workflow',
+      'Minor doc corrections across engine files',
+    ],
+  },
+  {
+    version: 'v3.3.5',
+    date: '2026-05-20',
+    type: 'patch',
+    changes: [
+      'Retired five legacy brand/tokens/*.css files (Feature 012)',
+      'Root barrel updated to @import from brand/tokens/output/web/',
+      'Updated CLAUDE.md, SYNC-MASTER.md, INSTALL.md, and two showcase pages to reflect new paths',
+    ],
+  },
+  {
+    version: 'v3.3.4',
+    date: '2026-05-10',
+    type: 'patch',
+    changes: [
+      'Adapter diff-awareness: no git noise when token values are unchanged',
+      'Local Figma state cache for early-exit on unchanged nightly runs',
+    ],
+  },
+  {
+    version: 'v3.3.3',
+    date: '2026-05-05',
+    type: 'patch',
+    changes: [
+      'Single-call Figma REST variable fetch via figma-rest.js',
+    ],
+  },
+  {
+    version: 'v3.3.2',
+    date: '2026-04-28',
+    type: 'patch',
+    changes: [
+      'Alias warning suppression in sync output',
+    ],
+  },
+  {
+    version: 'v3.3.0',
+    date: '2026-04-10',
+    type: 'minor',
+    changes: [
+      'W3C Design Tokens JSON as single source of truth for all token categories',
+      'Adapter pipeline: web-css, web-flat-json, email-inline, pptx-json, gslides-json',
+      'run-adapters.js orchestrates all adapters from brand/tokens/source/',
+      'Astro showcase migrated to import from brand/tokens/output/web/',
+    ],
+  },
+];
+
+const typeLabel: Record<string, string> = {
+  major: 'Major',
+  minor: 'Minor',
+  patch: 'Patch',
+};
+---
+
+<Base title="Changelog" currentPath="/changelog">
+  <header class="page-header">
+    <p class="eyebrow">Release history</p>
+    <h1>Changelog</h1>
+    <p class="lead">
+      All notable changes to Brandforge. Follows semantic versioning —
+      Major for breaking changes, Minor for new features, Patch for fixes and doc updates.
+    </p>
+  </header>
+
+  <div class="releases">
+    {RELEASES.map(release => (
+      <div class="release">
+        <div class="release-header">
+          <div class="release-meta">
+            <span class="release-version">{release.version}</span>
+            <span class={`release-type type-${release.type}`}>{typeLabel[release.type]}</span>
+          </div>
+          <time class="release-date">{release.date}</time>
+        </div>
+        <ul class="change-list">
+          {release.changes.map(change => (
+            <li>{change}</li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</Base>
+
+<style>
+  .page-header {
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: var(--space-10);
+  }
+
+  .eyebrow {
+    font-size: var(--fs-12);
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wide);
+    color: var(--fg-accent);
+    margin: 0 0 var(--space-3);
+  }
+
+  h1 {
+    font-size: var(--fs-36);
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--ls-tight);
+    line-height: var(--lh-tight);
+    margin: 0 0 var(--space-4);
+    color: var(--fg-1);
+  }
+
+  .lead {
+    font-size: var(--fs-18);
+    color: var(--fg-2);
+    line-height: var(--lh-relaxed);
+    max-width: 580px;
+    margin: 0;
+  }
+
+  .releases {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .release {
+    padding: var(--space-7) 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .release:last-child { border-bottom: none; }
+
+  .release-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-4);
+    gap: var(--space-4);
+    flex-wrap: wrap;
+  }
+
+  .release-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .release-version {
+    font-size: var(--fs-18);
+    font-weight: var(--fw-bold);
+    font-family: var(--font-mono);
+    color: var(--fg-1);
+    letter-spacing: var(--ls-tight);
+  }
+
+  .release-type {
+    font-size: var(--fs-12);
+    font-weight: var(--fw-semibold);
+    padding: 2px var(--space-3);
+    border-radius: var(--radius-pill);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wide);
+  }
+
+  .type-major { background: var(--color-error-100); color: var(--color-error-700); }
+  .type-minor { background: var(--bg-accent-soft); color: var(--fg-accent); }
+  .type-patch { background: var(--bg-muted); color: var(--fg-3); }
+
+  .release-date {
+    font-size: var(--fs-13);
+    color: var(--fg-3);
+    font-family: var(--font-mono);
+  }
+
+  .change-list {
+    margin: 0;
+    padding: 0 0 0 var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .change-list li {
+    font-size: var(--fs-14);
+    color: var(--fg-2);
+    line-height: var(--lh-relaxed);
+  }
+</style>

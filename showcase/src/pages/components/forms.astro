@@ -1,0 +1,432 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title="Forms" currentPath="/components/forms">
+  <header class="page-header">
+    <p class="eyebrow">Components</p>
+    <h1>Forms</h1>
+    <p class="lead">
+      Form element styles use semantic color tokens for all states: default, focus, disabled, and
+      error. No hardcoded values. All form elements use <code>var(--font-sans)</code>.
+    </p>
+  </header>
+
+  <section class="demo-section">
+    <h2>Text input</h2>
+    <div class="demo-surface">
+      <div class="field-group">
+        <div class="field">
+          <label class="field-label" for="ex-default">Default</label>
+          <input class="input" id="ex-default" type="text" placeholder="Placeholder text" />
+          <span class="field-hint">Helper text goes below the input.</span>
+        </div>
+        <div class="field">
+          <label class="field-label" for="ex-filled">Filled</label>
+          <input class="input" id="ex-filled" type="text" value="User-entered value" />
+        </div>
+        <div class="field">
+          <label class="field-label" for="ex-disabled">Disabled</label>
+          <input class="input" id="ex-disabled" type="text" value="Cannot be edited" disabled />
+        </div>
+        <div class="field">
+          <label class="field-label" for="ex-error">Error state</label>
+          <input class="input input--error" id="ex-error" type="text" value="invalid@" aria-describedby="ex-error-msg" aria-invalid="true" />
+          <span class="field-error" id="ex-error-msg">Enter a valid email address.</span>
+        </div>
+      </div>
+    </div>
+    <pre class="code-block">&lt;div class="field"&gt;
+  &lt;label class="field-label" for="email"&gt;Email&lt;/label&gt;
+  &lt;input class="input" id="email" type="email" placeholder="you@example.com" /&gt;
+  &lt;span class="field-hint"&gt;We'll never share your email.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Error state --&gt;
+&lt;input class="input input--error" aria-invalid="true" aria-describedby="err" /&gt;
+&lt;span class="field-error" id="err"&gt;Error message here.&lt;/span&gt;</pre>
+  </section>
+
+  <section class="demo-section">
+    <h2>Select</h2>
+    <div class="demo-surface">
+      <div class="field-group">
+        <div class="field">
+          <label class="field-label" for="ex-select">Role</label>
+          <div class="select-wrap">
+            <select class="input select" id="ex-select">
+              <option value="">Choose a role...</option>
+              <option value="designer">Designer</option>
+              <option value="engineer">Engineer</option>
+              <option value="pm">Product manager</option>
+            </select>
+            <svg class="select-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <pre class="code-block">&lt;div class="select-wrap"&gt;
+  &lt;select class="input select" id="role"&gt;
+    &lt;option value=""&gt;Choose a role...&lt;/option&gt;
+    &lt;option value="designer"&gt;Designer&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;svg class="select-chevron" ...&gt;&lt;/svg&gt;
+&lt;/div&gt;</pre>
+  </section>
+
+  <section class="demo-section">
+    <h2>Checkbox</h2>
+    <div class="demo-surface">
+      <div class="check-group">
+        <label class="check-label">
+          <input type="checkbox" class="check" checked />
+          <span>Option one (checked)</span>
+        </label>
+        <label class="check-label">
+          <input type="checkbox" class="check" />
+          <span>Option two</span>
+        </label>
+        <label class="check-label">
+          <input type="checkbox" class="check" disabled />
+          <span class="disabled-text">Disabled option</span>
+        </label>
+      </div>
+    </div>
+    <pre class="code-block">&lt;label class="check-label"&gt;
+  &lt;input type="checkbox" class="check" /&gt;
+  &lt;span&gt;Option label&lt;/span&gt;
+&lt;/label&gt;</pre>
+  </section>
+
+  <section class="demo-section">
+    <h2>Radio</h2>
+    <div class="demo-surface">
+      <fieldset class="fieldset">
+        <legend class="fieldset-legend">Preferred surface</legend>
+        <div class="check-group">
+          <label class="check-label">
+            <input type="radio" class="radio" name="surface" value="web" checked />
+            <span>Web</span>
+          </label>
+          <label class="check-label">
+            <input type="radio" class="radio" name="surface" value="pptx" />
+            <span>PowerPoint</span>
+          </label>
+          <label class="check-label">
+            <input type="radio" class="radio" name="surface" value="slides" />
+            <span>Google Slides</span>
+          </label>
+        </div>
+      </fieldset>
+    </div>
+    <pre class="code-block">&lt;fieldset class="fieldset"&gt;
+  &lt;legend class="fieldset-legend"&gt;Group label&lt;/legend&gt;
+  &lt;label class="check-label"&gt;
+    &lt;input type="radio" class="radio" name="group" value="a" /&gt;
+    &lt;span&gt;Option A&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/fieldset&gt;</pre>
+  </section>
+
+  <section class="demo-section">
+    <h2>Toggle</h2>
+    <div class="demo-surface">
+      <div class="check-group">
+        <label class="toggle-label">
+          <input type="checkbox" class="toggle-input" checked />
+          <span class="toggle-track" aria-hidden="true">
+            <span class="toggle-thumb"></span>
+          </span>
+          <span>Enabled (on)</span>
+        </label>
+        <label class="toggle-label">
+          <input type="checkbox" class="toggle-input" />
+          <span class="toggle-track" aria-hidden="true">
+            <span class="toggle-thumb"></span>
+          </span>
+          <span>Disabled (off)</span>
+        </label>
+        <label class="toggle-label">
+          <input type="checkbox" class="toggle-input" disabled />
+          <span class="toggle-track" aria-hidden="true">
+            <span class="toggle-thumb"></span>
+          </span>
+          <span class="disabled-text">Not available</span>
+        </label>
+      </div>
+    </div>
+    <pre class="code-block">&lt;label class="toggle-label"&gt;
+  &lt;input type="checkbox" class="toggle-input" /&gt;
+  &lt;span class="toggle-track" aria-hidden="true"&gt;
+    &lt;span class="toggle-thumb"&gt;&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span&gt;Label&lt;/span&gt;
+&lt;/label&gt;</pre>
+  </section>
+
+  <section class="demo-section">
+    <h2>Textarea</h2>
+    <div class="demo-surface">
+      <div class="field">
+        <label class="field-label" for="ex-textarea">Description</label>
+        <textarea class="input textarea" id="ex-textarea" rows="4" placeholder="Enter a description..."></textarea>
+        <span class="field-hint">Maximum 500 characters.</span>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* Fields */
+  .field-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    max-width: 360px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .field-label {
+    font-size: var(--fs-14);
+    font-weight: var(--fw-medium);
+    color: var(--fg-1);
+  }
+
+  .field-hint {
+    font-size: var(--fs-13);
+    color: var(--fg-3);
+  }
+
+  .field-error {
+    font-size: var(--fs-13);
+    color: var(--color-error);
+  }
+
+  /* Input base */
+  .input {
+    font-family: var(--font-sans);
+    font-size: var(--fs-14);
+    color: var(--fg-1);
+    background: var(--bg-canvas);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    padding: var(--space-3) var(--space-4);
+    width: 100%;
+    transition: border-color var(--dur-fast) var(--ease-standard),
+                box-shadow var(--dur-fast) var(--ease-standard);
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .input::placeholder { color: var(--fg-4); }
+
+  .input:focus {
+    outline: none;
+    border-color: var(--border-accent);
+    box-shadow: var(--shadow-focus);
+  }
+
+  .input:disabled {
+    background: var(--bg-muted);
+    color: var(--fg-4);
+    cursor: not-allowed;
+    border-color: var(--border-subtle);
+  }
+
+  .input--error {
+    border-color: var(--color-error);
+  }
+
+  .input--error:focus {
+    box-shadow: 0 0 0 3px var(--color-error-200);
+  }
+
+  /* Select */
+  .select-wrap {
+    position: relative;
+    width: 100%;
+  }
+
+  .select {
+    cursor: pointer;
+    padding-right: var(--space-10);
+  }
+
+  .select-chevron {
+    position: absolute;
+    right: var(--space-3);
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--fg-3);
+  }
+
+  /* Textarea */
+  .textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  /* Checkbox + radio */
+  .check-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .check-label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    cursor: pointer;
+    font-size: var(--fs-14);
+    color: var(--fg-1);
+    font-family: var(--font-sans);
+  }
+
+  .check,
+  .radio {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-default);
+    background: var(--bg-canvas);
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: border-color var(--dur-fast) var(--ease-standard),
+                background var(--dur-fast) var(--ease-standard);
+    position: relative;
+  }
+
+  .check { border-radius: var(--radius-xs); }
+  .radio { border-radius: var(--radius-pill); }
+
+  .check:checked,
+  .radio:checked {
+    background: var(--btn-primary-bg);
+    border-color: var(--btn-primary-bg);
+  }
+
+  .check:checked::after {
+    content: '';
+    position: absolute;
+    top: 2px; left: 5px;
+    width: 5px; height: 9px;
+    border: 2px solid white;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+  }
+
+  .radio:checked::after {
+    content: '';
+    position: absolute;
+    top: 3px; left: 3px;
+    width: 8px; height: 8px;
+    background: white;
+    border-radius: var(--radius-pill);
+  }
+
+  .check:focus-visible,
+  .radio:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-focus);
+  }
+
+  .check:disabled,
+  .radio:disabled {
+    background: var(--bg-muted);
+    border-color: var(--border-subtle);
+    cursor: not-allowed;
+  }
+
+  .disabled-text { color: var(--fg-3); }
+
+  /* Toggle */
+  .toggle-label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    cursor: pointer;
+    font-size: var(--fs-14);
+    color: var(--fg-1);
+    font-family: var(--font-sans);
+  }
+
+  .toggle-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .toggle-track {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 40px;
+    height: 22px;
+    border-radius: var(--radius-pill);
+    background: var(--border-default);
+    flex-shrink: 0;
+    transition: background var(--dur-fast) var(--ease-standard);
+  }
+
+  .toggle-thumb {
+    position: absolute;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: var(--radius-pill);
+    background: var(--bg-canvas);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    transition: transform var(--dur-fast) var(--ease-standard),
+                background var(--dur-fast) var(--ease-standard);
+  }
+
+  .toggle-input:checked + .toggle-track {
+    background: var(--btn-primary-bg);
+  }
+
+  .toggle-input:checked + .toggle-track .toggle-thumb {
+    transform: translateX(18px);
+  }
+
+  .toggle-input:focus-visible + .toggle-track {
+    outline: none;
+    box-shadow: var(--shadow-focus);
+  }
+
+  .toggle-input:disabled + .toggle-track {
+    background: var(--bg-muted);
+    cursor: not-allowed;
+  }
+
+  .toggle-input:disabled + .toggle-track .toggle-thumb {
+    background: var(--bg-subtle);
+  }
+
+  .toggle-label:has(.toggle-input:disabled) {
+    cursor: not-allowed;
+  }
+
+  /* Fieldset */
+  .fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .fieldset-legend {
+    font-size: var(--fs-14);
+    font-weight: var(--fw-medium);
+    color: var(--fg-1);
+    margin-bottom: var(--space-4);
+  }
+</style>

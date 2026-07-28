@@ -1,0 +1,64 @@
+{
+  "$description": "Metanoia — Color Primitives. Raw palette values only. No aliases. Source of truth: Metanoia Visual Identity Guide 2025 v1.",
+
+  "color-navy":       { "$value": "#094B77", "$type": "color" },
+  "color-aqua":       { "$value": "#32CBED", "$type": "color" },
+  "color-light-aqua": { "$value": "#9BEBF9", "$type": "color" },
+  "color-white":      { "$value": "#FFFFFF", "$type": "color" },
+  "color-black":      { "$value": "#000000", "$type": "color" },
+  "color-grey":       { "$value": "#999999", "$type": "color" },
+  "color-dark-grey":  { "$value": "#666666", "$type": "color" },
+
+  "color-navy-900":   { "$value": "#062F4A", "$type": "color" },
+  "color-navy-700":   { "$value": "#094B77", "$type": "color" },
+  "color-navy-500":   { "$value": "#1F6EA0", "$type": "color" },
+  "color-navy-100":   { "$value": "#DCEAF3", "$type": "color" },
+
+  "color-aqua-700":   { "$value": "#1FA8C9", "$type": "color" },
+  "color-aqua-500":   { "$value": "#32CBED", "$type": "color" },
+  "color-aqua-300":   { "$value": "#62D9F3", "$type": "color" },
+  "color-aqua-200":   { "$value": "#BFF1FB", "$type": "color" },
+  "color-aqua-50":    { "$value": "#ECFAFD", "$type": "color" },
+
+  "color-grey-900":   { "$value": "#131A21", "$type": "color" },
+  "color-grey-800":   { "$value": "#232C35", "$type": "color" },
+  "color-grey-700":   { "$value": "#3A4754", "$type": "color" },
+  "color-grey-600":   { "$value": "#56636F", "$type": "color" },
+  "color-grey-500":   { "$value": "#6E7A86", "$type": "color" },
+  "color-grey-400":   { "$value": "#8C97A1", "$type": "color" },
+  "color-grey-300":   { "$value": "#B6BEC6", "$type": "color" },
+  "color-grey-200":   { "$value": "#D8DEE3", "$type": "color" },
+  "color-grey-100":   { "$value": "#ECEFF2", "$type": "color" },
+  "color-grey-50":    { "$value": "#F4F6F8", "$type": "color" },
+
+  "color-success":    { "$value": "#2E9E6E", "$type": "color" },
+  "color-warning":    { "$value": "#E9A23B", "$type": "color" },
+  "color-error":      { "$value": "#D6492F", "$type": "color" },
+  "color-info":       { "$value": "#7C5BD9", "$type": "color" },
+
+  "color-success-200":  { "$value": "#C8F0DF", "$type": "color" },
+  "color-success-400":  { "$value": "#6FCA9E", "$type": "color" },
+  "color-success-600":  { "$value": "#2E9E6E", "$type": "color" },
+  "color-success-800":  { "$value": "#1A6343", "$type": "color" },
+  "color-success-1000": { "$value": "#0A2B1D", "$type": "color" },
+
+  "color-warning-200":  { "$value": "#FDECD2", "$type": "color" },
+  "color-warning-400":  { "$value": "#F5C073", "$type": "color" },
+  "color-warning-600":  { "$value": "#E9A23B", "$type": "color" },
+  "color-warning-800":  { "$value": "#9E6A1D", "$type": "color" },
+  "color-warning-1000": { "$value": "#3D280A", "$type": "color" },
+
+  "color-error-50":   { "$value": "#FFF2F0", "$type": "color" },
+  "color-error-200":  { "$value": "#FAD5CE", "$type": "color" },
+  "color-error-400":  { "$value": "#E98474", "$type": "color" },
+  "color-error-600":  { "$value": "#D6492F", "$type": "color" },
+  "color-error-700":  { "$value": "#B83C24", "$type": "color" },
+  "color-error-800":  { "$value": "#8F2D1C", "$type": "color" },
+  "color-error-1000": { "$value": "#3A0F09", "$type": "color" },
+
+  "color-info-200":  { "$value": "#E6E0FA", "$type": "color" },
+  "color-info-400":  { "$value": "#B09AEA", "$type": "color" },
+  "color-info-600":  { "$value": "#7C5BD9", "$type": "color" },
+  "color-info-800":  { "$value": "#4A30A8", "$type": "color" },
+  "color-info-1000": { "$value": "#1E1242", "$type": "color" }
+}

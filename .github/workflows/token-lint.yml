@@ -1,0 +1,49 @@
+name: Validate Token Sources
+
+on:
+  pull_request:
+    paths:
+      - 'brand/tokens/source/**'
+      - 'brand/token-map.js'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  lint:
+    name: Validate token sources
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Run lint-tokens
+        id: lint
+        run: |
+          node sweden/engine/lint-tokens.js --json > /tmp/lint-result.json
+          node sweden/engine/lint-tokens.js
+
+      - name: Post lint summary to PR (on failure)
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          SUMMARY=$(node -e "
+            const r = require('/tmp/lint-result.json');
+            const lines = r.errors.map(e => '- **[' + e.check + ']** ' + e.message);
+            console.log('### Token lint failed\n\n' + lines.join('\n'));
+          ")
+
+          gh pr comment "${{ github.event.pull_request.number }}" \
+            --body "${SUMMARY}
+
+> Fix these errors in \`brand/tokens/source/\` before merging.
+> Run \`node sweden/engine/lint-tokens.js\` locally to reproduce."
