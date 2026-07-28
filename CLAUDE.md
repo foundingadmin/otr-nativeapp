@@ -28,6 +28,7 @@ the UI into a Figma file** via the Figma MCP.
 │   └── assets/              ← Logos, identity guides
 ├── intake/                  ← CD package drop zone (see intake/README.md)
 ├── docs/                    ← Canon docs: OPERATING-MODEL.md, decisions.md, prds/
+├── sweden-starter/          ← Whitelabel install kit for future client deployments
 └── sample-metanoia/         ← Reference deployment (Metanoia) — delete when no longer needed
 ```
 

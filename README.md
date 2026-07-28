@@ -15,6 +15,7 @@ bindings via the Figma MCP.
 - `sweden/` — the engine (brand-agnostic): token sync scripts, adapters, translators
 - `brand/` — everything Off The Record: config, tokens, components, fonts, assets
 - `intake/` — drop zone for incoming CD packages
+- `sweden-starter/` — whitelabel install kit for future client deployments
 - `sample-metanoia/` — reference deployment kept temporarily; safe to delete
 
 ## Docs
