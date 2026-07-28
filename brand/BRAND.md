@@ -140,6 +140,39 @@ Raw values in use (DS requests, see ④ Diffs): `#5b63ff` grad stop 1,
 zone header tint, `#10141e` @50% hero chip, ticket paper palette, wireframe
 silhouettes `#545c6a` @50%.
 
+## Text Style Reference
+
+Every agent text node binds a text style. One published library style is an
+exact match and is bound where used: **Product/Small Standard Text**
+(Figtree Regular 14, key `409e1d0392f30911c2cd1d7f3ac31f28005c259a`). The
+published Figtree ramp starts at 14px, so the Cases card language
+(10.5–15.5px) has no honest published matches; it lives as **34 local
+semantic working styles** under `OTR/Cases/`:
+`Title/` (Page 25, Hero 21, Quote 19, App bar 15) · `Card/` (Title 15.5,
+Eyebrow 11) · `Zone/` (Action title 13.5, Header 13, Help title 12.5, CTA
+label 12) · `Button/Label` 14 · `Badge/Label` 13 · `Text/` (Strong 13.5,
+Label 12.5, Chip label 12.5, Timer 12, Device time 13, Standard 13, Meta
+12.5, Note 12, Note strong 12, Sub 11.5, Sub strong 11.5, Caption 11) ·
+`Micro/` (Label 11, Tag 10.5, Counter 10, Watermark 10) · `Ticket/`
+(Violation 11.5, Row strong 11, Row 11, Note 9.5, Cap 9, Stamp 8.5, in
+Roboto Mono). Consolidation ask lives on ④ as TYPE DIFF cards; when the DS
+team publishes a ratified ramp, the agent rebinds and deletes the local set.
+
+## Icons
+
+Product icons come from the CD bundle's FeatureIcon set (157 icons,
+`intake/.../design/_ds/.../_ds_bundle.js`, name → viewBox + SVG body).
+Printed icons inherit their slot's variable-bound color (paint reuse from
+the placeholder they replaced). In use: bill-dollar-2, countdown-timer,
+star-1, image-photo-add, location-pin, triangle-arrow-synchronize-1,
+time-history-off, chart-circle-up-growth, file-edit,
+file-document-info-quick-reference, bell-notification, open-folder,
+calendar-check, building-1, tag, chat-bubble-info-help,
+magnifying-glass-square, triangle-arrow-expand-window-1. The FI set has no
+chevrons (boards used FontAwesome scaffold) — chevrons are drawn 2.5pt
+round-cap vectors. Best-guess slots to sanity check: bell (Action needed),
+calendar/tag/building (facts rows), magnifier (search).
+
 ## Variable Collection IDs
 
 Confirmed at runtime each session via

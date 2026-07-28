@@ -1,44 +1,203 @@
 {
-  "actionbutton": [
-    {"design": "#e5463a", "action": "BIND_NEAREST_AND_FLAG", "bound": "colors/cherry/500", "boundHex": "#e35545", "deltaE": 2.61, "usedFor": "money action fill (overdue payment)", "seenIn": "ds-cases-atomic-system IR, class act money"},
-    {"design": "#2e6bff", "action": "BIND_NEAREST_AND_FLAG", "bound": "colors/blueberry/500", "boundHex": "#3a78f4", "deltaE": 4.51, "usedFor": "blue action fill", "seenIn": "ds-cases-atomic-system IR, class act blue"},
-    {"design": "#5b63ff", "action": "DS_REQUEST", "bound": null, "nearest": "colors/blueberry/600", "nearestHex": "#155eef", "deltaE": 6.93, "usedFor": "SmartMatch grad stop 1", "seenIn": "ds-cases-atomic-system IR, class act grad"},
-    {"design": "#8b5cf6", "action": "BIND_NEAREST_AND_FLAG", "bound": "colors/grape/500", "boundHex": "#8c4ef4", "deltaE": 3.34, "usedFor": "SmartMatch grad stop 2", "seenIn": "ds-cases-atomic-system IR, class act grad"}
-  ],
-  "notes": [
-    "CSS-dump figmaCandidates (colors/blue/dark/500 etc.) do not exist in live library; live palette is blueberry/cherry/grape/ink/etc. Report per FIGMA-PRINT-GUIDE section 4: dump and library out of step.",
-    "ActionButton pass 1: icon slot omitted; padding 20 measured from board fixed-width buttons, needs human eye.",
-    "Grad stop2 bound via ColorStop.boundVariables (verify persisted on read back)."
-  ],
-  "chip": [
-    {"design": "#6b7280", "action": "BIND_NEAREST_AND_FLAG", "bound": "colors/ink/600", "boundHex": "#6a6e75", "deltaE": 3.64, "usedFor": "wf-muted: chip/classif/charge label grey", "seenIn": "otr-chip, classif, pill-outline CSS"},
-    {"design": "#f79009", "action": "DS_REQUEST", "bound": null, "nearest": "colors/honey/600", "nearestHex": "#f19d00", "deltaE": 5.87, "usedFor": "chip alert dot (dump said BIND; live library disagrees)", "seenIn": "screen-all_cases_feed IR chip-alert"}
-  ],
-  "lockup_meter_overdue": [
-    {"design": "#9aa1ad", "action": "BIND_NEAREST_AND_FLAG", "bound": "colors/ink/300", "deltaE": 4.16, "usedFor": "wf-faint: firm line, secondary text"},
-    {"design": "#3b3e46", "action": "BIND_NEAREST_AND_FLAG", "bound": "colors/ink/800", "deltaE": 2.63, "usedFor": "wf-strong: meter bar, rating number"},
-    {"design": "#fdb022", "action": "BIND_NEAREST_AND_FLAG", "bound": "colors/honey/500", "deltaE": 4.51, "usedFor": "rating star"},
-    {"design": "#fdeceb", "action": "BIND_NEAREST_AND_FLAG", "bound": "colors/cherry/25", "deltaE": 2.92, "usedFor": "money-bg: overdue pill fill"},
-    {"design": "#f7c9c4", "action": "BIND_NEAREST_AND_FLAG", "bound": "colors/cherry/100", "deltaE": 2.36, "usedFor": "money-line: overdue pill border"},
-    {"design": "#e2e6ec/#ccd1da", "action": "BIND_NEAREST_AND_FLAG", "bound": "ink/50 to ink/100", "deltaE": 2.38, "usedFor": "portrait placeholder gradient"}
-  ],
-  "ticket": {"action": "DS_REQUEST", "palette": {"cream": "#6b4f1d/#fdf3c6/#f6e6a2", "blue": "#234e86/#dde9fb/#bdd4f2", "green": "#356b2a/#e3f0d4/#c6e2ad", "pink": "#9b2a5a/#ffdcea/#ffc2da", "slate": "#3d4452/#e9ecf2/#d2d8e2"}, "note": "skeuomorphic paper palette, intentionally non-DS; Courier New unavailable in Figma, printed in Roboto Mono (FLAG for design team)"},
-  "printed": {
-    "statusbadge": {"setId": "11262:1769", "variants": 60},
-    "actionbutton": {"setId": "11274:1577", "variants": 20},
-    "chip": {"setId": "11276:1553", "variants": 8},
-    "classiftag": {"setId": "11276:1558", "variants": 2},
-    "attorneylockup": {"setId": "11278:295", "variants": 8},
-    "meter": {"setId": "11278:305", "variants": 5},
-    "overduepill": {"componentId": "11278:306", "variants": 1},
-    "ticket": {"setId": "11279:303", "variants": 6},
-    "casepreviewcard": {"setId": "11280:763", "variants": 18},
-    "detail_zones": {"StatusZone": "11281:351", "AppBar": "11281:357", "TicketHero": "11281:365", "Identity": "11281:381", "ActionItem": "11281:393", "ActionHub": "11281:407", "CaseFacts": "11281:425", "ExpandedRecord": "11281:447", "HelpZone": "11281:482"}
+ "actionbutton": [
+  {
+   "design": "#e5463a",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "bound": "colors/cherry/500",
+   "boundHex": "#e35545",
+   "deltaE": 2.61,
+   "usedFor": "money action fill (overdue payment)",
+   "seenIn": "ds-cases-atomic-system IR, class act money"
   },
-  "gaps": [
-    "AccountRail listed in FIGMA-PRINT-GUIDE zone table but absent from the extracted IR; not printed. Needs CD to re-export or confirm it was folded into another zone.",
-    "StatusBadge set has no unread axis (status x form x size only); unread dot state not printed pass 1.",
-    "CPC detail zones: aitem amber title #7a2e0e RAW; zone header tint #fbfbfc RAW; hero cls chip #10141e 50pct RAW.",
-    "Badge forms in CPC fixed post-print to registry-canonical (solid: deadline, missed, smartmatchd, almostgone, counter, dismissed); size md (25px) matches board sbadge height."
-  ]
+  {
+   "design": "#2e6bff",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "bound": "colors/blueberry/500",
+   "boundHex": "#3a78f4",
+   "deltaE": 4.51,
+   "usedFor": "blue action fill",
+   "seenIn": "ds-cases-atomic-system IR, class act blue"
+  },
+  {
+   "design": "#5b63ff",
+   "action": "DS_REQUEST",
+   "bound": null,
+   "nearest": "colors/blueberry/600",
+   "nearestHex": "#155eef",
+   "deltaE": 6.93,
+   "usedFor": "SmartMatch grad stop 1",
+   "seenIn": "ds-cases-atomic-system IR, class act grad"
+  },
+  {
+   "design": "#8b5cf6",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "bound": "colors/grape/500",
+   "boundHex": "#8c4ef4",
+   "deltaE": 3.34,
+   "usedFor": "SmartMatch grad stop 2",
+   "seenIn": "ds-cases-atomic-system IR, class act grad"
+  }
+ ],
+ "notes": [
+  "CSS-dump figmaCandidates (colors/blue/dark/500 etc.) do not exist in live library; live palette is blueberry/cherry/grape/ink/etc. Report per FIGMA-PRINT-GUIDE section 4: dump and library out of step.",
+  "ActionButton pass 1: icon slot omitted; padding 20 measured from board fixed-width buttons, needs human eye.",
+  "Grad stop2 bound via ColorStop.boundVariables (verify persisted on read back)."
+ ],
+ "chip": [
+  {
+   "design": "#6b7280",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "bound": "colors/ink/600",
+   "boundHex": "#6a6e75",
+   "deltaE": 3.64,
+   "usedFor": "wf-muted: chip/classif/charge label grey",
+   "seenIn": "otr-chip, classif, pill-outline CSS"
+  },
+  {
+   "design": "#f79009",
+   "action": "DS_REQUEST",
+   "bound": null,
+   "nearest": "colors/honey/600",
+   "nearestHex": "#f19d00",
+   "deltaE": 5.87,
+   "usedFor": "chip alert dot (dump said BIND; live library disagrees)",
+   "seenIn": "screen-all_cases_feed IR chip-alert"
+  }
+ ],
+ "lockup_meter_overdue": [
+  {
+   "design": "#9aa1ad",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "bound": "colors/ink/300",
+   "deltaE": 4.16,
+   "usedFor": "wf-faint: firm line, secondary text"
+  },
+  {
+   "design": "#3b3e46",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "bound": "colors/ink/800",
+   "deltaE": 2.63,
+   "usedFor": "wf-strong: meter bar, rating number"
+  },
+  {
+   "design": "#fdb022",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "bound": "colors/honey/500",
+   "deltaE": 4.51,
+   "usedFor": "rating star"
+  },
+  {
+   "design": "#fdeceb",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "bound": "colors/cherry/25",
+   "deltaE": 2.92,
+   "usedFor": "money-bg: overdue pill fill"
+  },
+  {
+   "design": "#f7c9c4",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "bound": "colors/cherry/100",
+   "deltaE": 2.36,
+   "usedFor": "money-line: overdue pill border"
+  },
+  {
+   "design": "#e2e6ec/#ccd1da",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "bound": "ink/50 to ink/100",
+   "deltaE": 2.38,
+   "usedFor": "portrait placeholder gradient"
+  }
+ ],
+ "ticket": {
+  "action": "DS_REQUEST",
+  "palette": {
+   "cream": "#6b4f1d/#fdf3c6/#f6e6a2",
+   "blue": "#234e86/#dde9fb/#bdd4f2",
+   "green": "#356b2a/#e3f0d4/#c6e2ad",
+   "pink": "#9b2a5a/#ffdcea/#ffc2da",
+   "slate": "#3d4452/#e9ecf2/#d2d8e2"
+  },
+  "note": "skeuomorphic paper palette, intentionally non-DS; Courier New unavailable in Figma, printed in Roboto Mono (FLAG for design team)"
+ },
+ "printed": {
+  "statusbadge": {
+   "setId": "11262:1769",
+   "variants": 60
+  },
+  "actionbutton": {
+   "setId": "11274:1577",
+   "variants": 20
+  },
+  "chip": {
+   "setId": "11276:1553",
+   "variants": 8
+  },
+  "classiftag": {
+   "setId": "11276:1558",
+   "variants": 2
+  },
+  "attorneylockup": {
+   "setId": "11278:295",
+   "variants": 8
+  },
+  "meter": {
+   "setId": "11278:305",
+   "variants": 5
+  },
+  "overduepill": {
+   "componentId": "11278:306",
+   "variants": 1
+  },
+  "ticket": {
+   "setId": "11279:303",
+   "variants": 6
+  },
+  "casepreviewcard": {
+   "setId": "11280:763",
+   "variants": 18
+  },
+  "detail_zones": {
+   "StatusZone": "11281:351",
+   "AppBar": "11281:357",
+   "TicketHero": "11281:365",
+   "Identity": "11281:381",
+   "ActionItem": "11281:393",
+   "ActionHub": "11281:407",
+   "CaseFacts": "11281:425",
+   "ExpandedRecord": "11281:447",
+   "HelpZone": "11281:482"
+  }
+ },
+ "gaps": [
+  "AccountRail listed in FIGMA-PRINT-GUIDE zone table but absent from the extracted IR; not printed. Needs CD to re-export or confirm it was folded into another zone.",
+  "StatusBadge set has no unread axis (status x form x size only); unread dot state not printed pass 1.",
+  "CPC detail zones: aitem amber title #7a2e0e RAW; zone header tint #fbfbfc RAW; hero cls chip #10141e 50pct RAW.",
+  "Badge forms in CPC fixed post-print to registry-canonical (solid: deadline, missed, smartmatchd, almostgone, counter, dismissed); size md (25px) matches board sbadge height."
+ ],
+ "session2": {
+  "diffSwatchBindings": "token-side swatches on all diff cards now bound to their live variables (7 rects)",
+  "textStyles": {
+   "local": 34,
+   "libraryBound": "Product/Small Standard Text (Figtree Regular 14, exact)",
+   "nodesBound": 283,
+   "lsOverrides": 22,
+   "naming": "semantic tree OTR/Cases/{Title,Card,Zone,Button,Badge,Text,Micro,Ticket}"
+  },
+  "numericBindings": {
+   "radiusFields": 240,
+   "spacingFields": 525,
+   "keyFind": "radius/MD = 16 (earlier in-script check was wrong; card radius DS request withdrawn)",
+   "leftRaw": "radius 3/7/22/11/2 and spacing 5/7/9/10/11/22 etc. have no tokens; largest gaps: radius 3 (ticket), radius 7 (count pills), feed gap 11"
+  },
+  "typeDiffs": [
+   "TYPE DIFF \u00b7 Roboto Mono \u00b7 ticket citation ramp (NEW CUSTOM DESIGN) 11294:1494",
+   "TYPE DIFF \u00b7 OTR/Cases semantic ramp (DS REQUEST) 11294:1502"
+  ],
+  "icons": {
+   "source": "CD bundle FeatureIcon set (157 icons)",
+   "swapped": "OverduePill, AttorneyLockup (8 stars + 4 timers), CPC (14), hero tag, appbar, ActionItem, ActionHub, CaseFacts (4), HelpZone, feed search (4 screens), empty state",
+   "colorInheritance": "icons reuse the replaced placeholder's bound paint",
+   "guesses": "bell=Action needed, calendar/tag/building=facts rows, magnifier=search"
+  }
+ }
 }
