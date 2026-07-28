@@ -224,5 +224,8 @@
    "archived": "OTR/Cases/ActionButton moved to Archive page 11158:8460",
    "diffCard": "11307:1766"
   }
- }
+ },
+ "buildChecks": [
+  "RULE (user, session 3): after any print into a shared section, screenshot and re-read the WHOLE section, not just the new node. Check for overlaps and ragged spacing; new cards go through a grid relayout of the section, never absolute drops at guessed coordinates. Both agent annotation sections (Proposed, Diffs) now use a 4-column/row-band grid with 40px gutters."
+ ]
 }
