@@ -94,6 +94,18 @@
       "detail": "CD is hard-isolated with no stakeholder access, so divergence prints to the area's Explorations page for on-canvas review; only verdicted winners converge to canon with full binding. CD sessions are disposable and repo-seeded (fresh project + 'this is for the otr-nativeapp repo' prompt); CC files every candidate package so no exploration is lost. Vocabulary: disposable (CD, candidates, open sprints) vs permanent (repo, canon, verdicts). Sprint convention: one CD session = one dated sprint section on Explorations with a verdict card; REVIEWED sprints move to Archive. Canvas v3: plate hues encode section type with 140px header bands; nested sections white; sets bordered with radius/4XL.",
       "decidedBy": "user (Titus), written feedback on v2",
       "commit": "this commit"
+    },
+    {
+      "id": "D-013",
+      "title": "Sections ditched; plates are auto-layout frames; demo-well recipe",
+      "decidedOn": "figma",
+      "date": "2026-07-29",
+      "source": "Video brief 12.20.19 AM + hand-applied reference edits on the Lexicon page (11417:42077)",
+      "carveOut": "Pages hosting presentable rigs (Proto) keep rigs at page or section level per lesson 12b3; if that page's plate converts to a frame, rigs move up to page level.",
+      "verdict": "Adopted (hand-demonstrated on canvas)",
+      "decidedBy": "Titus",
+      "detail": "Presentation plates are FRAMES with auto layout, never sections (sections cannot carry auto layout). Plate recipe: high padding (spacing/13xl 96, user typed 100 raw), large radius (80 raw, no DS token that size, DS-request candidate), fill brand/50, hairline stroke black 10%. Shelf right rail is a demo well: fill global/background/strong, stroke global/border/neutral/default 1px, padding spacing/8xl 48, radius radius/XL 20, content centered both axes, layoutSizingVertical FILL when the left rail is taller. Every numeric binds a DS token: radius and spacing collections mapped in BRAND.md. Nested radius formula: inner = outer minus padding, snapped to the nearest smaller token; never let nested corners pinch. Nesting reads visually: plate (tint) > shelf (white) > index (strong tint).",
+      "commit": "this commit"
     }
   ]
 }

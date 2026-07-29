@@ -198,7 +198,8 @@
   },
   "lexiconPage": {
     "id": "11415:3",
-    "section": "11415:169 · ① Lexicon (agent)",
+    "reference": "11417:42077 · ① Lexicon (agent) · Titus's hand-edited v2 (section converted to frame, demo wells applied) · HUMAN-KEPT, do not reflow",
+    "v3Rebuild": "11444:177 · ① Lexicon (agent) · v3 · agent rebuild to D-013 recipe, sits right of the reference",
     "note": "Visual of the naming grammar (v2, session 4p, PROPOSAL awaiting verdict). Standardized shelf template: left rail 400 fixed (index + legend text), right rail 900 fixed (visualization), heights hug. Five shelves: The law, Sidebar, Canvas, Design, Everywhere. All text binds the DS semantic foreground/dark ramp (mode-aware): titles=primary, body=tertiary, captions/tags=quinary. Page unplaced in sidebar order; org later per user.",
     "textRamp": {
       "collection": "semantic variables (Customer side / Guidelines)",

@@ -380,5 +380,15 @@
     ],
     "discovery": "DS modes are LIVE (user-confirmed): semantic foreground/background variables flip light/dark on mode switch. Session 1's 'foreground flip' incident was modes working, not a bug. Lesson 9 rewritten; product-text migration to the semantic ramp recorded as an OPEN candidate in INDEX. The Lexicon page is mode-aware by construction.",
     "sweeps": "Section containment zero, pairwise zero, strays zero; ramp verified via resolveForConsumer (screenshot-confirmed after)."
+  },
+  "session4q": {
+    "scope": "Lexicon v3: rebuild to Titus's hand-applied reference (video brief 12.20.19 AM, D-013)",
+    "method": "Read-back first: he edited v2 IN PLACE (root section already converted to frame, ids churned) and said build yours again next to this. Extracted his treatment node by node (fills, strokes, radii, padding, alignment, bound variables), mapped the full radius + spacing token collections, rebuilt v3 at x=1793 beside his reference.",
+    "recipe": "Plate: frame, pad spacing/13xl 96, radius 80 raw (no token; DS-request candidate), brand/50, black 10% hairline. Well: bgStrong + border neutral default + pad 8xl + radius XL + centered + FILL height when left rail taller (applied: Law, Canvas). Every numeric bound: shelf 4XL/6xl/8xl, plate mini 2XL/2xl/xl, mini shelf MD/xl, blocks 2XS, zones XS, pills FULL, column gap 11xl. Canvas demo now a literal nesting chain: plate tint > shelf white > index strong tint.",
+    "hisInconsistenciesStandardized": "He bound only lawRight radius to XL and left 24 raw elsewhere ('you'll standardize this'); v3 uses XL everywhere. His raw 100 padding snapped to spacing/13xl 96.",
+    "incidents": [
+      "decisions.json is {decisions: [...]}, not a flat dict; first D-013 write landed as a stray top-level key and was reshaped into the array with house fields."
+    ],
+    "sweeps": "No overlap between reference and v3 roots, page strays zero, internal layout auto-layout-guaranteed (screenshot-verified)."
   }
 }

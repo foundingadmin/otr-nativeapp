@@ -13,13 +13,22 @@ one again costs more.
    bounds, (b) PAIRWISE overlap across all siblings at page level. Run both
    after every print, before ending the session. The user has flagged
    hang-outs three times; there is no fourth pass.
-3. **Sections cannot take corner radius or auto layout.** They are
-   organizational only. Anything that needs the specimen look (rounded,
-   auto layout, breathing room) must be a FRAME.
-3b. **Auto layout all the way down (ratified, brief 4).** Sections exist
-   only at the topmost layer. Every container inside is an auto-layout
-   frame: header columns, item wrappers, wrapping rows for small parts.
+3. **Sections are ditched (D-013, Jul 29).** They cannot take auto
+   layout or radius, so plates are FRAMES now: auto layout, padding
+   spacing/13xl (96), radius 80 (raw, no DS token that large, flagged),
+   fill brand/50, hairline black 10% stroke. Carve-out: pages hosting
+   presentable rigs keep rigs at page level (see 12b3).
+3b. **Auto layout all the way down (ratified, brief 4; extended D-013).**
+   Every container including the topmost plate is an auto-layout frame:
+   header columns, item wrappers, wrapping rows for small parts.
    Hand-placed grids are banned; if content grows, the sheet must flow.
+3c. **Demo wells + numeric binding (D-013).** A shelf's right rail is a
+   demo well: global/background/strong fill, global/border/neutral/
+   default 1px, padding spacing/8xl (48), radius radius/XL (20), content
+   centered, FILL height when the left rail is taller. Bind EVERY
+   numeric to a DS token (radius + spacing maps in BRAND.md). Nested
+   radius formula: inner = outer minus padding, snapped to the nearest
+   smaller token; eyeball-check that nested corners never pinch.
 4. **Display and storage are different layers.** Component sets cannot use
    auto layout, so never hand-grid variants as the presentation. The client
    pattern (see the Buttons specimen, node 11355:19505): presentation
