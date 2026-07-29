@@ -13,6 +13,7 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
 |---|---|
 | Figma file | `Native App / Design`, key `JcqKNz1pMrEvxwExhb296r` |
 | Agent sections | ① Components ② Screens ③ Proposed ④ Diffs on the `↪ Cases` page (IDs in `figma-state.json`) |
+| Exploration prints | `↪ Explorations` page `11337:2087` (sub-page of Cases, created session 4, empty scaffold) |
 | Node/style/variable registries | `brand/BRAND.md` |
 | Print history + policies | `print-log.json` (sessions 1–3, `buildChecks`) |
 | Open DS asks | `variable-requests.md` + the cards on ④ Diffs |
@@ -36,11 +37,27 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
   > 5 raw + DS request (CIEDE2000, live library values only — the CSS-dump
   candidate names are stale).
 
+## Standing caution (session 4)
+
+- **CD escalation gap.** Exploration decisions in CD were not promoted to
+  root HTMLs, so canon-stage boards can trail ratified design (that is how
+  the first CPC print went stale). Before printing any board, cross-check
+  recency against explorations and confirm with the user. Proposal for a
+  restructured CD project: `docs/prds/prd-cd-workflow-v2.md`.
+
 ## Open items (next session picks these up)
 
+- **Feed/detail screen migration to CPC v2.** ② Screens still instance the
+  pre-v2 card anatomy (buttons, court lines). Swap to the new form=card
+  variants and relayout.
+- StatusBadge asks: icon-in-badge axis (Jul 7 board), compact 22px size
+  (printed sm=21), unread axis (pre-existing).
+- Compact forms for matching-family statuses need CD coverage (pairing
+  board only covers the 5 lifecycle badges).
 - Design-team verdicts on ④ Diffs: SmartMatch gradient + Solid-neutral
   Button types (or ratify all-blue), alert-orange token, amber-ink token,
-  screen-tint tokens, ticket palette ratification, mono face.
+  rematch violet accent (#6a5bd0/#5b4bb8, new), screen-tint tokens, ticket
+  palette ratification, mono face.
 - Publish the Native text collection to the Guidelines library (currently
   local to the Native App file).
 - Component-reuse audits: Chip vs White pills, tap rows vs Link text,

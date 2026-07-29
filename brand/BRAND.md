@@ -63,6 +63,11 @@ the client's existing file structure:
 | ④ Diffs (agent) | `11287:1672` |
 | ⑤ Ready for dev | human-owned, not created by agents |
 
+Sub-pages of `↪ Cases` (session 4): `↪ Explorations` page `11337:2087`
+(agent, exploration prints land here); `↪ Archive` page `11158:8460`
+(retired frames; first-run Test debris moved here). CPC v2 diff card:
+`11338:1922` on ④ Diffs.
+
 ---
 
 ## Component Node ID Reference
@@ -77,7 +82,7 @@ the client's existing file structure:
 | OTR/Cases/Meter | `11278:305` | 5 (value 0–100) |
 | OTR/Cases/OverduePill | `11278:306` | 1 |
 | OTR/Cases/Ticket | `11279:303` | 6 (cream/blue/green/pink/slate/photo) |
-| OTR/Cases/CasePreviewCard | `11280:763` | 18 (15 statuses + unfinished/analyzing-brand/tap) |
+| OTR/Cases/CasePreviewCard | `11280:763` | 53 (status × mod × form; v2 per Jul 7 pairing board: form card/compact, signal mods urgency/warrant/unread/sign/counter/rematch/overdue/review/moneyback; lifecycle none-cards cleaned, no in-card buttons) |
 | OTR/Cases/Detail/StatusZone | `11281:351` | 1 |
 | OTR/Cases/Detail/AppBar | `11281:357` | 1 |
 | OTR/Cases/Detail/TicketHero | `11281:365` | 1 |
@@ -134,11 +139,27 @@ Import keys for every variable bound this session (Guidelines library):
 | global/foreground/dark/primary | `8939924c69631ed6029ce1e9cd53c10687361083` | ink labels on light |
 | global/foreground/light/primary | `e05d77c21b08df7ca3ce80e39baf026cf3b73840` | white labels on solid |
 | radius/FULL | `a95f485680b5d91600397f3608161b1f6e64ee47` | every pill radius |
+| error/25 | `bae9985c720078feabbbbcba1cf59186bdfa3f11` | red block bg (ΔE 0.54) |
+| error/600 | `279bb8c2905a03fe2cb0a332d5ae722253307a0b` | red dot, icon, chevron (ΔE 0) |
+| error/800 | `1beae9fc75b447c4e60456b2155fc8c24845c479` | red block ink (ΔE 4.15 FLAG) |
+| brand/25 | `f05bc44aeee9cceb08be4d37fa0dd2b95b0396fa` | blue block bg (ΔE 1.01) |
+| brand/600 | `2cc478c5d0aa0862fd89de270aa82aca0d676ab8` | blue dot, icon, chevron (ΔE 0 vs #155eef) |
+| brand/800 | `c1d7bb9246d973793b5cd8cddd889f81ac10b1a1` | blue block ink (ΔE 1.82) |
+| success/50 | `4fba1271e2a1e26e8f09bd2ee443ac221de2dae4` | green block bg (ΔE 5.03 FLAG) |
+| success/600 | `258d903b8a7e732a7955d95bca7e690e54218812` | green dot, icon, chevron (ΔE 3.12 FLAG) |
+| success/900 | `5ac865b8ba3c8e0e485c427e03bd0b5caa9bfdbb` | green block ink (ΔE 3.74 FLAG) |
+| accent2/25 | `f251b2740c6572f49a7daf07ac159e0dda7f3284` | violet block bg (ΔE 3.64 FLAG) |
 
 Raw values in use (DS requests, see ④ Diffs): `#5b63ff` grad stop 1,
-`#f79009` alert dot, `#7a2e0e` amber ink, `#fbfcfd` screen bg, `#fbfbfc`
-zone header tint, `#10141e` @50% hero chip, ticket paper palette, wireframe
-silhouettes `#545c6a` @50%.
+`#f79009` alert dot + amber block accents, `#7a2e0e` amber ink, `#6a5bd0` /
+`#5b4bb8` rematch violet accent + ink (session 4), `#fbfcfd` screen bg,
+`#fbfbfc` zone header tint, `#10141e` @50% hero chip, ticket paper palette,
+wireframe silhouettes `#545c6a` @50%.
+
+Session 4 binding note: semantic `global/foreground/*` variables alias the
+light/dark collection; product text binds **primitives** (`colors/ink/*`)
+per session 1 precedent. Tap block radius 14 printed raw (no token, same
+as card 16).
 
 ## Text Style Reference
 

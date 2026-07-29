@@ -53,6 +53,22 @@
       "verdict": "adopt",
       "detail": "sample-metanoia/ deleted per root CLAUDE.md provision, first OTR deployment being complete.",
       "decidedBy": "user cleanup directive"
+    },
+    {
+      "id": "D-008",
+      "title": "July 7 CPC pairing board ratified as card canon",
+      "verdict": "adopt",
+      "detail": "CasePreviewCard gains form axis (card|compact) and signal mods per component-case_preview_cards board. In-card CTA buttons retired from lifecycle cards in favor of tinted whole-block taps; court/outcome metalines removed; meter confined to mod=unfinished. Legacy matching-family variants untouched pending CD coverage.",
+      "decidedBy": "user (Titus), Jul 28 session",
+      "commit": "this commit"
+    },
+    {
+      "id": "D-009",
+      "title": "CD escalation gap acknowledged",
+      "verdict": "adopt",
+      "detail": "Exploration decisions in CD were not escalated to root HTMLs, so canon-stage boards can trail ratified design. Until CD restructures: before printing any board, cross-check its recency against exploration decisions and confirm with the user. Simplified CD project proposal drafted in docs/prds/prd-cd-workflow-v2.md.",
+      "decidedBy": "user observation + agent",
+      "commit": "this commit"
     }
   ]
 }

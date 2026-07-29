@@ -9,24 +9,78 @@
     "diffs": "11287:1672"
   },
   "components": {
-    "OTR/Cases/StatusBadge": { "id": "11262:1769", "variants": 60, "axes": "status x form x size" },
-    "OTR/Cases/ActionButton": { "id": "11274:1577", "variants": 20, "axes": "kind x size x full" },
-    "OTR/Cases/Chip": { "id": "11276:1553", "variants": 8, "axes": "on x count x alert" },
-    "OTR/Cases/ClassifTag": { "id": "11276:1558", "variants": 2, "axes": "kind" },
-    "OTR/Cases/AttorneyLockup": { "id": "11278:295", "variants": 8, "axes": "blurred x quote x size" },
-    "OTR/Cases/Meter": { "id": "11278:305", "variants": 5, "axes": "value" },
-    "OTR/Cases/OverduePill": { "id": "11278:306", "variants": 1 },
-    "OTR/Cases/Ticket": { "id": "11279:303", "variants": 6, "axes": "variant" },
-    "OTR/Cases/CasePreviewCard": { "id": "11280:763", "variants": 18, "axes": "status x mod" },
-    "OTR/Cases/Detail/StatusZone": { "id": "11281:351" },
-    "OTR/Cases/Detail/AppBar": { "id": "11281:357" },
-    "OTR/Cases/Detail/TicketHero": { "id": "11281:365" },
-    "OTR/Cases/Detail/Identity": { "id": "11281:381" },
-    "OTR/Cases/Detail/ActionItem": { "id": "11281:393" },
-    "OTR/Cases/Detail/ActionHub": { "id": "11281:407" },
-    "OTR/Cases/Detail/CaseFacts": { "id": "11281:425" },
-    "OTR/Cases/Detail/ExpandedRecord": { "id": "11281:447" },
-    "OTR/Cases/Detail/HelpZone": { "id": "11281:482" }
+    "OTR/Cases/StatusBadge": {
+      "id": "11262:1769",
+      "variants": 60,
+      "axes": "status x form x size"
+    },
+    "OTR/Cases/ActionButton": {
+      "id": "11274:1577",
+      "variants": 20,
+      "axes": "kind x size x full"
+    },
+    "OTR/Cases/Chip": {
+      "id": "11276:1553",
+      "variants": 8,
+      "axes": "on x count x alert"
+    },
+    "OTR/Cases/ClassifTag": {
+      "id": "11276:1558",
+      "variants": 2,
+      "axes": "kind"
+    },
+    "OTR/Cases/AttorneyLockup": {
+      "id": "11278:295",
+      "variants": 8,
+      "axes": "blurred x quote x size"
+    },
+    "OTR/Cases/Meter": {
+      "id": "11278:305",
+      "variants": 5,
+      "axes": "value"
+    },
+    "OTR/Cases/OverduePill": {
+      "id": "11278:306",
+      "variants": 1
+    },
+    "OTR/Cases/Ticket": {
+      "id": "11279:303",
+      "variants": 6,
+      "axes": "variant"
+    },
+    "OTR/Cases/CasePreviewCard": {
+      "id": "11280:763",
+      "variants": 53,
+      "axes": "status x mod x form",
+      "v2": "Jul 7 pairing board: form card|compact; mods + urgency,warrant,unread,sign,counter,rematch,overdue,review,moneyback; lifecycle none-cards cleaned (no buttons/metalines)"
+    },
+    "OTR/Cases/Detail/StatusZone": {
+      "id": "11281:351"
+    },
+    "OTR/Cases/Detail/AppBar": {
+      "id": "11281:357"
+    },
+    "OTR/Cases/Detail/TicketHero": {
+      "id": "11281:365"
+    },
+    "OTR/Cases/Detail/Identity": {
+      "id": "11281:381"
+    },
+    "OTR/Cases/Detail/ActionItem": {
+      "id": "11281:393"
+    },
+    "OTR/Cases/Detail/ActionHub": {
+      "id": "11281:407"
+    },
+    "OTR/Cases/Detail/CaseFacts": {
+      "id": "11281:425"
+    },
+    "OTR/Cases/Detail/ExpandedRecord": {
+      "id": "11281:447"
+    },
+    "OTR/Cases/Detail/HelpZone": {
+      "id": "11281:482"
+    }
   },
   "screens": {
     "p-solo": "11285:397",
@@ -42,11 +96,23 @@
     "dismissed": "11285:1650",
     "notbooked": "11285:1736"
   },
-  "decisionsApplied": ["DR-CPC-001", "DR-CPC-002 (tap variant approximates V4)"],
+  "decisionsApplied": [
+    "DR-CPC-001",
+    "DR-CPC-002 (tap variant approximates V4)"
+  ],
   "notPrinted": {
     "AccountRail": "absent from IR, OPEN card on Proposed",
     "anatomy-active": "annotated duplicate of active-clean, annotations are board scaffolding",
     "unread badge dot": "StatusBadge set has no unread axis pass 1",
     "confetti": "dismissed celebration decoration omitted pass 1"
+  },
+  "explorationsPage": "11337:2087",
+  "diffCards": {
+    "cpcV2": "11338:1922"
+  },
+  "archived": {
+    "firstRunTestFrame": "11225:1523",
+    "firstRunLabel": "11225:1522",
+    "movedTo": "11158:8460 (Cases Archive page)"
   }
 }

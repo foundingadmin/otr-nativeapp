@@ -77,3 +77,19 @@ cherry/500 dE 2.61 (money), blueberry/500 dE 4.51 (otr-blue), grape/500
 dE 3.34 (grad stop 2), ink/600 dE 3.64 (wf-muted), ink/800 dE 2.63
 (wf-strong), ink/300 dE 4.16 (wf-faint), cherry/25 dE 2.92 (money-bg),
 cherry/100 dE 2.36 (money-line), ink/50+ink/100 (portrait gradient).
+
+#6a5bd0 / #5b4bb8 • rematch violet accent and ink (session 4)
+  used        rematch tap block icon, compact signal dot, block title ink
+  nearest     brand/700 (#0f4bc4) dE 14.3 / 13.3, nothing honest
+  ask         mint a rematch/processing accent pair, or ratify grape ramp
+              values for this state
+  decided     open
+  frame       DIFF · CPC v2 (11338:1922)
+
+#ecfdd9 • celebration green tint (session 4)
+  used        dismissed review block bg, money-back block bg
+  nearest     success/50 (#e1f2dd) dE 5.03  ← BOUND, flagged
+  ask         bless success/50 for celebration surfaces, or mint a
+              celebration tint token
+  decided     open
+  frame       DIFF · CPC v2 (11338:1922)
