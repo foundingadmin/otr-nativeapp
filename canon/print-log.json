@@ -282,5 +282,10 @@
     "canvas": "Mega-sections repositioned without overlap (previous masonry widened Components over Screens, unnoticed). Plates: Components brand/50, Screens neutral/50, Proposed accent2/50, Diffs warning/50; each with a 140px solid band (600-level) and 64px white title. Nested sections whitened; 13 component sets get border/neutral/light 1.5 stroke.",
     "explorations": "Page scaffolded as the divergence-review queue: standing rules header, TEMPLATE sprint section (dated name, candidates A-C slots, verdict card). Only OPEN sprints live on the page; REVIEWED sprints move to Archive.",
     "model": "prd-cd-workflow-v2.md rewritten to v3 per Titus review: no review in CD ever, divergence prints light to Explorations, verdicts on canvas recorded by CC, winners converge with full binding; CD sessions repo-seeded and disposable."
+  },
+  "session4f": {
+    "scope": "Spec-sheet canvas language adopted from client DS specimen (node 11355:19505)",
+    "pattern": "White sheet + soft tinted header band + ink title + muted note + matrix labels (left rail, column captions). Applied: mega-section bands softened to 100-level tints with 64px ink titles; nested sheets get 50-level header bands; 37 matrix labels on the six CPC family sets (signal captions per card column, Card/Compact left rail) + tone rail and Block/Line captions on SignalBlock; Canvas/Label style (Figtree SB 13) added; rails given real left gutters; containment sweep clean.",
+    "rule": "Hue = surface type at plate level; band tint one step stronger than plate; type is always ink on bands, never white; white = pickable object."
   }
 }
