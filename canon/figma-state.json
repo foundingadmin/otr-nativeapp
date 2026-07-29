@@ -199,12 +199,14 @@
   "lexiconPage": {
     "id": "11415:3",
     "section": "11415:169 · ① Lexicon (agent)",
-    "note": "Visual of the naming grammar (session 4o, PROPOSAL awaiting verdict): law specimen (objective word · contextual label), sidebar mock with workflow/stage/station chips, canvas furniture miniature, screen/zone/block/element schematic, everywhere-words lists. Page unplaced in sidebar order; org later per user.",
-    "shelves": {
-      "law": "in header column",
-      "sidebar": "11416:168",
-      "canvas": "11420:168",
-      "design": "11420:201"
+    "note": "Visual of the naming grammar (v2, session 4p, PROPOSAL awaiting verdict). Standardized shelf template: left rail 400 fixed (index + legend text), right rail 900 fixed (visualization), heights hug. Five shelves: The law, Sidebar, Canvas, Design, Everywhere. All text binds the DS semantic foreground/dark ramp (mode-aware): titles=primary, body=tertiary, captions/tags=quinary. Page unplaced in sidebar order; org later per user.",
+    "textRamp": {
+      "collection": "semantic variables (Customer side / Guidelines)",
+      "primary": "8939924c69631ed6029ce1e9cd53c10687361083",
+      "secondary": "7a0bc428cc7d5c31321e9d35754747c8ac8c958d (skipped: too close to primary)",
+      "tertiary": "1e056d0f465c79084ec1984bf9285fdde8ce45ae",
+      "quaternary": "b6fb57b805b83eab3a3c5fa1e2a8d71539f7fbfc (unused)",
+      "quinary": "7c72ee4bdb2f67dbc25bff8a069d009e3c8033f3"
     }
   },
   "protoPage": {

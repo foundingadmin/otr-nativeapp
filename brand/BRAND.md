@@ -158,7 +158,11 @@ Import keys for every variable bound this session (Guidelines library):
 | global/background/default | `90a77fdcd2961eb79eb3d5c8b8159f453d80d849` | white fills |
 | global/background/strong | `94ec2f99f4d126ad77f9f94b8c93f15c0b85766b` | wf-fill (ΔE 1.14) |
 | global/border/neutral/light | `2e9b5493c4e28758f74749adf58583d41a04d42d` | wf-line borders (ΔE 1.28) |
-| global/foreground/dark/primary | `8939924c69631ed6029ce1e9cd53c10687361083` | ink labels on light |
+| global/foreground/dark/primary | `8939924c69631ed6029ce1e9cd53c10687361083` | ink labels on light; Lexicon titles |
+| global/foreground/dark/secondary | `7a0bc428cc7d5c31321e9d35754747c8ac8c958d` | unused: resolves within 18 RGB of primary |
+| global/foreground/dark/tertiary | `1e056d0f465c79084ec1984bf9285fdde8ce45ae` | Lexicon body/desc text |
+| global/foreground/dark/quaternary | `b6fb57b805b83eab3a3c5fa1e2a8d71539f7fbfc` | (mapped, unused) |
+| global/foreground/dark/quinary | `7c72ee4bdb2f67dbc25bff8a069d009e3c8033f3` | Lexicon captions/tags; index desc precedent |
 | global/foreground/light/primary | `e05d77c21b08df7ca3ce80e39baf026cf3b73840` | white labels on solid |
 | radius/FULL | `a95f485680b5d91600397f3608161b1f6e64ee47` | every pill radius |
 | error/25 | `bae9985c720078feabbbbcba1cf59186bdfa3f11` | red block bg (ΔE 0.54) |
@@ -178,10 +182,15 @@ Raw values in use (DS requests, see ④ Diffs): `#5b63ff` grad stop 1,
 `#fbfbfc` zone header tint, `#10141e` @50% hero chip, ticket paper palette,
 wireframe silhouettes `#545c6a` @50%.
 
-Session 4 binding note: semantic `global/foreground/*` variables alias the
-light/dark collection; product text binds **primitives** (`colors/ink/*`)
-per session 1 precedent. Tap block radius 14 printed raw (no token, same
-as card 16).
+Binding note (reframed session 4p): semantic `global/foreground/*` and
+`global/background/*` variables are **mode-aware** — the DS ships
+light/dark modes, and the session 1 "flip" was modes working. Bind the
+semantic foreground/dark ramp for text that should flip with mode
+(canvas furniture does, Lexicon precedent); bind `colors/ink/*`
+primitives only to mode-lock a color. Product text is currently
+primitive-bound (mode-locked); migration to the semantic ramp is an
+OPEN candidate in canon/INDEX.md. Tap block radius 14 printed raw (no
+token, same as card 16).
 
 ## Text Style Reference
 

@@ -68,10 +68,18 @@ one again costs more.
    (renders black or stale). Always build bound paints from the honest hex:
    `solidPaint(realHex)` then bind. Sweep for bound-black paints after
    bulk binding.
-9. Semantic `global/foreground/*` variables alias the light/dark
-   collection and can flip. Product text binds primitives (`colors/ink/*`)
-   per session 1 precedent. Verify with `resolveForConsumer`, not with a
-   screenshot.
+9. **Semantic foreground/background variables are MODE-AWARE (reframed
+   Jul 29).** The DS team ships light/dark modes; `global/foreground/*`
+   flipping is the feature, not a bug (session 1 misdiagnosed it).
+   Choose bindings intentionally: semantic `global/foreground/dark/*`
+   ramp (primary...quinary) for text that should flip with mode;
+   `colors/ink/*` primitives ONLY when a color must be mode-locked.
+   Canvas furniture text binds the semantic ramp (Lexicon precedent:
+   titles=primary, body=tertiary, captions=quinary; secondary is nearly
+   identical to primary, skip it for hierarchy). Product screens still
+   bind ink primitives from session 1 and are therefore mode-locked; a
+   migration to the semantic ramp is an OPEN candidate. Always verify
+   with `resolveForConsumer`, never with a screenshot.
 10. Parse variant names BEFORE popping variants out of a component set;
     extraction can rename nodes mid-loop.
 11. The screenshot endpoint serves stale cached tiles for minutes after

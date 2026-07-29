@@ -366,5 +366,19 @@
     ],
     "status": "PROPOSAL. Vocabulary not yet ratified; canon/vocabulary.md, Canvas style renames (Section->Plate, Collection->Shelf), and node-name sweeps all wait on the user's verdict.",
     "sweeps": "Section containment zero, pairwise zero, page strays zero (screenshot-verified, tofu fix applied after)."
+  },
+  "session4p": {
+    "scope": "Lexicon v2 rebuild from user design review + DS text-color adoption + modes discovery",
+    "userBrief": "Legends join the index in the left rail; standardize both shelf columns (left stacked text, right wider visualizations); sidebar viz great, canvas viz confusing, design viz could be richer; no all-caps in demos; captions too close to item text, drop them visually; law shelf spacing weird; balance and hierarchy paramount; widths standardized with heights hugging. Mid-round: use the customer DS type colors, specifically the foreground dark ramp.",
+    "changes": [
+      "Full column teardown/rebuild on a standardized template: left rail 400 fixed (index + legend blips), right rail 900 fixed (visualization), heights hug; shelf width now uniform at 1428.",
+      "All page text rebound from ink+opacity hacks to the DS semantic foreground/dark ramp: titles=primary, body/desc=tertiary, captions/tags=quinary. Secondary skipped: resolves within 18 RGB points of primary, no visible hierarchy. Resolved (light mode): primary 1d1e21, tertiary 55595e, quinary 91949a.",
+      "Law specimen respaced: each half is its own stack (big word over its caption), killing the floating-caption drift.",
+      "Canvas viz rebuilt for containment reading: every tag now sits INSIDE its container top-left (plate > shelf > index/instances; guide/callout/rig on a second row).",
+      "Design viz enriched: AppBar/ContentZone/HelpZone zones, SignalBlock + TicketHero blocks, element placeholders, fixture tag, plus a flow connector to a second mini screen (Detail/active-clean).",
+      "Everywhere demo de-capsed: open / reviewed, deprecated."
+    ],
+    "discovery": "DS modes are LIVE (user-confirmed): semantic foreground/background variables flip light/dark on mode switch. Session 1's 'foreground flip' incident was modes working, not a bug. Lesson 9 rewritten; product-text migration to the semantic ramp recorded as an OPEN candidate in INDEX. The Lexicon page is mode-aware by construction.",
+    "sweeps": "Section containment zero, pairwise zero, strays zero; ramp verified via resolveForConsumer (screenshot-confirmed after)."
   }
 }

@@ -49,6 +49,12 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
 
 ## Open items (next session picks these up)
 
+- **Dark-mode migration candidate.** DS modes are live (user-confirmed
+  Jul 29): `global/foreground|background/*` flip on mode switch. Product
+  screens bind `colors/ink/*` primitives (mode-locked). Candidate: rebind
+  product text to the semantic foreground ramp for free dark mode; needs
+  a verdict plus a background-variable audit.
+
 - **Feed/detail screen migration to CPC v2.** ② Screens still instance the
   pre-v2 card anatomy (buttons, court lines). Swap to the new form=card
   variants and relayout.
