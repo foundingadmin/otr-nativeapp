@@ -308,5 +308,11 @@
     "built": "Jul 29 seven canvas systems (OPEN) on Proposed, group 11367:2255, sheet 11364:2221: 1 Specimen library, 2 Shelves, 3 Codex, 4 Tile dashboard, 5 Journey storyboard, 6 Canon and Workbench, 7 Hub and satellites. Every proposal: auto layout throughout, style-bound text, bold title + description + schematic visual, wrapped grid, group-wrapped sheet. Zero edits to the live canvas.",
     "sweeps": "Pairwise page overlaps zero, containment zero, render verified.",
     "awaiting": "Titus reviews later and picks a system or pieces; then ONE implementation pass executes it end to end (including masters strip if 1/6/7 win, screens min-height, style-bound band type, no axis-dump labels anywhere)."
+  },
+  "session4j": {
+    "scope": "Verdict on the seven systems: all kept as toolbox, Shelves default. Full page rebuild executed.",
+    "built": "Proposed graduated to its own sub-page (11368:3) with page header; its three sheets moved and spaced. Components rebuilt as 11 shelves in a group-wrapped auto-layout column (squished 140px bands deleted; airy headers instead). Screens rebuilt as Feed and Case detail shelves. Diffs rebuilt as a dated shelf with wrapped card grid. Every shelf: white, rounded (radius/4XL bound), hairline stroke, 280px index card with human name + description (no axis dumps).",
+    "incident": "During disassembly the Case preview cards sheet was missed because the user had hand-wrapped it in a group mid-recording; caught by verifying the family sets existed before proceeding. Nothing lost.",
+    "sweeps": "Pairwise overlaps zero, containment zero, render verified (all 11 shelves clean)."
   }
 }

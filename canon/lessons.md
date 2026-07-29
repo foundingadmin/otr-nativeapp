@@ -41,6 +41,17 @@ one again costs more.
    in groups so Figma's tiny labels disappear and the designed titles are
    the only titles. Nested frames inside a group are label-free too.
 
+6c. **Shelves is the default presentation system (verdict, Jul 29).** One
+   white rounded auto-layout shelf per family: fixed-width index card
+   (bold name + human description) then the content, as wide as needed.
+   The other six proposal systems stay on the Proposed page as the
+   toolbox for cases where a shelf fits worse. Proposed lives on its own
+   sub-page; Components, Screens, Diffs live on the area page.
+6d. **Verify existence before destroy.** A user may hand-wrap nodes in
+   groups mid-session; never assume the tree matches your last write.
+   Confirm critical nodes survived any bulk removal BEFORE building on
+   top (the family sets nearly shipped inside a deleted sheet).
+
 ## Figma plugin API traps (use_figma)
 
 7. `figma.skipInvisibleInstanceChildren` defaults true in this harness.

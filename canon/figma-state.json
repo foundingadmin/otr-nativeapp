@@ -5,8 +5,8 @@
   "sections": {
     "components": "11262:1588",
     "screens": "11285:396",
-    "proposed": "11287:1655",
-    "diffs": "11287:1672"
+    "diffs": "11287:1672",
+    "note": "Proposed moved to its own sub-page 11368:3 (Jul 29); sections carry a group-wrapped auto-layout column: header + shelves"
   },
   "components": {
     "OTR/Cases/StatusBadge": {
@@ -169,21 +169,15 @@
     "components": "DEPRECATED/CasePreviewCard/{deadline, missed, counter, active-action, reassigned, active tap}",
     "reason": "superseded by badge-rule model: five lifecycle badges + action signals"
   },
-  "nestedSections": {
-    "components": {
-      "Case preview cards": "11345:2071",
-      "Signal system": "11345:2072",
-      "Badges & atoms": "11345:2073",
-      "Identity & ticket": "11345:2074",
-      "Detail kit": "11345:2075"
-    },
-    "screens": {
-      "Feed": "11345:6695",
-      "Case detail": "11345:6696"
-    }
-  },
   "canvasWayfinding": {
     "note": "session 4c: tinted nested sections with canvas-title/canvas-note headers; flow arrow Feed -> Case detail",
     "arrow": "11348:6744"
+  },
+  "proposedPage": "11368:3",
+  "canvasSystem": {
+    "standard": "Shelves (proposal 2) is the default presentation. Shelf = white rounded auto-layout row: fixed 280px index card (Canvas/Subtitle name + Canvas/Note description) + the family content, wide as needed. Columns group-wrapped so no Figma name labels render. All seven proposal wireframes remain on the Proposed page as the system toolbox.",
+    "componentsShelves": "Incomplete(+draft), Active, Resolved, Dismissed, Cancelled, SmartMatch, Signal system(+icon grid), Status badge, Atoms, Identity & ticket, Detail kit",
+    "screensShelves": "Feed (4), Case detail (8)",
+    "diffsShelves": "one per date group, cards in a wrapped grid"
   }
 }
