@@ -314,5 +314,12 @@
     "built": "Proposed graduated to its own sub-page (11368:3) with page header; its three sheets moved and spaced. Components rebuilt as 11 shelves in a group-wrapped auto-layout column (squished 140px bands deleted; airy headers instead). Screens rebuilt as Feed and Case detail shelves. Diffs rebuilt as a dated shelf with wrapped card grid. Every shelf: white, rounded (radius/4XL bound), hairline stroke, 280px index card with human name + description (no axis dumps).",
     "incident": "During disassembly the Case preview cards sheet was missed because the user had hand-wrapped it in a group mid-recording; caught by verifying the family sets existed before proceeding. Nothing lost.",
     "sweeps": "Pairwise overlaps zero, containment zero, render verified (all 11 shelves clean)."
+  },
+  "session4k": {
+    "scope": "Device mock kit, canvas type ramp v2, min mock height",
+    "mocks": "OTR/Mock/Device (11376:2353): 24 variants, os x size x shell x chrome. Breakpoints from 2026 usage data: Android 360/384/412 (workhorse widths), Apple 375/393/430. Flat minimal shells, bound fills, status bar + home/gesture bar as chrome=full, scrollable content container, OTR/Mock/Slot placeholder instance. Own shelf in Components.",
+    "typeRamp": "Canvas styles migrated by rename (all bound texts updated): Section/Headline 64, Collection/Headline 36, Collection/Text 17, Item/Text 14; new Page/Headline 96, Page/Text 28, Section/Text 22, Item/Headline 22, Caption 12.",
+    "screens": "Min height 844 enforced; no chrome layers found in printed screens (bars live only in the mock kit). NOTE: several detail screens measured 844 at enforcement time, lower than remembered print heights; flag for a height audit against print-log if anything looks cropped.",
+    "sweeps": "Pairwise zero, containment zero."
   }
 }

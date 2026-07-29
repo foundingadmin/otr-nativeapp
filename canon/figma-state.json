@@ -115,6 +115,12 @@
       "variants": 12,
       "axes": "tone(error|warning|info|success|match|inactive) x density(block|line)",
       "note": "six system tones per badge-rule board; nested icon instance swappable; hidden amount/body slots for overrides"
+    },
+    "OTR/Mock/Device": {
+      "id": "11376:2353",
+      "variants": 24,
+      "axes": "os(apple|android) x size(compact|standard|max) x shell(light|dark) x chrome(full|bare)",
+      "dims": "apple 375x667/393x852/430x932; android 360x800/384x854/412x915; scroll container overflowDirection VERTICAL; slot instance OTR/Mock/Slot 11375:2221"
     }
   },
   "screens": {
@@ -178,6 +184,7 @@
     "standard": "Shelves (proposal 2) is the default presentation. Shelf = white rounded auto-layout row: fixed 280px index card (Canvas/Subtitle name + Canvas/Note description) + the family content, wide as needed. Columns group-wrapped so no Figma name labels render. All seven proposal wireframes remain on the Proposed page as the system toolbox.",
     "componentsShelves": "Incomplete(+draft), Active, Resolved, Dismissed, Cancelled, SmartMatch, Signal system(+icon grid), Status badge, Atoms, Identity & ticket, Detail kit",
     "screensShelves": "Feed (4), Case detail (8)",
-    "diffsShelves": "one per date group, cards in a wrapped grid"
+    "diffsShelves": "one per date group, cards in a wrapped grid",
+    "typeRamp": "Canvas/Page 96+28, Section 64+22, Collection 36+17, Item 22+14, Caption 12 (migrated from Title/Subtitle/Note/Label by rename)"
   }
 }

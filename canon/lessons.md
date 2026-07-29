@@ -26,13 +26,20 @@ one again costs more.
    sheets are frames of INSTANCES with auto layout; variant masters park in
    a compact strip. Wrap counts chosen by hand ("4 per row") are always
    wrong.
-5. **Screen demos have a minimum device height.** No 300px "phones."
+5. **Screen demos have a minimum device height: 844px (locked, Jul 29).**
+   A frame insinuating a mobile mock must be at least a real phone tall;
+   short content gets background fill to 844. Present screens through the
+   OTR/Mock/Device component (os x size x shell x chrome, slot inside);
+   OS chrome lives in the mock tool, never inside screen designs.
    Every sheet and group carries a title AND a one-line description;
    "what am I looking at" must always have an answer on canvas.
 6. **Canvas language**: hue = surface type; band tint one step stronger
    than plate; type on bands is ink, never white; white = a pickable
    object. Annotations use Canvas/Title, Canvas/Note, Canvas/Label styles,
-   never raw one-off text. Block anatomy is always: bold title, one-line
+   never raw one-off text. Canvas type ramp (Jul 29): Canvas/Page,
+   /Section, /Collection, /Item tiers, each with Headline + Text, plus
+   Caption (96/28, 64/22, 36/17, 22/14, 12). Tier matches container.
+   Block anatomy is always: bold title, one-line
    description, then the visual. Axis-dump labels (form: card · compact
    signal: none · urgency...) are banned; they are noise, not naming.
 6b. **Label-noise control (user technique, Jul 29)**: sections render
