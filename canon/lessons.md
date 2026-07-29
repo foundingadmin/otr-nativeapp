@@ -16,6 +16,10 @@ one again costs more.
 3. **Sections cannot take corner radius or auto layout.** They are
    organizational only. Anything that needs the specimen look (rounded,
    auto layout, breathing room) must be a FRAME.
+3b. **Auto layout all the way down (ratified, brief 4).** Sections exist
+   only at the topmost layer. Every container inside is an auto-layout
+   frame: header columns, item wrappers, wrapping rows for small parts.
+   Hand-placed grids are banned; if content grows, the sheet must flow.
 4. **Display and storage are different layers.** Component sets cannot use
    auto layout, so never hand-grid variants as the presentation. The client
    pattern (see the Buttons specimen, node 11355:19505): presentation

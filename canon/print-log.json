@@ -294,5 +294,12 @@
     "built": "Jul 29 canvas organization proposals (OPEN) on Proposed, section 11360:2393: A Specimen sheets (rounded frames of instances, auto layout, masters strip), B Library shelves (one auto layout row per family, index cards, no wrap), C Atlas (hub + standalone spec frames + screens lane).",
     "insight": "Component sets cannot take auto layout; the client's clean sheets are frames of INSTANCES with auto layout while masters park elsewhere. All three proposals adopt this.",
     "queued": "StatusBadge vocabulary cleanup (retire solid forms + non-vocabulary statuses per badge rule, ratified again in brief 3); screens min-height rule; execution of whichever proposal wins."
+  },
+  "session4h": {
+    "scope": "Video brief 4: 'almost there, another run'. Construction standard executed.",
+    "standard": "Sections only at the topmost layer. Every container inside is auto layout, all the way down: sheets are rounded auto-layout frames (radius/4XL bound) with header column + labeled item wrappers; small parts flow in wrapping rows; long content flows instead of overflowing. Nested frames show no canvas names; groups reserved for any future top-level composite.",
+    "rebuilt": "All 7 nested sheets in Components/Screens + 3 date groups in Proposed/Diffs converted from sections to auto-layout sheet frames (new ids in figma-state on next read-back). Matrix label overlays replaced by in-flow item labels with axes summaries. Purple verdict card on Explorations restyled white with violet stroke.",
+    "sweeps": "Pairwise page overlap: zero. Containment: zero. Render verified.",
+    "aside": "If the 'purple thing' meant Figma's purple component-set chrome rather than the verdict card, the cure is the masters-strip/instance-sheet pattern from proposal A; flagged for the next verdict."
   }
 }
