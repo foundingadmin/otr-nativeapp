@@ -154,6 +154,11 @@ one again costs more.
     cap; read the .txt, skip transcription when an .srt exists; seek-based
     frames only. Answer the asides; the highest-value item usually hides
     there.
+17b. **Executing a brief gets an unmissable confirmation.** When a video
+    brief is executed, the reply LEADS with "executed" plus the link and
+    a visual, standing alone, never buried inside PR or canon
+    bookkeeping. The user missed the v3 execution entirely because the
+    report shared a turn with subscription chatter (Jul 29).
 18. Every session ends with: canon files updated, commit pushed, PR
     current, and this file extended if something new was learned the hard
     way.
