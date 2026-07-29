@@ -118,18 +118,15 @@
     },
     "OTR/Mock/Device": {
       "id": "11376:2353",
-      "variants": 24,
-      "axes": "os(apple|android) x size(compact|standard|max) x shell(light|dark) x chrome(full|bare)",
-      "dims": "apple 375x667/393x852/430x932; android 360x800/384x854/412x915; scroll container overflowDirection VERTICAL; slot instance OTR/Mock/Slot 11375:2221",
-      "sizeOptions": "compact · 360-375w | standard · 384-393w | max · 412-430w; exact px + device class in per-variant descriptions",
-      "benches": "Mock test bench 11383:19378: two detached editable devices (apple 11384:14924, android 11384:16536) with heavy feed instances, clipped + overflow VERTICAL, verified scrolling",
-      "location": "moved to ↪ Proto page with benches and slot"
+      "status": "RETIRED (session 4n)",
+      "location": "Cases Archive page 11158:8460, renamed DEPRECATED/... (superseded by native-first rig)",
+      "note": "24-variant fixed-dims device set, OTR/Mock/Slot 11375:2221 and Mock test bench 11383:19378 retired with it; flexible rigs replace all three"
     },
     "OTR/Mock/Chrome": {
       "id": "11389:13975",
       "variants": 8,
       "axes": "part(status|home) x os(apple|android) x tone(dark|light)",
-      "note": "chrome overlays for native prototype flow; fix-position is a manual toggle (scrollBehavior not in plugin API)"
+      "note": "session 4n: all 8 masters rebuilt as stretchy auto layout (status: HORIZONTAL SPACE_BETWEEN, home: centered pill) and verified at 360/440 widths; lives in shelf · Chrome on the Proto section; fix-position is a manual toggle (scrollBehavior not in plugin API)"
     }
   },
   "screens": {
@@ -145,7 +142,8 @@
     "Detail/overdue": "11383:14559",
     "Detail/remarket": "11383:14560",
     "Detail/dismissed": "11383:14561",
-    "Detail/notbooked": "11383:14562"
+    "Detail/notbooked": "11383:14562",
+    "responsive": "verified session 4n: all 12 screen components are already fully responsive (layoutMode VERTICAL, all children FILL); instances stretch cleanly, tested at 430w"
   },
   "decisionsApplied": [
     "DR-CPC-001",
@@ -196,7 +194,15 @@
     "screensShelves": "Feed (4), Case detail (8)",
     "diffsShelves": "one per date group, cards in a wrapped grid",
     "typeRamp": "Canvas/Page 96+28, Section 64+22, Collection 36+17, Item 22+14, Caption 12 (migrated from Title/Subtitle/Note/Label by rename)",
-    "protoWorkflow": "Native-first: starters at Figma's own device dims (iPhone 16 393x852, Android Compact 412x917) + presentation-settings bezel; OTR/Mock/Chrome supplies OS chrome; OTR/Mock/Device + bench remain for static canvas shots and drop-in scroll checks."
+    "protoWorkflow": "Native-first, flexible rigs (session 4n): duplicate a rig, resize to ANY device size, swap the screen instance; chrome and screen stretch with the frame (never pick a matching mock). Presentation settings supply the bezel. OTR/Mock/Device + Slot + bench retired to Archive."
   },
-  "protoPage": "11382:38949"
+  "protoPage": {
+    "id": "11382:38949",
+    "section": "11414:1529 · ① Tools (agent) · blue plate, group-wrapped column (headline + guide + shelf · Chrome), rigs as DIRECT section children so they stay presentable",
+    "rigs": {
+      "apple": "11410:4926 · Rig · apple · resize me to any device size (393x852 start)",
+      "android": "11410:5405 · Rig · android · resize me to any device size (412x917 start)",
+      "anatomy": "plain frame, clipsContent + overflowDirection VERTICAL; children: 'screen · swap me' (STRETCH/MIN), 'chrome status · fix position' (STRETCH/MIN), 'chrome home · fix position' (STRETCH/MAX); stretch verified at 360x800 and 430x932"
+    }
+  }
 }

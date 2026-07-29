@@ -65,8 +65,15 @@ the client's existing file structure:
 
 Sub-pages of `↪ Cases` (session 4): `↪ Explorations` page `11337:2087`
 (agent, exploration prints land here); `↪ Archive` page `11158:8460`
-(retired frames; first-run Test debris moved here). CPC v2 diff card:
-`11338:1922` on ④ Diffs.
+(retired frames; first-run Test debris moved here); `↪ Proposed` page
+`11368:3`; `↪ Proto` page `11382:38949` with section ① Tools (agent)
+`11414:1529` — stretchy `OTR/Mock/Chrome` set `11389:13975` (8 variants,
+part × os × tone, all auto layout) and two resize-anywhere rigs, direct
+section children so they stay presentable: `Rig · apple` `11410:4926`
+(starts 393×852), `Rig · android` `11410:5405` (starts 412×917).
+Retired session 4n to Archive as DEPRECATED/: `OTR/Mock/Device`
+`11376:2353`, `OTR/Mock/Slot` `11375:2221`, Mock test bench
+`11383:19378`. CPC v2 diff card: `11338:1922` on ④ Diffs.
 
 ---
 

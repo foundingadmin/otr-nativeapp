@@ -28,9 +28,9 @@ one again costs more.
    wrong.
 5. **Screen demos have a minimum device height: 844px (locked, Jul 29).**
    A frame insinuating a mobile mock must be at least a real phone tall;
-   short content gets background fill to 844. Present screens through the
-   OTR/Mock/Device component (os x size x shell x chrome, slot inside);
-   OS chrome lives in the mock tool, never inside screen designs.
+   short content gets background fill to 844. Present screens through a
+   Rig (Proto page) resized to the device size you need; OS chrome lives
+   in OTR/Mock/Chrome overlays, never inside screen designs.
    Every sheet and group carries a title AND a one-line description;
    "what am I looking at" must always have an answer on canvas.
 6. **Canvas language**: hue = surface type; band tint one step stronger
@@ -89,12 +89,26 @@ one again costs more.
     frames (clipped content + overflowDirection VERTICAL). figma.createSlot
     does not exist in this plugin API; the native Slot feature is
     UI-only for now.
-12b2. **Native-first proto testing (verdict, Jul 29).** Figma's
-    presentation settings render real device bezels; do not rebuild
-    bezels for flow testing. Starters live on ↪ Proto at Figma's own
-    device dims; OTR/Mock/Chrome supplies status and home bars (fix
-    position manually; scrollBehavior is not in the plugin API).
-    OTR/Mock/Device and the bench remain for static canvas shots.
+12b2. **Native-first proto testing (verdict, Jul 29; hardened 4n).**
+    Figma's presentation settings render real device bezels; do not
+    rebuild bezels for flow testing. The tools are two flexible Rigs on
+    ↪ Proto: plain frames whose screen and chrome children STRETCH, so
+    you resize to any device size instead of picking a matching mock.
+    OTR/Mock/Chrome supplies status and home bars (fix position
+    manually; scrollBehavior is not in the plugin API). OTR/Mock/Device,
+    Slot, and the bench are DEPRECATED on the Archive page.
+12b3. **Prototype start frames must be page- or section-level.** A frame
+    nested inside another frame (a shelf, a column) cannot start a flow
+    or be presented. Anything meant to be presented lives as a direct
+    child of the page or a topmost section, even when that breaks the
+    shelf pattern; the section renders its instructional name as the
+    label instead of an index card.
+12b4. **Everything in a device rig stretches.** Chrome sets, screens,
+    and rig children all use auto layout / STRETCH constraints so the
+    rig resizes to any device size. Fixed-dimension device variants are
+    the smell that got the 24-variant mock set retired. Before
+    converting a tree to auto layout, audit it: the 12 screens were
+    already fully responsive and needed zero changes.
 12c. **Chrome hunting is content-based.** Screen chrome hid as
     Detail/StatusZone instances; name searches miss it. Find chrome by
     what it renders (9:41, 12:30) and walk up to the holder.
