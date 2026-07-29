@@ -196,6 +196,17 @@
     "typeRamp": "Canvas/Page 96+28, Section 64+22, Collection 36+17, Item 22+14, Caption 12 (migrated from Title/Subtitle/Note/Label by rename)",
     "protoWorkflow": "Native-first, flexible rigs (session 4n): duplicate a rig, resize to ANY device size, swap the screen instance; chrome and screen stretch with the frame (never pick a matching mock). Presentation settings supply the bezel. OTR/Mock/Device + Slot + bench retired to Archive."
   },
+  "lexiconPage": {
+    "id": "11415:3",
+    "section": "11415:169 · ① Lexicon (agent)",
+    "note": "Visual of the naming grammar (session 4o, PROPOSAL awaiting verdict): law specimen (objective word · contextual label), sidebar mock with workflow/stage/station chips, canvas furniture miniature, screen/zone/block/element schematic, everywhere-words lists. Page unplaced in sidebar order; org later per user.",
+    "shelves": {
+      "law": "in header column",
+      "sidebar": "11416:168",
+      "canvas": "11420:168",
+      "design": "11420:201"
+    }
+  },
   "protoPage": {
     "id": "11382:38949",
     "section": "11414:1529 · ① Tools (agent) · blue plate, group-wrapped column (headline + guide + shelf · Chrome), rigs as DIRECT section children so they stay presentable",

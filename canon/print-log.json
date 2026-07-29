@@ -355,5 +355,16 @@
       "Prototype constraint honored: flow start frames must be page- or section-level, so rigs cannot live inside a shelf frame."
     ],
     "sweeps": "Proto section containment zero, pairwise zero, page strays zero (screenshot-verified)."
+  },
+  "session4o": {
+    "scope": "Lexicon visual: new page printing the naming-system proposal for team advocacy",
+    "context": "Chat rounds produced a three-part grammar awaiting verdict: habitats (sidebar venues / canvas furniture / design parts / everywhere words), objective word vs contextual label (type vs instance), closed vs open label menus, tenure (agent-kept / human-kept / handshake). User wanted it visual to advocate internally.",
+    "built": "Lexicon page 11415:3, section ① Lexicon (agent) 11415:169, 1622x3248. Header + five exhibits: The law (two-tone specimen 'shelf · Chrome' with objective/label captions, anti-twist + sidebar-exception blips); Sidebar (mock page list with tinted chips: workflow=blue, stage=neutral, station=amber; legend blips); Canvas (miniature plate containing mini shelf/index/guide/blips/verdict callout/dashed rig, each tagged objective · label); Design (390x844 schematic screen nesting zone > block > element, six-word legend); Everywhere (status / tenure / reserved word lists). Built entirely from canon furniture: cloned index cards, copied bound plate/shelf fills, Canvas/* text styles throughout.",
+    "incidents": [
+      "Arrow glyph ↪ is not in Figtree and rendered tofu in the sidebar mock rows; stripped, indent alone carries hierarchy.",
+      "Violet Proposed plate fill no longer findable (11287:1655 gone, no section on Proposed page 11368:3); stage chips fell back to the neutral plate tint."
+    ],
+    "status": "PROPOSAL. Vocabulary not yet ratified; canon/vocabulary.md, Canvas style renames (Section->Plate, Collection->Shelf), and node-name sweeps all wait on the user's verdict.",
+    "sweeps": "Section containment zero, pairwise zero, page strays zero (screenshot-verified, tofu fix applied after)."
   }
 }

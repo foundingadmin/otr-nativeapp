@@ -15,6 +15,7 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
 | Agent sections | ① Components ② Screens ③ Proposed ④ Diffs on the `↪ Cases` page (IDs in `figma-state.json`) |
 | Exploration prints | `↪ Explorations` page `11337:2087` (sub-page of Cases, created session 4, empty scaffold) |
 | Proto tools | `↪ Proto` page `11382:38949`, section ① Tools `11414:1529`: stretchy OTR/Mock/Chrome + two resize-anywhere Rigs (`11410:4926` apple, `11410:5405` android) |
+| Lexicon (PROPOSAL) | `Lexicon` page `11415:3`, section ① Lexicon `11415:169`: visual of the naming grammar awaiting verdict; vocabulary.md + style renames + name sweeps blocked on it |
 | Node/style/variable registries | `brand/BRAND.md` |
 | Print history + policies | `print-log.json` (sessions 1–3, `buildChecks`) |
 | Open DS asks | `variable-requests.md` + the cards on ④ Diffs |
