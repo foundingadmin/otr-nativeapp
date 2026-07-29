@@ -276,5 +276,11 @@
     "canvas": "All five Components nested sections + Feed/Case detail: variable-bound tints, 40px Figtree EB canvas-titles, 16px canvas-notes (annotation layer, raw sizes per scaffolding exemption). Flow arrow 'tap a card' from Feed to Case detail.",
     "bulkFormSwitchLimitation": "Figma cannot batch-change variant props across instances of different component sets; multi-select form flips are an agent task (read selection, flip). Logged as a compromise of the family split.",
     "open": "Fixture repopulation for swapped p-heavy cards; StatusBadge vocabulary shrink; video pipe: Drive folder + agent transcription to replace Loom."
+  },
+  "session4e": {
+    "scope": "Canvas v3 legibility pass + Explorations scaffold + operating model v3",
+    "canvas": "Mega-sections repositioned without overlap (previous masonry widened Components over Screens, unnoticed). Plates: Components brand/50, Screens neutral/50, Proposed accent2/50, Diffs warning/50; each with a 140px solid band (600-level) and 64px white title. Nested sections whitened; 13 component sets get border/neutral/light 1.5 stroke.",
+    "explorations": "Page scaffolded as the divergence-review queue: standing rules header, TEMPLATE sprint section (dated name, candidates A-C slots, verdict card). Only OPEN sprints live on the page; REVIEWED sprints move to Archive.",
+    "model": "prd-cd-workflow-v2.md rewritten to v3 per Titus review: no review in CD ever, divergence prints light to Explorations, verdicts on canvas recorded by CC, winners converge with full binding; CD sessions repo-seeded and disposable."
   }
 }
