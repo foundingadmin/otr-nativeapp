@@ -77,6 +77,14 @@
       "detail": "Per the system board (badge rule + action signals): CasePreviewCard split into six family component sets so each property panel shows only valid signals; signal UI extracted to OTR/Cases/SignalBlock (tone x density, six fixed tones incl. inactive gray) instanced by all cards and compact rows; icons promoted to OTR/Icons components for swap overrides. Superseded variants (deadline, missed, counter, active-action, reassigned, tap) deprecated to Archive. OPEN: quote-family CTA treatment; StatusBadge vocabulary shrink to 5+2.",
       "decidedBy": "user delegated the model choice; agent applied CD's system board",
       "commit": "this commit"
+    },
+    {
+      "id": "D-011",
+      "title": "No buttons on cards, anywhere",
+      "verdict": "adopt",
+      "detail": "Ratified via video brief (Loom transcript, Jul 29): blue DS Buttons must not appear in any case preview card. SmartMatch quote/quote-urgent/expired and Incomplete draft converted to signal blocks (match, warning, inactive, warning). Closes the quote-family CTA question from D-010. Legitimate buttons remain on empty-state screens, HelpZone, and Detail/ActionItem (signal-owns-its-button per system board, detail surface only).",
+      "decidedBy": "user (Titus), video brief",
+      "commit": "this commit"
     }
   ]
 }

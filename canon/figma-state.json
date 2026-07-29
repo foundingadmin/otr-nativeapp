@@ -181,5 +181,9 @@
       "Feed": "11345:6695",
       "Case detail": "11345:6696"
     }
+  },
+  "canvasWayfinding": {
+    "note": "session 4c: tinted nested sections with canvas-title/canvas-note headers; flow arrow Feed -> Case detail",
+    "arrow": "11348:6744"
   }
 }

@@ -266,5 +266,15 @@
     "canvas": "Components section reorganized into five nested sections; Screens split into Feed and Case detail nested sections.",
     "gotcha": "figma.skipInvisibleInstanceChildren defaults true in use_figma; must set false before findOne on hidden override slots inside instances.",
     "open": "Quote-family cards (SmartMatch set + Incomplete draft) keep DS Buttons pending verdict on one-blue-CTA vs signal-owned resolution; StatusBadge vocabulary shrink (5 lifecycle + 2 SmartMatch, badge-rule board) not yet applied; feed screens still instance pre-v2 anatomy."
+  },
+  "session4c": {
+    "scope": "Video-brief execution: button purge, screen swaps, canvas wayfinding",
+    "brief": "First video-brief intake (transcript-only, .srt). Verdicts: family split liked; per-family signals 'perfect'; nested-signal deep-editing accepted compromise; buttons must not exist on cards; canvas needs color, titles, flow.",
+    "buttons": "SmartMatch quote ('Accept or deny your quote', match), quote-urgent ('Accept or deny now', warning), expired (inactive + body), Incomplete draft ('Complete your booking', warning) converted to SignalBlock instances. Screen instances updated automatically via masters.",
+    "screenSwaps": "p-heavy stale instances swapped: active-action -> Active/card/sign (11285:687), tap -> Active/card/unread (11285:776). Fixture text reset to master values, repopulation is polish-pass work.",
+    "keptButtons": "Empty state (Add your ticket, How it works), HelpZone (Start a live chat), Detail/ActionItem (Review & sign engagement) are not card CTAs and stay.",
+    "canvas": "All five Components nested sections + Feed/Case detail: variable-bound tints, 40px Figtree EB canvas-titles, 16px canvas-notes (annotation layer, raw sizes per scaffolding exemption). Flow arrow 'tap a card' from Feed to Case detail.",
+    "bulkFormSwitchLimitation": "Figma cannot batch-change variant props across instances of different component sets; multi-select form flips are an agent task (read selection, flip). Logged as a compromise of the family split.",
+    "open": "Fixture repopulation for swapped p-heavy cards; StatusBadge vocabulary shrink; video pipe: Drive folder + agent transcription to replace Loom."
   }
 }
