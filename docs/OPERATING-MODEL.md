@@ -77,3 +77,13 @@ Unresolved design questions ride along rather than block the pipeline:
 Weekly design work on both surfaces for the next several months. Every session
 — human or agent, CD-side or Figma-side — begins by pulling canon from this
 repo, and ends by writing back what changed. CC enforces both halves.
+
+
+## Video briefs (session 4c)
+
+Loom is retired as the delivery pipe. Permanent flow: record with the OS
+screen recorder (macOS Cmd+Shift+5, save location set to the synced Google
+Drive folder "OTR video briefs"), then tell CC a brief landed. CC pulls the
+file through the Drive connector, extracts frames with ffmpeg, transcribes
+locally, and runs the video-brief-intake skill. No processing waits, no
+size limits, no manual downloads. Transcript paste remains the fallback.

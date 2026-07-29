@@ -1,241 +1,384 @@
 {
- "actionbutton": [
-  {
-   "design": "#e5463a",
-   "action": "BIND_NEAREST_AND_FLAG",
-   "bound": "colors/cherry/500",
-   "boundHex": "#e35545",
-   "deltaE": 2.61,
-   "usedFor": "money action fill (overdue payment)",
-   "seenIn": "ds-cases-atomic-system IR, class act money"
-  },
-  {
-   "design": "#2e6bff",
-   "action": "BIND_NEAREST_AND_FLAG",
-   "bound": "colors/blueberry/500",
-   "boundHex": "#3a78f4",
-   "deltaE": 4.51,
-   "usedFor": "blue action fill",
-   "seenIn": "ds-cases-atomic-system IR, class act blue"
-  },
-  {
-   "design": "#5b63ff",
-   "action": "DS_REQUEST",
-   "bound": null,
-   "nearest": "colors/blueberry/600",
-   "nearestHex": "#155eef",
-   "deltaE": 6.93,
-   "usedFor": "SmartMatch grad stop 1",
-   "seenIn": "ds-cases-atomic-system IR, class act grad"
-  },
-  {
-   "design": "#8b5cf6",
-   "action": "BIND_NEAREST_AND_FLAG",
-   "bound": "colors/grape/500",
-   "boundHex": "#8c4ef4",
-   "deltaE": 3.34,
-   "usedFor": "SmartMatch grad stop 2",
-   "seenIn": "ds-cases-atomic-system IR, class act grad"
-  }
- ],
- "notes": [
-  "CSS-dump figmaCandidates (colors/blue/dark/500 etc.) do not exist in live library; live palette is blueberry/cherry/grape/ink/etc. Report per FIGMA-PRINT-GUIDE section 4: dump and library out of step.",
-  "ActionButton pass 1: icon slot omitted; padding 20 measured from board fixed-width buttons, needs human eye.",
-  "Grad stop2 bound via ColorStop.boundVariables (verify persisted on read back)."
- ],
- "chip": [
-  {
-   "design": "#6b7280",
-   "action": "BIND_NEAREST_AND_FLAG",
-   "bound": "colors/ink/600",
-   "boundHex": "#6a6e75",
-   "deltaE": 3.64,
-   "usedFor": "wf-muted: chip/classif/charge label grey",
-   "seenIn": "otr-chip, classif, pill-outline CSS"
-  },
-  {
-   "design": "#f79009",
-   "action": "DS_REQUEST",
-   "bound": null,
-   "nearest": "colors/honey/600",
-   "nearestHex": "#f19d00",
-   "deltaE": 5.87,
-   "usedFor": "chip alert dot (dump said BIND; live library disagrees)",
-   "seenIn": "screen-all_cases_feed IR chip-alert"
-  }
- ],
- "lockup_meter_overdue": [
-  {
-   "design": "#9aa1ad",
-   "action": "BIND_NEAREST_AND_FLAG",
-   "bound": "colors/ink/300",
-   "deltaE": 4.16,
-   "usedFor": "wf-faint: firm line, secondary text"
-  },
-  {
-   "design": "#3b3e46",
-   "action": "BIND_NEAREST_AND_FLAG",
-   "bound": "colors/ink/800",
-   "deltaE": 2.63,
-   "usedFor": "wf-strong: meter bar, rating number"
-  },
-  {
-   "design": "#fdb022",
-   "action": "BIND_NEAREST_AND_FLAG",
-   "bound": "colors/honey/500",
-   "deltaE": 4.51,
-   "usedFor": "rating star"
-  },
-  {
-   "design": "#fdeceb",
-   "action": "BIND_NEAREST_AND_FLAG",
-   "bound": "colors/cherry/25",
-   "deltaE": 2.92,
-   "usedFor": "money-bg: overdue pill fill"
-  },
-  {
-   "design": "#f7c9c4",
-   "action": "BIND_NEAREST_AND_FLAG",
-   "bound": "colors/cherry/100",
-   "deltaE": 2.36,
-   "usedFor": "money-line: overdue pill border"
-  },
-  {
-   "design": "#e2e6ec/#ccd1da",
-   "action": "BIND_NEAREST_AND_FLAG",
-   "bound": "ink/50 to ink/100",
-   "deltaE": 2.38,
-   "usedFor": "portrait placeholder gradient"
-  }
- ],
- "ticket": {
-  "action": "DS_REQUEST",
-  "palette": {
-   "cream": "#6b4f1d/#fdf3c6/#f6e6a2",
-   "blue": "#234e86/#dde9fb/#bdd4f2",
-   "green": "#356b2a/#e3f0d4/#c6e2ad",
-   "pink": "#9b2a5a/#ffdcea/#ffc2da",
-   "slate": "#3d4452/#e9ecf2/#d2d8e2"
-  },
-  "note": "skeuomorphic paper palette, intentionally non-DS; Courier New unavailable in Figma, printed in Roboto Mono (FLAG for design team)"
- },
- "printed": {
-  "statusbadge": {
-   "setId": "11262:1769",
-   "variants": 60
-  },
-  "actionbutton": {
-   "setId": "11274:1577",
-   "variants": 20
-  },
-  "chip": {
-   "setId": "11276:1553",
-   "variants": 8
-  },
-  "classiftag": {
-   "setId": "11276:1558",
-   "variants": 2
-  },
-  "attorneylockup": {
-   "setId": "11278:295",
-   "variants": 8
-  },
-  "meter": {
-   "setId": "11278:305",
-   "variants": 5
-  },
-  "overduepill": {
-   "componentId": "11278:306",
-   "variants": 1
-  },
-  "ticket": {
-   "setId": "11279:303",
-   "variants": 6
-  },
-  "casepreviewcard": {
-   "setId": "11280:763",
-   "variants": 18
-  },
-  "detail_zones": {
-   "StatusZone": "11281:351",
-   "AppBar": "11281:357",
-   "TicketHero": "11281:365",
-   "Identity": "11281:381",
-   "ActionItem": "11281:393",
-   "ActionHub": "11281:407",
-   "CaseFacts": "11281:425",
-   "ExpandedRecord": "11281:447",
-   "HelpZone": "11281:482"
-  }
- },
- "gaps": [
-  "AccountRail listed in FIGMA-PRINT-GUIDE zone table but absent from the extracted IR; not printed. Needs CD to re-export or confirm it was folded into another zone.",
-  "StatusBadge set has no unread axis (status x form x size only); unread dot state not printed pass 1.",
-  "CPC detail zones: aitem amber title #7a2e0e RAW; zone header tint #fbfbfc RAW; hero cls chip #10141e 50pct RAW.",
-  "Badge forms in CPC fixed post-print to registry-canonical (solid: deadline, missed, smartmatchd, almostgone, counter, dismissed); size md (25px) matches board sbadge height."
- ],
- "session2": {
-  "diffSwatchBindings": "token-side swatches on all diff cards now bound to their live variables (7 rects)",
-  "textStyles": {
-   "local": 34,
-   "libraryBound": "Product/Small Standard Text (Figtree Regular 14, exact)",
-   "nodesBound": 283,
-   "lsOverrides": 22,
-   "naming": "semantic tree OTR/Cases/{Title,Card,Zone,Button,Badge,Text,Micro,Ticket}"
-  },
-  "numericBindings": {
-   "radiusFields": 240,
-   "spacingFields": 525,
-   "keyFind": "radius/MD = 16 (earlier in-script check was wrong; card radius DS request withdrawn)",
-   "leftRaw": "radius 3/7/22/11/2 and spacing 5/7/9/10/11/22 etc. have no tokens; largest gaps: radius 3 (ticket), radius 7 (count pills), feed gap 11"
-  },
-  "typeDiffs": [
-   "TYPE DIFF \u00b7 Roboto Mono \u00b7 ticket citation ramp (NEW CUSTOM DESIGN) 11294:1494",
-   "TYPE DIFF \u00b7 OTR/Cases semantic ramp (DS REQUEST) 11294:1502"
+  "actionbutton": [
+    {
+      "design": "#e5463a",
+      "action": "BIND_NEAREST_AND_FLAG",
+      "bound": "colors/cherry/500",
+      "boundHex": "#e35545",
+      "deltaE": 2.61,
+      "usedFor": "money action fill (overdue payment)",
+      "seenIn": "ds-cases-atomic-system IR, class act money"
+    },
+    {
+      "design": "#2e6bff",
+      "action": "BIND_NEAREST_AND_FLAG",
+      "bound": "colors/blueberry/500",
+      "boundHex": "#3a78f4",
+      "deltaE": 4.51,
+      "usedFor": "blue action fill",
+      "seenIn": "ds-cases-atomic-system IR, class act blue"
+    },
+    {
+      "design": "#5b63ff",
+      "action": "DS_REQUEST",
+      "bound": null,
+      "nearest": "colors/blueberry/600",
+      "nearestHex": "#155eef",
+      "deltaE": 6.93,
+      "usedFor": "SmartMatch grad stop 1",
+      "seenIn": "ds-cases-atomic-system IR, class act grad"
+    },
+    {
+      "design": "#8b5cf6",
+      "action": "BIND_NEAREST_AND_FLAG",
+      "bound": "colors/grape/500",
+      "boundHex": "#8c4ef4",
+      "deltaE": 3.34,
+      "usedFor": "SmartMatch grad stop 2",
+      "seenIn": "ds-cases-atomic-system IR, class act grad"
+    }
   ],
-  "icons": {
-   "source": "CD bundle FeatureIcon set (157 icons)",
-   "swapped": "OverduePill, AttorneyLockup (8 stars + 4 timers), CPC (14), hero tag, appbar, ActionItem, ActionHub, CaseFacts (4), HelpZone, feed search (4 screens), empty state",
-   "colorInheritance": "icons reuse the replaced placeholder's bound paint",
-   "guesses": "bell=Action needed, calendar/tag/building=facts rows, magnifier=search"
-  }
- },
- "session3": {
-  "numericPolicy": "RATIFIED BY USER: never hard-code numerics; snap to nearest DS token (ties round down). Swept 492 radius + 282 spacing fields incl. value shifts (r3->6 ticket-excluded... r7->6, s10->8, s5->4, r22->20, s11->12 etc.). Ticket component excluded: protected custom paper radii.",
-  "typeBoard": "Printed on Proposed: Product ramp specimen (10 styles, bound to live library styles) + Proposal A Native/compact (9 styles, 24/16/13/11/10 scale) + Proposal B Native/six-step (12 styles, keeps CD density) + Proposal C Native/Product lexicon (11 styles, user-requested: reuses the published ramp grammar - Standard/Action/Highlight body emphasis, Headline/Section Heading/Subheading display tiers, Note Caption micro - sizes follow B density). Decision pending; on ratification agent creates /Native collection, rebinds 283 nodes, deletes OTR/Cases working styles. REVISED (user): Proposal C restructured into nested filterable folders: Native -> Headline (Primary 25, Secondary 20) / Section Heading (Primary 15.5, Sub 13.5) / Body (Action 13, Highlight 12.5, Standard 12.5, Small Action 11, Small Standard 11) / Caption (Note 11 upper, Small Note 10.5 upper), plus protected Ticket folder. REVISED AGAIN (user): display tiers renamed to placed locations, killing the Headline/Heading ambiguity: Native -> Page (Primary 25, Secondary 20) / Section (Primary 15.5, Secondary 13.5) / Body (Standard, Action, Highlight + Small variants) / Caption (Note, Small Note). Deliberate improvement over the Product ramp's Headline+Heading coexistence; Body/Caption grammar stays sibling to webapp. FINAL SHAPE (user iterations): Proposal C = Title/Text/Caption, one axis per folder: Title placed (Page 25, Hero 20, Section 15.5, Subsection 13.5), Text emphasis (Standard, Action, Highlight + Small variants), Caption micro (Note, Small Note). Wireframe demo printed (11314:1766): one screen, 13 labeled text nodes with C flags + A/B equivalents; surfaces the uppercase Bold 11 facts-key edge (absorb to Small Note 10.5 or add Caption/Key). FINAL v2 (user): Text group re-axed to size folders with emphasis leaves: Native -> Title (Page/Hero/Section/Subsection) + Text/Large (Standard R13, Action B13) + Text/Regular (Standard R12.5, Action B12.5, Highlight SB12.5) + Text/Small (Standard R11, Action B11) + Text/Caption (Note SB11 upper, Small Note B10.5 upper) = 13 styles + protected Ticket. Improves absorb map: tabs keep true 12.5 as Regular/Action. Demo re-flagged to match. RATIFIED AMENDMENTS (user): facts keys bind Caption/Note (weight normalizes to SemiBold 11 upper); all .5 sizes dropped -> integer ladder 25/20/16/14/13/12/11/10. Final C: Title{Page EB25, Hero EB20, Section B16, Subsection EB14} Text/Large{Standard R13, Action B13} Text/Regular{Standard R12, Action B12, Highlight SB12} Text/Small{Standard R11, Action B11} Text/Caption{Note SB11 upper, Small Note B10 upper}. 13 styles + protected Ticket mono. Awaiting explicit build go-ahead.",
-  "dsButtonFinding": "Guidelines library HAS a variant-rich Button set (key 624f386331f5011ab67eba8f318994a7fbff4369, 219 variants: type x state x size, icon slots, token-bound fills, style-bound labels; sizes small=40 medium=44 match CD exactly). OTR/Cases/ActionButton duplicated it. Older 27-variant Button set also published (legacy drift). Kind mapping: blue->Solid-brand, money->Solid-error, ghost->Outline-neutral, grad->Gradient-brand (gradient value TBC vs SmartMatch indigo), primary(ink)->no obvious DS equivalent. Remediation pending user call.",
-  "componentReusePolicy": "NEW POLICY: before printing any component, audit the DS library inventory (search_design_system) and instance/wrap existing DS components where they map honestly; print divergences as diffs. Candidates to re-audit: Chip vs White pills, tap rows vs Link text, search field vs Inputs, portraits vs placeholder avatar.",
-  "dsButtonAdoption": {
-   "decision": "USER: use DS Button directly",
-   "swapped": "11 ActionButton instances (CPC + screens) + ActionItem cta + HelpZone cta -> DS Button (key 624f386331f5011ab67eba8f318994a7fbff4369)",
-   "mapping": {
-    "blue": "Solid-brand",
-    "primary": "Solid-brand (no ink type in DS)",
-    "money": "Solid-error",
-    "ghost": "Outline-neutral",
-    "grad": "Gradient-brand"
-   },
-   "deltas": [
-    "SmartMatch indigo-purple gradient lost: DS Gradient-brand is #155eef->#0f4bc4",
-    "ink primary lost -> blue",
-    "labels Bold 14 -> SemiBold via Product/Small Action Text",
-    "money #e5463a -> error #d92d20"
-   ],
-   "archived": "OTR/Cases/ActionButton moved to Archive page 11158:8460",
-   "diffCard": "11307:1766"
+  "notes": [
+    "CSS-dump figmaCandidates (colors/blue/dark/500 etc.) do not exist in live library; live palette is blueberry/cherry/grape/ink/etc. Report per FIGMA-PRINT-GUIDE section 4: dump and library out of step.",
+    "ActionButton pass 1: icon slot omitted; padding 20 measured from board fixed-width buttons, needs human eye.",
+    "Grad stop2 bound via ColorStop.boundVariables (verify persisted on read back)."
+  ],
+  "chip": [
+    {
+      "design": "#6b7280",
+      "action": "BIND_NEAREST_AND_FLAG",
+      "bound": "colors/ink/600",
+      "boundHex": "#6a6e75",
+      "deltaE": 3.64,
+      "usedFor": "wf-muted: chip/classif/charge label grey",
+      "seenIn": "otr-chip, classif, pill-outline CSS"
+    },
+    {
+      "design": "#f79009",
+      "action": "DS_REQUEST",
+      "bound": null,
+      "nearest": "colors/honey/600",
+      "nearestHex": "#f19d00",
+      "deltaE": 5.87,
+      "usedFor": "chip alert dot (dump said BIND; live library disagrees)",
+      "seenIn": "screen-all_cases_feed IR chip-alert"
+    }
+  ],
+  "lockup_meter_overdue": [
+    {
+      "design": "#9aa1ad",
+      "action": "BIND_NEAREST_AND_FLAG",
+      "bound": "colors/ink/300",
+      "deltaE": 4.16,
+      "usedFor": "wf-faint: firm line, secondary text"
+    },
+    {
+      "design": "#3b3e46",
+      "action": "BIND_NEAREST_AND_FLAG",
+      "bound": "colors/ink/800",
+      "deltaE": 2.63,
+      "usedFor": "wf-strong: meter bar, rating number"
+    },
+    {
+      "design": "#fdb022",
+      "action": "BIND_NEAREST_AND_FLAG",
+      "bound": "colors/honey/500",
+      "deltaE": 4.51,
+      "usedFor": "rating star"
+    },
+    {
+      "design": "#fdeceb",
+      "action": "BIND_NEAREST_AND_FLAG",
+      "bound": "colors/cherry/25",
+      "deltaE": 2.92,
+      "usedFor": "money-bg: overdue pill fill"
+    },
+    {
+      "design": "#f7c9c4",
+      "action": "BIND_NEAREST_AND_FLAG",
+      "bound": "colors/cherry/100",
+      "deltaE": 2.36,
+      "usedFor": "money-line: overdue pill border"
+    },
+    {
+      "design": "#e2e6ec/#ccd1da",
+      "action": "BIND_NEAREST_AND_FLAG",
+      "bound": "ink/50 to ink/100",
+      "deltaE": 2.38,
+      "usedFor": "portrait placeholder gradient"
+    }
+  ],
+  "ticket": {
+    "action": "DS_REQUEST",
+    "palette": {
+      "cream": "#6b4f1d/#fdf3c6/#f6e6a2",
+      "blue": "#234e86/#dde9fb/#bdd4f2",
+      "green": "#356b2a/#e3f0d4/#c6e2ad",
+      "pink": "#9b2a5a/#ffdcea/#ffc2da",
+      "slate": "#3d4452/#e9ecf2/#d2d8e2"
+    },
+    "note": "skeuomorphic paper palette, intentionally non-DS; Courier New unavailable in Figma, printed in Roboto Mono (FLAG for design team)"
   },
-  "nativeCollectionBuilt": {
-   "decision": "USER: build it",
-   "styles": 13,
-   "rebound": 187,
-   "capsSplitToCaptionNote": "uppercase Bold-11 nodes folded into Caption/Note per verdict",
-   "monoRenamed": "OTR/Cases/Ticket/* -> Native/Ticket/* (6)",
-   "workingSetRemoved": 28,
-   "note": "collection is local to Native App file; publish-to-Guidelines ask goes to design team. Proposal board header stamped RATIFIED.",
-   "sizesShifted": "15.5->16, 15->16, 13.5->14, 12.5->12, 21/19->20, 14->13, 10.5->10 per integer ladder"
+  "printed": {
+    "statusbadge": {
+      "setId": "11262:1769",
+      "variants": 60
+    },
+    "actionbutton": {
+      "setId": "11274:1577",
+      "variants": 20
+    },
+    "chip": {
+      "setId": "11276:1553",
+      "variants": 8
+    },
+    "classiftag": {
+      "setId": "11276:1558",
+      "variants": 2
+    },
+    "attorneylockup": {
+      "setId": "11278:295",
+      "variants": 8
+    },
+    "meter": {
+      "setId": "11278:305",
+      "variants": 5
+    },
+    "overduepill": {
+      "componentId": "11278:306",
+      "variants": 1
+    },
+    "ticket": {
+      "setId": "11279:303",
+      "variants": 6
+    },
+    "casepreviewcard": {
+      "setId": "11280:763",
+      "variants": 18
+    },
+    "detail_zones": {
+      "StatusZone": "11281:351",
+      "AppBar": "11281:357",
+      "TicketHero": "11281:365",
+      "Identity": "11281:381",
+      "ActionItem": "11281:393",
+      "ActionHub": "11281:407",
+      "CaseFacts": "11281:425",
+      "ExpandedRecord": "11281:447",
+      "HelpZone": "11281:482"
+    }
+  },
+  "gaps": [
+    "AccountRail listed in FIGMA-PRINT-GUIDE zone table but absent from the extracted IR; not printed. Needs CD to re-export or confirm it was folded into another zone.",
+    "StatusBadge set has no unread axis (status x form x size only); unread dot state not printed pass 1.",
+    "CPC detail zones: aitem amber title #7a2e0e RAW; zone header tint #fbfbfc RAW; hero cls chip #10141e 50pct RAW.",
+    "Badge forms in CPC fixed post-print to registry-canonical (solid: deadline, missed, smartmatchd, almostgone, counter, dismissed); size md (25px) matches board sbadge height.",
+    "StatusBadge lacks icon-in-badge axis (Jul 7 board shows icons inside card-size badges); compact prints size sm 21px vs board 22px.",
+    "Compact forms for matching-family statuses (deadline, missed, analyzing, remarketing, smartmatchd, almostgone, counter-status, expired, active-action, reassigned) not covered by the pairing board; legacy card variants unchanged.",
+    "Feed screens still instance pre-v2 anatomy; migration pass pending.",
+    "CD escalation gap: exploration decisions not promoted to root HTMLs; verify board recency vs explorations before printing any other board."
+  ],
+  "session2": {
+    "diffSwatchBindings": "token-side swatches on all diff cards now bound to their live variables (7 rects)",
+    "textStyles": {
+      "local": 34,
+      "libraryBound": "Product/Small Standard Text (Figtree Regular 14, exact)",
+      "nodesBound": 283,
+      "lsOverrides": 22,
+      "naming": "semantic tree OTR/Cases/{Title,Card,Zone,Button,Badge,Text,Micro,Ticket}"
+    },
+    "numericBindings": {
+      "radiusFields": 240,
+      "spacingFields": 525,
+      "keyFind": "radius/MD = 16 (earlier in-script check was wrong; card radius DS request withdrawn)",
+      "leftRaw": "radius 3/7/22/11/2 and spacing 5/7/9/10/11/22 etc. have no tokens; largest gaps: radius 3 (ticket), radius 7 (count pills), feed gap 11"
+    },
+    "typeDiffs": [
+      "TYPE DIFF · Roboto Mono · ticket citation ramp (NEW CUSTOM DESIGN) 11294:1494",
+      "TYPE DIFF · OTR/Cases semantic ramp (DS REQUEST) 11294:1502"
+    ],
+    "icons": {
+      "source": "CD bundle FeatureIcon set (157 icons)",
+      "swapped": "OverduePill, AttorneyLockup (8 stars + 4 timers), CPC (14), hero tag, appbar, ActionItem, ActionHub, CaseFacts (4), HelpZone, feed search (4 screens), empty state",
+      "colorInheritance": "icons reuse the replaced placeholder's bound paint",
+      "guesses": "bell=Action needed, calendar/tag/building=facts rows, magnifier=search"
+    }
+  },
+  "session3": {
+    "numericPolicy": "RATIFIED BY USER: never hard-code numerics; snap to nearest DS token (ties round down). Swept 492 radius + 282 spacing fields incl. value shifts (r3->6 ticket-excluded... r7->6, s10->8, s5->4, r22->20, s11->12 etc.). Ticket component excluded: protected custom paper radii.",
+    "typeBoard": "Printed on Proposed: Product ramp specimen (10 styles, bound to live library styles) + Proposal A Native/compact (9 styles, 24/16/13/11/10 scale) + Proposal B Native/six-step (12 styles, keeps CD density) + Proposal C Native/Product lexicon (11 styles, user-requested: reuses the published ramp grammar - Standard/Action/Highlight body emphasis, Headline/Section Heading/Subheading display tiers, Note Caption micro - sizes follow B density). Decision pending; on ratification agent creates /Native collection, rebinds 283 nodes, deletes OTR/Cases working styles. REVISED (user): Proposal C restructured into nested filterable folders: Native -> Headline (Primary 25, Secondary 20) / Section Heading (Primary 15.5, Sub 13.5) / Body (Action 13, Highlight 12.5, Standard 12.5, Small Action 11, Small Standard 11) / Caption (Note 11 upper, Small Note 10.5 upper), plus protected Ticket folder. REVISED AGAIN (user): display tiers renamed to placed locations, killing the Headline/Heading ambiguity: Native -> Page (Primary 25, Secondary 20) / Section (Primary 15.5, Secondary 13.5) / Body (Standard, Action, Highlight + Small variants) / Caption (Note, Small Note). Deliberate improvement over the Product ramp's Headline+Heading coexistence; Body/Caption grammar stays sibling to webapp. FINAL SHAPE (user iterations): Proposal C = Title/Text/Caption, one axis per folder: Title placed (Page 25, Hero 20, Section 15.5, Subsection 13.5), Text emphasis (Standard, Action, Highlight + Small variants), Caption micro (Note, Small Note). Wireframe demo printed (11314:1766): one screen, 13 labeled text nodes with C flags + A/B equivalents; surfaces the uppercase Bold 11 facts-key edge (absorb to Small Note 10.5 or add Caption/Key). FINAL v2 (user): Text group re-axed to size folders with emphasis leaves: Native -> Title (Page/Hero/Section/Subsection) + Text/Large (Standard R13, Action B13) + Text/Regular (Standard R12.5, Action B12.5, Highlight SB12.5) + Text/Small (Standard R11, Action B11) + Text/Caption (Note SB11 upper, Small Note B10.5 upper) = 13 styles + protected Ticket. Improves absorb map: tabs keep true 12.5 as Regular/Action. Demo re-flagged to match. RATIFIED AMENDMENTS (user): facts keys bind Caption/Note (weight normalizes to SemiBold 11 upper); all .5 sizes dropped -> integer ladder 25/20/16/14/13/12/11/10. Final C: Title{Page EB25, Hero EB20, Section B16, Subsection EB14} Text/Large{Standard R13, Action B13} Text/Regular{Standard R12, Action B12, Highlight SB12} Text/Small{Standard R11, Action B11} Text/Caption{Note SB11 upper, Small Note B10 upper}. 13 styles + protected Ticket mono. Awaiting explicit build go-ahead.",
+    "dsButtonFinding": "Guidelines library HAS a variant-rich Button set (key 624f386331f5011ab67eba8f318994a7fbff4369, 219 variants: type x state x size, icon slots, token-bound fills, style-bound labels; sizes small=40 medium=44 match CD exactly). OTR/Cases/ActionButton duplicated it. Older 27-variant Button set also published (legacy drift). Kind mapping: blue->Solid-brand, money->Solid-error, ghost->Outline-neutral, grad->Gradient-brand (gradient value TBC vs SmartMatch indigo), primary(ink)->no obvious DS equivalent. Remediation pending user call.",
+    "componentReusePolicy": "NEW POLICY: before printing any component, audit the DS library inventory (search_design_system) and instance/wrap existing DS components where they map honestly; print divergences as diffs. Candidates to re-audit: Chip vs White pills, tap rows vs Link text, search field vs Inputs, portraits vs placeholder avatar.",
+    "dsButtonAdoption": {
+      "decision": "USER: use DS Button directly",
+      "swapped": "11 ActionButton instances (CPC + screens) + ActionItem cta + HelpZone cta -> DS Button (key 624f386331f5011ab67eba8f318994a7fbff4369)",
+      "mapping": {
+        "blue": "Solid-brand",
+        "primary": "Solid-brand (no ink type in DS)",
+        "money": "Solid-error",
+        "ghost": "Outline-neutral",
+        "grad": "Gradient-brand"
+      },
+      "deltas": [
+        "SmartMatch indigo-purple gradient lost: DS Gradient-brand is #155eef->#0f4bc4",
+        "ink primary lost -> blue",
+        "labels Bold 14 -> SemiBold via Product/Small Action Text",
+        "money #e5463a -> error #d92d20"
+      ],
+      "archived": "OTR/Cases/ActionButton moved to Archive page 11158:8460",
+      "diffCard": "11307:1766"
+    },
+    "nativeCollectionBuilt": {
+      "decision": "USER: build it",
+      "styles": 13,
+      "rebound": 187,
+      "capsSplitToCaptionNote": "uppercase Bold-11 nodes folded into Caption/Note per verdict",
+      "monoRenamed": "OTR/Cases/Ticket/* -> Native/Ticket/* (6)",
+      "workingSetRemoved": 28,
+      "note": "collection is local to Native App file; publish-to-Guidelines ask goes to design team. Proposal board header stamped RATIFIED.",
+      "sizesShifted": "15.5->16, 15->16, 13.5->14, 12.5->12, 21/19->20, 14->13, 10.5->10 per integer ladder"
+    }
+  },
+  "buildChecks": [
+    "RULE (user, session 3): after any print into a shared section, screenshot and re-read the WHOLE section, not just the new node. Check for overlaps and ragged spacing; new cards go through a grid relayout of the section, never absolute drops at guessed coordinates. Both agent annotation sections (Proposed, Diffs) now use a 4-column/row-band grid with 40px gutters."
+  ],
+  "session4": {
+    "scope": "CPC v2: July 7 pairing board (component-case_preview_cards, canon stage) printed as form axis on OTR/Cases/CasePreviewCard",
+    "trigger": "USER: printed set was stale vs latest CD decisions; ratified the pairing board as CPC canon. Root cause recorded: CD exploration decisions were never escalated to root HTMLs.",
+    "formAxis": "18 existing variants renamed form=card (instances preserved). 20 form=compact variants built (5 lifecycle statuses x board signal pairs): line1 location B13 + meta SB12, line2 StatusBadge(light/sm) + signal dot 7 + Small/Standard text, drawn 2.5pt chevron.",
+    "signalCards": "15 new form=card signal variants with tinted whole-block taps r14: urgency/warrant red, unread blue, sign/counter amber, rematch violet, overdue red, review green (embeds AttorneyLockup, green inks), moneyback green. Icons from FI set: warning-triangle, warning-circle, chat-bubble-typing-oval, file-edit, briefcase-dollar, ai-sparkles, star-1, bill-dollar-2 (scale-balanced absent from FI, briefcase-dollar substituted for counter).",
+    "noneCleanups": "Ratified deltas: incomplete/none dropped meter+Complete booking (live only on mod=unfinished); active dropped court metaline; resolved+dismissed dropped outcome metaline + Review button; cancelled gained attorney zone (Harbor Legal 4.7).",
+    "bindings": "Reused session index where present. New imports: error/25+600+800, brand/25+600+800, success/50+600+900, accent2/25. Raw per precedent: #f79009, #7a2e0e, #e5463a, #179a55; new raw: #6a5bd0/#5b4bb8 rematch violet (DS request).",
+    "incidents": [
+      "setBoundVariableForPaint left base color unsynced on several error/* paints (rendered black); fixed by recreating paints with honest base hex under the binding. Sweep confirmed zero bound-black paints remain.",
+      "Compact location text first bound global/foreground/dark/primary (semantic alias); rebound to colors/ink/950 primitive per session precedent. resolveForConsumer confirms dark ink; light-text screenshots were stale render tiles (screenshot endpoint served cached bytes repeatedly this session)."
+    ],
+    "layout": "Set regridded by status family (cards row then compacts row, 4 cols, legacy block trailing) -> 1620x3337 (+1729h). Detail/* rows shifted +1729, section resized.",
+    "diffCard": "DIFF - CPC v2 (11338:1922) on Diffs: flagged binds, DS requests, ratified deltas, opens.",
+    "pages": "Created '↪ Explorations' page 11337:2087 between UX and Archive (client indent convention). First-run debris (Test 11225:1523, label 11225:1522) moved to Cases Archive page 11158:8460.",
+    "buildChecks": "componentPropertyDefinitions verified (status 15 x mod 13 x form 2, 53 variants). Bound-black sweep clean. resolvedVariableModes all-light. Visual QA on set render: all five block families correct."
+  },
+  "session4b": {
+    "scope": "Component system restructure + canvas organization",
+    "signalBlock": "OTR/Cases/SignalBlock 11341:26731 (tone x density, 12 variants) built from printed exemplars + new inactive gray tone (bg background/strong, ink light/quinary, icon time-history-off). All 14 standard signal cards + 15 compact lines now instance it; dismissed/review keeps its bespoke green composite.",
+    "familySplit": "Old 53-variant set dissolved (node 11280:763 gone). Six sets: Incomplete 11344:2108, Active 11344:2109, Resolved 11344:2110, Dismissed 11344:2111, Cancelled 11344:2112, SmartMatch 11344:2113, + standalone Incomplete draft 11280:698. Variant node ids preserved, screen instances intact.",
+    "icons": "Nine OTR/Icons/* components created from flattened signal icons so instances can swap.",
+    "canvas": "Components section reorganized into five nested sections; Screens split into Feed and Case detail nested sections.",
+    "gotcha": "figma.skipInvisibleInstanceChildren defaults true in use_figma; must set false before findOne on hidden override slots inside instances.",
+    "open": "Quote-family cards (SmartMatch set + Incomplete draft) keep DS Buttons pending verdict on one-blue-CTA vs signal-owned resolution; StatusBadge vocabulary shrink (5 lifecycle + 2 SmartMatch, badge-rule board) not yet applied; feed screens still instance pre-v2 anatomy."
+  },
+  "session4c": {
+    "scope": "Video-brief execution: button purge, screen swaps, canvas wayfinding",
+    "brief": "First video-brief intake (transcript-only, .srt). Verdicts: family split liked; per-family signals 'perfect'; nested-signal deep-editing accepted compromise; buttons must not exist on cards; canvas needs color, titles, flow.",
+    "buttons": "SmartMatch quote ('Accept or deny your quote', match), quote-urgent ('Accept or deny now', warning), expired (inactive + body), Incomplete draft ('Complete your booking', warning) converted to SignalBlock instances. Screen instances updated automatically via masters.",
+    "screenSwaps": "p-heavy stale instances swapped: active-action -> Active/card/sign (11285:687), tap -> Active/card/unread (11285:776). Fixture text reset to master values, repopulation is polish-pass work.",
+    "keptButtons": "Empty state (Add your ticket, How it works), HelpZone (Start a live chat), Detail/ActionItem (Review & sign engagement) are not card CTAs and stay.",
+    "canvas": "All five Components nested sections + Feed/Case detail: variable-bound tints, 40px Figtree EB canvas-titles, 16px canvas-notes (annotation layer, raw sizes per scaffolding exemption). Flow arrow 'tap a card' from Feed to Case detail.",
+    "bulkFormSwitchLimitation": "Figma cannot batch-change variant props across instances of different component sets; multi-select form flips are an agent task (read selection, flip). Logged as a compromise of the family split.",
+    "open": "Fixture repopulation for swapped p-heavy cards; StatusBadge vocabulary shrink; video pipe: Drive folder + agent transcription to replace Loom."
+  },
+  "session4e": {
+    "scope": "Canvas v3 legibility pass + Explorations scaffold + operating model v3",
+    "canvas": "Mega-sections repositioned without overlap (previous masonry widened Components over Screens, unnoticed). Plates: Components brand/50, Screens neutral/50, Proposed accent2/50, Diffs warning/50; each with a 140px solid band (600-level) and 64px white title. Nested sections whitened; 13 component sets get border/neutral/light 1.5 stroke.",
+    "explorations": "Page scaffolded as the divergence-review queue: standing rules header, TEMPLATE sprint section (dated name, candidates A-C slots, verdict card). Only OPEN sprints live on the page; REVIEWED sprints move to Archive.",
+    "model": "prd-cd-workflow-v2.md rewritten to v3 per Titus review: no review in CD ever, divergence prints light to Explorations, verdicts on canvas recorded by CC, winners converge with full binding; CD sessions repo-seeded and disposable."
+  },
+  "session4f": {
+    "scope": "Spec-sheet canvas language adopted from client DS specimen (node 11355:19505)",
+    "pattern": "White sheet + soft tinted header band + ink title + muted note + matrix labels (left rail, column captions). Applied: mega-section bands softened to 100-level tints with 64px ink titles; nested sheets get 50-level header bands; 37 matrix labels on the six CPC family sets (signal captions per card column, Card/Compact left rail) + tone rail and Block/Line captions on SignalBlock; Canvas/Label style (Figtree SB 13) added; rails given real left gutters; containment sweep clean.",
+    "rule": "Hue = surface type at plate level; band tint one step stronger than plate; type is always ink on bands, never white; white = pickable object."
+  },
+  "session4g": {
+    "scope": "Video brief 3 (canvas org verdict: not there) -> three wireframe proposals on Proposed",
+    "brief": "8.33.40 PM recording via brief-crunch pipeline (mp4+txt+srt landed automatically; frames from chat-uploaded mp4). Verdicts: current canvas pass rejected (cramped, straight-edged sections, arbitrary 4-wrap, tiny labels); coloring liked; sections wrong container vs client specimen frames; screens need min device height; solid StatusBadge forms confirmed unwanted (badge rule); instruction: build proposals off to the side, no more live churn, the chosen system runs for months.",
+    "built": "Jul 29 canvas organization proposals (OPEN) on Proposed, section 11360:2393: A Specimen sheets (rounded frames of instances, auto layout, masters strip), B Library shelves (one auto layout row per family, index cards, no wrap), C Atlas (hub + standalone spec frames + screens lane).",
+    "insight": "Component sets cannot take auto layout; the client's clean sheets are frames of INSTANCES with auto layout while masters park elsewhere. All three proposals adopt this.",
+    "queued": "StatusBadge vocabulary cleanup (retire solid forms + non-vocabulary statuses per badge rule, ratified again in brief 3); screens min-height rule; execution of whichever proposal wins."
+  },
+  "session4h": {
+    "scope": "Video brief 4: 'almost there, another run'. Construction standard executed.",
+    "standard": "Sections only at the topmost layer. Every container inside is auto layout, all the way down: sheets are rounded auto-layout frames (radius/4XL bound) with header column + labeled item wrappers; small parts flow in wrapping rows; long content flows instead of overflowing. Nested frames show no canvas names; groups reserved for any future top-level composite.",
+    "rebuilt": "All 7 nested sheets in Components/Screens + 3 date groups in Proposed/Diffs converted from sections to auto-layout sheet frames (new ids in figma-state on next read-back). Matrix label overlays replaced by in-flow item labels with axes summaries. Purple verdict card on Explorations restyled white with violet stroke.",
+    "sweeps": "Pairwise page overlap: zero. Containment: zero. Render verified.",
+    "aside": "If the 'purple thing' meant Figma's purple component-set chrome rather than the verdict card, the cure is the masters-strip/instance-sheet pattern from proposal A; flagged for the next verdict."
+  },
+  "session4i": {
+    "scope": "Video brief 5 (8.53.34): stop, build seven wireframe proposals, touch nothing else",
+    "heard": "Still not there: manual arrangement of sheets inside sections is not auto layout; topmost sections cannot round; frames as direct children of sections DO render names (groups are the only cure); band titles were raw type not styles; item labels with axis dumps are useless (want bold title + description + visual); free-form leftovers (Incomplete draft wrapper); signal system rows should wrap with gaps and 64/64 padding.",
+    "built": "Jul 29 seven canvas systems (OPEN) on Proposed, group 11367:2255, sheet 11364:2221: 1 Specimen library, 2 Shelves, 3 Codex, 4 Tile dashboard, 5 Journey storyboard, 6 Canon and Workbench, 7 Hub and satellites. Every proposal: auto layout throughout, style-bound text, bold title + description + schematic visual, wrapped grid, group-wrapped sheet. Zero edits to the live canvas.",
+    "sweeps": "Pairwise page overlaps zero, containment zero, render verified.",
+    "awaiting": "Titus reviews later and picks a system or pieces; then ONE implementation pass executes it end to end (including masters strip if 1/6/7 win, screens min-height, style-bound band type, no axis-dump labels anywhere)."
+  },
+  "session4j": {
+    "scope": "Verdict on the seven systems: all kept as toolbox, Shelves default. Full page rebuild executed.",
+    "built": "Proposed graduated to its own sub-page (11368:3) with page header; its three sheets moved and spaced. Components rebuilt as 11 shelves in a group-wrapped auto-layout column (squished 140px bands deleted; airy headers instead). Screens rebuilt as Feed and Case detail shelves. Diffs rebuilt as a dated shelf with wrapped card grid. Every shelf: white, rounded (radius/4XL bound), hairline stroke, 280px index card with human name + description (no axis dumps).",
+    "incident": "During disassembly the Case preview cards sheet was missed because the user had hand-wrapped it in a group mid-recording; caught by verifying the family sets existed before proceeding. Nothing lost.",
+    "sweeps": "Pairwise overlaps zero, containment zero, render verified (all 11 shelves clean)."
+  },
+  "session4k": {
+    "scope": "Device mock kit, canvas type ramp v2, min mock height",
+    "mocks": "OTR/Mock/Device (11376:2353): 24 variants, os x size x shell x chrome. Breakpoints from 2026 usage data: Android 360/384/412 (workhorse widths), Apple 375/393/430. Flat minimal shells, bound fills, status bar + home/gesture bar as chrome=full, scrollable content container, OTR/Mock/Slot placeholder instance. Own shelf in Components.",
+    "typeRamp": "Canvas styles migrated by rename (all bound texts updated): Section/Headline 64, Collection/Headline 36, Collection/Text 17, Item/Text 14; new Page/Headline 96, Page/Text 28, Section/Text 22, Item/Headline 22, Caption 12.",
+    "screens": "Min height 844 enforced; no chrome layers found in printed screens (bars live only in the mock kit). NOTE: several detail screens measured 844 at enforcement time, lower than remembered print heights; flag for a height audit against print-log if anything looks cropped.",
+    "sweeps": "Pairwise zero, containment zero."
+  },
+  "session4l": {
+    "scope": "Device mock round 2 from user testing",
+    "findings": [
+      "Real Figma Slot feature is NOT exposed in this plugin API (figma.createSlot absent); instance-swap is the scriptable mechanism.",
+      "Nothing can be dropped INSIDE a component instance; and a swapped nested instance KEEPS the master slot geometry (853px), so tall screens crop. Swap flow = quick static look only.",
+      "Scroll testing needs a non-instance bench: detached device frames with clipped content + overflowDirection VERTICAL. Verified: 2689px screen in 852px container, top-aligned, scrolls.",
+      "Screen chrome was OTR/Cases/Detail/StatusZone instances (named nothing like status bar); stripped from all 12 screens, master deprecated to Archive."
+    ],
+    "changes": "Screens converted to components (OTR/Screens/*, new ids in figma-state); size options renamed with px ranges; per-variant descriptions carry exact dims + device class; status bars got white backing; slot master top-drops with constraint-centered placeholder; two-device test bench built and verified; index card rebuilt as structured blips (headline, intro, six subhead+line pairs); user test artifacts relocated, not deleted.",
+    "sweeps": "Pairwise zero (after relocating user's Prototype Frame Test and pulled-out card), containment zero."
+  },
+  "session4m": {
+    "scope": "Native-first proto workflow; device work moved to ↪ Proto page",
+    "verdict": "User: lean on Figma's native prototype device rendering; keep components for chrome. Division of labor: Figma owns the bezel, we own the chrome.",
+    "built": "↪ Proto page (user-created, renamed to convention, ordered after Proposed): page headline (Canvas/Page tier), three-blip guide, OTR/Mock/Chrome set (part x os x tone, 8 variants, white/ink backed status bars, transparent home bars), two native-dim starters (iPhone 16 393x852, Android Compact 412x917) preloaded with the heavy feed + dark chrome. Device mocks shelf (set, slot, benches) moved from Components to Proto; Components reflowed.",
+    "apiNote": "node.scrollBehavior does not exist in this plugin API; fix-position-when-scrolling on chrome overlays is a one-click manual step, documented in the guide copy.",
+    "sweeps": "Cases page and Proto page pairwise zero; user's Frame 1 test preserved and parked."
+  },
+  "session4n": {
+    "scope": "Auto-layout-everything pass on the proto kit (user critique: chrome should just expand to the device; headlines were bare on the black page; device mocks shelf obsolete under native-first)",
+    "changes": [
+      "All 8 OTR/Mock/Chrome masters rebuilt as stretchy auto layout: status bars HORIZONTAL + SPACE_BETWEEN with glyph cluster wrapped, home bars centered pill. Stretch verified at 360 and 440 widths.",
+      "Screens audited for the same conversion: all 12 were ALREADY responsive (layoutMode VERTICAL, every child FILL). No changes needed; instance stretch verified clean at 430w.",
+      "OTR/Mock/Device (11376:2353), OTR/Mock/Slot (11375:2221), Mock test bench (11383:19378) retired to Cases Archive, renamed DEPRECATED/... (superseded by native-first rig). Device mocks shelf and fixed starters removed.",
+      "Two flexible rigs built: Rig · apple (11410:4926, starts 393x852) and Rig · android (11410:5405, starts 412x917). Plain frames, clipsContent + overflowDirection VERTICAL; children screen · swap me (STRETCH/MIN), chrome status · fix position (STRETCH/MIN), chrome home · fix position (STRETCH/MAX). Resize-anywhere verified at 360x800 and 430x932 (chrome width tracks frame, home bar tracks bottom).",
+      "Proto page wrapped in canon section ① Tools (agent) 11414:1529: blue plate, group-wrapped column (Canvas/Page headline + guide + shelf · Chrome with 280px index card), rigs left as DIRECT section children so they remain valid prototype start frames. Rigs found stacked at the same origin during read-back; repositioned side by side.",
+      "Guide copy rewritten for the flexible-rig flow: never pick a matching mock, resize the rig; Retired tools blip points at the Archive."
+    ],
+    "incidents": [
+      "TypeError during rig verification: chrome instance names take the SET name, not the variant name; fixed by naming rig children explicitly before sweeping.",
+      "Prototype constraint honored: flow start frames must be page- or section-level, so rigs cannot live inside a shelf frame."
+    ],
+    "sweeps": "Proto section containment zero, pairwise zero, page strays zero (screenshot-verified)."
+  },
+  "session4o": {
+    "scope": "Lexicon visual: new page printing the naming-system proposal for team advocacy",
+    "context": "Chat rounds produced a three-part grammar awaiting verdict: habitats (sidebar venues / canvas furniture / design parts / everywhere words), objective word vs contextual label (type vs instance), closed vs open label menus, tenure (agent-kept / human-kept / handshake). User wanted it visual to advocate internally.",
+    "built": "Lexicon page 11415:3, section ① Lexicon (agent) 11415:169, 1622x3248. Header + five exhibits: The law (two-tone specimen 'shelf · Chrome' with objective/label captions, anti-twist + sidebar-exception blips); Sidebar (mock page list with tinted chips: workflow=blue, stage=neutral, station=amber; legend blips); Canvas (miniature plate containing mini shelf/index/guide/blips/verdict callout/dashed rig, each tagged objective · label); Design (390x844 schematic screen nesting zone > block > element, six-word legend); Everywhere (status / tenure / reserved word lists). Built entirely from canon furniture: cloned index cards, copied bound plate/shelf fills, Canvas/* text styles throughout.",
+    "incidents": [
+      "Arrow glyph ↪ is not in Figtree and rendered tofu in the sidebar mock rows; stripped, indent alone carries hierarchy.",
+      "Violet Proposed plate fill no longer findable (11287:1655 gone, no section on Proposed page 11368:3); stage chips fell back to the neutral plate tint."
+    ],
+    "status": "PROPOSAL. Vocabulary not yet ratified; canon/vocabulary.md, Canvas style renames (Section->Plate, Collection->Shelf), and node-name sweeps all wait on the user's verdict.",
+    "sweeps": "Section containment zero, pairwise zero, page strays zero (screenshot-verified, tofu fix applied after)."
+  },
+  "session4p": {
+    "scope": "Lexicon v2 rebuild from user design review + DS text-color adoption + modes discovery",
+    "userBrief": "Legends join the index in the left rail; standardize both shelf columns (left stacked text, right wider visualizations); sidebar viz great, canvas viz confusing, design viz could be richer; no all-caps in demos; captions too close to item text, drop them visually; law shelf spacing weird; balance and hierarchy paramount; widths standardized with heights hugging. Mid-round: use the customer DS type colors, specifically the foreground dark ramp.",
+    "changes": [
+      "Full column teardown/rebuild on a standardized template: left rail 400 fixed (index + legend blips), right rail 900 fixed (visualization), heights hug; shelf width now uniform at 1428.",
+      "All page text rebound from ink+opacity hacks to the DS semantic foreground/dark ramp: titles=primary, body/desc=tertiary, captions/tags=quinary. Secondary skipped: resolves within 18 RGB points of primary, no visible hierarchy. Resolved (light mode): primary 1d1e21, tertiary 55595e, quinary 91949a.",
+      "Law specimen respaced: each half is its own stack (big word over its caption), killing the floating-caption drift.",
+      "Canvas viz rebuilt for containment reading: every tag now sits INSIDE its container top-left (plate > shelf > index/instances; guide/callout/rig on a second row).",
+      "Design viz enriched: AppBar/ContentZone/HelpZone zones, SignalBlock + TicketHero blocks, element placeholders, fixture tag, plus a flow connector to a second mini screen (Detail/active-clean).",
+      "Everywhere demo de-capsed: open / reviewed, deprecated."
+    ],
+    "discovery": "DS modes are LIVE (user-confirmed): semantic foreground/background variables flip light/dark on mode switch. Session 1's 'foreground flip' incident was modes working, not a bug. Lesson 9 rewritten; product-text migration to the semantic ramp recorded as an OPEN candidate in INDEX. The Lexicon page is mode-aware by construction.",
+    "sweeps": "Section containment zero, pairwise zero, strays zero; ramp verified via resolveForConsumer (screenshot-confirmed after)."
   }
- },
- "buildChecks": [
-  "RULE (user, session 3): after any print into a shared section, screenshot and re-read the WHOLE section, not just the new node. Check for overlaps and ragged spacing; new cards go through a grid relayout of the section, never absolute drops at guessed coordinates. Both agent annotation sections (Proposed, Diffs) now use a 4-column/row-band grid with 40px gutters."
- ]
 }

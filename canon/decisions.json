@@ -53,6 +53,47 @@
       "verdict": "adopt",
       "detail": "sample-metanoia/ deleted per root CLAUDE.md provision, first OTR deployment being complete.",
       "decidedBy": "user cleanup directive"
+    },
+    {
+      "id": "D-008",
+      "title": "July 7 CPC pairing board ratified as card canon",
+      "verdict": "adopt",
+      "detail": "CasePreviewCard gains form axis (card|compact) and signal mods per component-case_preview_cards board. In-card CTA buttons retired from lifecycle cards in favor of tinted whole-block taps; court/outcome metalines removed; meter confined to mod=unfinished. Legacy matching-family variants untouched pending CD coverage.",
+      "decidedBy": "user (Titus), Jul 28 session",
+      "commit": "this commit"
+    },
+    {
+      "id": "D-009",
+      "title": "CD escalation gap acknowledged",
+      "verdict": "adopt",
+      "detail": "Exploration decisions in CD were not escalated to root HTMLs, so canon-stage boards can trail ratified design. Until CD restructures: before printing any board, cross-check its recency against exploration decisions and confirm with the user. Simplified CD project proposal drafted in docs/prds/prd-cd-workflow-v2.md.",
+      "decidedBy": "user observation + agent",
+      "commit": "this commit"
+    },
+    {
+      "id": "D-010",
+      "title": "CPC family split + SignalBlock system",
+      "verdict": "adopt",
+      "detail": "Per the system board (badge rule + action signals): CasePreviewCard split into six family component sets so each property panel shows only valid signals; signal UI extracted to OTR/Cases/SignalBlock (tone x density, six fixed tones incl. inactive gray) instanced by all cards and compact rows; icons promoted to OTR/Icons components for swap overrides. Superseded variants (deadline, missed, counter, active-action, reassigned, tap) deprecated to Archive. OPEN: quote-family CTA treatment; StatusBadge vocabulary shrink to 5+2.",
+      "decidedBy": "user delegated the model choice; agent applied CD's system board",
+      "commit": "this commit"
+    },
+    {
+      "id": "D-011",
+      "title": "No buttons on cards, anywhere",
+      "verdict": "adopt",
+      "detail": "Ratified via video brief (Loom transcript, Jul 29): blue DS Buttons must not appear in any case preview card. SmartMatch quote/quote-urgent/expired and Incomplete draft converted to signal blocks (match, warning, inactive, warning). Closes the quote-family CTA question from D-010. Legitimate buttons remain on empty-state screens, HelpZone, and Detail/ActionItem (signal-owns-its-button per system board, detail surface only).",
+      "decidedBy": "user (Titus), video brief",
+      "commit": "this commit"
+    },
+    {
+      "id": "D-012",
+      "title": "Operating model v3: divergence reviews in Figma; CD outputs candidates, not decisions",
+      "verdict": "adopt",
+      "decidedOn": "chat review by Titus (pre-dates figma-verdict discipline this record establishes)",
+      "detail": "CD is hard-isolated with no stakeholder access, so divergence prints to the area's Explorations page for on-canvas review; only verdicted winners converge to canon with full binding. CD sessions are disposable and repo-seeded (fresh project + 'this is for the otr-nativeapp repo' prompt); CC files every candidate package so no exploration is lost. Vocabulary: disposable (CD, candidates, open sprints) vs permanent (repo, canon, verdicts). Sprint convention: one CD session = one dated sprint section on Explorations with a verdict card; REVIEWED sprints move to Archive. Canvas v3: plate hues encode section type with 140px header bands; nested sections white; sets bordered with radius/4XL.",
+      "decidedBy": "user (Titus), written feedback on v2",
+      "commit": "this commit"
     }
   ]
 }

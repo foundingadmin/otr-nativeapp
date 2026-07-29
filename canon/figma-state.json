@@ -5,48 +5,217 @@
   "sections": {
     "components": "11262:1588",
     "screens": "11285:396",
-    "proposed": "11287:1655",
-    "diffs": "11287:1672"
+    "diffs": "11287:1672",
+    "note": "Proposed moved to its own sub-page 11368:3 (Jul 29); sections carry a group-wrapped auto-layout column: header + shelves"
   },
   "components": {
-    "OTR/Cases/StatusBadge": { "id": "11262:1769", "variants": 60, "axes": "status x form x size" },
-    "OTR/Cases/ActionButton": { "id": "11274:1577", "variants": 20, "axes": "kind x size x full" },
-    "OTR/Cases/Chip": { "id": "11276:1553", "variants": 8, "axes": "on x count x alert" },
-    "OTR/Cases/ClassifTag": { "id": "11276:1558", "variants": 2, "axes": "kind" },
-    "OTR/Cases/AttorneyLockup": { "id": "11278:295", "variants": 8, "axes": "blurred x quote x size" },
-    "OTR/Cases/Meter": { "id": "11278:305", "variants": 5, "axes": "value" },
-    "OTR/Cases/OverduePill": { "id": "11278:306", "variants": 1 },
-    "OTR/Cases/Ticket": { "id": "11279:303", "variants": 6, "axes": "variant" },
-    "OTR/Cases/CasePreviewCard": { "id": "11280:763", "variants": 18, "axes": "status x mod" },
-    "OTR/Cases/Detail/StatusZone": { "id": "11281:351" },
-    "OTR/Cases/Detail/AppBar": { "id": "11281:357" },
-    "OTR/Cases/Detail/TicketHero": { "id": "11281:365" },
-    "OTR/Cases/Detail/Identity": { "id": "11281:381" },
-    "OTR/Cases/Detail/ActionItem": { "id": "11281:393" },
-    "OTR/Cases/Detail/ActionHub": { "id": "11281:407" },
-    "OTR/Cases/Detail/CaseFacts": { "id": "11281:425" },
-    "OTR/Cases/Detail/ExpandedRecord": { "id": "11281:447" },
-    "OTR/Cases/Detail/HelpZone": { "id": "11281:482" }
+    "OTR/Cases/StatusBadge": {
+      "id": "11262:1769",
+      "variants": 60,
+      "axes": "status x form x size"
+    },
+    "OTR/Cases/ActionButton": {
+      "id": "11274:1577",
+      "variants": 20,
+      "axes": "kind x size x full"
+    },
+    "OTR/Cases/Chip": {
+      "id": "11276:1553",
+      "variants": 8,
+      "axes": "on x count x alert"
+    },
+    "OTR/Cases/ClassifTag": {
+      "id": "11276:1558",
+      "variants": 2,
+      "axes": "kind"
+    },
+    "OTR/Cases/AttorneyLockup": {
+      "id": "11278:295",
+      "variants": 8,
+      "axes": "blurred x quote x size"
+    },
+    "OTR/Cases/Meter": {
+      "id": "11278:305",
+      "variants": 5,
+      "axes": "value"
+    },
+    "OTR/Cases/OverduePill": {
+      "id": "11278:306",
+      "variants": 1
+    },
+    "OTR/Cases/Ticket": {
+      "id": "11279:303",
+      "variants": 6,
+      "axes": "variant"
+    },
+    "OTR/Cases/Detail/StatusZone": {
+      "id": "11281:351"
+    },
+    "OTR/Cases/Detail/AppBar": {
+      "id": "11281:357"
+    },
+    "OTR/Cases/Detail/TicketHero": {
+      "id": "11281:365"
+    },
+    "OTR/Cases/Detail/Identity": {
+      "id": "11281:381"
+    },
+    "OTR/Cases/Detail/ActionItem": {
+      "id": "11281:393"
+    },
+    "OTR/Cases/Detail/ActionHub": {
+      "id": "11281:407"
+    },
+    "OTR/Cases/Detail/CaseFacts": {
+      "id": "11281:425"
+    },
+    "OTR/Cases/Detail/ExpandedRecord": {
+      "id": "11281:447"
+    },
+    "OTR/Cases/Detail/HelpZone": {
+      "id": "11281:482"
+    },
+    "OTR/Cases/CasePreviewCard/Incomplete": {
+      "id": "11344:2108",
+      "variants": 6,
+      "axes": "form x signal(none|urgency|warrant)"
+    },
+    "OTR/Cases/CasePreviewCard/Active": {
+      "id": "11344:2109",
+      "variants": 12,
+      "axes": "form x signal(none|unread|sign|counter|rematch|overdue)"
+    },
+    "OTR/Cases/CasePreviewCard/Resolved": {
+      "id": "11344:2110",
+      "variants": 6,
+      "axes": "form x signal(none|unread|overdue)"
+    },
+    "OTR/Cases/CasePreviewCard/Dismissed": {
+      "id": "11344:2111",
+      "variants": 8,
+      "axes": "form x signal(none|review|unread|overdue)"
+    },
+    "OTR/Cases/CasePreviewCard/Cancelled": {
+      "id": "11344:2112",
+      "variants": 8,
+      "axes": "form x signal(none|warrant|moneyback|unread)"
+    },
+    "OTR/Cases/CasePreviewCard/SmartMatch": {
+      "id": "11344:2113",
+      "variants": 6,
+      "axes": "phase(matching|matching-brand|rematching|quote|quote-urgent|expired) x form(card)"
+    },
+    "OTR/Cases/CasePreviewCard/Incomplete draft": {
+      "id": "11280:698",
+      "variants": 1,
+      "note": "meter + Complete booking CTA, kept pending quote-CTA verdict"
+    },
+    "OTR/Cases/SignalBlock": {
+      "id": "11341:26731",
+      "variants": 12,
+      "axes": "tone(error|warning|info|success|match|inactive) x density(block|line)",
+      "note": "six system tones per badge-rule board; nested icon instance swappable; hidden amount/body slots for overrides"
+    },
+    "OTR/Mock/Device": {
+      "id": "11376:2353",
+      "status": "RETIRED (session 4n)",
+      "location": "Cases Archive page 11158:8460, renamed DEPRECATED/... (superseded by native-first rig)",
+      "note": "24-variant fixed-dims device set, OTR/Mock/Slot 11375:2221 and Mock test bench 11383:19378 retired with it; flexible rigs replace all three"
+    },
+    "OTR/Mock/Chrome": {
+      "id": "11389:13975",
+      "variants": 8,
+      "axes": "part(status|home) x os(apple|android) x tone(dark|light)",
+      "note": "session 4n: all 8 masters rebuilt as stretchy auto layout (status: HORIZONTAL SPACE_BETWEEN, home: centered pill) and verified at 360/440 widths; lives in shelf · Chrome on the Proto section; fix-position is a manual toggle (scrollBehavior not in plugin API)"
+    }
   },
   "screens": {
-    "p-solo": "11285:397",
-    "p-light": "11285:462",
-    "p-heavy": "11285:594",
-    "v-empty": "11285:1038",
-    "active-clean": "11285:1056",
-    "loe": "11285:1142",
-    "counter": "11285:1246",
-    "concurrent": "11285:1350",
-    "overdue": "11285:1468",
-    "remarket": "11285:1576",
-    "dismissed": "11285:1650",
-    "notbooked": "11285:1736"
+    "note": "Session 4l: screens converted to COMPONENTS (OTR/Screens/*) for slot swapping; StatusZone chrome instances stripped, master deprecated to Archive; ids changed",
+    "Feed/solo": "11383:14507",
+    "Feed/light": "11383:14508",
+    "Feed/heavy": "11383:14509",
+    "Feed/empty": "11383:14510",
+    "Detail/active-clean": "11383:14555",
+    "Detail/loe": "11383:14556",
+    "Detail/counter": "11383:14557",
+    "Detail/concurrent": "11383:14558",
+    "Detail/overdue": "11383:14559",
+    "Detail/remarket": "11383:14560",
+    "Detail/dismissed": "11383:14561",
+    "Detail/notbooked": "11383:14562",
+    "responsive": "verified session 4n: all 12 screen components are already fully responsive (layoutMode VERTICAL, all children FILL); instances stretch cleanly, tested at 430w"
   },
-  "decisionsApplied": ["DR-CPC-001", "DR-CPC-002 (tap variant approximates V4)"],
+  "decisionsApplied": [
+    "DR-CPC-001",
+    "DR-CPC-002 (tap variant approximates V4)"
+  ],
   "notPrinted": {
     "AccountRail": "absent from IR, OPEN card on Proposed",
     "anatomy-active": "annotated duplicate of active-clean, annotations are board scaffolding",
     "unread badge dot": "StatusBadge set has no unread axis pass 1",
     "confetti": "dismissed celebration decoration omitted pass 1"
+  },
+  "explorationsPage": "11337:2087",
+  "diffCards": {
+    "cpcV2": "11338:1922"
+  },
+  "archived": {
+    "firstRunTestFrame": "11225:1523",
+    "firstRunLabel": "11225:1522",
+    "movedTo": "11158:8460 (Cases Archive page)"
+  },
+  "icons": {
+    "note": "OTR/Icons/* components, session 4b",
+    "ids": {
+      "warning-triangle": "11340:1948",
+      "warning-circle": "11340:1951",
+      "chat-bubble-typing-oval": "11340:1954",
+      "file-edit": "11340:1957",
+      "briefcase-dollar": "11340:1960",
+      "ai-sparkles": "11340:1963",
+      "star-1": "11340:1966",
+      "bill-dollar-2": "11340:1969",
+      "time-history-off": "11340:1972"
+    }
+  },
+  "deprecated": {
+    "movedTo": "11158:8460",
+    "components": "DEPRECATED/CasePreviewCard/{deadline, missed, counter, active-action, reassigned, active tap}",
+    "reason": "superseded by badge-rule model: five lifecycle badges + action signals"
+  },
+  "canvasWayfinding": {
+    "note": "session 4c: tinted nested sections with canvas-title/canvas-note headers; flow arrow Feed -> Case detail",
+    "arrow": "11348:6744"
+  },
+  "proposedPage": "11368:3",
+  "canvasSystem": {
+    "standard": "Shelves (proposal 2) is the default presentation. Shelf = white rounded auto-layout row: fixed 280px index card (Canvas/Subtitle name + Canvas/Note description) + the family content, wide as needed. Columns group-wrapped so no Figma name labels render. All seven proposal wireframes remain on the Proposed page as the system toolbox.",
+    "componentsShelves": "Incomplete(+draft), Active, Resolved, Dismissed, Cancelled, SmartMatch, Signal system(+icon grid), Status badge, Atoms, Identity & ticket, Detail kit",
+    "screensShelves": "Feed (4), Case detail (8)",
+    "diffsShelves": "one per date group, cards in a wrapped grid",
+    "typeRamp": "Canvas/Page 96+28, Section 64+22, Collection 36+17, Item 22+14, Caption 12 (migrated from Title/Subtitle/Note/Label by rename)",
+    "protoWorkflow": "Native-first, flexible rigs (session 4n): duplicate a rig, resize to ANY device size, swap the screen instance; chrome and screen stretch with the frame (never pick a matching mock). Presentation settings supply the bezel. OTR/Mock/Device + Slot + bench retired to Archive."
+  },
+  "lexiconPage": {
+    "id": "11415:3",
+    "section": "11415:169 · ① Lexicon (agent)",
+    "note": "Visual of the naming grammar (v2, session 4p, PROPOSAL awaiting verdict). Standardized shelf template: left rail 400 fixed (index + legend text), right rail 900 fixed (visualization), heights hug. Five shelves: The law, Sidebar, Canvas, Design, Everywhere. All text binds the DS semantic foreground/dark ramp (mode-aware): titles=primary, body=tertiary, captions/tags=quinary. Page unplaced in sidebar order; org later per user.",
+    "textRamp": {
+      "collection": "semantic variables (Customer side / Guidelines)",
+      "primary": "8939924c69631ed6029ce1e9cd53c10687361083",
+      "secondary": "7a0bc428cc7d5c31321e9d35754747c8ac8c958d (skipped: too close to primary)",
+      "tertiary": "1e056d0f465c79084ec1984bf9285fdde8ce45ae",
+      "quaternary": "b6fb57b805b83eab3a3c5fa1e2a8d71539f7fbfc (unused)",
+      "quinary": "7c72ee4bdb2f67dbc25bff8a069d009e3c8033f3"
+    }
+  },
+  "protoPage": {
+    "id": "11382:38949",
+    "section": "11414:1529 · ① Tools (agent) · blue plate, group-wrapped column (headline + guide + shelf · Chrome), rigs as DIRECT section children so they stay presentable",
+    "rigs": {
+      "apple": "11410:4926 · Rig · apple · resize me to any device size (393x852 start)",
+      "android": "11410:5405 · Rig · android · resize me to any device size (412x917 start)",
+      "anatomy": "plain frame, clipsContent + overflowDirection VERTICAL; children: 'screen · swap me' (STRETCH/MIN), 'chrome status · fix position' (STRETCH/MIN), 'chrome home · fix position' (STRETCH/MAX); stretch verified at 360x800 and 430x932"
+    }
   }
 }

@@ -63,6 +63,18 @@ the client's existing file structure:
 | ④ Diffs (agent) | `11287:1672` |
 | ⑤ Ready for dev | human-owned, not created by agents |
 
+Sub-pages of `↪ Cases` (session 4): `↪ Explorations` page `11337:2087`
+(agent, exploration prints land here); `↪ Archive` page `11158:8460`
+(retired frames; first-run Test debris moved here); `↪ Proposed` page
+`11368:3`; `↪ Proto` page `11382:38949` with section ① Tools (agent)
+`11414:1529` — stretchy `OTR/Mock/Chrome` set `11389:13975` (8 variants,
+part × os × tone, all auto layout) and two resize-anywhere rigs, direct
+section children so they stay presentable: `Rig · apple` `11410:4926`
+(starts 393×852), `Rig · android` `11410:5405` (starts 412×917).
+Retired session 4n to Archive as DEPRECATED/: `OTR/Mock/Device`
+`11376:2353`, `OTR/Mock/Slot` `11375:2221`, Mock test bench
+`11383:19378`. CPC v2 diff card: `11338:1922` on ④ Diffs.
+
 ---
 
 ## Component Node ID Reference
@@ -77,7 +89,22 @@ the client's existing file structure:
 | OTR/Cases/Meter | `11278:305` | 5 (value 0–100) |
 | OTR/Cases/OverduePill | `11278:306` | 1 |
 | OTR/Cases/Ticket | `11279:303` | 6 (cream/blue/green/pink/slate/photo) |
-| OTR/Cases/CasePreviewCard | `11280:763` | 18 (15 statuses + unfinished/analyzing-brand/tap) |
+| OTR/Cases/CasePreviewCard/Incomplete | `11344:2108` | 6 (form × signal none/urgency/warrant) |
+| OTR/Cases/CasePreviewCard/Active | `11344:2109` | 12 (form × signal none/unread/sign/counter/rematch/overdue) |
+| OTR/Cases/CasePreviewCard/Resolved | `11344:2110` | 6 (form × signal none/unread/overdue) |
+| OTR/Cases/CasePreviewCard/Dismissed | `11344:2111` | 8 (form × signal none/review/unread/overdue) |
+| OTR/Cases/CasePreviewCard/Cancelled | `11344:2112` | 8 (form × signal none/warrant/moneyback/unread) |
+| OTR/Cases/CasePreviewCard/SmartMatch | `11344:2113` | 6 (phase matching/matching-brand/rematching/quote/quote-urgent/expired, card only) |
+| OTR/Cases/CasePreviewCard/Incomplete draft | `11280:698` | 1 (meter + booking CTA, quote-CTA verdict pending) |
+| OTR/Cases/SignalBlock | `11341:26731` | 12 (tone error/warning/info/success/match/inactive × density block/line); nested OTR/Icons instance swappable, hidden amount/body override slots |
+
+The former 53-variant CasePreviewCard set is dissolved (family split per the
+badge-rule board); variant node ids survive inside the family sets, screen
+instances intact. Deprecated to the Cases Archive page: deadline, missed,
+counter, active-action, reassigned, tap. `OTR/Icons/*`: nine icon
+components `11340:1948`-`11340:1972` (warning-triangle, warning-circle,
+chat-bubble-typing-oval, file-edit, briefcase-dollar, ai-sparkles, star-1,
+bill-dollar-2, time-history-off).
 | OTR/Cases/Detail/StatusZone | `11281:351` | 1 |
 | OTR/Cases/Detail/AppBar | `11281:357` | 1 |
 | OTR/Cases/Detail/TicketHero | `11281:365` | 1 |
@@ -131,14 +158,39 @@ Import keys for every variable bound this session (Guidelines library):
 | global/background/default | `90a77fdcd2961eb79eb3d5c8b8159f453d80d849` | white fills |
 | global/background/strong | `94ec2f99f4d126ad77f9f94b8c93f15c0b85766b` | wf-fill (ΔE 1.14) |
 | global/border/neutral/light | `2e9b5493c4e28758f74749adf58583d41a04d42d` | wf-line borders (ΔE 1.28) |
-| global/foreground/dark/primary | `8939924c69631ed6029ce1e9cd53c10687361083` | ink labels on light |
+| global/foreground/dark/primary | `8939924c69631ed6029ce1e9cd53c10687361083` | ink labels on light; Lexicon titles |
+| global/foreground/dark/secondary | `7a0bc428cc7d5c31321e9d35754747c8ac8c958d` | unused: resolves within 18 RGB of primary |
+| global/foreground/dark/tertiary | `1e056d0f465c79084ec1984bf9285fdde8ce45ae` | Lexicon body/desc text |
+| global/foreground/dark/quaternary | `b6fb57b805b83eab3a3c5fa1e2a8d71539f7fbfc` | (mapped, unused) |
+| global/foreground/dark/quinary | `7c72ee4bdb2f67dbc25bff8a069d009e3c8033f3` | Lexicon captions/tags; index desc precedent |
 | global/foreground/light/primary | `e05d77c21b08df7ca3ce80e39baf026cf3b73840` | white labels on solid |
 | radius/FULL | `a95f485680b5d91600397f3608161b1f6e64ee47` | every pill radius |
+| error/25 | `bae9985c720078feabbbbcba1cf59186bdfa3f11` | red block bg (ΔE 0.54) |
+| error/600 | `279bb8c2905a03fe2cb0a332d5ae722253307a0b` | red dot, icon, chevron (ΔE 0) |
+| error/800 | `1beae9fc75b447c4e60456b2155fc8c24845c479` | red block ink (ΔE 4.15 FLAG) |
+| brand/25 | `f05bc44aeee9cceb08be4d37fa0dd2b95b0396fa` | blue block bg (ΔE 1.01) |
+| brand/600 | `2cc478c5d0aa0862fd89de270aa82aca0d676ab8` | blue dot, icon, chevron (ΔE 0 vs #155eef) |
+| brand/800 | `c1d7bb9246d973793b5cd8cddd889f81ac10b1a1` | blue block ink (ΔE 1.82) |
+| success/50 | `4fba1271e2a1e26e8f09bd2ee443ac221de2dae4` | green block bg (ΔE 5.03 FLAG) |
+| success/600 | `258d903b8a7e732a7955d95bca7e690e54218812` | green dot, icon, chevron (ΔE 3.12 FLAG) |
+| success/900 | `5ac865b8ba3c8e0e485c427e03bd0b5caa9bfdbb` | green block ink (ΔE 3.74 FLAG) |
+| accent2/25 | `f251b2740c6572f49a7daf07ac159e0dda7f3284` | violet block bg (ΔE 3.64 FLAG) |
 
 Raw values in use (DS requests, see ④ Diffs): `#5b63ff` grad stop 1,
-`#f79009` alert dot, `#7a2e0e` amber ink, `#fbfcfd` screen bg, `#fbfbfc`
-zone header tint, `#10141e` @50% hero chip, ticket paper palette, wireframe
-silhouettes `#545c6a` @50%.
+`#f79009` alert dot + amber block accents, `#7a2e0e` amber ink, `#6a5bd0` /
+`#5b4bb8` rematch violet accent + ink (session 4), `#fbfcfd` screen bg,
+`#fbfbfc` zone header tint, `#10141e` @50% hero chip, ticket paper palette,
+wireframe silhouettes `#545c6a` @50%.
+
+Binding note (reframed session 4p): semantic `global/foreground/*` and
+`global/background/*` variables are **mode-aware** — the DS ships
+light/dark modes, and the session 1 "flip" was modes working. Bind the
+semantic foreground/dark ramp for text that should flip with mode
+(canvas furniture does, Lexicon precedent); bind `colors/ink/*`
+primitives only to mode-lock a color. Product text is currently
+primitive-bound (mode-locked); migration to the semantic ramp is an
+OPEN candidate in canon/INDEX.md. Tap block radius 14 printed raw (no
+token, same as card 16).
 
 ## Text Style Reference
 
