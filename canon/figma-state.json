@@ -120,22 +120,25 @@
       "id": "11376:2353",
       "variants": 24,
       "axes": "os(apple|android) x size(compact|standard|max) x shell(light|dark) x chrome(full|bare)",
-      "dims": "apple 375x667/393x852/430x932; android 360x800/384x854/412x915; scroll container overflowDirection VERTICAL; slot instance OTR/Mock/Slot 11375:2221"
+      "dims": "apple 375x667/393x852/430x932; android 360x800/384x854/412x915; scroll container overflowDirection VERTICAL; slot instance OTR/Mock/Slot 11375:2221",
+      "sizeOptions": "compact · 360-375w | standard · 384-393w | max · 412-430w; exact px + device class in per-variant descriptions",
+      "benches": "Mock test bench 11383:19378: two detached editable devices (apple 11384:14924, android 11384:16536) with heavy feed instances, clipped + overflow VERTICAL, verified scrolling"
     }
   },
   "screens": {
-    "p-solo": "11285:397",
-    "p-light": "11285:462",
-    "p-heavy": "11285:594",
-    "v-empty": "11285:1038",
-    "active-clean": "11285:1056",
-    "loe": "11285:1142",
-    "counter": "11285:1246",
-    "concurrent": "11285:1350",
-    "overdue": "11285:1468",
-    "remarket": "11285:1576",
-    "dismissed": "11285:1650",
-    "notbooked": "11285:1736"
+    "note": "Session 4l: screens converted to COMPONENTS (OTR/Screens/*) for slot swapping; StatusZone chrome instances stripped, master deprecated to Archive; ids changed",
+    "Feed/solo": "11383:14507",
+    "Feed/light": "11383:14508",
+    "Feed/heavy": "11383:14509",
+    "Feed/empty": "11383:14510",
+    "Detail/active-clean": "11383:14555",
+    "Detail/loe": "11383:14556",
+    "Detail/counter": "11383:14557",
+    "Detail/concurrent": "11383:14558",
+    "Detail/overdue": "11383:14559",
+    "Detail/remarket": "11383:14560",
+    "Detail/dismissed": "11383:14561",
+    "Detail/notbooked": "11383:14562"
   },
   "decisionsApplied": [
     "DR-CPC-001",

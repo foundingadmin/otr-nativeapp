@@ -321,5 +321,16 @@
     "typeRamp": "Canvas styles migrated by rename (all bound texts updated): Section/Headline 64, Collection/Headline 36, Collection/Text 17, Item/Text 14; new Page/Headline 96, Page/Text 28, Section/Text 22, Item/Headline 22, Caption 12.",
     "screens": "Min height 844 enforced; no chrome layers found in printed screens (bars live only in the mock kit). NOTE: several detail screens measured 844 at enforcement time, lower than remembered print heights; flag for a height audit against print-log if anything looks cropped.",
     "sweeps": "Pairwise zero, containment zero."
+  },
+  "session4l": {
+    "scope": "Device mock round 2 from user testing",
+    "findings": [
+      "Real Figma Slot feature is NOT exposed in this plugin API (figma.createSlot absent); instance-swap is the scriptable mechanism.",
+      "Nothing can be dropped INSIDE a component instance; and a swapped nested instance KEEPS the master slot geometry (853px), so tall screens crop. Swap flow = quick static look only.",
+      "Scroll testing needs a non-instance bench: detached device frames with clipped content + overflowDirection VERTICAL. Verified: 2689px screen in 852px container, top-aligned, scrolls.",
+      "Screen chrome was OTR/Cases/Detail/StatusZone instances (named nothing like status bar); stripped from all 12 screens, master deprecated to Archive."
+    ],
+    "changes": "Screens converted to components (OTR/Screens/*, new ids in figma-state); size options renamed with px ranges; per-variant descriptions carry exact dims + device class; status bars got white backing; slot master top-drops with constraint-centered placeholder; two-device test bench built and verified; index card rebuilt as structured blips (headline, intro, six subhead+line pairs); user test artifacts relocated, not deleted.",
+    "sweeps": "Pairwise zero (after relocating user's Prototype Frame Test and pulled-out card), containment zero."
   }
 }

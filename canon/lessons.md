@@ -81,6 +81,18 @@ one again costs more.
 12. One `setCurrentPageAsync` per script; fan multi-page work into
     parallel calls.
 
+12b. **Instances are sealed boxes.** Nothing can be appended inside a
+    component instance, and swapped nested instances keep the MASTER's
+    slot geometry (a tall screen crops to the slot height; resize from
+    outside is ignored). Instance-swap slots = static quick looks only.
+    Real scroll/drop testing requires detached, duplicatable bench
+    frames (clipped content + overflowDirection VERTICAL). figma.createSlot
+    does not exist in this plugin API; the native Slot feature is
+    UI-only for now.
+12c. **Chrome hunting is content-based.** Screen chrome hid as
+    Detail/StatusZone instances; name searches miss it. Find chrome by
+    what it renders (9:41, 12:30) and walk up to the holder.
+
 ## Process
 
 13. **Recency before printing (D-009).** CD root HTMLs can trail ratified
