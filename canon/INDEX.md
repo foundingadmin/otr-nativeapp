@@ -2,7 +2,7 @@
 
 Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTOCOL.md` §4):
 
-1. Read this file, then `figma-state.json` and `decisions.json`.
+1. Read this file, then `lessons.md`, `figma-state.json`, and `decisions.json`.
 2. Read Figma back before printing. Never print without read-back.
 3. `brand/BRAND.md` carries the full registries: file key, section and node
    IDs, variable import keys, the ratified Native text styles, icon sourcing.
