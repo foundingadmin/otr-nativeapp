@@ -32,10 +32,12 @@ one again costs more.
 6. **Canvas language**: hue = surface type; band tint one step stronger
    than plate; type on bands is ink, never white; white = a pickable
    object. Annotations use Canvas/Title, Canvas/Note, Canvas/Label styles,
-   never raw one-off text.
-6b. **Label-noise control (user technique, Jul 29)**: sections always
-   render their name on canvas, top-level frames render theirs, GROUPS
-   never do. When we print our own titles, wrap the outermost containers
+   never raw one-off text. Block anatomy is always: bold title, one-line
+   description, then the visual. Axis-dump labels (form: card · compact
+   signal: none · urgency...) are banned; they are noise, not naming.
+6b. **Label-noise control (user technique, Jul 29)**: sections render
+   their own name AND the names of their direct frame children (proven in
+   brief 5); top-level frames render theirs; GROUPS never do. When we print our own titles, wrap the outermost containers
    in groups so Figma's tiny labels disappear and the designed titles are
    the only titles. Nested frames inside a group are label-free too.
 

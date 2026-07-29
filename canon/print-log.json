@@ -301,5 +301,12 @@
     "rebuilt": "All 7 nested sheets in Components/Screens + 3 date groups in Proposed/Diffs converted from sections to auto-layout sheet frames (new ids in figma-state on next read-back). Matrix label overlays replaced by in-flow item labels with axes summaries. Purple verdict card on Explorations restyled white with violet stroke.",
     "sweeps": "Pairwise page overlap: zero. Containment: zero. Render verified.",
     "aside": "If the 'purple thing' meant Figma's purple component-set chrome rather than the verdict card, the cure is the masters-strip/instance-sheet pattern from proposal A; flagged for the next verdict."
+  },
+  "session4i": {
+    "scope": "Video brief 5 (8.53.34): stop, build seven wireframe proposals, touch nothing else",
+    "heard": "Still not there: manual arrangement of sheets inside sections is not auto layout; topmost sections cannot round; frames as direct children of sections DO render names (groups are the only cure); band titles were raw type not styles; item labels with axis dumps are useless (want bold title + description + visual); free-form leftovers (Incomplete draft wrapper); signal system rows should wrap with gaps and 64/64 padding.",
+    "built": "Jul 29 seven canvas systems (OPEN) on Proposed, group 11367:2255, sheet 11364:2221: 1 Specimen library, 2 Shelves, 3 Codex, 4 Tile dashboard, 5 Journey storyboard, 6 Canon and Workbench, 7 Hub and satellites. Every proposal: auto layout throughout, style-bound text, bold title + description + schematic visual, wrapped grid, group-wrapped sheet. Zero edits to the live canvas.",
+    "sweeps": "Pairwise page overlaps zero, containment zero, render verified.",
+    "awaiting": "Titus reviews later and picks a system or pieces; then ONE implementation pass executes it end to end (including masters strip if 1/6/7 win, screens min-height, style-bound band type, no axis-dump labels anywhere)."
   }
 }
