@@ -82,7 +82,22 @@ Sub-pages of `↪ Cases` (session 4): `↪ Explorations` page `11337:2087`
 | OTR/Cases/Meter | `11278:305` | 5 (value 0–100) |
 | OTR/Cases/OverduePill | `11278:306` | 1 |
 | OTR/Cases/Ticket | `11279:303` | 6 (cream/blue/green/pink/slate/photo) |
-| OTR/Cases/CasePreviewCard | `11280:763` | 53 (status × mod × form; v2 per Jul 7 pairing board: form card/compact, signal mods urgency/warrant/unread/sign/counter/rematch/overdue/review/moneyback; lifecycle none-cards cleaned, no in-card buttons) |
+| OTR/Cases/CasePreviewCard/Incomplete | `11344:2108` | 6 (form × signal none/urgency/warrant) |
+| OTR/Cases/CasePreviewCard/Active | `11344:2109` | 12 (form × signal none/unread/sign/counter/rematch/overdue) |
+| OTR/Cases/CasePreviewCard/Resolved | `11344:2110` | 6 (form × signal none/unread/overdue) |
+| OTR/Cases/CasePreviewCard/Dismissed | `11344:2111` | 8 (form × signal none/review/unread/overdue) |
+| OTR/Cases/CasePreviewCard/Cancelled | `11344:2112` | 8 (form × signal none/warrant/moneyback/unread) |
+| OTR/Cases/CasePreviewCard/SmartMatch | `11344:2113` | 6 (phase matching/matching-brand/rematching/quote/quote-urgent/expired, card only) |
+| OTR/Cases/CasePreviewCard/Incomplete draft | `11280:698` | 1 (meter + booking CTA, quote-CTA verdict pending) |
+| OTR/Cases/SignalBlock | `11341:26731` | 12 (tone error/warning/info/success/match/inactive × density block/line); nested OTR/Icons instance swappable, hidden amount/body override slots |
+
+The former 53-variant CasePreviewCard set is dissolved (family split per the
+badge-rule board); variant node ids survive inside the family sets, screen
+instances intact. Deprecated to the Cases Archive page: deadline, missed,
+counter, active-action, reassigned, tap. `OTR/Icons/*`: nine icon
+components `11340:1948`-`11340:1972` (warning-triangle, warning-circle,
+chat-bubble-typing-oval, file-edit, briefcase-dollar, ai-sparkles, star-1,
+bill-dollar-2, time-history-off).
 | OTR/Cases/Detail/StatusZone | `11281:351` | 1 |
 | OTR/Cases/Detail/AppBar | `11281:357` | 1 |
 | OTR/Cases/Detail/TicketHero | `11281:365` | 1 |

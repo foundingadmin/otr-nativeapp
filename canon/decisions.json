@@ -69,6 +69,14 @@
       "detail": "Exploration decisions in CD were not escalated to root HTMLs, so canon-stage boards can trail ratified design. Until CD restructures: before printing any board, cross-check its recency against exploration decisions and confirm with the user. Simplified CD project proposal drafted in docs/prds/prd-cd-workflow-v2.md.",
       "decidedBy": "user observation + agent",
       "commit": "this commit"
+    },
+    {
+      "id": "D-010",
+      "title": "CPC family split + SignalBlock system",
+      "verdict": "adopt",
+      "detail": "Per the system board (badge rule + action signals): CasePreviewCard split into six family component sets so each property panel shows only valid signals; signal UI extracted to OTR/Cases/SignalBlock (tone x density, six fixed tones incl. inactive gray) instanced by all cards and compact rows; icons promoted to OTR/Icons components for swap overrides. Superseded variants (deadline, missed, counter, active-action, reassigned, tap) deprecated to Archive. OPEN: quote-family CTA treatment; StatusBadge vocabulary shrink to 5+2.",
+      "decidedBy": "user delegated the model choice; agent applied CD's system board",
+      "commit": "this commit"
     }
   ]
 }

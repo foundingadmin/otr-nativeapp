@@ -50,8 +50,11 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
 - **Feed/detail screen migration to CPC v2.** ② Screens still instance the
   pre-v2 card anatomy (buttons, court lines). Swap to the new form=card
   variants and relayout.
-- StatusBadge asks: icon-in-badge axis (Jul 7 board), compact 22px size
-  (printed sm=21), unread axis (pre-existing).
+- StatusBadge asks: vocabulary shrink to 5 lifecycle + 2 SmartMatch badges
+  per the badge-rule board (solid forms become legacy), icon-in-badge axis
+  (Jul 7 board), compact 22px size (printed sm=21), unread axis.
+- Quote-family CTA verdict: SmartMatch set + Incomplete draft keep DS
+  Buttons; decide one-blue-CTA vs signal-owned resolution.
 - Compact forms for matching-family statuses need CD coverage (pairing
   board only covers the 5 lifecycle badges).
 - Design-team verdicts on ④ Diffs: SmartMatch gradient + Solid-neutral

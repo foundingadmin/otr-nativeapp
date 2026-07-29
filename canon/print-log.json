@@ -257,5 +257,14 @@
     "diffCard": "DIFF - CPC v2 (11338:1922) on Diffs: flagged binds, DS requests, ratified deltas, opens.",
     "pages": "Created '↪ Explorations' page 11337:2087 between UX and Archive (client indent convention). First-run debris (Test 11225:1523, label 11225:1522) moved to Cases Archive page 11158:8460.",
     "buildChecks": "componentPropertyDefinitions verified (status 15 x mod 13 x form 2, 53 variants). Bound-black sweep clean. resolvedVariableModes all-light. Visual QA on set render: all five block families correct."
+  },
+  "session4b": {
+    "scope": "Component system restructure + canvas organization",
+    "signalBlock": "OTR/Cases/SignalBlock 11341:26731 (tone x density, 12 variants) built from printed exemplars + new inactive gray tone (bg background/strong, ink light/quinary, icon time-history-off). All 14 standard signal cards + 15 compact lines now instance it; dismissed/review keeps its bespoke green composite.",
+    "familySplit": "Old 53-variant set dissolved (node 11280:763 gone). Six sets: Incomplete 11344:2108, Active 11344:2109, Resolved 11344:2110, Dismissed 11344:2111, Cancelled 11344:2112, SmartMatch 11344:2113, + standalone Incomplete draft 11280:698. Variant node ids preserved, screen instances intact.",
+    "icons": "Nine OTR/Icons/* components created from flattened signal icons so instances can swap.",
+    "canvas": "Components section reorganized into five nested sections; Screens split into Feed and Case detail nested sections.",
+    "gotcha": "figma.skipInvisibleInstanceChildren defaults true in use_figma; must set false before findOne on hidden override slots inside instances.",
+    "open": "Quote-family cards (SmartMatch set + Incomplete draft) keep DS Buttons pending verdict on one-blue-CTA vs signal-owned resolution; StatusBadge vocabulary shrink (5 lifecycle + 2 SmartMatch, badge-rule board) not yet applied; feed screens still instance pre-v2 anatomy."
   }
 }

@@ -48,12 +48,6 @@
       "variants": 6,
       "axes": "variant"
     },
-    "OTR/Cases/CasePreviewCard": {
-      "id": "11280:763",
-      "variants": 53,
-      "axes": "status x mod x form",
-      "v2": "Jul 7 pairing board: form card|compact; mods + urgency,warrant,unread,sign,counter,rematch,overdue,review,moneyback; lifecycle none-cards cleaned (no buttons/metalines)"
-    },
     "OTR/Cases/Detail/StatusZone": {
       "id": "11281:351"
     },
@@ -80,6 +74,47 @@
     },
     "OTR/Cases/Detail/HelpZone": {
       "id": "11281:482"
+    },
+    "OTR/Cases/CasePreviewCard/Incomplete": {
+      "id": "11344:2108",
+      "variants": 6,
+      "axes": "form x signal(none|urgency|warrant)"
+    },
+    "OTR/Cases/CasePreviewCard/Active": {
+      "id": "11344:2109",
+      "variants": 12,
+      "axes": "form x signal(none|unread|sign|counter|rematch|overdue)"
+    },
+    "OTR/Cases/CasePreviewCard/Resolved": {
+      "id": "11344:2110",
+      "variants": 6,
+      "axes": "form x signal(none|unread|overdue)"
+    },
+    "OTR/Cases/CasePreviewCard/Dismissed": {
+      "id": "11344:2111",
+      "variants": 8,
+      "axes": "form x signal(none|review|unread|overdue)"
+    },
+    "OTR/Cases/CasePreviewCard/Cancelled": {
+      "id": "11344:2112",
+      "variants": 8,
+      "axes": "form x signal(none|warrant|moneyback|unread)"
+    },
+    "OTR/Cases/CasePreviewCard/SmartMatch": {
+      "id": "11344:2113",
+      "variants": 6,
+      "axes": "phase(matching|matching-brand|rematching|quote|quote-urgent|expired) x form(card)"
+    },
+    "OTR/Cases/CasePreviewCard/Incomplete draft": {
+      "id": "11280:698",
+      "variants": 1,
+      "note": "meter + Complete booking CTA, kept pending quote-CTA verdict"
+    },
+    "OTR/Cases/SignalBlock": {
+      "id": "11341:26731",
+      "variants": 12,
+      "axes": "tone(error|warning|info|success|match|inactive) x density(block|line)",
+      "note": "six system tones per badge-rule board; nested icon instance swappable; hidden amount/body slots for overrides"
     }
   },
   "screens": {
@@ -114,5 +149,37 @@
     "firstRunTestFrame": "11225:1523",
     "firstRunLabel": "11225:1522",
     "movedTo": "11158:8460 (Cases Archive page)"
+  },
+  "icons": {
+    "note": "OTR/Icons/* components, session 4b",
+    "ids": {
+      "warning-triangle": "11340:1948",
+      "warning-circle": "11340:1951",
+      "chat-bubble-typing-oval": "11340:1954",
+      "file-edit": "11340:1957",
+      "briefcase-dollar": "11340:1960",
+      "ai-sparkles": "11340:1963",
+      "star-1": "11340:1966",
+      "bill-dollar-2": "11340:1969",
+      "time-history-off": "11340:1972"
+    }
+  },
+  "deprecated": {
+    "movedTo": "11158:8460",
+    "components": "DEPRECATED/CasePreviewCard/{deadline, missed, counter, active-action, reassigned, active tap}",
+    "reason": "superseded by badge-rule model: five lifecycle badges + action signals"
+  },
+  "nestedSections": {
+    "components": {
+      "Case preview cards": "11345:2071",
+      "Signal system": "11345:2072",
+      "Badges & atoms": "11345:2073",
+      "Identity & ticket": "11345:2074",
+      "Detail kit": "11345:2075"
+    },
+    "screens": {
+      "Feed": "11345:6695",
+      "Case detail": "11345:6696"
+    }
   }
 }
