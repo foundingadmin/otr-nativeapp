@@ -140,3 +140,7 @@ one again costs more.
 18. Every session ends with: canon files updated, commit pushed, PR
     current, and this file extended if something new was learned the hard
     way.
+19. **Tree demos in replies stay narrow.** Sidebar/structure trees keep
+    each line short enough to never wrap (roughly 40 chars); no inline
+    annotation tails on tree lines. Notes go below the tree. Wrapped
+    tree lines are unreadable (user flag, Jul 29).
