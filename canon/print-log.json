@@ -287,5 +287,12 @@
     "scope": "Spec-sheet canvas language adopted from client DS specimen (node 11355:19505)",
     "pattern": "White sheet + soft tinted header band + ink title + muted note + matrix labels (left rail, column captions). Applied: mega-section bands softened to 100-level tints with 64px ink titles; nested sheets get 50-level header bands; 37 matrix labels on the six CPC family sets (signal captions per card column, Card/Compact left rail) + tone rail and Block/Line captions on SignalBlock; Canvas/Label style (Figtree SB 13) added; rails given real left gutters; containment sweep clean.",
     "rule": "Hue = surface type at plate level; band tint one step stronger than plate; type is always ink on bands, never white; white = pickable object."
+  },
+  "session4g": {
+    "scope": "Video brief 3 (canvas org verdict: not there) -> three wireframe proposals on Proposed",
+    "brief": "8.33.40 PM recording via brief-crunch pipeline (mp4+txt+srt landed automatically; frames from chat-uploaded mp4). Verdicts: current canvas pass rejected (cramped, straight-edged sections, arbitrary 4-wrap, tiny labels); coloring liked; sections wrong container vs client specimen frames; screens need min device height; solid StatusBadge forms confirmed unwanted (badge rule); instruction: build proposals off to the side, no more live churn, the chosen system runs for months.",
+    "built": "Jul 29 canvas organization proposals (OPEN) on Proposed, section 11360:2393: A Specimen sheets (rounded frames of instances, auto layout, masters strip), B Library shelves (one auto layout row per family, index cards, no wrap), C Atlas (hub + standalone spec frames + screens lane).",
+    "insight": "Component sets cannot take auto layout; the client's clean sheets are frames of INSTANCES with auto layout while masters park elsewhere. All three proposals adopt this.",
+    "queued": "StatusBadge vocabulary cleanup (retire solid forms + non-vocabulary statuses per badge rule, ratified again in brief 3); screens min-height rule; execution of whichever proposal wins."
   }
 }
