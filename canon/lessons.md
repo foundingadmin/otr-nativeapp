@@ -13,11 +13,14 @@ one again costs more.
    bounds, (b) PAIRWISE overlap across all siblings at page level. Run both
    after every print, before ending the session. The user has flagged
    hang-outs three times; there is no fourth pass.
-3. **Sections are ditched (D-013, Jul 29).** They cannot take auto
-   layout or radius, so plates are FRAMES now: auto layout, padding
-   spacing/13xl (96), radius 80 (raw, no DS token that large, flagged),
-   fill brand/50, hairline black 10% stroke. Carve-out: pages hosting
-   presentable rigs keep rigs at page level (see 12b3).
+3. **Sections are ditched (D-013, Jul 29; amended same day).** They
+   cannot take auto layout or radius, so plates are FRAMES now: auto
+   layout, padding spacing/13xl (96), radius radius/5XL (36), fill
+   brand/50, stroke global/border/neutral/default. Amendment: values
+   the user demonstrates by hand are IDEAS, not directives; never keep
+   them raw, snap to the best DS token (his 80 radius became 5XL, his
+   black 10% hairline became border/neutral/default). Carve-out: pages
+   hosting presentable rigs keep rigs at page level (see 12b3).
 3b. **Auto layout all the way down (ratified, brief 4; extended D-013).**
    Every container including the topmost plate is an auto-layout frame:
    header columns, item wrappers, wrapping rows for small parts.
@@ -63,6 +66,12 @@ one again costs more.
    The other six proposal systems stay on the Proposed page as the
    toolbox for cases where a shelf fits worse. Proposed lives on its own
    sub-page; Components, Screens, Diffs live on the area page.
+6e. **Museum captions for specimens (Jul 29).** When furniture or parts
+   are demonstrated in a demo, the specimen looks like the REAL thing
+   (realistic content, greeked body lines) and carries exactly one
+   dimmed caption below it, museum-placard style. Tags never nest
+   inside specimens; labels labeling labels ("blip" under a blip) read
+   as noise and got flagged on sight.
 6d. **Verify existence before destroy.** A user may hand-wrap nodes in
    groups mid-session; never assume the tree matches your last write.
    Confirm critical nodes survived any bulk removal BEFORE building on

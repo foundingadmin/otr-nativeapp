@@ -175,8 +175,10 @@ Spacing tokens: none 0, 5xs 2, 4xs 4, 3xs 6 `6459000b`, 2xs 8 `43df441b`,
 xs 12 `d1c9c214`, sm 14, md 16 `be36ab2a`, lg 18, xl 20 `27c15b5f`,
 2xl 24 `67cca52a`, sxl 28, 4xl 32, 5xl 36, 6xl 40 `1b1c1447`, 7xl 44,
 8xl 48 `82a97643`, 9xl 52, 10xl 56, 11xl 64 `b988fbbe`, 12xl 80,
-13xl 96 `93026106`, 14xl 128, 15xl 140. There is no radius token near 80;
-the D-013 plate radius stays raw pending a DS request.
+13xl 96 `93026106`, 14xl 128, 15xl 140. D-013 amendment: demonstrated
+values are ideas, not directives; the plate radius binds radius/5XL (36)
+and the plate stroke binds global/border/neutral/default. No raw
+numerics anywhere on the Lexicon v3 build (147 fields token-bound).
 | radius/FULL | `a95f485680b5d91600397f3608161b1f6e64ee47` | every pill radius |
 | error/25 | `bae9985c720078feabbbbcba1cf59186bdfa3f11` | red block bg (ΔE 0.54) |
 | error/600 | `279bb8c2905a03fe2cb0a332d5ae722253307a0b` | red dot, icon, chevron (ΔE 0) |
