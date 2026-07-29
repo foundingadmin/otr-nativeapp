@@ -89,6 +89,12 @@ one again costs more.
     frames (clipped content + overflowDirection VERTICAL). figma.createSlot
     does not exist in this plugin API; the native Slot feature is
     UI-only for now.
+12b2. **Native-first proto testing (verdict, Jul 29).** Figma's
+    presentation settings render real device bezels; do not rebuild
+    bezels for flow testing. Starters live on ↪ Proto at Figma's own
+    device dims; OTR/Mock/Chrome supplies status and home bars (fix
+    position manually; scrollBehavior is not in the plugin API).
+    OTR/Mock/Device and the bench remain for static canvas shots.
 12c. **Chrome hunting is content-based.** Screen chrome hid as
     Detail/StatusZone instances; name searches miss it. Find chrome by
     what it renders (9:41, 12:30) and walk up to the holder.

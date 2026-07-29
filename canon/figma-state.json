@@ -122,7 +122,14 @@
       "axes": "os(apple|android) x size(compact|standard|max) x shell(light|dark) x chrome(full|bare)",
       "dims": "apple 375x667/393x852/430x932; android 360x800/384x854/412x915; scroll container overflowDirection VERTICAL; slot instance OTR/Mock/Slot 11375:2221",
       "sizeOptions": "compact · 360-375w | standard · 384-393w | max · 412-430w; exact px + device class in per-variant descriptions",
-      "benches": "Mock test bench 11383:19378: two detached editable devices (apple 11384:14924, android 11384:16536) with heavy feed instances, clipped + overflow VERTICAL, verified scrolling"
+      "benches": "Mock test bench 11383:19378: two detached editable devices (apple 11384:14924, android 11384:16536) with heavy feed instances, clipped + overflow VERTICAL, verified scrolling",
+      "location": "moved to ↪ Proto page with benches and slot"
+    },
+    "OTR/Mock/Chrome": {
+      "id": "11389:13975",
+      "variants": 8,
+      "axes": "part(status|home) x os(apple|android) x tone(dark|light)",
+      "note": "chrome overlays for native prototype flow; fix-position is a manual toggle (scrollBehavior not in plugin API)"
     }
   },
   "screens": {
@@ -188,6 +195,8 @@
     "componentsShelves": "Incomplete(+draft), Active, Resolved, Dismissed, Cancelled, SmartMatch, Signal system(+icon grid), Status badge, Atoms, Identity & ticket, Detail kit",
     "screensShelves": "Feed (4), Case detail (8)",
     "diffsShelves": "one per date group, cards in a wrapped grid",
-    "typeRamp": "Canvas/Page 96+28, Section 64+22, Collection 36+17, Item 22+14, Caption 12 (migrated from Title/Subtitle/Note/Label by rename)"
-  }
+    "typeRamp": "Canvas/Page 96+28, Section 64+22, Collection 36+17, Item 22+14, Caption 12 (migrated from Title/Subtitle/Note/Label by rename)",
+    "protoWorkflow": "Native-first: starters at Figma's own device dims (iPhone 16 393x852, Android Compact 412x917) + presentation-settings bezel; OTR/Mock/Chrome supplies OS chrome; OTR/Mock/Device + bench remain for static canvas shots and drop-in scroll checks."
+  },
+  "protoPage": "11382:38949"
 }

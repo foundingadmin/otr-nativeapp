@@ -332,5 +332,12 @@
     ],
     "changes": "Screens converted to components (OTR/Screens/*, new ids in figma-state); size options renamed with px ranges; per-variant descriptions carry exact dims + device class; status bars got white backing; slot master top-drops with constraint-centered placeholder; two-device test bench built and verified; index card rebuilt as structured blips (headline, intro, six subhead+line pairs); user test artifacts relocated, not deleted.",
     "sweeps": "Pairwise zero (after relocating user's Prototype Frame Test and pulled-out card), containment zero."
+  },
+  "session4m": {
+    "scope": "Native-first proto workflow; device work moved to ↪ Proto page",
+    "verdict": "User: lean on Figma's native prototype device rendering; keep components for chrome. Division of labor: Figma owns the bezel, we own the chrome.",
+    "built": "↪ Proto page (user-created, renamed to convention, ordered after Proposed): page headline (Canvas/Page tier), three-blip guide, OTR/Mock/Chrome set (part x os x tone, 8 variants, white/ink backed status bars, transparent home bars), two native-dim starters (iPhone 16 393x852, Android Compact 412x917) preloaded with the heavy feed + dark chrome. Device mocks shelf (set, slot, benches) moved from Components to Proto; Components reflowed.",
+    "apiNote": "node.scrollBehavior does not exist in this plugin API; fix-position-when-scrolling on chrome overlays is a one-click manual step, documented in the guide copy.",
+    "sweeps": "Cases page and Proto page pairwise zero; user's Frame 1 test preserved and parked."
   }
 }
