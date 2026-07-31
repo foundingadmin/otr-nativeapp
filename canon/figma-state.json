@@ -155,7 +155,23 @@
     "unread badge dot": "StatusBadge set has no unread axis pass 1",
     "confetti": "dismissed celebration decoration omitted pass 1"
   },
-  "explorationsPage": "11337:2087",
+  "explorationsPage": {
+    "id": "11337:2087",
+    "note": "The page header texts and the TEMPLATE section (11354:169/170/171) are no longer in the file as of session 5; cause unconfirmed, see print-log session5.templateMissing.",
+    "boards": {
+      "case-action entry set": {
+        "outerFrame": "11480:117",
+        "structure": "Lexicon template: tinted outer frame (brand/50, r36, pad 140) > GROUP 11488:116 > column 11480:118 (gap 64) > header + 4 shelves",
+        "shelves": {
+          "The set": "11480:287",
+          "Full payload": "11481:116",
+          "Optionality": "11481:351",
+          "Binding": "11482:117"
+        },
+        "status": "OPEN - awaiting verdict"
+      }
+    }
+  },
   "diffCards": {
     "cpcV2": "11338:1922"
   },
@@ -165,7 +181,7 @@
     "movedTo": "11158:8460 (Cases Archive page)"
   },
   "icons": {
-    "note": "OTR/Icons/* components, session 4b",
+    "note": "OTR/Icons/* components, session 4b; +7 case-action glyphs session 5 (all in the icons frame 11370:26841 on the Cases page)",
     "ids": {
       "warning-triangle": "11340:1948",
       "warning-circle": "11340:1951",
@@ -175,7 +191,14 @@
       "ai-sparkles": "11340:1963",
       "star-1": "11340:1966",
       "bill-dollar-2": "11340:1969",
-      "time-history-off": "11340:1972"
+      "time-history-off": "11340:1972",
+      "folder-check": "11473:2000",
+      "folder-remove": "11473:2003",
+      "check-thick": "11473:2006",
+      "delete-circle": "11473:2009",
+      "folder-star-favorite": "11473:2012",
+      "file-document-info-quick-reference": "11473:2015",
+      "download-tray": "11473:2018"
     }
   },
   "deprecated": {

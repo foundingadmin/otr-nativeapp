@@ -47,7 +47,29 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
   recency against explorations and confirm with the user. Proposal for a
   restructured CD project: `docs/prds/prd-cd-workflow-v2.md`.
 
+## Standing policy added session 5
+
+- **Bind semantic ramps, not fruit primitives.** The Guidelines library ships
+  `Color function & themes` with full `brand/error/warning/success/neutral/
+  accent/accent2/highlight/highlight2` ramps at 25→950. Any tinted product
+  surface binds a ramp rung, which states the role and survives a palette
+  change. Ratified ladder: surface 25, border 100, icon 700, secondary text
+  800, title 900. Uniform across tones, chosen so every rung clears its
+  contrast bar in every ramp. Full keys in `brand/BRAND.md`.
+
 ## Open items (next session picks these up)
+
+- **Verdict needed: `OTR/Cases/ActionEntry`** (`11477:16`, board `11480:117`
+  on ↪ Explorations). Nine kinds, four optionality switches, zero raw values.
+  On adopt it promotes to ① Components and the feed/detail screens can drop
+  their bespoke action cards. Open questions carried from the CD brief: the
+  actor-label wording for automated actions (`OTR · automated`), and whether
+  the offer block ever collapses to a chip.
+- **Explorations page furniture is missing.** The page header texts
+  (`11354:169`, `11354:170`) and the TEMPLATE section (`11354:171`) were read
+  back at the start of session 5 and were gone later in the same session; the
+  agent ran no delete against them. Confirm with the user whether they were
+  removed deliberately before rebuilding the scaffold.
 
 - **Dark-mode migration candidate.** DS modes are live (user-confirmed
   Jul 29): `global/foreground|background/*` flip on mode switch. Product

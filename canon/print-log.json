@@ -240,7 +240,9 @@
     }
   },
   "buildChecks": [
-    "RULE (user, session 3): after any print into a shared section, screenshot and re-read the WHOLE section, not just the new node. Check for overlaps and ragged spacing; new cards go through a grid relayout of the section, never absolute drops at guessed coordinates. Both agent annotation sections (Proposed, Diffs) now use a 4-column/row-band grid with 40px gutters."
+    "RULE (user, session 3): after any print into a shared section, screenshot and re-read the WHOLE section, not just the new node. Check for overlaps and ragged spacing; new cards go through a grid relayout of the section, never absolute drops at guessed coordinates. Both agent annotation sections (Proposed, Diffs) now use a 4-column/row-band grid with 40px gutters.",
+    "RULE (session 5): audit radius bindings on topLeftRadius/topRightRadius/bottomLeftRadius/bottomRightRadius. node.boundVariables.cornerRadius is never populated by setBoundVariable(\"cornerRadius\", v) and checking it reports every bound radius as raw.",
+    "RULE (session 5): figma.createSection() lands at (0,0) and Figma sections auto-adopt overlapping nodes. Prefer createFrame for agent boards, or position the section before it can overlap existing work."
   ],
   "session4": {
     "scope": "CPC v2: July 7 pairing board (component-case_preview_cards, canon stage) printed as form axis on OTR/Cases/CasePreviewCard",
@@ -380,5 +382,33 @@
     ],
     "discovery": "DS modes are LIVE (user-confirmed): semantic foreground/background variables flip light/dark on mode switch. Session 1's 'foreground flip' incident was modes working, not a bug. Lesson 9 rewritten; product-text migration to the semantic ramp recorded as an OPEN candidate in INDEX. The Lexicon page is mode-aware by construction.",
     "sweeps": "Section containment zero, pairwise zero, strays zero; ramp verified via resolveForConsumer (screenshot-confirmed after)."
+  },
+  "session5": {
+    "date": "2026-07-31",
+    "brief": "Print the case-action components gallery from CD exploration 04-case-chat (cc-gallery section). User directive: be strict about existing DS, keep diffs to an extreme low, Figma DS is the source of truth for DS, not CD.",
+    "discovery": "The Guidelines library ships a \"Color function & themes\" collection with full semantic ramps (brand, error, warning, success, neutral, accent, accent2, highlight, highlight2) at 25/50/100/200/300/500/600/700/800/900. Prior sessions bound scattered steps of it (error/brand/success/accent2) but never recorded the ramps as a system. This is what let the whole gallery bind with zero raw values.",
+    "toneMapping": "CD tone -> DS ramp, one ladder for all four: bg=25, border=100, icon=700, secondary=800, title=900. success->success (lime), warning->warning (honey), critical->error (cherry), neutral->neutral (ink). CD info->brand kept in reserve; no gallery action uses it.",
+    "toneRationale": "Step choice is role-driven, not CD-matched: icon=700 is the lightest rung clearing 3:1 on the white chip across all four ramps (warning/600 fails at 2.1:1); secondary=800 is the lightest clearing 4.5:1 on the tinted surface (warning/700 fails at 3.1:1). Uniform across tones so the family reads as one system.",
+    "cdDivergence": "DS hues differ from CD by design and by user instruction. CD success was a teal green (#19a558), DS success is lime (#2daa00, dE ~10). CD amber ink #8a5206, DS warning/900 #734900 (dE 5.8). Adopted DS in every case; no DS requests raised.",
+    "components": {
+      "OTR/Cases/ActionEntry": {
+        "id": "11477:16",
+        "variants": "9 (kind = accepted, declined, cancelled, counterSent, counterAccepted, counterDeclined, counterWithdrawn, resolved, paymentFailed)",
+        "props": "BOOLEAN show actor (default true), show offer / show note / show attachment (default false) - CD brief: defaults lean bare",
+        "anatomy": "container r14 (radius/SM) > head [icon chip 32 r8 radius/2XS on background/default + title/actor + time] + offer block r12 (radius/XS) + note + attachment pill radius/FULL",
+        "geometry": "Icon chip adopts the DS Framed icon 4XL geometry (32x32, 16px glyph)."
+      }
+    },
+    "icons": "7 new OTR/Icons components from the CD FeatureIcon bundle: folder-check, folder-remove, check-thick, delete-circle, folder-star-favorite, file-document-info-quick-reference, download-tray. scale-balanced confirmed absent from the FI set; briefcase-dollar substituted for the counter-offer kinds, following the session-4 CPC precedent.",
+    "dsReuseVerdicts": {
+      "Framed icon (53ad6d72...)": "REJECTED. Geometry adopted (32x32/16px), instance not used: its tone axis is only secondary/tertiary accent (no positive/warning/negative), and its icon slot is an INSTANCE_SWAP typed to DS icon components, which cannot carry the FI action glyphs.",
+      "White pills (337f5cbb...)": "NOT USED for the attachment pill. Tone axis matches (neutral/accent/positive/warning/negative) but the pill is 32px tall with a fixed nested stacking icon and no trailing-icon slot; the attachment row needs a leading file glyph plus a trailing download glyph.",
+      "Colored pills (f52eecf7...)": "NOT USED. Tinted rather than white, and the attachment chip must read as a white surface on the tinted entry.",
+      "Button (624f3863...)": "NOT APPLICABLE. Item G firewall: no state-changing CTA lives inside a log entry."
+    },
+    "bindingAudit": "Walked all 9 variants on print: 0 unbound fills, 0 unbound strokes, 0 off-style text nodes, 0 raw radii, 0 raw spacing values. Note: radius bindings land on topLeft/topRight/bottomLeft/bottomRightRadius, NOT boundVariables.cornerRadius - a first-pass audit that checked cornerRadius produced 36 false positives.",
+    "fixes": "Cleared root fills on the two legacy OTR/Icons instances (briefcase-dollar, bill-dollar-2) - the icon-instance white-fill gotcha in FIGMA-PLUGIN.md; the 7 new glyph components ship with fills=[] on the root.",
+    "board": "Printed to the Explorations page on the Lexicon template (user instruction mid-session): tinted outer frame > group > column > header + shelves, each shelf a 400px explanation column beside a 900px stage. Outer 11480:117.",
+    "templateMissing": "The Explorations page header texts (11354:169, 11354:170) and the TEMPLATE section (11354:171) were present at session start (read back via get_metadata, and were the user's live selection at that moment) and were absent from the file later in the session. The agent ran no delete against them. Cause unconfirmed - raised with the user rather than silently rebuilt."
   }
 }
