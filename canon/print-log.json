@@ -242,7 +242,9 @@
   "buildChecks": [
     "RULE (user, session 3): after any print into a shared section, screenshot and re-read the WHOLE section, not just the new node. Check for overlaps and ragged spacing; new cards go through a grid relayout of the section, never absolute drops at guessed coordinates. Both agent annotation sections (Proposed, Diffs) now use a 4-column/row-band grid with 40px gutters.",
     "RULE (session 5): audit radius bindings on topLeftRadius/topRightRadius/bottomLeftRadius/bottomRightRadius. node.boundVariables.cornerRadius is never populated by setBoundVariable(\"cornerRadius\", v) and checking it reports every bound radius as raw.",
-    "RULE (session 5): figma.createSection() lands at (0,0) and Figma sections auto-adopt overlapping nodes. Prefer createFrame for agent boards, or position the section before it can overlap existing work."
+    "RULE (session 5): figma.createSection() lands at (0,0) and Figma sections auto-adopt overlapping nodes. Prefer createFrame for agent boards, or position the section before it can overlap existing work.",
+    "RULE (session 5): swapComponent invalidates ids of nodes nested under the swapped instance. Do all traversal and edits BEFORE any swap in the same script, or the later findOne crashes on a stale node.",
+    "RULE (session 5): frame.maxWidth does not clamp a WIDTH_AND_HEIGHT text child. For a wrapping bubble use a FIXED-width frame with the text set to FILL + textAutoResize HEIGHT."
   ],
   "session4": {
     "scope": "CPC v2: July 7 pairing board (component-case_preview_cards, canon stage) printed as form axis on OTR/Cases/CasePreviewCard",
@@ -409,6 +411,24 @@
     "bindingAudit": "Walked all 9 variants on print: 0 unbound fills, 0 unbound strokes, 0 off-style text nodes, 0 raw radii, 0 raw spacing values. Note: radius bindings land on topLeft/topRight/bottomLeft/bottomRightRadius, NOT boundVariables.cornerRadius - a first-pass audit that checked cornerRadius produced 36 false positives.",
     "fixes": "Cleared root fills on the two legacy OTR/Icons instances (briefcase-dollar, bill-dollar-2) - the icon-instance white-fill gotcha in FIGMA-PLUGIN.md; the 7 new glyph components ship with fills=[] on the root.",
     "board": "Printed to the Explorations page on the Lexicon template (user instruction mid-session): tinted outer frame > group > column > header + shelves, each shelf a 400px explanation column beside a 900px stage. Outer 11480:117.",
-    "templateMissing": "The Explorations page header texts (11354:169, 11354:170) and the TEMPLATE section (11354:171) were present at session start (read back via get_metadata, and were the user's live selection at that moment) and were absent from the file later in the session. The agent ran no delete against them. Cause unconfirmed - raised with the user rather than silently rebuilt."
+    "templateMissing": "The Explorations page header texts (11354:169, 11354:170) and the TEMPLATE section (11354:171) were present at session start (read back via get_metadata, and were the user's live selection at that moment) and were absent from the file later in the session. The agent ran no delete against them. Cause unconfirmed - raised with the user rather than silently rebuilt.",
+    "chatScreens": {
+      "brief": "Print the five case chat surface approaches (cc-approaches) from CD exploration 04-case-chat.",
+      "screens": "390x844, apple. A unified thread, B log-led with day dividers, C split pinned+log, D compact system chips, E compact chips + pinned toast. ApproachC in the CD source is retired (Jul 10) and was not printed; the CD ids c/d/e map to the source functions ApproachD/E/F.",
+      "newComponents": {
+        "OTR/Cases/Chat/Message": "11493:305 - 4 variants (side firm/me x first true/false). first=false hides the avatar but keeps the 28px gutter. Bubble fixed 250 with wrapping text.",
+        "OTR/Cases/Chat/DayDivider": "11493:306 - rule + Native/Text/Caption/Note label + rule.",
+        "OTR/Cases/Chat/SystemChip": "11494:305 - 4 tones, the compact inline form of a case action.",
+        "OTR/Cases/Chat/PinnedBar": "11494:360 - 4 tones, the item G persistent surface, carries a DS Button."
+      },
+      "reuse": "ActionEntry instanced directly into the threads (A, B, C) with per-screen property toggles, which is the whole point of the set. Device chrome from OTR/Mock/Chrome (part=status/home, os=apple, tone=dark - tone names the CONTENT colour, so tone=dark is the bar that belongs on a white app bar). Pinned CTA is a DS Button Solid-brand extra small.",
+      "dsReuseVerdicts": {
+        "White pills": "Evaluated again for SystemChip and not used. Tone axis matches, but its leading icon is a nested stacking-icon instance that cannot carry the OTR/Icons action glyphs, and the chip must stay visually identical to ActionEntry, same glyph family and same tone ladder.",
+        "Inputs": "Not used for the composer. The DS field is a labelled form input (400x76 with label and hint architecture); a chat composer is a pill-radius single-line field. Recorded rather than forced."
+      },
+      "bindingAudit": "Product surfaces only (component-set containers and DS instance internals excluded): 0 unbound fills, 0 unbound strokes, 0 off-style text, 0 raw radii, 0 raw spacing. Two real misses were caught and fixed: the log itemSpacing was raw 10 (snapped to 8, spacing/2xs, ties round down) and its paddingBottom raw 16 (spacing/md). The 36px toast indent binds spacing/5xl.",
+      "knownGap": "CD approach B specifies a compact density for the entries (padding 9/11, radius 13). ActionEntry has no density axis, so B prints at standard density. Adding a density axis would double the set to 18 variants; flagged for the verdict rather than assumed.",
+      "openQuestions": "Which approach anchors the build (A-E). Whether the pinned CTA keeps DS brand blue or takes the bar tone (the standing one-blue-CTA question). Actor wording for automated actions."
+    }
   }
 }

@@ -97,7 +97,11 @@ Retired session 4n to Archive as DEPRECATED/: `OTR/Mock/Device`
 | OTR/Cases/CasePreviewCard/SmartMatch | `11344:2113` | 6 (phase matching/matching-brand/rematching/quote/quote-urgent/expired, card only) |
 | OTR/Cases/CasePreviewCard/Incomplete draft | `11280:698` | 1 (meter + booking CTA, quote-CTA verdict pending) |
 | OTR/Cases/SignalBlock | `11341:26731` | 12 (tone error/warning/info/success/match/inactive × density block/line); nested OTR/Icons instance swappable, hidden amount/body override slots |
-| OTR/Cases/ActionEntry | `11477:16` | 9 (kind = accepted, declined, cancelled, counterSent, counterAccepted, counterDeclined, counterWithdrawn, resolved, paymentFailed) + 4 BOOLEAN props: show actor (default true), show offer / show note / show attachment (default false). Lives on the Explorations board pending verdict; promote to ① Components on adopt. |
+| OTR/Cases/ActionEntry | `11477:16` | 9 (kind = accepted, declined, cancelled, counterSent, counterAccepted, counterDeclined, counterWithdrawn, resolved, paymentFailed) + 4 BOOLEAN props: show actor (default true), show offer / show note / show attachment (default false). Lives on the Explorations board pending verdict; promote to ① Components on adopt. No density axis yet: CD approach B asks for a compact entry, which would double the set to 18 variants. |
+| OTR/Cases/Chat/Message | `11493:305` | 4 (side firm/me × first true/false). Bubble fixed 250 with wrapping text; the tail corner (`radius/4xs`) points at the speaker. `first=false` hides the avatar but keeps the 28px gutter so a run stays on one axis. |
+| OTR/Cases/Chat/DayDivider | `11493:306` | 1 (rule + `Native/Text/Caption/Note` label + rule) |
+| OTR/Cases/Chat/SystemChip | `11494:305` | 4 (tone success/warning/critical/neutral). The compact inline form of a case action; same glyph family and tone ladder as ActionEntry. |
+| OTR/Cases/Chat/PinnedBar | `11494:360` | 4 (tone success/warning/critical/neutral). The item G persistent surface: the only place in the chat where a state-changing CTA may live. Carries a DS Button (Solid-brand, extra small). |
 
 The former 53-variant CasePreviewCard set is dissolved (family split per the
 badge-rule board); variant node ids survive inside the family sets, screen

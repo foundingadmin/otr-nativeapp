@@ -65,6 +65,12 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
   their bespoke action cards. Open questions carried from the CD brief: the
   actor-label wording for automated actions (`OTR · automated`), and whether
   the offer block ever collapses to a chip.
+- **Verdict needed: which case chat approach anchors the build** (A through E,
+  board `11500:409` on ↪ Explorations). All five instance the same ActionEntry,
+  so the choice is about surface, not parts. Two sub-questions ride on it:
+  whether the pinned CTA keeps DS brand blue or takes the bar tone (the
+  standing one-blue-CTA question), and whether ActionEntry needs a compact
+  density axis, which CD approach B assumes and the set does not yet have.
 - **Explorations page furniture is missing.** The page header texts
   (`11354:169`, `11354:170`) and the TEMPLATE section (`11354:171`) were read
   back at the start of session 5 and were gone later in the same session; the

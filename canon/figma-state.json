@@ -169,6 +169,18 @@
           "Binding": "11482:117"
         },
         "status": "OPEN - awaiting verdict"
+      },
+      "case chat": {
+        "outerFrame": "11500:409",
+        "structure": "Lexicon template, widened to 2950 so five 390px screens compare in one row: outer > group > column > header + shelf Surface approaches + shelf Parts",
+        "screens": {
+          "A · unified thread": "11495:136",
+          "B · log-led, day dividers": "11498:195",
+          "C · split · pinned + log": "11498:470",
+          "D · compact system chips": "11499:320",
+          "E · compact chips + pinned toast": "11499:557"
+        },
+        "status": "OPEN - awaiting verdict on which approach anchors the build"
       }
     }
   },
