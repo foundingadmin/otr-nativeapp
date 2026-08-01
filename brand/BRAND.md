@@ -97,6 +97,11 @@ Retired session 4n to Archive as DEPRECATED/: `OTR/Mock/Device`
 | OTR/Cases/CasePreviewCard/SmartMatch | `11344:2113` | 6 (phase matching/matching-brand/rematching/quote/quote-urgent/expired, card only) |
 | OTR/Cases/CasePreviewCard/Incomplete draft | `11280:698` | 1 (meter + booking CTA, quote-CTA verdict pending) |
 | OTR/Cases/SignalBlock | `11341:26731` | 12 (tone error/warning/info/success/match/inactive × density block/line); nested OTR/Icons instance swappable, hidden amount/body override slots |
+| OTR/Cases/ActionEntry | `11477:16` | 9 (kind = accepted, declined, cancelled, counterSent, counterAccepted, counterDeclined, counterWithdrawn, resolved, paymentFailed) + 4 BOOLEAN props: show actor (default true), show offer / show note / show attachment (default false). Lives on the Explorations board pending verdict; promote to ① Components on adopt. No density axis yet: CD approach B asks for a compact entry, which would double the set to 18 variants. |
+| OTR/Cases/Chat/Message | `11493:305` | 4 (side firm/me × first true/false). Bubble fixed 250 with wrapping text; the tail corner (`radius/4xs`) points at the speaker. `first=false` hides the avatar but keeps the 28px gutter so a run stays on one axis. |
+| OTR/Cases/Chat/DayDivider | `11493:306` | 1 (rule + `Native/Text/Caption/Note` label + rule) |
+| OTR/Cases/Chat/SystemChip | `11494:305` | 4 (tone success/warning/critical/neutral). The compact inline form of a case action; same glyph family and tone ladder as ActionEntry. |
+| OTR/Cases/Chat/PinnedBar | `11494:360` | 4 (tone success/warning/critical/neutral). The item G persistent surface: the only place in the chat where a state-changing CTA may live. Carries a DS Button (Solid-brand, extra small). |
 
 The former 53-variant CasePreviewCard set is dissolved (family split per the
 badge-rule board); variant node ids survive inside the family sets, screen
@@ -176,6 +181,45 @@ Import keys for every variable bound this session (Guidelines library):
 | success/900 | `5ac865b8ba3c8e0e485c427e03bd0b5caa9bfdbb` | green block ink (ΔE 3.74 FLAG) |
 | accent2/25 | `f251b2740c6572f49a7daf07ac159e0dda7f3284` | violet block bg (ΔE 3.64 FLAG) |
 
+### Semantic tone ramps · `Color function & themes` collection
+
+The Guidelines library ships a **full semantic ramp system** in a collection
+named `Color function & themes` (modes: `customer facing`, `Free Pass`). Ramps:
+`brand` `error` `warning` `success` `neutral` `accent` `accent2` `highlight`
+`highlight2`, each at 25/50/100/200/300/500/600/700/800/900. They alias the
+fruit primitives (`error`→cherry, `warning`→honey, `success`→lime,
+`brand`→blueberry, `neutral`→ink), so they are **mode-locked**, not part of
+the light/dark semantic ramp.
+
+**Prefer these over raw primitives for any tinted product surface.** Bind a
+ramp, not a fruit name; it states the role and survives a palette change.
+
+Ratified ladder (session 5, ActionEntry). One ladder for every tone:
+
+| Role | Rung | Why |
+|---|---|---|
+| surface | `25` | lightest tint |
+| border | `100` | ≥1.15:1 against its own 25 |
+| icon | `700` | lightest rung clearing 3:1 on a white chip in **all** ramps (`warning/600` fails at 2.10:1) |
+| secondary text | `800` | lightest rung clearing 4.5:1 on its own 25 (`warning/700` fails at 3.11:1) |
+| title | `900` | 7.5:1 or better on its own 25 |
+
+Import keys:
+
+| Ramp | 25 | 100 | 700 | 800 | 900 |
+|---|---|---|---|---|---|
+| success | `06da9d074bc37f7b87bc5048d7f454ea5883abfd` | `0c297b4f8b34c53c5f089c58d534eb9d537b1b36` | `03a633c3a3dc1fd51ec0a86bbd212ddbb03e3ae3` | `db7e3ab4a25f3fec558c34c1372e630f06ef01cf` | `5ac865b8ba3c8e0e485c427e03bd0b5caa9bfdbb` |
+| warning | `d59b92f6891d0772612fe079ca68fcd1764809a9` | `1f94bbea2a842e8ea3411d0e39c6de12c19cd29c` | `65e076ca44aa0084e5dab16e0d1587027b0e1547` | `8559584d20a1a26c7d600a43f528dfa9bb25c6f4` | `f3686d9edf40246bf74e8c5e959cac46554d5267` |
+| error | `bae9985c720078feabbbbcba1cf59186bdfa3f11` | `17d5f22a1edb04b5ceb3c4709888306e69abe2f6` | `8a3cd3f48ca8e6c98c33a9cd046b718506b10c06` | `1beae9fc75b447c4e60456b2155fc8c24845c479` | `74cc12cf79427d3c2887fde53e8fbaab920d1ef5` |
+| neutral | `94d04f79a1c79ed20d82de1873f4a0b22b3d3f50` | `cc3d46419c70b344bc3abc58520967cadd10cf13` | `ef33e2bcce5f15a2347692e23f20181104c1c696` | `b0f413086e7d82bc88c874be09fe9de2456e51e8` | `c54c12328211c2396d6923fe5acafa4f76467127` |
+| brand | `f05bc44aeee9cceb08be4d37fa0dd2b95b0396fa` | `b33c32be43c4124f4915a44ba10cf7dc3e6d172f` | `0a06b36a154e95da9b9be3c6a3309524843379d5` | `c1d7bb9246d973793b5cd8cddd889f81ac10b1a1` | `0e7604e9a8254230f86bd5be2588536b3a97e9f4` |
+
+**Caveat:** the `warning` ramp does **not** resolve the open `#7a2e0e` amber-ink
+request. It aliases the same honey primitives, and `warning/900` is ΔE 15.2
+from `#7a2e0e`. ActionEntry avoids that request by adopting `warning/900` on
+its own merits rather than matching CD. The existing action-item boards that
+use `#7a2e0e` still need a verdict.
+
 Raw values in use (DS requests, see ④ Diffs): `#5b63ff` grad stop 1,
 `#f79009` alert dot + amber block accents, `#7a2e0e` amber ink, `#6a5bd0` /
 `#5b4bb8` rematch violet accent + ink (session 4), `#fbfcfd` screen bg,
@@ -230,7 +274,16 @@ star-1, image-photo-add, location-pin, triangle-arrow-synchronize-1,
 time-history-off, chart-circle-up-growth, file-edit,
 file-document-info-quick-reference, bell-notification, open-folder,
 calendar-check, building-1, tag, chat-bubble-info-help,
-magnifying-glass-square, triangle-arrow-expand-window-1. The FI set has no
+magnifying-glass-square, triangle-arrow-expand-window-1. Session 5 added seven
+case-action glyphs as `OTR/Icons/*` components (all inside the `icons` frame
+`11370:26841`): folder-check `11473:2000`, folder-remove `11473:2003`,
+check-thick `11473:2006`, delete-circle `11473:2009`, folder-star-favorite
+`11473:2012`, file-document-info-quick-reference `11473:2015`, download-tray
+`11473:2018`. These ship with `fills = []` on the component root and a
+`neutral/900`-bound fill on their vectors; consumers rebind the vector fill to
+their tone rung. `scale-balanced` is confirmed absent from the FI set;
+`briefcase-dollar` carries the counter-offer kinds, per the session-4
+CPC precedent. The FI set has no
 chevrons (boards used FontAwesome scaffold) — chevrons are drawn 2.5pt
 round-cap vectors. Best-guess slots to sanity check: bell (Action needed),
 calendar/tag/building (facts rows), magnifier (search).
