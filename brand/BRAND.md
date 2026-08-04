@@ -169,6 +169,21 @@ Import keys for every variable bound this session (Guidelines library):
 | global/foreground/dark/quaternary | `b6fb57b805b83eab3a3c5fa1e2a8d71539f7fbfc` | (mapped, unused) |
 | global/foreground/dark/quinary | `7c72ee4bdb2f67dbc25bff8a069d009e3c8033f3` | Lexicon captions/tags; index desc precedent |
 | global/foreground/light/primary | `e05d77c21b08df7ca3ce80e39baf026cf3b73840` | white labels on solid |
+| global/border/neutral/default | `bee2429384afeb37061af72682c5c8e035b54b17` | demo well strokes (D-013) |
+| brand/50 | `435c614a3c985051679454cfd7dae62d0218c7da` | plate fill (D-013) |
+
+Radius tokens (full map, session 4q): 3XS 6 `c6fd93ce`, 2XS 8 `a80bba8c`,
+XS 12 `4d768c1c`, SM 14 `f0d32d90`, MD 16 `55464a75`, LG 18 `1b148a1a`,
+XL 20 `2ed187a9`, 2XL 24 `b88dec1b`, 4XL 32 `639921c1`, 5XL 36 `6c6e4885`,
+FULL `a95f4856` (short prefixes; full keys resolve via team library).
+Spacing tokens: none 0, 5xs 2, 4xs 4, 3xs 6 `6459000b`, 2xs 8 `43df441b`,
+xs 12 `d1c9c214`, sm 14, md 16 `be36ab2a`, lg 18, xl 20 `27c15b5f`,
+2xl 24 `67cca52a`, sxl 28, 4xl 32, 5xl 36, 6xl 40 `1b1c1447`, 7xl 44,
+8xl 48 `82a97643`, 9xl 52, 10xl 56, 11xl 64 `b988fbbe`, 12xl 80,
+13xl 96 `93026106`, 14xl 128, 15xl 140. D-013 amendment: demonstrated
+values are ideas, not directives; the plate radius binds radius/5XL (36)
+and the plate stroke binds global/border/neutral/default. No raw
+numerics anywhere on the Lexicon v3 build (147 fields token-bound).
 | radius/FULL | `a95f485680b5d91600397f3608161b1f6e64ee47` | every pill radius |
 | error/25 | `bae9985c720078feabbbbcba1cf59186bdfa3f11` | red block bg (ΔE 0.54) |
 | error/600 | `279bb8c2905a03fe2cb0a332d5ae722253307a0b` | red dot, icon, chevron (ΔE 0) |
