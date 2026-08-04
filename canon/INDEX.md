@@ -57,6 +57,17 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
   800, title 900. Uniform across tones, chosen so every rung clears its
   contrast bar in every ramp. Full keys in `brand/BRAND.md`.
 
+## Standing policy added session 6
+
+- **Shelves run on two fixed rails.** Index rail 400, stage rail fixed to
+  the widest content on that surface (① Components: 2396), pad 40, gap 48,
+  shelf hugs both axes — so every shelf on a surface lands on one width
+  (① Components: 2924). Narrower shelves keep the whitespace. Component
+  sets inside are a matrix, not a flow: rows one axis, columns the cross
+  product of the rest, uniform column pitch, deprecated variants parked in
+  the last rows. Full template in `figma-state.json` → `canvasSystem`,
+  traps in `lessons.md` 6e/6f/8b/8c.
+
 ## Open items (next session picks these up)
 
 - **Verdict needed: `OTR/Cases/ActionEntry`** (`11477:16`, board `11480:117`
@@ -83,6 +94,11 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
   product text to the semantic foreground ramp for free dark mode; needs
   a verdict plus a background-variable audit.
 
+- **① Components is still storage-as-display.** Session 6 tidied the shelves
+  and the variant grids, but the shelves still present the component SETS
+  themselves. Lesson 4 calls for frames of instances with the masters parked
+  in a compact strip (Buttons specimen `11355:19505`). Decide before the next
+  components print whether to convert.
 - **Feed/detail screen migration to CPC v2.** ② Screens still instance the
   pre-v2 card anatomy (buttons, court lines). Swap to the new form=card
   variants and relayout.

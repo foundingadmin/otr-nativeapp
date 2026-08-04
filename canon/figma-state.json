@@ -6,7 +6,8 @@
     "components": "11262:1588",
     "screens": "11285:396",
     "diffs": "11287:1672",
-    "note": "Proposed moved to its own sub-page 11368:3 (Jul 29); sections carry a group-wrapped auto-layout column: header + shelves"
+    "note": "Proposed moved to its own sub-page 11368:3 (Jul 29); sections carry a group-wrapped auto-layout column: header + shelves",
+    "componentsGeometry": "session 6: section 11262:1588 = 3124x6146 at 450/19200; group 'components' 11370:26862 at section-relative 100/100; column 11370:26861 = 2924x5946, VERTICAL gap 64. Section children use SECTION-RELATIVE coordinates - do not add the section origin when re-seating them."
   },
   "components": {
     "OTR/Cases/StatusBadge": {
@@ -224,12 +225,13 @@
   },
   "proposedPage": "11368:3",
   "canvasSystem": {
-    "standard": "Shelves (proposal 2) is the default presentation. Shelf = white rounded auto-layout row: fixed 280px index card (Canvas/Subtitle name + Canvas/Note description) + the family content, wide as needed. Columns group-wrapped so no Figma name labels render. All seven proposal wireframes remain on the Proposed page as the system toolbox.",
-    "componentsShelves": "Incomplete(+draft), Active, Resolved, Dismissed, Cancelled, SmartMatch, Signal system(+icon grid), Status badge, Atoms, Identity & ticket, Detail kit",
+    "standard": "Shelves (proposal 2) is the default presentation. RATIFIED SHELF TEMPLATE (session 6, ported from the Lexicon page): shelf = HORIZONTAL auto layout, pad 40, gap 48, hug both axes, radius 32; left rail = 'index' at FIXED 400 (name + description, both FILL); right rail = 'right' frame at FIXED width, HORIZONTAL + WRAP, hug height, itemSpacing 40, counterAxisSpacing 40, counterAxisAlignItems MIN. Two fixed rails means hug width resolves to one number for every shelf on a surface. Rail width is set per surface by its widest content: ① Components uses 2396, so every shelf there is 2924. Narrower shelves keep the whitespace; they never shrink. Columns group-wrapped so no Figma name labels render. All seven proposal wireframes remain on the Proposed page as the system toolbox.",
+    "componentsShelves": "Incomplete(+draft), Active, Resolved, Dismissed, Cancelled, SmartMatch, Signal system, Status badge, Atoms, Identity & ticket, Detail kit. All 2924 wide since session 6.",
     "screensShelves": "Feed (4), Case detail (8)",
     "diffsShelves": "one per date group, cards in a wrapped grid",
     "typeRamp": "Canvas/Page 96+28, Section 64+22, Collection 36+17, Item 22+14, Caption 12 (migrated from Title/Subtitle/Note/Label by rename)",
-    "protoWorkflow": "Native-first, flexible rigs (session 4n): duplicate a rig, resize to ANY device size, swap the screen instance; chrome and screen stretch with the frame (never pick a matching mock). Presentation settings supply the bezel. OTR/Mock/Device + Slot + bench retired to Archive."
+    "protoWorkflow": "Native-first, flexible rigs (session 4n): duplicate a rig, resize to ANY device size, swap the screen instance; chrome and screen stretch with the frame (never pick a matching mock). Presentation settings supply the bezel. OTR/Mock/Device + Slot + bench retired to Archive.",
+    "variantGrid": "Component sets are storage, laid out as a strict matrix (session 6): rows = one axis, columns = the cross product of the rest, uniform column pitch = set max width + 40, row pitch = tallest variant in the row + 40 (16 when the set's tallest variant is <= 30px), padding 24, layers panel in reading order. Deprecated/hidden variants park in the last rows, never underneath live ones. Set layoutMode must be forced to NONE first - some sets ship with auto layout on and it silently overrides written coordinates."
   },
   "lexiconPage": {
     "id": "11415:3",

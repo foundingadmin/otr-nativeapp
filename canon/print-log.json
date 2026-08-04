@@ -430,5 +430,26 @@
       "knownGap": "CD approach B specifies a compact density for the entries (padding 9/11, radius 13). ActionEntry has no density axis, so B prints at standard density. Adding a density axis would double the set to 18 variants; flagged for the verdict rather than assumed.",
       "openQuestions": "Which approach anchors the build (A-E). Whether the pinned CTA keeps DS brand blue or takes the bar tone (the standing one-blue-CTA question). Actor wording for automated actions."
     }
+  },
+  "session6": {
+    "date": "2026-08-04",
+    "brief": "User: organise the ① Components collections using the lexicon layout best practices. Two named faults: variants inside the multi-variant sets are messy, and every shelf container is a different width.",
+    "scope": "Presentation only. No component was added, removed, renamed, rebound or revariant'd; nothing outside section 11262:1588 was touched.",
+    "shelfTemplate": "Lexicon template ported from the Lexicon page (11444:177) onto ① Components: shelf = HORIZONTAL auto layout, pad 40, gap 48, hug both axes; left rail = index at fixed 400 (was a ragged 280 with 260-wide description text); right rail = new 'right' frame, HORIZONTAL + WRAP, FIXED 2396, hug height, itemSpacing 40, counterAxisSpacing 40, counterAxisAlignItems MIN. Because both rails are fixed, hug width resolves to one number for every shelf: 2924. Shelf widths before: 1219, 1610, 2008 x5, 2016, 2252, 2254, 3708.",
+    "railWidth": "2396 = the widest set on the page (Active and SmartMatch at 6 columns of 358 cards + 5 gaps of 40 + 24 padding each side). Chosen so no set has to wrap mid-axis; narrower shelves keep the whitespace rather than shrinking, which is what makes the left edge read as one column.",
+    "variantGrid": "Every component set relaid out as a strict matrix: rows = one axis, columns = the cross product of the rest, uniform column pitch = set max width + 40, row pitch = tallest variant in that row + 40 (+16 when the set's tallest variant is <= 30, so badge ladders stay tight). Padding 24. Layers panel reordered to reading order. Grids: Incomplete 2x3, Active 2x6, Resolved 2x3, Dismissed 2x4, Cancelled 2x4, SmartMatch 1x6, SignalBlock 2x6, StatusBadge 15x4, Chip 2x4, ClassifTag 1x2, Meter 5x1, AttorneyLockup 2x4, Ticket 1x6. 13 sets, 96 variants placed, 0 orphans, every set fitting its content to exactly 24px on both trailing edges.",
+    "axisOrder": "Column order normalised so a column index means the same thing across the five CasePreviewCard shelves: signal = none, unread, then family-specific, overdue last. Dismissed (was none/review/unread/overdue) and Cancelled (was none/warrant/moneyback/unread) moved to match. SmartMatch phase reordered to lifecycle: matching, matching-brand, rematching, quote, quote-urgent, expired. StatusBadge rows keep the declared status order but the two deprecated statuses (active-action, reassigned) are parked in the last two rows instead of sitting mid-ladder underneath live ones.",
+    "statusBadgeFix": "The 60-variant set was the worst of it: hidden solid variants were parked at x 459/669 with y running to 650, well outside the set's stated 309 height, and the hidden deprecated variants sat exactly on top of live ones (reassigned/md at x137 under expired/md, active-action/md at x242 under deadline/md). Now a 15 x 4 matrix, status down the side, form x size across, nothing overlapping.",
+    "autoLayoutDiscovery": "THREE component sets had auto layout switched on (SignalBlock, StatusBadge, AttorneyLockup, all HORIZONTAL). That silently overrode the first grid pass: coordinates were written, the set's own flow reflowed them, and the read-back showed StatusBadge at h=317 against a computed 647. Lesson 4's 'component sets cannot use auto layout' is out of date. Sets are now explicitly layoutMode NONE before positioning.",
+    "sectionReflow": "Section 11262:1588 resized 3910x7595 -> 3124x6146; column 3708 -> 2924 wide, 6613 -> 5946 tall. Group 'components' re-seated at 100/100.",
+    "buildCheck": {
+      "shelfWidths": "all 11 shelves = 2924, single distinct value",
+      "setFit": "13/13 sets fit content with 24px trailing pad on both axes",
+      "orphanVariants": 0,
+      "containment": "0 escapees: every section child inside section bounds",
+      "pairwiseOverlap": "0 hits across page-level siblings (① Components 450..3574, ② Screens 4660..8724)",
+      "screenshot": "re-read at 3124x6146 after the fix; grid confirmed visually"
+    },
+    "notDone": "The deeper fix is untouched and still open: these shelves display the component SETS themselves (storage as display), which lesson 4 says should be frames of instances with the masters parked in a compact strip. Tidying the set grids makes storage presentable; it does not convert it to a presentation sheet. Raise before the next components print."
   }
 }
