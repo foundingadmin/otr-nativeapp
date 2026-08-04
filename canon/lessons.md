@@ -32,8 +32,11 @@ one again costs more.
    numeric to a DS token (radius + spacing maps in BRAND.md). Nested
    radius formula: inner = outer minus padding, snapped to the nearest
    smaller token; eyeball-check that nested corners never pinch.
-4. **Display and storage are different layers.** Component sets cannot use
-   auto layout, so never hand-grid variants as the presentation. The client
+4. **Display and storage are different layers.** Never hand-grid
+   variants as the presentation. (Correction, session 6: component sets
+   CAN carry auto layout — three on ① Components did. But a flow cannot
+   express a variant matrix, so sets stay layoutMode NONE and get
+   hand-gridded per 6f. See trap 8b.) The client
    pattern (see the Buttons specimen, node 11355:19505): presentation
    sheets are frames of INSTANCES with auto layout; variant masters park in
    a compact strip. Wrap counts chosen by hand ("4 per row") are always
@@ -76,6 +79,19 @@ one again costs more.
    groups mid-session; never assume the tree matches your last write.
    Confirm critical nodes survived any bulk removal BEFORE building on
    top (the family sets nearly shipped inside a deleted sheet).
+6e. **Two fixed rails, not hug (session 6).** A shelf hugging its
+   content gives every shelf a different width; the section reads as
+   noise. The Lexicon template is the fix: index rail FIXED 400, stage
+   rail FIXED (widest content on the surface), pad 40, gap 48, hug
+   both axes. Hug then resolves to ONE width for the whole surface.
+   Narrower shelves keep the whitespace; shrinking them is the bug.
+6f. **Component sets are a matrix, not a flow.** Rows = one axis,
+   columns = the cross product of the rest, uniform column pitch =
+   set max width + gap. A column index must mean the same thing on
+   every shelf of a family, so normalise axis order across sets
+   (signal: none, unread, family-specific, overdue last). Hidden and
+   deprecated variants park in the LAST rows; the StatusBadge set had
+   them sitting exactly on top of live variants for five sessions.
 
 ## Figma plugin API traps (use_figma)
 
@@ -86,6 +102,21 @@ one again costs more.
    (renders black or stale). Always build bound paints from the honest hex:
    `solidPaint(realHex)` then bind. Sweep for bound-black paints after
    bulk binding.
+8b. **A set's own auto layout beats your coordinates (session 6).**
+   Writing x/y into a component set that has layoutMode HORIZONTAL
+   does nothing — the set reflows on the next tick and the read-back
+   lies about why (StatusBadge came back 317 tall against a computed
+   647). Force `set.layoutMode = "NONE"` before positioning, then
+   `resizeWithoutConstraints`, after pinning every variant to
+   MIN/MIN constraints so the resize cannot drag them.
+8c. **Section children are SECTION-RELATIVE.** `child.x` on a
+   SectionNode child is an offset inside the section, not a page
+   coordinate. `group.x = section.x + pad` double-adds the origin and
+   throws the child thousands of px down-page while every width check
+   still passes. Set `group.x = pad`. Catch it by comparing
+   `absoluteBoundingBox` against the section box, not by eye — the
+   screenshot endpoint renders the escapee and the size looks absurd
+   (25246px tall) long before anything else complains.
 9. **Semantic foreground/background variables are MODE-AWARE (reframed
    Jul 29).** The DS team ships light/dark modes; `global/foreground/*`
    flipping is the feature, not a bug (session 1 misdiagnosed it).

@@ -47,7 +47,46 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
   recency against explorations and confirm with the user. Proposal for a
   restructured CD project: `docs/prds/prd-cd-workflow-v2.md`.
 
+## Standing policy added session 5
+
+- **Bind semantic ramps, not fruit primitives.** The Guidelines library ships
+  `Color function & themes` with full `brand/error/warning/success/neutral/
+  accent/accent2/highlight/highlight2` ramps at 25→950. Any tinted product
+  surface binds a ramp rung, which states the role and survives a palette
+  change. Ratified ladder: surface 25, border 100, icon 700, secondary text
+  800, title 900. Uniform across tones, chosen so every rung clears its
+  contrast bar in every ramp. Full keys in `brand/BRAND.md`.
+
+## Standing policy added session 6
+
+- **Shelves run on two fixed rails.** Index rail 400, stage rail fixed to
+  the widest content on that surface (① Components: 2396), pad 40, gap 48,
+  shelf hugs both axes — so every shelf on a surface lands on one width
+  (① Components: 2924). Narrower shelves keep the whitespace. Component
+  sets inside are a matrix, not a flow: rows one axis, columns the cross
+  product of the rest, uniform column pitch, deprecated variants parked in
+  the last rows. Full template in `figma-state.json` → `canvasSystem`,
+  traps in `lessons.md` 6e/6f/8b/8c.
+
 ## Open items (next session picks these up)
+
+- **Verdict needed: `OTR/Cases/ActionEntry`** (`11477:16`, board `11480:117`
+  on ↪ Explorations). Nine kinds, four optionality switches, zero raw values.
+  On adopt it promotes to ① Components and the feed/detail screens can drop
+  their bespoke action cards. Open questions carried from the CD brief: the
+  actor-label wording for automated actions (`OTR · automated`), and whether
+  the offer block ever collapses to a chip.
+- **Verdict needed: which case chat approach anchors the build** (A through E,
+  board `11500:409` on ↪ Explorations). All five instance the same ActionEntry,
+  so the choice is about surface, not parts. Two sub-questions ride on it:
+  whether the pinned CTA keeps DS brand blue or takes the bar tone (the
+  standing one-blue-CTA question), and whether ActionEntry needs a compact
+  density axis, which CD approach B assumes and the set does not yet have.
+- **Explorations page furniture is missing.** The page header texts
+  (`11354:169`, `11354:170`) and the TEMPLATE section (`11354:171`) were read
+  back at the start of session 5 and were gone later in the same session; the
+  agent ran no delete against them. Confirm with the user whether they were
+  removed deliberately before rebuilding the scaffold.
 
 - **Dark-mode migration candidate.** DS modes are live (user-confirmed
   Jul 29): `global/foreground|background/*` flip on mode switch. Product
@@ -55,6 +94,11 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
   product text to the semantic foreground ramp for free dark mode; needs
   a verdict plus a background-variable audit.
 
+- **① Components is still storage-as-display.** Session 6 tidied the shelves
+  and the variant grids, but the shelves still present the component SETS
+  themselves. Lesson 4 calls for frames of instances with the masters parked
+  in a compact strip (Buttons specimen `11355:19505`). Decide before the next
+  components print whether to convert.
 - **Feed/detail screen migration to CPC v2.** ② Screens still instance the
   pre-v2 card anatomy (buttons, court lines). Swap to the new form=card
   variants and relayout.
