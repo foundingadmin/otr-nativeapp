@@ -25,6 +25,7 @@ Read `PROTOCOL.md` before doing anything. It is the operating contract.
 5. `PORT-MAP.md` • which file is canon, what each kit becomes in Figma, the known conflicts.
 6. `VARIABLE-GAPS.md` • the values that have no honest Figma variable. Print these as diffs, do not invent bindings.
 7. `Workflow.html` • the one-page picture of the whole loop. Built for the CEO. Open it in a browser.
+8. `PRINT-BRIEF-record-content.md` • current print queue: the record content board, promoted to print Aug 11, 2026. Prints to Proposed with OPEN markers.
 
 ## What is in here
 
