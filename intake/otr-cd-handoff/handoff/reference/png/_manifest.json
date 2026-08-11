@@ -217,6 +217,67 @@
      "designSize": "518x1148"
     }
    ]
+  },
+  {
+   "id": "exp-03-record-content",
+   "dir": "reference/png/exp-03-record-content/",
+   "note": "Added Aug 11, 2026 with PRINT-BRIEF-record-content.md. Captured letterboxed on the canvas cream #f0eee9; the artboard is the white card only.",
+   "files": [
+    {
+     "file": "01-artboard.png",
+     "artboardId": "rc-collapsed",
+     "label": "Record · collapsed",
+     "designSize": "390x664"
+    },
+    {
+     "file": "02-artboard.png",
+     "artboardId": "rc-expanded",
+     "label": "Record · Show more expanded",
+     "designSize": "390x980"
+    },
+    {
+     "file": "03-artboard.png",
+     "artboardId": "rc-firm-block",
+     "label": "Firm profile · tapped from Law firm",
+     "designSize": "356x430"
+    },
+    {
+     "file": "04-artboard.png",
+     "artboardId": "rc-receipt-paid",
+     "label": "Receipt · paid in full",
+     "designSize": "356x264"
+    },
+    {
+     "file": "05-artboard.png",
+     "artboardId": "rc-receipt-plan",
+     "label": "Receipt · payment plan + overdue",
+     "designSize": "356x400"
+    },
+    {
+     "file": "06-artboard.png",
+     "artboardId": "rc-txns",
+     "label": "Transactions · statement charges",
+     "designSize": "356x330"
+    },
+    {
+     "file": "07-artboard.png",
+     "artboardId": "rc-txn-detail",
+     "label": "Transaction · invoice detail",
+     "designSize": "356x344"
+    },
+    {
+     "file": "08-artboard.png",
+     "artboardId": "rc-participants-card",
+     "label": "Participants · view",
+     "designSize": "356x300"
+    },
+    {
+     "file": "09-artboard.png",
+     "artboardId": "rc-participants-manage",
+     "label": "Participants · manage & remove",
+     "designSize": "356x404"
+    }
+   ]
   }
  ]
 }
