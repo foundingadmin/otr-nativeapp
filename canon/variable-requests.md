@@ -61,10 +61,12 @@ ticket paper palette • #6b4f1d cream + blue/green/pink/slate tints
 
 radius 16 • card corner radius
   used        CPC, Identity, ActionHub, CaseFacts cards
-  nearest     no radius token resolves to 16
+  nearest     no radius token resolved to 16 at request time
   ask         add a radius/16 (or LG=16) token, or move cards to an existing
               step
-  decided     open
+  decided     RESOLVED (session 7): the live radius collection now carries
+              MD = 16; the record content print binds it and future prints
+              should too. Earlier raw-16 cards can be rebound opportunistically.
 
 Courier New • ticket typeface
   used        OTR/Cases/Ticket (printed in Roboto Mono as fallback)
@@ -85,6 +87,27 @@ cherry/100 dE 2.36 (money-line), ink/50+ink/100 (portrait gradient).
               values for this state
   decided     open
   frame       DIFF · CPC v2 (11338:1922)
+
+#127a43 on #e4f7ec • paid tag emerald pair (session 7)
+  used        Receipt "Paid in full" tag on the record content board
+  nearest     lime success ramp: success/800 dE 10.2, success/25 dE 5.4
+  bound       success/800 + success/25 by ladder role (session 5 precedent),
+              flagged on the board's FLAG card
+  ask         ratify lime for paid money surfaces, or mint an emerald
+              positive-money pair
+  decided     open
+  frame       FLAG card 11573:1457 on the record content board
+
+five Streamline Flex glyphs • icon gaps (session 7)
+  used        hashtag (Case ID, Reference number), car (Accidents),
+              receipt (Receipt header), credit-card (Transactions header),
+              bolt/flash (Pay ahead)
+  printed     dashed placeholder frames named PLACEHOLDER icon/<name>
+  substituted User-Friendship-Group for multiple-users-1;
+              Folder-Document-Copy-Duplicate for copy-paste (bless or swap)
+  ask         add the five glyphs to Icon / Streamline Flex on the Icons page
+  decided     open
+  frame       GAP card 11573:1468 on the record content board
 
 #ecfdd9 • celebration green tint (session 4)
   used        dismissed review block bg, money-back block bg

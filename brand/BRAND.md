@@ -63,6 +63,16 @@ the client's existing file structure:
 | ④ Diffs (agent) | `11287:1672` |
 | ⑤ Ready for dev | human-owned, not created by agents |
 
+**RESTRUCTURE (Aug 11, session 7):** the design team reorganized the file.
+`↪ Explorations` is now `↪ Explore` (same id); the ① Components section is
+dissolved (its shelves sit on ↪ Explore as bare frames); ④ Diffs, Proposed,
+Lexicon and Tools content moved to the Cases `↪ Archive` page; the Case Chat
+board moved onto `↪ Cases`; Proto and Proposed pages are gone; new pages
+`↪ Icons` `11530:6367`, `↪ Flows`, `↪ Home`, `↪ Onboard`, PARKED group.
+Diff swatches and OPEN markers now print on the exploration board itself.
+Full map in `canon/figma-state.json` → `restructureAug11`. The section IDs
+below are historical.
+
 Sub-pages of `↪ Cases` (session 4): `↪ Explorations` page `11337:2087`
 (agent, exploration prints land here); `↪ Archive` page `11158:8460`
 (retired frames; first-run Test debris moved here); `↪ Proposed` page
@@ -102,6 +112,18 @@ Retired session 4n to Archive as DEPRECATED/: `OTR/Mock/Device`
 | OTR/Cases/Chat/DayDivider | `11493:306` | 1 (rule + `Native/Text/Caption/Note` label + rule) |
 | OTR/Cases/Chat/SystemChip | `11494:305` | 4 (tone success/warning/critical/neutral). The compact inline form of a case action; same glyph family and tone ladder as ActionEntry. |
 | OTR/Cases/Chat/PinnedBar | `11494:360` | 4 (tone success/warning/critical/neutral). The item G persistent surface: the only place in the chat where a state-changing CTA may live. Carries a DS Button (Solid-brand, extra small). |
+| OTR/Cases/CaseFacts | `11569:2111` | 2 (expanded=false/true). Record content board (session 7, OPEN with DR-CD-002). Extends the Detail/CaseFacts anatomy with the confirmed field set; does NOT replace the Detail organism until adopt. |
+| OTR/Cases/FirmProfile | `11567:1973` | 1. Firm identity head (gradient image placeholder avatar; firm photo is an asset request) + ink Star-1 rating + stat triptych (placeholder values, F-2). |
+| OTR/Cases/Receipt | `11567:1907` | 2 (state=paid/plan-overdue). Paid tag binds success/25 + success/800 by ladder role, flagged. |
+| OTR/Cases/InstallmentRow | `11566:1870` | 3 (state=overdue/done/upcoming; upcoming carries the dashed border, done rides at 72% opacity). |
+| OTR/Cases/Transactions | `11567:1908` | 1. Three TransactionRow instances with hairline dividers. |
+| OTR/Cases/TransactionRow | `11566:1893` | 2 (state=settled/upcoming). |
+| OTR/Cases/TransactionDetail | `11567:1949` | 1. Download invoice is a hand-built outline pill: the DS Button set carries no Outline-neutral + small + Text variant. |
+| OTR/Cases/Participants | `11569:2199` | 2 (mode=view/manage). |
+| OTR/Cases/ParticipantRow | `11566:1917` | 2 (removable=false/true) + BOOLEAN `show self tag`. Remove is a cherry outline pill; This is you is a neutral pill. |
+
+Session-7 masters live on the record content board's `The set` shelf
+(`11570:804` on ↪ Explore) pending the DR-CD-002 verdict; promote on adopt.
 
 The former 53-variant CasePreviewCard set is dissolved (family split per the
 badge-rule board); variant node ids survive inside the family sets, screen
@@ -224,6 +246,7 @@ Import keys:
 | Ramp | 25 | 100 | 700 | 800 | 900 |
 |---|---|---|---|---|---|
 | success | `06da9d074bc37f7b87bc5048d7f454ea5883abfd` | `0c297b4f8b34c53c5f089c58d534eb9d537b1b36` | `03a633c3a3dc1fd51ec0a86bbd212ddbb03e3ae3` | `db7e3ab4a25f3fec558c34c1372e630f06ef01cf` | `5ac865b8ba3c8e0e485c427e03bd0b5caa9bfdbb` |
+| accent | `a5549f89aa008939351fae359f8e184813785d7c` (25) | `8b08ca46cfa4fb55e1c04564331e9d510c5e3141` (50) | | | (session 7: accent/25 carries the wf-line2 hairline dE 2.1 FLAG; accent/50 carries the screen frame border, silent) |
 | warning | `d59b92f6891d0772612fe079ca68fcd1764809a9` | `1f94bbea2a842e8ea3411d0e39c6de12c19cd29c` | `65e076ca44aa0084e5dab16e0d1587027b0e1547` | `8559584d20a1a26c7d600a43f528dfa9bb25c6f4` | `f3686d9edf40246bf74e8c5e959cac46554d5267` |
 | error | `bae9985c720078feabbbbcba1cf59186bdfa3f11` | `17d5f22a1edb04b5ceb3c4709888306e69abe2f6` | `8a3cd3f48ca8e6c98c33a9cd046b718506b10c06` | `1beae9fc75b447c4e60456b2155fc8c24845c479` | `74cc12cf79427d3c2887fde53e8fbaab920d1ef5` |
 | neutral | `94d04f79a1c79ed20d82de1873f4a0b22b3d3f50` | `cc3d46419c70b344bc3abc58520967cadd10cf13` | `ef33e2bcce5f15a2347692e23f20181104c1c696` | `b0f413086e7d82bc88c874be09fe9de2456e51e8` | `c54c12328211c2396d6923fe5acafa4f76467127` |
@@ -281,7 +304,19 @@ a Native, Ticket, Product, or DS-component style.
 
 ## Icons
 
-Product icons come from the CD bundle's FeatureIcon set (157 icons,
+**Session 7 forward: instance the team's `Icon / Streamline Flex` library**
+(frame `11530:6368` on the `↪ Icons` page): 180 fill-based 24×24 components
+named `<Name> Streamline Flex`. Recipe: `createInstance()`, resize to the
+slot, rebind every vector fill to the tone variable (set
+`figma.skipInvisibleInstanceChildren = false` first). The old `OTR/Icons/*`
+frame is archived (`11511:11179` on the Cases Archive page). Missing from the
+library: hashtag, car, receipt, credit-card, bolt/flash (GAP card on the
+record content board; dashed `PLACEHOLDER icon/<name>` frames printed).
+Substitutions in use: `User-Friendship-Group` for multiple-users-1,
+`Folder-Document-Copy-Duplicate` for copy-paste. Chevrons remain drawn
+round-cap vectors (no chevron glyph in the library).
+
+Historical: product icons formerly came from the CD bundle's FeatureIcon set (157 icons,
 `intake/.../design/_ds/.../_ds_bundle.js`, name → viewBox + SVG body).
 Printed icons inherit their slot's variable-bound color (paint reuse from
 the placeholder they replaced). In use: bill-dollar-2, countdown-timer,
@@ -315,8 +350,12 @@ present: `primitives`, `semantic variables`, `radius`, `spacing`,
 ## Design Rules
 
 - Pill radius binds `radius/FULL`, never a literal 999.
-- Radius 16 (cards) has **no matching radius token** — printed raw; candidate
-  for a DS request.
+- Radius 16 (cards): **resolved session 7** — the live radius collection now
+  carries `MD = 16`; bind it. (Earlier prints carry raw 16; rebind
+  opportunistically.) Caveat: spacing/radius library keys drifted between
+  sessions (`93026106` was 13xl, is now 15xl) — never hardcode numeric token
+  keys; enumerate the collections at runtime and resolve alias chains to
+  values (lesson 12f).
 - Product type is Figtree even where boards render the system UI stack.
 - DR-CPC-001: CPC header = uppercase eyebrow `ISSUED · MON YYYY` over
   location headline; one hollow violation pill (charge + overflow count);

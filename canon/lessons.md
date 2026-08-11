@@ -170,6 +170,27 @@ one again costs more.
     Detail/StatusZone instances; name searches miss it. Find chrome by
     what it renders (9:41, 12:30) and walk up to the holder.
 
+12d. **Plugin scripts roll back atomically on throw.** A use_figma script
+    that errors leaves NOTHING behind, including work from earlier lines
+    that appeared to succeed. Never hand-clean after a crash before
+    verifying what actually persisted; usually the answer is nothing.
+12e. **Boolean component property names carry an id suffix.**
+    `addComponentProperty('show self tag', ...)` stores the property as
+    `show self tag#123:0`; `setProperties({'show self tag': true})`
+    throws. Always resolve via `Object.keys(instance.componentProperties)
+    .find(k => k.startsWith(name))`.
+12f. **Library spacing/radius tokens are alias chains.** Their
+    `valuesByMode` holds VARIABLE_ALIAS entries into a primitives
+    collection; resolve the chain (getVariableByIdAsync, up to a few hops)
+    before building a value→token map, or every numeric bind fails.
+12g. **Re-resolve the file structure every session; never trust cached
+    page ids or section homes.** The Aug 11 read-back found the whole file
+    reorganized: pages renamed and added, ① Components dissolved onto the
+    Explore page, ④ Diffs archived, boards moved. figma-state.json is a
+    snapshot, not a contract; list `figma.root.children` first and route
+    prints to where things live NOW (diffs and OPEN markers now ride on
+    the exploration board itself).
+
 ## Process
 
 13. **Recency before printing (D-009).** CD root HTMLs can trail ratified

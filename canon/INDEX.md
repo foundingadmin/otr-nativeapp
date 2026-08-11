@@ -12,10 +12,10 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
 | Surface | Location |
 |---|---|
 | Figma file | `Native App / Design`, key `JcqKNz1pMrEvxwExhb296r` |
-| Agent sections | ① Components ② Screens ③ Proposed ④ Diffs on the `↪ Cases` page (IDs in `figma-state.json`) |
-| Exploration prints | `↪ Explorations` page `11337:2087` (sub-page of Cases, created session 4, empty scaffold) |
-| Proto tools | `↪ Proto` page `11382:38949`, section ① Tools `11414:1529`: stretchy OTR/Mock/Chrome + two resize-anywhere Rigs (`11410:4926` apple, `11410:5405` android) |
-| Lexicon (PROPOSAL) | `Lexicon` page `11415:3`, section ① Lexicon `11415:169`: visual of the naming grammar awaiting verdict; vocabulary.md + style renames + name sweeps blocked on it |
+| Exploration prints | `↪ Explore` page `11337:2087` (renamed from `↪ Explorations` by the team, Aug 11) |
+| Record content board (OPEN) | plate `11570:797` on ↪ Explore; 9 masters + 9 artboards + OPEN/diff shelves, session 7 |
+| Icon library | `Icon / Streamline Flex` frame `11530:6368` on the new `↪ Icons` page `11530:6367`; 180 fill-based 24px components. OTR/Icons frame archived. Instance these, never draw. |
+| RESTRUCTURE (Aug 11) | The team reorganized the file between sessions: ① Components section dissolved (shelves moved to ↪ Explore as bare frames), ④ Diffs + Proposed + Lexicon + Tools content moved to the Cases `↪ Archive` page, Case Chat board moved to the `↪ Cases` page (actively worked), Proto/Proposed pages gone, new Home/Onboard/Flows/PARKED pages. Full map: `figma-state.json` → `restructureAug11`. Diff swatches and OPEN markers now print on the exploration board itself. |
 | Node/style/variable registries | `brand/BRAND.md` |
 | Print history + policies | `print-log.json` (sessions 1–3, `buildChecks`) |
 | Open DS asks | `variable-requests.md` + the cards on ④ Diffs |
@@ -70,6 +70,18 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
 
 ## Open items (next session picks these up)
 
+- **Verdict needed: 03 Record content board** (plate `11570:797` on ↪ Explore,
+  printed session 7 from the Aug 11 CD package). Closes with DR-CD-002. Four
+  OPEN cards ride on the board: field order, F-2 firm stats, F-3 participant
+  permissions, the decision record itself. The `OTR/Cases/CaseFacts` set on the
+  board deliberately does NOT replace `OTR/Cases/Detail/CaseFacts`; on adopt it
+  folds in and the detail screens migrate. Two DS asks on the board: the
+  paid-tag emerald pair vs the lime success ramp, and five missing Streamline
+  Flex glyphs (hashtag, car, receipt, credit-card, bolt).
+- **Ask the user about the `Add participant` section** (`11555:9503` on
+  ↪ Explore): a large human-pasted screenshot set (Mobile + Desktop) that looks
+  like Alex's screenshots. If so it unblocks F-2/F-3 and the firm-stat set and
+  participant permissions can be ratified next session.
 - **Verdict needed: `OTR/Cases/ActionEntry`** (`11477:16`, board `11480:117`
   on ↪ Explorations). Nine kinds, four optionality switches, zero raw values.
   On adopt it promotes to ① Components and the feed/detail screens can drop
