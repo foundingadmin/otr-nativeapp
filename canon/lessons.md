@@ -191,6 +191,29 @@ one again costs more.
     prints to where things live NOW (diffs and OPEN markers now ride on
     the exploration board itself).
 
+12h. **`resize()` after a sizing mode is set PINS that axis; hug last, always
+    (session 8).** `primaryAxisSizingMode = 'AUTO'` then `resize(w, 10)` locks
+    the height at 10, silently, and every child renders into a 10px box that
+    the read-back reports as real. The fix that scales: build with explicit
+    sizes, then run ONE recursive post-order pass that sets
+    `layoutSizingVertical = 'HUG'` on every auto-layout frame except an
+    explicit fixed-height name set (nav circles, icon chips, count pills,
+    progress bars, avatars, the artboards themselves). Do it at the end of
+    every build script, not per frame. Watch the name set: naming the
+    LegalTeamCard message strip `unread` and the app bar badge `unread` too
+    meant the exclusion list silently collapsed the strip.
+12i. **FRAME nodes have no `description` property.** Only COMPONENT does.
+    Print briefs that ask for the IR join key "in the frame description" get
+    it in the museum caption instead (session 7 precedent, session 8 confirmed
+    it is the only option).
+12j. **A sealed master with fixed slots cannot carry richer content
+    (session 8).** `OTR/Cases/Ticket` carries three field rows, one violation
+    and one stamp; the full case details citation has two violations and four
+    flags. Instances cannot be appended to (12b), so the honest move is to
+    instance anyway, override what fits, and print the slot gap as a NOTE. Do
+    not fork the master to win a screenshot; the under-populated artifact is
+    itself evidence for the open decision.
+
 ## Process
 
 13. **Recency before printing (D-009).** CD root HTMLs can trail ratified

@@ -1,0 +1,412 @@
+{
+ "core-kit.jsx": [
+  {
+   "path": "cases/_ds-cases/kits/core-kit.jsx",
+   "lines": 461,
+   "bytes": 72830,
+   "canon": true
+  },
+  {
+   "path": "cases/component-case_preview_cards/archive/02-alert-cta-sizing/core-kit.jsx",
+   "lines": 461,
+   "bytes": 72866,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/explorations/03-record-content/core-kit.jsx",
+   "lines": 461,
+   "bytes": 72830,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/explorations/04-case-chat/core-kit.jsx",
+   "lines": 461,
+   "bytes": 72830,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/explorations/05-status-coverage/core-kit.jsx",
+   "lines": 461,
+   "bytes": 72830,
+   "canon": false
+  },
+  {
+   "path": "cases/component-case_preview_cards/archive/01-header-divergences/core-kit.jsx",
+   "lines": 449,
+   "bytes": 26446,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/archive/00-early-divergence/core-kit.jsx",
+   "lines": 443,
+   "bytes": 26244,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/archive/01-prototype/core-kit.jsx",
+   "lines": 443,
+   "bytes": 26244,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/explorations/01-feed-exploration/core-kit.jsx",
+   "lines": 443,
+   "bytes": 26244,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/archive/03-details-exploration/core-kit.jsx",
+   "lines": 443,
+   "bytes": 26244,
+   "canon": false
+  },
+  {
+   "path": "cases/system-case_status_and_action/explorations/01-status-series/core-kit.jsx",
+   "lines": 443,
+   "bytes": 26244,
+   "canon": false
+  }
+ ],
+ "cpc.jsx": [
+  {
+   "path": "cases/_ds-cases/kits/cpc.jsx",
+   "lines": 230,
+   "bytes": 15265,
+   "canon": true
+  },
+  {
+   "path": "cases/component-case_preview_cards/archive/01-header-divergences/cpc.jsx",
+   "lines": 230,
+   "bytes": 15265,
+   "canon": false
+  },
+  {
+   "path": "cases/component-case_preview_cards/archive/02-alert-cta-sizing/cpc.jsx",
+   "lines": 230,
+   "bytes": 15265,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/archive/00-early-divergence/cpc.jsx",
+   "lines": 230,
+   "bytes": 15246,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/archive/01-prototype/cpc.jsx",
+   "lines": 230,
+   "bytes": 15246,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/explorations/01-feed-exploration/cpc.jsx",
+   "lines": 230,
+   "bytes": 15246,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/archive/03-details-exploration/cpc.jsx",
+   "lines": 230,
+   "bytes": 15246,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/explorations/03-record-content/cpc.jsx",
+   "lines": 230,
+   "bytes": 15265,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/explorations/05-status-coverage/cpc.jsx",
+   "lines": 230,
+   "bytes": 15265,
+   "canon": false
+  },
+  {
+   "path": "cases/system-case_status_and_action/explorations/01-status-series/cpc.jsx",
+   "lines": 230,
+   "bytes": 15246,
+   "canon": false
+  }
+ ],
+ "card-kit.jsx": [
+  {
+   "path": "cases/_ds-cases/kits/card-kit.jsx",
+   "lines": 347,
+   "bytes": 20708,
+   "canon": true
+  },
+  {
+   "path": "cases/component-case_preview_cards/archive/02-alert-cta-sizing/card-kit.jsx",
+   "lines": 308,
+   "bytes": 18023,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/explorations/03-record-content/card-kit.jsx",
+   "lines": 308,
+   "bytes": 18023,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/explorations/05-status-coverage/card-kit.jsx",
+   "lines": 308,
+   "bytes": 18023,
+   "canon": false
+  },
+  {
+   "path": "cases/component-case_preview_cards/archive/01-header-divergences/card-kit.jsx",
+   "lines": 302,
+   "bytes": 17817,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/archive/00-early-divergence/card-kit.jsx",
+   "lines": 302,
+   "bytes": 17817,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/archive/01-prototype/card-kit.jsx",
+   "lines": 302,
+   "bytes": 17817,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/explorations/01-feed-exploration/card-kit.jsx",
+   "lines": 302,
+   "bytes": 17817,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/archive/03-details-exploration/card-kit.jsx",
+   "lines": 302,
+   "bytes": 17817,
+   "canon": false
+  },
+  {
+   "path": "cases/system-case_status_and_action/explorations/01-status-series/card-kit.jsx",
+   "lines": 302,
+   "bytes": 17817,
+   "canon": false
+  }
+ ],
+ "design-canvas.jsx": [
+  {
+   "path": "cases/_ds-cases/kits/design-canvas.jsx",
+   "lines": 1039,
+   "bytes": 52247,
+   "canon": true
+  },
+  {
+   "path": "cases/component-case_preview_cards/archive/01-header-divergences/design-canvas.jsx",
+   "lines": 1039,
+   "bytes": 52247,
+   "canon": false
+  },
+  {
+   "path": "cases/component-case_preview_cards/archive/02-alert-cta-sizing/design-canvas.jsx",
+   "lines": 1039,
+   "bytes": 52247,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/explorations/01-feed-exploration/design-canvas.jsx",
+   "lines": 1039,
+   "bytes": 52247,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/archive/03-details-exploration/design-canvas.jsx",
+   "lines": 1039,
+   "bytes": 52247,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/explorations/03-record-content/design-canvas.jsx",
+   "lines": 1039,
+   "bytes": 52247,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/explorations/04-case-chat/design-canvas.jsx",
+   "lines": 1039,
+   "bytes": 52247,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/explorations/05-status-coverage/design-canvas.jsx",
+   "lines": 1039,
+   "bytes": 52247,
+   "canon": false
+  },
+  {
+   "path": "cases/system-case_status_and_action/explorations/01-status-series/design-canvas.jsx",
+   "lines": 1039,
+   "bytes": 52247,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/archive/00-early-divergence/design-canvas.jsx",
+   "lines": 1035,
+   "bytes": 51790,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/archive/01-prototype/design-canvas.jsx",
+   "lines": 1035,
+   "bytes": 51790,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/archive/02-divergence-pass-1/design-canvas.jsx",
+   "lines": 1035,
+   "bytes": 51790,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/archive/03-variants-a-d/design-canvas.jsx",
+   "lines": 1035,
+   "bytes": 51790,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/archive/00-board-c-detail-pages/design-canvas.jsx",
+   "lines": 1035,
+   "bytes": 51790,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/archive/01-board-d-flow-moments/design-canvas.jsx",
+   "lines": 1035,
+   "bytes": 51790,
+   "canon": false
+  }
+ ],
+ "tweaks-panel.jsx": [
+  {
+   "path": "cases/_ds-cases/kits/tweaks-panel.jsx",
+   "lines": 542,
+   "bytes": 23964,
+   "canon": true
+  },
+  {
+   "path": "cases/screen-all_cases_feed/archive/03-variants-a-d/tweaks-panel.jsx",
+   "lines": 542,
+   "bytes": 23964,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/explorations/01-feed-exploration/tweaks-panel.jsx",
+   "lines": 542,
+   "bytes": 23964,
+   "canon": false
+  }
+ ],
+ "status-doc.jsx": [
+  {
+   "path": "cases/component-case_preview_cards/kits/status-doc.jsx",
+   "lines": 477,
+   "bytes": 31192,
+   "canon": true
+  },
+  {
+   "path": "cases/system-case_status_and_action/kits/status-doc.jsx",
+   "lines": 468,
+   "bytes": 29712,
+   "canon": true
+  },
+  {
+   "path": "cases/system-case_status_and_action/explorations/01-status-series/status-doc.jsx",
+   "lines": 466,
+   "bytes": 29450,
+   "canon": false
+  }
+ ],
+ "feed-kit.jsx": [
+  {
+   "path": "cases/screen-all_cases_feed/kits/feed-kit.jsx",
+   "lines": 359,
+   "bytes": 19749,
+   "canon": true
+  },
+  {
+   "path": "cases/screen-all_cases_feed/archive/03-variants-a-d/feed-kit.jsx",
+   "lines": 359,
+   "bytes": 19749,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-all_cases_feed/explorations/01-feed-exploration/feed-kit.jsx",
+   "lines": 359,
+   "bytes": 19749,
+   "canon": false
+  }
+ ],
+ "detail-kit.jsx": [
+  {
+   "path": "cases/screen-single_case_details/kits/detail-kit.jsx",
+   "lines": 639,
+   "bytes": 42434,
+   "canon": true
+  },
+  {
+   "path": "cases/screen-single_case_details/explorations/03-record-content/detail-kit.jsx",
+   "lines": 639,
+   "bytes": 42434,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/explorations/05-status-coverage/detail-kit.jsx",
+   "lines": 639,
+   "bytes": 42434,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/archive/03-details-exploration/detail-kit.jsx",
+   "lines": 638,
+   "bytes": 42232,
+   "canon": false
+  }
+ ],
+ "detail-record.jsx": [
+  {
+   "path": "cases/screen-single_case_details/archive/03-details-exploration/detail-record.jsx",
+   "lines": 464,
+   "bytes": 23299,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/kits/detail-record.jsx",
+   "lines": 463,
+   "bytes": 23613,
+   "canon": true
+  },
+  {
+   "path": "cases/screen-single_case_details/explorations/03-record-content/detail-record.jsx",
+   "lines": 463,
+   "bytes": 23613,
+   "canon": false
+  },
+  {
+   "path": "cases/screen-single_case_details/explorations/05-status-coverage/detail-record.jsx",
+   "lines": 463,
+   "bytes": 23613,
+   "canon": false
+  }
+ ],
+ "detail-screens.jsx": [
+  {
+   "path": "cases/screen-single_case_details/kits/detail-screens.jsx",
+   "lines": 98,
+   "bytes": 4530,
+   "canon": true
+  },
+  {
+   "path": "cases/screen-single_case_details/explorations/05-status-coverage/detail-screens.jsx",
+   "lines": 98,
+   "bytes": 4530,
+   "canon": false
+  }
+ ]
+}

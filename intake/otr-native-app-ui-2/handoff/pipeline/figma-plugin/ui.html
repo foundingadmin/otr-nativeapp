@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font:12px/1.5 'Inter',system-ui,sans-serif;color:#1f242f;padding:14px}
+h1{font-size:13px;margin:0 0 4px}
+p{margin:0 0 12px;color:#61646c}
+label{display:block;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#61646c;margin:12px 0 5px}
+select,input[type=file]{width:100%;font:inherit;padding:7px;border:1px solid #cecfd2;border-radius:8px;background:#fff}
+.row{display:flex;gap:8px;margin-top:14px}
+button{flex:1;font:inherit;font-weight:700;padding:9px;border-radius:999px;border:1px solid transparent;background:#155EEF;color:#fff;cursor:pointer}
+button.s{background:#fff;color:#1f242f;border-color:#cecfd2}
+button:disabled{opacity:.5;cursor:default}
+#log{margin-top:14px;height:250px;overflow:auto;background:#0c111d;color:#c9d4e6;border-radius:10px;padding:10px;font:11px/1.6 ui-monospace,Menlo,monospace;white-space:pre-wrap}
+.meta{font-size:11px;color:#85888e;margin-top:8px}
+</style></head>
+<body>
+<h1>OTR Canon Print</h1>
+<p>Prints an IR bundle from <b>spec/ir/</b> into this file, binding DS variables. Read back before printing.</p>
+
+<label>IR bundle</label>
+<input type="file" id="file" accept="application/json">
+
+<label>Target page</label>
+<select id="target">
+  <option value="components">① Components (agent)</option>
+  <option value="screens" selected>② Screens (agent)</option>
+  <option value="proposed">③ Proposed</option>
+</select>
+
+<div class="row">
+  <button class="s" id="read">Read back</button>
+  <button id="print" disabled>Print</button>
+</div>
+<div class="meta" id="meta">loading variable index…</div>
+<div id="log"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+let JSONTEXT = null;
+const log = m => { $('#log').textContent += m + '\n'; $('#log').scrollTop = 1e9; };
+parent.postMessage({ pluginMessage: { type: 'init' } }, '*');
+
+$('#file').onchange = e => {
+  const f = e.target.files[0]; if (!f) return;
+  const r = new FileReader();
+  r.onload = () => { JSONTEXT = r.result; $('#print').disabled = false; log('loaded ' + f.name + ' (' + (f.size/1024|0) + ' kb)'); };
+  r.readAsText(f);
+};
+$('#print').onclick = () => {
+  if (!JSONTEXT) return;
+  $('#print').disabled = true;
+  log('\nprinting…');
+  parent.postMessage({ pluginMessage: { type: 'print', json: JSONTEXT, target: $('#target').value } }, '*');
+};
+$('#read').onclick = () => { log('\nreading back…'); parent.postMessage({ pluginMessage: { type: 'readback' } }, '*'); };
+
+onmessage = ev => {
+  const m = ev.data.pluginMessage; if (!m) return;
+  if (m.type === 'log') log(m.message);
+  if (m.type === 'ready') $('#meta').textContent = m.variables + ' variables indexed. Pick an IR bundle.';
+  if (m.type === 'done') { $('#print').disabled = false; log('\ndone. ' + (m.diffs || 0) + ' diffs printed.' + (m.error ? ' ERROR: ' + m.error : '')); }
+  if (m.type === 'state') {
+    log('\nfigma-state.json follows. Save it to canon/figma-state.json.');
+    log(m.state.slice(0, 4000) + (m.state.length > 4000 ? '\n… truncated in this log, copy from the console' : ''));
+    console.log(m.state);
+  }
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+/* ============================================================
+   Off The Record — Design System
+   Global stylesheet entry point. Consumers link THIS file.
+   Keep this as an @import manifest only.
+   ============================================================ */
+
+/* Full Figma variable set (reference / advanced theming, incl. dark mode).
+   Imported FIRST so the curated token files below take precedence — the Figma
+   dump stores lengths as unitless floats (e.g. --radius-full: 9999) which must
+   not clobber our px values. */
+@import './tokens/fig-tokens.css';
+
+/* Foundations — curated, authoritative (override any colliding Figma tokens) */
+@import './tokens/fonts.css';
+@import './tokens/colors.css';
+@import './tokens/typography.css';
+@import './tokens/spacing.css';
+@import './tokens/radius.css';
+
+/* Light base reset */
+@import './tokens/base.css';

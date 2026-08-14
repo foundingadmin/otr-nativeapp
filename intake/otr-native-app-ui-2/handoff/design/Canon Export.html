@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Canon Export</title>
+<link rel="stylesheet" href="_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/colors.css">
+<link rel="stylesheet" href="_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/radius.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Figtree',system-ui,sans-serif;color:var(--neutral-950);background:var(--neutral-25);letter-spacing:.01em}
+a{color:var(--blue-700);text-decoration:none}a:hover{color:var(--blue-800);text-decoration:underline}
+.wrap{max-width:1060px;margin:0 auto;padding:32px 24px 80px}
+h1{font-size:26px;font-weight:800;letter-spacing:-.4px;margin:0 0 6px}
+.lede{font-size:15px;line-height:1.55;color:var(--neutral-600);max-width:74ch;margin:0 0 22px;text-wrap:pretty}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:0 0 18px;padding:14px;background:#fff;border:1px solid var(--neutral-100);border-radius:14px}
+button{font-family:inherit;font-size:13.5px;font-weight:700;border-radius:999px;border:1px solid transparent;padding:9px 16px;cursor:pointer;transition:background .14s,color .14s}
+button.p{background:var(--blue-600);color:#fff}button.p:hover{background:var(--blue-700)}
+button.s{background:#fff;color:var(--neutral-800);border-color:var(--neutral-200)}button.s:hover{background:var(--neutral-50)}
+button:disabled{opacity:.45;cursor:default}
+.stat{margin-left:auto;font-size:12.5px;font-weight:700;color:var(--neutral-500)}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--neutral-100);border-radius:14px;overflow:hidden;font-size:13px}
+th{text-align:left;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;color:var(--neutral-500);padding:10px 12px;background:var(--neutral-25);border-bottom:1px solid var(--neutral-100)}
+td{padding:9px 12px;border-bottom:1px solid var(--neutral-50);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+.tag{display:inline-flex;align-items:center;font-size:10.5px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;padding:3px 8px;border-radius:999px}
+.tag.canon{background:var(--blue-50);color:var(--blue-800)}
+.tag.exp{background:var(--amber-50);color:var(--amber-900)}
+.tag.arch{background:var(--neutral-50);color:var(--neutral-600)}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;color:var(--neutral-500)}
+.ok{color:var(--green-700);font-weight:700}.err{color:var(--red-600);font-weight:700}
+#log{margin-top:18px;padding:14px;background:var(--neutral-950);color:#c9d4e6;border-radius:14px;font-family:ui-monospace,Menlo,monospace;font-size:11.5px;line-height:1.6;max-height:280px;overflow:auto;white-space:pre-wrap}
+#stage{position:fixed;inset:0;z-index:50;background:#fff;display:none}
+#stage.on{display:block}
+iframe{border:0;width:100%;height:100%;display:block}
+.hide{position:fixed;left:-9999px;top:0;width:1440px;height:1200px}
+</style>
+</head>
+<body>
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="18" fill="#155EEF"/><path d="M30 62V38m0 0 10 12 10-12v24m20-24v24m0-24h-8m8 12h-6" stroke="#fff" stroke-width="5" stroke-linecap="round" fill="none"/></svg>
+</template>
+<div class="wrap">
+  <h1>Canon Export</h1>
+  <p class="lede">The export station between this design surface and Figma. It walks each board's rendered artboards, emits a Figma-ready IR (layout, paints, strokes, radii, effects, text) with every colour already carrying its Figma variable decision, and writes the result into <span class="mono">handoff/spec/ir/</span>. Run it whenever a board changes, before handing the pack to Claude Code.</p>
+  <div class="bar">
+    <button class="p" id="run">Extract canon</button>
+    <button class="s" id="runAll">Extract everything</button>
+    <button class="s" id="reset">Clear log</button>
+    <span class="stat" id="stat">idle</span>
+  </div>
+  <table><thead><tr><th style="width:34px"></th><th>Board</th><th>Stage</th><th>Artboards</th><th>Nodes</th><th>Paint decisions</th><th>Written</th></tr></thead><tbody id="rows"></tbody></table>
+  <div id="log">ready.</div>
+</div>
+<div id="stage"><iframe id="pngFrame"></iframe></div>
+<iframe id="work" class="hide"></iframe>
+
+<script src="pipeline/token-resolve.js"></script>
+<script>
+const BOARDS = [
+  { id:'system-case_status_and_action', stage:'canon', workstream:'system-case_status_and_action', title:'Case Status and Action', path:'cases/system-case_status_and_action/Case Status and Action.html' },
+  { id:'component-case_preview_cards', stage:'canon', workstream:'component-case_preview_cards', title:'Case Preview Cards', path:'cases/component-case_preview_cards/Case Preview Cards.html' },
+  { id:'screen-all_cases_feed', stage:'canon', workstream:'screen-all_cases_feed', title:'All Cases Feed', path:'cases/screen-all_cases_feed/All Cases Feed.html' },
+  { id:'screen-single_case_details', stage:'canon', workstream:'screen-single_case_details', title:'Single Case Details', path:'cases/screen-single_case_details/Single Case Details.html' },
+  { id:'ds-cases-atomic-system', stage:'canon', workstream:'_ds-cases', title:'Atomic System', path:'cases/_ds-cases/Atomic System.html' },
+  { id:'mount-detail-screens', stage:'canon', workstream:'screen-single_case_details', title:'Detail Screens (pipeline mount)', path:'pipeline/mounts/detail-screens.html',
+    note:'DetailScreens is declared in cases/screen-single_case_details/kits/detail-screens.jsx but mounted by no board. This pipeline mount exists so the nine full detail screens reach Figma.' },
+  { id:'exp-01-feed-exploration', stage:'exploration', workstream:'screen-all_cases_feed', title:'01 Feed exploration', path:'cases/screen-all_cases_feed/explorations/01-feed-exploration/01-feed-exploration.html' },
+  { id:'exp-03-record-content', stage:'exploration', workstream:'screen-single_case_details', title:'03 Record content', path:'cases/screen-single_case_details/explorations/03-record-content/Record Content.html' },
+  { id:'exp-04-case-chat', stage:'exploration', workstream:'screen-single_case_details', title:'04 Case chat', path:'cases/screen-single_case_details/explorations/04-case-chat/Case Chat.html' },
+  { id:'exp-05-status-coverage', stage:'exploration', workstream:'screen-single_case_details', title:'05 Status coverage', path:'cases/screen-single_case_details/explorations/05-status-coverage/Status Coverage.html' },
+  { id:'exp-01-status-series', stage:'exploration', workstream:'system-case_status_and_action', title:'01 Status series', path:'cases/system-case_status_and_action/explorations/01-status-series/01-status-series.html' },
+  { id:'arc-cpc-01-header-divergences', stage:'archive', workstream:'component-case_preview_cards', title:'Archive · 01 Header divergences', path:'cases/component-case_preview_cards/archive/01-header-divergences/01-header-divergences.html' },
+  { id:'arc-cpc-02-alert-cta-sizing', stage:'archive', workstream:'component-case_preview_cards', title:'Archive · 02 Alert CTA sizing', path:'cases/component-case_preview_cards/archive/02-alert-cta-sizing/02-alert-cta-sizing.html' },
+  { id:'arc-feed-00-early-divergence', stage:'archive', workstream:'screen-all_cases_feed', title:'Archive · 00 Early divergence', path:'cases/screen-all_cases_feed/archive/00-early-divergence/Exploration.html' },
+  { id:'arc-feed-01-prototype', stage:'archive', workstream:'screen-all_cases_feed', title:'Archive · 01 Prototype', path:'cases/screen-all_cases_feed/archive/01-prototype/Prototype.html' },
+  { id:'arc-feed-02-divergence-pass-1', stage:'archive', workstream:'screen-all_cases_feed', title:'Archive · 02 Divergence pass 1', path:'cases/screen-all_cases_feed/archive/02-divergence-pass-1/Cases Tab - Divergence Pass 1.html' },
+  { id:'arc-feed-03-variants-a-d', stage:'archive', workstream:'screen-all_cases_feed', title:'Archive · 03 Variants A-D', path:'cases/screen-all_cases_feed/archive/03-variants-a-d/Cases Tab - Variants A-D.html' },
+  { id:'arc-detail-00-board-c', stage:'archive', workstream:'screen-single_case_details', title:'Archive · Board C detail pages', path:'cases/screen-single_case_details/archive/00-board-c-detail-pages/Board C - Case Detail Pages.html' },
+  { id:'arc-detail-01-board-d', stage:'archive', workstream:'screen-single_case_details', title:'Archive · Board D flow moments', path:'cases/screen-single_case_details/archive/01-board-d-flow-moments/Board D - Flow Moments.html' },
+  { id:'arc-detail-02-timeline-lab', stage:'archive', workstream:'screen-single_case_details', title:'Archive · Timeline lab', path:'cases/screen-single_case_details/archive/02-timeline-lab/Timeline Lab.html' },
+  { id:'arc-detail-03-details-exploration', stage:'archive', workstream:'screen-single_case_details', title:'Archive · 03 Details exploration', path:'cases/screen-single_case_details/archive/03-details-exploration/01-details-exploration.html' }
+];
+/* The host bridge only permits *.state.json sidecars, so IR lands as dotfile
+   sidecars next to this page; the pack build moves them into spec/ir/. */
+const OUT = id => '.ir-' + id + '.state.json';
+const MAP_URL = 'handoff/spec/tokens/figma-variable-map.json';
+const $ = s => document.querySelector(s);
+const log = (m, cls) => { const d = $('#log'); d.innerHTML += '\n' + (cls ? '<span class="'+cls+'">'+m+'</span>' : m); d.scrollTop = d.scrollHeight; };
+let MAP = null, SRC = {};
+
+function rowsInit(){
+  $('#rows').innerHTML = BOARDS.map((b,i)=>`<tr id="r${i}">
+    <td class="mono">${i+1}</td><td><b>${b.title}</b><div class="mono">${b.path}</div></td>
+    <td><span class="tag ${b.stage==='canon'?'canon':b.stage==='exploration'?'exp':'arch'}">${b.stage}</span></td>
+    <td class="c-art mono">·</td><td class="c-nodes mono">·</td><td class="c-bind mono">·</td><td class="c-out mono">·</td></tr>`).join('');
+}
+const sleep = ms => new Promise(r=>setTimeout(r,ms));
+function waitFor(fn, ms=25000){ const t0=Date.now(); return new Promise((res,rej)=>{ (function tick(){ let v; try{ v=fn(); }catch(e){ v=null; } if(v) return res(v); if(Date.now()-t0>ms) return rej(new Error('timeout')); setTimeout(tick,180); })(); }); }
+
+async function boot(){
+  MAP = await (await fetch(MAP_URL)).json();
+  SRC.tok = await (await fetch('pipeline/token-resolve.js')).text();
+  SRC.ir  = await (await fetch('pipeline/ir-extract.js')).text();
+  window.OTRTokens.load(MAP);
+  log('variable map loaded · ' + MAP.values.length + ' audited values · ' + JSON.stringify(MAP.summary));
+}
+async function extract(b, i){
+  const row = $('#r'+i);
+  const f = $('#work');
+  log('\n── ' + b.title);
+  await new Promise(res => { f.onload = res; f.src = b.path; });
+  const w = f.contentWindow, d = f.contentDocument;
+  await waitFor(()=> d.querySelectorAll('[data-dc-slot]').length > 0);
+  try { await d.fonts.ready; } catch(e){}
+  await sleep(900);
+  for (const key of ['tok','ir']) { const s = d.createElement('script'); s.textContent = SRC[key === 'tok' ? 'tok' : 'ir']; d.head.appendChild(s); }
+  w.OTRTokens.load(MAP);
+  const bundle = w.OTR_IR.extractBoard(d, { id:b.id, title:b.title, path:b.path, stage:b.stage, workstream:b.workstream });
+  bundle.stats = w.OTR_IR.stats(bundle);
+  const json = JSON.stringify(bundle);
+  row.querySelector('.c-art').textContent = bundle.stats.artboards;
+  row.querySelector('.c-nodes').textContent = bundle.stats.nodes;
+  const pd = bundle.stats.paintDecisions;
+  row.querySelector('.c-bind').textContent = 'bind ' + (pd.BIND + pd.BIND_NEAREST) + ' · flag ' + pd.BIND_NEAREST_AND_FLAG + ' · req ' + pd.DS_REQUEST;
+  let written = '—';
+  if (window.omelette && window.omelette.writeFile) {
+    try { await window.omelette.writeFile(OUT(b.id), json); written = (json.length/1024|0) + ' kb'; }
+    catch(e){ written = 'write failed'; log('  write failed: ' + e.message, 'err'); }
+  } else { written = 'no host bridge'; }
+  row.querySelector('.c-out').innerHTML = '<span class="'+(written.indexOf('kb')>0?'ok':'err')+'">'+written+'</span>';
+  log('  ' + bundle.stats.artboards + ' artboards · ' + bundle.stats.nodes + ' nodes · ' + written);
+  return { id:b.id, stage:b.stage, title:b.title, path:b.path, stats:bundle.stats, bytes:json.length };
+}
+async function run(stages){
+  $('#run').disabled = $('#runAll').disabled = true;
+  const list = BOARDS.map((b,i)=>({b,i})).filter(x=>stages.includes(x.b.stage));
+  const index = [];
+  for (const {b,i} of list){
+    $('#stat').textContent = 'extracting ' + (index.length+1) + '/' + list.length;
+    try { index.push(await extract(b,i)); }
+    catch(e){ log('  FAILED: ' + e.message, 'err'); $('#r'+i).querySelector('.c-out').innerHTML = '<span class="err">failed</span>'; }
+  }
+  if (window.omelette && window.omelette.writeFile){
+    await window.omelette.writeFile(OUT('_index'), JSON.stringify({
+      generated:new Date().toISOString(), variableMapSummary:MAP.summary, boards:index }, null, 1));
+  }
+  $('#stat').textContent = 'done · ' + index.length + ' boards';
+  log('\nwrote ' + index.length + ' IR bundles + _index.json', 'ok');
+  $('#run').disabled = $('#runAll').disabled = false;
+}
+/* PNG staging — moves one artboard card into a bare document at 1:1 so the
+   reference capture is the artboard alone, no canvas chrome. */
+window.stagePng = async function(boardId, idx){
+  const b = BOARDS.find(x=>x.id===boardId); if(!b) throw new Error('no board '+boardId);
+  const st = $('#stage'), f = $('#pngFrame');
+  st.classList.add('on');
+  if (f.dataset.board !== boardId){
+    await new Promise(res=>{ f.onload=res; f.src=b.path; });
+    f.dataset.board = boardId;
+    const d = f.contentDocument;
+    await waitFor(()=> d.querySelectorAll('[data-dc-slot]').length>0);
+    try { await d.fonts.ready; } catch(e){}
+    await sleep(900);
+  }
+  const d = f.contentDocument;
+  const slots = [...d.querySelectorAll('[data-dc-slot]')];
+  const slot = slots[idx]; if(!slot) return null;
+  const card = slot.querySelector('.dc-card') || slot;
+  d.body.querySelectorAll('#__stagehost').forEach(n=>n.remove());
+  const host = d.createElement('div');
+  host.id = '__stagehost';
+  host.setAttribute('style','position:fixed;inset:0;z-index:9999;background:#fff;overflow:auto;padding:0;margin:0');
+  host.appendChild(card);
+  card.style.transform = 'none';
+  d.body.appendChild(host);
+  d.documentElement.style.overflow = 'hidden';
+  return { id: slot.getAttribute('data-dc-slot'), w: card.offsetWidth, h: card.offsetHeight, count: slots.length };
+};
+window.stageCount = async function(boardId){ const r = await window.stagePng(boardId,0); return r && r.count; };
+window.stageOff = function(){ $('#stage').classList.remove('on'); };
+
+$('#run').onclick = ()=>run(['canon']);
+window.runOne = async function(id){ const i = BOARDS.findIndex(b=>b.id===id); return await extract(BOARDS[i], i); };
+$('#runAll').onclick = ()=>run(['canon','exploration','archive']);
+$('#reset').onclick = ()=>{ $('#log').textContent = 'ready.'; };
+rowsInit(); boot().catch(e=>log('boot failed: '+e.message,'err'));
+</script>
+</body>
+</html>

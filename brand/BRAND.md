@@ -121,6 +121,17 @@ Retired session 4n to Archive as DEPRECATED/: `OTR/Mock/Device`
 | OTR/Cases/TransactionDetail | `11567:1949` | 1. Download invoice is a hand-built outline pill: the DS Button set carries no Outline-neutral + small + Text variant. |
 | OTR/Cases/Participants | `11569:2199` | 2 (mode=view/manage). |
 | OTR/Cases/ParticipantRow | `11566:1917` | 2 (removable=false/true) + BOOLEAN `show self tag`. Remove is a cherry outline pill; This is you is a neutral pill. |
+| OTR/Cases/CaseAppBar | `11588:2305` | 2 (chat=false/true). Full case details board, session 8. The chat variant carries the counted icon and is the alternative DR-CD-006 did not take. |
+| OTR/Cases/CaseHero | `11588:2308` | 1. The no-photo identity block: issued eyebrow, location headline, StatusBadge, court date line. Headline prints `Native/Title/Page` (25) against CD's 32; the display rung is a DS ask (D-014). |
+| OTR/Cases/LegalTeamCard | `11588:2367` | 2 (preview=true/false). DR-CD-006: the whole card is the door into case chat. preview=false is the quiet state once the thread is read. |
+| OTR/Cases/ActionToast | `11588:2370` | 1. Persistent, sits above the tabs. Binds the brand ramp ladder (surface 25, border 100, icon 700, secondary 800, title 900), not CD's hex pair. Trailing CTA is a DS Button Solid-brand extra small. |
+| OTR/Cases/TabsPrimary | `11590:1580` | 2 (active=ticket/case). Segmented pill track on `accent/25`, white active pill. |
+| OTR/Cases/TabsSecondary | `11590:1610` | 3 (active=overview/docs/pay). Underline style, `brand/600` indicator. Count badge only where the number is literal, Documents. |
+| OTR/Cases/SortToggle | `11590:1623` | 2 (order=newest/oldest). `Justified-Alignment` stands in for the Font Awesome sort caret, flagged. |
+| OTR/Cases/BalanceCard | `11590:1626` | 1. Head of Payments divergences B and D. Progress reads as installments, never a percentage. |
+
+Session-8 masters live on the full case details board's `The parts` shelf
+(`11586:1543` on ↪ Explore) pending the DR-CD-005 verdict; promote on adopt.
 
 Session-7 masters live on the record content board's `The set` shelf
 (`11570:804` on ↪ Explore) pending the DR-CD-002 verdict; promote on adopt.
@@ -311,10 +322,13 @@ slot, rebind every vector fill to the tone variable (set
 `figma.skipInvisibleInstanceChildren = false` first). The old `OTR/Icons/*`
 frame is archived (`11511:11179` on the Cases Archive page). Missing from the
 library: hashtag, car, receipt, credit-card, bolt/flash (GAP card on the
-record content board; dashed `PLACEHOLDER icon/<name>` frames printed).
+record content board), plus **camera** (session 8, GAP card on the full case
+details board); dashed `PLACEHOLDER icon/<name>` frames printed for all six.
 Substitutions in use: `User-Friendship-Group` for multiple-users-1,
-`Folder-Document-Copy-Duplicate` for copy-paste. Chevrons remain drawn
-round-cap vectors (no chevron glyph in the library).
+`Folder-Document-Copy-Duplicate` for copy-paste, `Upload-Tray` for
+cloud-upload, `Justified-Alignment` for the Font Awesome sort caret (session
+8, both flagged). Chevrons remain drawn 2pt round-cap vectors (no chevron
+glyph in the library).
 
 Historical: product icons formerly came from the CD bundle's FeatureIcon set (157 icons,
 `intake/.../design/_ds/.../_ds_bundle.js`, name → viewBox + SVG body).

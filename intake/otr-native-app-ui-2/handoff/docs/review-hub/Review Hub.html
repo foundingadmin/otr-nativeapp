@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Review Hub · OTR Native App UI</title>
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fig-tokens.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fonts.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/colors.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/typography.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/spacing.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/radius.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/base.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+  html, body { margin: 0; padding: 0; background: var(--surface-subtle); }
+  body { font-family: var(--font-sans, 'Figtree', sans-serif); color: var(--text-primary); }
+  a { color: var(--text-link); text-decoration: none; }
+  a:hover { color: var(--blue-800); text-decoration: underline; }
+  .page { max-width: 760px; margin: 0 auto; padding: 56px 24px 96px; }
+  .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 16px; }
+  h1 { font-size: 40px; font-weight: 800; margin: 0 0 18px; }
+  .intro { font-size: 17px; line-height: 1.55; color: var(--text-secondary); max-width: 600px; margin: 0 0 32px; text-wrap: pretty; }
+  .steps { display: flex; gap: 22px; flex-wrap: wrap; margin: 0 0 32px; padding: 14px 18px; background: var(--white);
+           border: 1px solid var(--border-secondary); border-radius: 999px; }
+  .step { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 600; color: var(--text-secondary); }
+  .step b { flex: 0 0 20px; height: 20px; border-radius: 999px; background: var(--blue-50); color: var(--blue-700);
+            border: 1px solid var(--blue-100); font-size: 11.5px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; }
+  .cards { display: flex; flex-direction: column; gap: 16px; }
+  .rv-card { background: var(--white); border: 1px solid var(--border-secondary); border-radius: 20px; padding: 24px 26px;
+             box-shadow: var(--shadow-card, 0 1px 2px rgba(16,24,40,0.05)); }
+  .rv-title { font-size: 19px; font-weight: 800; letter-spacing: 0.01em; margin: 0 0 6px; }
+  .rv-ask { font-size: 15px; line-height: 1.55; color: var(--text-secondary); margin: 0 0 16px; max-width: 560px; text-wrap: pretty; }
+  .rv-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .rv-path { font-size: 11.5px; color: var(--neutral-400); letter-spacing: 0.01em; margin: 12px 0 0; word-break: break-all; }
+  .btn-link { text-decoration: none; }
+  .btn-link:hover { text-decoration: none; }
+  .done-h { font-size: 16px; font-weight: 800; color: var(--text-secondary); margin: 44px 0 4px; }
+  .done-sub { font-size: 13.5px; color: var(--text-tertiary); margin: 0 0 12px; }
+  .d-row { display: flex; align-items: center; gap: 12px; padding: 11px 4px; border-bottom: 1px solid var(--border-secondary); }
+  .d-row:last-child { border-bottom: none; }
+  .d-check { color: var(--green-500, #17B26A); font-size: 15px; }
+  .d-title { flex: 1; font-size: 14.5px; font-weight: 600; color: var(--text-tertiary); }
+  .d-title a { color: inherit; }
+  .d-when { font-size: 12.5px; color: var(--text-tertiary); white-space: nowrap; }
+  .d-undo { font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+  .empty { background: var(--white); border: 1px dashed var(--border-primary); border-radius: 20px; padding: 40px 24px;
+           text-align: center; color: var(--text-tertiary); font-size: 15.5px; }
+  .empty strong { color: var(--text-secondary); display: block; font-size: 17px; margin-bottom: 4px; }
+  .foot { margin-top: 44px; font-size: 13.5px; color: var(--text-tertiary); }
+</style>
+</head>
+<body>
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" rx="18" fill="#155EEF"/>
+    <rect x="22" y="26" width="56" height="30" rx="10" fill="#fff" opacity="0.95"/>
+    <rect x="22" y="62" width="40" height="14" rx="7" fill="#fff" opacity="0.45"/>
+  </svg>
+</template>
+<!-- board-path chip: auto-updates from the file's own location -->
+<div id="__boardPath" aria-hidden="true" style="position:fixed;top:0;left:0;z-index:2147483000;font-family:'Figtree',var(--font-sans),sans-serif;font-size:11px;line-height:1;letter-spacing:.02em;color:var(--text-tertiary,#667085);background:rgba(255,255,255,.82);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:6px 11px;border:1px solid var(--border-secondary,#ECECED);border-top:none;border-left:none;border-radius:0 0 10px 0;pointer-events:none;user-select:none;white-space:nowrap;max-width:80vw;overflow:hidden;text-overflow:ellipsis;">&nbsp;</div>
+<script>(function(){var p=decodeURIComponent(location.pathname).split('/serve/');var rel=p.length>1?p[1]:(location.pathname.split('/').pop()||'');var el=document.getElementById('__boardPath');if(el)el.textContent=rel;})();</script>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/_ds_bundle.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="review-core.js"></script>
+
+<script type="text/babel" data-presets="react">
+;(function () {
+  const { Button } = window.OffTheRecordDesignSystem_6eff96;
+  const { REVIEW_ITEMS, ReviewState } = window;
+
+  function App() {
+    const [state, setState] = React.useState(ReviewState.load());
+    const active = REVIEW_ITEMS.filter((i) => !(state[i.id] && state[i.id].reviewed));
+    const done = REVIEW_ITEMS.filter((i) => state[i.id] && state[i.id].reviewed)
+      .sort((a, b) => state[b.id].ts - state[a.id].ts);
+    const mark = (id) => setState({ ...ReviewState.mark(id) });
+    const unmark = (id) => setState({ ...ReviewState.unmark(id) });
+
+    return (
+      <div className="page" data-screen-label="Review Hub">
+        <div className="eyebrow">Off The Record · Native App UI</div>
+        <h1>Review Hub</h1>
+        <p className="intro">
+          {active.length === 0 ? 'All caught up. ' : `You have ${active.length} thing${active.length > 1 ? 's' : ''} waiting. `}
+          Review on your own time. Everything you mark reviewed gets demoed back to you, with your
+          feedback integrated, at the next sync.
+        </p>
+
+        <div className="steps">
+          <span className="step"><b>1</b> Open the board</span>
+          <span className="step"><b>2</b> Leave comments on it</span>
+          <span className="step"><b>3</b> Come back, mark reviewed</span>
+        </div>
+
+        {active.length === 0 ? (
+          <div className="empty">
+            <strong>Nothing needs you right now.</strong>
+            Browse the <a href="../roadmap/Roadmap.html">roadmap</a> or the <a href="../../File Navigator.html">file navigator</a> any time.
+          </div>
+        ) : (
+          <div className="cards">
+            {active.map((it) => (
+              <div className="rv-card" key={it.id}>
+                <h3 className="rv-title">{it.title}</h3>
+                <p className="rv-ask">{it.ask}</p>
+                <div className="rv-actions">
+                  <a className="btn-link" href={it.href}><Button variant="primary" size="sm" iconRight={<i className="fa-solid fa-arrow-right" aria-hidden="true"></i>}>Open the board</Button></a>
+                  <Button variant="secondary" size="sm" onClick={() => mark(it.id)}>Mark reviewed</Button>
+                </div>
+                <p className="rv-path">{it.href}</p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <h2 className="done-h">Reviewed</h2>
+        <p className="done-sub">Queued for the next sync, where we demo what changed based on your comments.</p>
+        {done.length === 0 ? (
+          <p className="done-sub" style={{ fontStyle: 'italic' }}>Nothing here yet.</p>
+        ) : (
+          <div>
+            {done.map((it) => (
+              <div className="d-row" key={it.id}>
+                <i className="fa-solid fa-circle-check d-check" aria-hidden="true"></i>
+                <span className="d-title"><a href={it.href}>{it.title}</a></span>
+                <span className="d-when">Reviewed {ReviewState.fmtWhen(state[it.id].ts)}</span>
+                <a className="d-undo" href="#" onClick={(e) => { e.preventDefault(); unmark(it.id); }}>Undo</a>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <p className="foot">
+          <a href="../roadmap/Roadmap.html">Roadmap</a> · <a href="../../File Navigator.html">File Navigator</a>
+        </p>
+      </div>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+})();
+</script>
+</body>
+</html>

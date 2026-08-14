@@ -14,6 +14,7 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
 | Figma file | `Native App / Design`, key `JcqKNz1pMrEvxwExhb296r` |
 | Exploration prints | `↪ Explore` page `11337:2087` (renamed from `↪ Explorations` by the team, Aug 11) |
 | Record content board (OPEN) | plate `11570:797` on ↪ Explore; 9 masters + 9 artboards + OPEN/diff shelves, session 7 |
+| Full case details board (OPEN) | plate `11586:1537` on ↪ Explore; 8 masters + 14 artboards + OPEN/diff shelves, session 8 |
 | Icon library | `Icon / Streamline Flex` frame `11530:6368` on the new `↪ Icons` page `11530:6367`; 180 fill-based 24px components. OTR/Icons frame archived. Instance these, never draw. |
 | RESTRUCTURE (Aug 11) | The team reorganized the file between sessions: ① Components section dissolved (shelves moved to ↪ Explore as bare frames), ④ Diffs + Proposed + Lexicon + Tools content moved to the Cases `↪ Archive` page, Case Chat board moved to the `↪ Cases` page (actively worked), Proto/Proposed pages gone, new Home/Onboard/Flows/PARKED pages. Full map: `figma-state.json` → `restructureAug11`. Diff swatches and OPEN markers now print on the exploration board itself. |
 | Node/style/variable registries | `brand/BRAND.md` |
@@ -69,6 +70,21 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
   traps in `lessons.md` 6e/6f/8b/8c.
 
 ## Open items (next session picks these up)
+
+- **Verdict needed: 06 Full case details board** (plate `11586:1537` on ↪ Explore,
+  printed session 8 from the Aug 14 CD package). Closes with DR-CD-005, the
+  Ticket/Case tab architecture, which every one of the fourteen artboards
+  depends on. The live sub-decision is the **Payments layout, A against B
+  against D**: handoff waits on that pick and the CEO has seen all three.
+  Four more OPEN cards ride on the board: sub-tab naming (Overview is a
+  placeholder), whether the coded ticket artifact carries data or is a
+  stand-in, and F-2/F-3 carried over from the record content board.
+  DR-CD-006 is already decided in the CD ledger, so the firm card is the door
+  into case chat and the app bar chat icon is printed only as the road not
+  taken. Three DS asks came out of it: a **Native/Title/Display rung** (D-014,
+  three separate 32 to 38px asks in one board), a **camera glyph**, and a
+  **sort glyph pair**. The 8 masters on the board's `The parts` shelf promote
+  to the components surface on adopt.
 
 - **Verdict needed: 03 Record content board** (plate `11570:797` on ↪ Explore,
   printed session 7 from the Aug 11 CD package). Closes with DR-CD-002. Four

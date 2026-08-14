@@ -106,6 +106,14 @@
       "decidedBy": "Titus",
       "detail": "Presentation plates are FRAMES with auto layout, never sections (sections cannot carry auto layout). Plate recipe: high padding (spacing/13xl 96, user typed 100 raw), large radius (80 raw, no DS token that size, DS-request candidate), fill brand/50, hairline stroke black 10%. Shelf right rail is a demo well: fill global/background/strong, stroke global/border/neutral/default 1px, padding spacing/8xl 48, radius radius/XL 20, content centered both axes, layoutSizingVertical FILL when the left rail is taller. Every numeric binds a DS token: radius and spacing collections mapped in BRAND.md. Nested radius formula: inner = outer minus padding, snapped to the nearest smaller token; never let nested corners pinch. Nesting reads visually: plate (tint) > shelf (white) > index (strong tint). AMENDED (same day, user): demonstrated values are ideas, not directives; never keep them raw. Plate radius binds radius/5XL (36), plate stroke binds global/border/neutral/default. Full numeric sweep: 147 fields token-bound, 61 values snapped to nearest token (ties round down).",
       "commit": "this commit"
+    },
+    {
+      "id": "D-014",
+      "title": "Display type rung is missing from the Native collection",
+      "verdict": "open",
+      "detail": "CD's full case details board asks for a 32px hero headline, a 34px balance figure and a 38px receipt amount. The Native ladder tops out at Title/Page 25 and raw type is banned on product text (D-005), so all three printed at 25. Either a Native/Title/Display rung gets added or the board's hero scale is conceded. Three independent asks in one board is the argument for adding it.",
+      "decidedBy": "pending user",
+      "commit": "session 8"
     }
   ]
 }
