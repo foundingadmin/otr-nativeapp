@@ -116,3 +116,46 @@ five Streamline Flex glyphs • icon gaps (session 7)
               celebration tint token
   decided     open
   frame       DIFF · CPC v2 (11338:1922)
+
+Native/Title/Display • type ramp gap (session 8)
+  used        Case hero headline (CD 32/-1), BalanceCard figure (CD 34/-1.2),
+              receipt amount (CD 38/-1.4) on the full case details board
+  nearest     Native/Title/Page, ExtraBold 25, ls -0.3  ← BOUND for all three
+  ask         add a Native/Title/Display rung (roughly EB 32, ls -1) or concede
+              the board's hero scale. Three asks in one board is the argument.
+  decided     open (D-014)
+  frame       NOTE card on the Bindings & gaps shelf, plate 11586:1537
+
+camera-1 • icon gap (session 8)
+  used        Take photo button on the Documents upload block
+  printed     dashed placeholder frame named PLACEHOLDER icon/Camera-1
+  ask         add a camera glyph to Icon / Streamline Flex on the Icons page.
+              Sixth glyph on top of the five the record content board raised.
+  decided     open
+  frame       GAP card on the Bindings & gaps shelf, plate 11586:1537
+
+sort caret • icon gap (session 8)
+  used        SortToggle on the Documents tab card header
+  wanted      Font Awesome fa-arrow-down-short-wide / fa-arrow-up-short-wide
+  substituted Justified-Alignment Streamline Flex (bless or replace)
+  ask         add a real sort glyph pair to the library
+  decided     open
+  frame       SUB card on the Bindings & gaps shelf, plate 11586:1537
+
+cloud-upload • icon substitution (session 8)
+  used        Documents upload drop block
+  substituted Upload-Tray Streamline Flex (nearest honest match, reads fine at 19px)
+  ask         bless the substitution or add a cloud-upload glyph
+  decided     open
+  frame       SUB card on the Bindings & gaps shelf, plate 11586:1537
+
+OTR/Cases/Ticket • slot count (session 8)
+  used        the no-photo Ticket artboard instances the cream master rather
+              than forking it
+  problem     the master carries three field rows, one violation row and one
+              stamp; this citation has two violations and four flags, so the
+              artifact prints under-populated
+  ask         give the set a repeat axis, or rule that the coded ticket is a
+              stand-in and carries no data (ties to the ticket-artifact OPEN)
+  decided     open
+  frame       NOTE card on the Bindings & gaps shelf, plate 11586:1537

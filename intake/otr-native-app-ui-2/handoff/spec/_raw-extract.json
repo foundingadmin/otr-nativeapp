@@ -1,0 +1,2326 @@
+{
+ "CASES": {
+  "smart": {
+   "status": "smartmatchd",
+   "city": "Los Angeles",
+   "mon": "Mar",
+   "year": "2026",
+   "cls": "Infraction",
+   "caseId": "OTR-48213",
+   "violation": "Speeding · VC 22349(a)",
+   "more": 1,
+   "firm": "Mendez & Cole",
+   "courtCity": "LA Metropolitan",
+   "courtDate": "Apr 24, 2026",
+   "attorney": {
+    "name": "your matched attorney",
+    "rating": 4.9,
+    "blurred": true
+   },
+   "quote": {
+    "amount": 149,
+    "expires": "24m 14s"
+   }
+  },
+  "almost": {
+   "status": "almostgone",
+   "city": "Brooklyn",
+   "mon": "Feb",
+   "year": "2026",
+   "cls": "Infraction",
+   "caseId": "OTR-47980",
+   "violation": "Red light · VTL 1111(d)",
+   "more": 0,
+   "firm": "Okonkwo Legal",
+   "courtCity": "Kings County",
+   "courtDate": "Mar 19, 2026",
+   "attorney": {
+    "name": "your matched attorney",
+    "rating": 4.8,
+    "blurred": true
+   },
+   "quote": {
+    "amount": 129,
+    "expires": "4m 48s"
+   }
+  },
+  "expired": {
+   "status": "expired",
+   "city": "Sacramento",
+   "mon": "Jan",
+   "year": "2026",
+   "cls": "Infraction",
+   "caseId": "OTR-47551",
+   "violation": "Speeding · VC 22350",
+   "more": 0,
+   "firm": "—",
+   "courtCity": "Sacramento Superior",
+   "courtDate": "Feb 11, 2026"
+  },
+  "loe": {
+   "status": "active-action",
+   "city": "Austin",
+   "mon": "Mar",
+   "year": "2026",
+   "cls": "Misdemeanor",
+   "caseId": "OTR-48090",
+   "violation": "Reckless driving · TC 545.401",
+   "more": 2,
+   "firm": "Whitfield & Reyes",
+   "courtCity": "Travis County",
+   "courtDate": "May 14, 2026",
+   "attorney": {
+    "name": "Dana Whitfield",
+    "rating": 4.9
+   },
+   "action": "loe"
+  },
+  "overdue": {
+   "status": "active",
+   "city": "Houston",
+   "mon": "Dec",
+   "year": "2025",
+   "cls": "Wobbler",
+   "caseId": "OTR-46622",
+   "violation": "No insurance · TC 601.191",
+   "more": 1,
+   "firm": "Briggs Traffic",
+   "courtCity": "Harris County",
+   "courtDate": "Apr 02, 2026",
+   "attorney": {
+    "name": "Marcus Brail",
+    "rating": 4.7
+   },
+   "balance": {
+    "amount": 109,
+    "overdue": true
+   }
+  },
+  "unread": {
+   "status": "active",
+   "city": "San Diego",
+   "mon": "Feb",
+   "year": "2026",
+   "cls": "Infraction",
+   "caseId": "OTR-47802",
+   "violation": "Speeding · VC 22349(a)",
+   "more": 0,
+   "firm": "Coastal Defense",
+   "courtCity": "San Diego Superior",
+   "courtDate": "Mar 30, 2026",
+   "attorney": {
+    "name": "Lena Park",
+    "rating": 4.8
+   },
+   "unread": 2
+  },
+  "active": {
+   "status": "active",
+   "city": "Fresno",
+   "mon": "Jan",
+   "year": "2026",
+   "cls": "Infraction",
+   "caseId": "OTR-47210",
+   "violation": "Failure to stop · VC 22450",
+   "more": 0,
+   "firm": "Nair Law Group",
+   "courtCity": "Fresno Superior",
+   "courtDate": "Apr 18, 2026",
+   "attorney": {
+    "name": "Priya Nair",
+    "rating": 4.9
+   }
+  },
+  "deadline": {
+   "status": "deadline",
+   "city": "Long Beach",
+   "mon": "Apr",
+   "year": "2026",
+   "cls": "Infraction",
+   "caseId": "OTR-48402",
+   "violation": "Speeding · VC 22349",
+   "more": 0,
+   "firm": "—",
+   "courtCity": "Long Beach Courthouse",
+   "courtDate": "Apr 29, 2026",
+   "daysToCourt": 9
+  },
+  "incomp": {
+   "status": "incomplete",
+   "city": "San Jose",
+   "mon": "Mar",
+   "year": "2026",
+   "cls": "—",
+   "caseId": "OTR-48377",
+   "violation": "Not provided",
+   "more": 0,
+   "firm": "—",
+   "complete": 40,
+   "courtDate": "Unknown"
+  },
+  "analyze": {
+   "status": "analyzing",
+   "city": "Oakland",
+   "mon": "Mar",
+   "year": "2026",
+   "cls": "Infraction",
+   "caseId": "OTR-48355",
+   "violation": "Speeding · VC 22349",
+   "more": 0,
+   "firm": "—",
+   "courtCity": "Alameda Superior",
+   "courtDate": "Apr 21, 2026"
+  },
+  "resolved": {
+   "status": "resolved",
+   "city": "Pasadena",
+   "mon": "Nov",
+   "year": "2025",
+   "cls": "Infraction",
+   "caseId": "OTR-45980",
+   "violation": "Speeding · VC 22349(a)",
+   "more": 0,
+   "firm": "Mendez & Cole",
+   "courtCity": "Pasadena Courthouse",
+   "courtDate": "Nov 12, 2025",
+   "attorney": {
+    "name": "Sofia Mendez",
+    "rating": 4.8
+   },
+   "outcome": {
+    "result": "Reduced to non-moving",
+    "saved": 240,
+    "points": 1
+   }
+  },
+  "dismiss": {
+   "status": "dismissed",
+   "city": "Riverside",
+   "mon": "Oct",
+   "year": "2025",
+   "cls": "Infraction",
+   "caseId": "OTR-45533",
+   "violation": "Speeding · VC 22349",
+   "more": 0,
+   "firm": "Okonkwo Legal",
+   "courtCity": "Riverside Superior",
+   "courtDate": "Oct 09, 2025",
+   "attorney": {
+    "name": "David Okonkwo",
+    "rating": 5
+   },
+   "outcome": {
+    "result": "Charge dismissed",
+    "saved": 480,
+    "points": 2
+   }
+  },
+  "dismissPay": {
+   "status": "dismissed",
+   "city": "El Paso",
+   "mon": "Sep",
+   "year": "2025",
+   "cls": "Infraction",
+   "caseId": "OTR-45102",
+   "violation": "Speeding · TC 545.351",
+   "more": 0,
+   "firm": "Briggs Traffic",
+   "courtCity": "El Paso County",
+   "attorney": {
+    "name": "Marcus Brail",
+    "rating": 4.7
+   },
+   "outcome": {
+    "result": "Charge dismissed",
+    "saved": 300,
+    "points": 2
+   },
+   "balance": {
+    "amount": 89,
+    "overdue": true
+   }
+  },
+  "counter": {
+   "status": "counter",
+   "city": "Anaheim",
+   "mon": "Feb",
+   "year": "2026",
+   "cls": "Infraction",
+   "caseId": "OTR-48510",
+   "violation": "Speeding · VC 22349(a)",
+   "more": 0,
+   "firm": "Reyes Traffic Law",
+   "courtCity": "Orange County",
+   "courtDate": "May 02, 2026",
+   "attorney": {
+    "name": "Carla Reyes",
+    "rating": 4.8
+   },
+   "counter": {
+    "from": 149,
+    "to": 189
+   }
+  },
+  "remarket": {
+   "status": "remarketing",
+   "city": "Modesto",
+   "mon": "Mar",
+   "year": "2026",
+   "cls": "Infraction",
+   "caseId": "OTR-48533",
+   "violation": "Speeding · VC 22349",
+   "more": 0,
+   "firm": "—",
+   "courtCity": "Stanislaus Superior",
+   "courtDate": "Apr 27, 2026"
+  },
+  "cancelled": {
+   "status": "cancelled",
+   "city": "Bakersfield",
+   "mon": "Feb",
+   "year": "2026",
+   "cls": "Infraction",
+   "caseId": "OTR-48201",
+   "violation": "Speeding · VC 22349",
+   "more": 0,
+   "firm": "—",
+   "courtCity": "Kern County",
+   "courtDate": "Apr 10, 2026"
+  },
+  "missed": {
+   "status": "missed",
+   "city": "Stockton",
+   "mon": "Mar",
+   "year": "2026",
+   "cls": "Infraction",
+   "caseId": "OTR-48088",
+   "violation": "Speeding · VC 22349",
+   "more": 0,
+   "firm": "—",
+   "courtCity": "San Joaquin Superior",
+   "courtDate": "Mar 18, 2026",
+   "daysToCourt": 0
+  },
+  "reassign": {
+   "status": "reassigned",
+   "city": "Glendale",
+   "mon": "Mar",
+   "year": "2026",
+   "cls": "Misdemeanor",
+   "caseId": "OTR-48144",
+   "violation": "Reckless driving · VC 23103",
+   "more": 1,
+   "firm": "Park & Vance",
+   "courtCity": "LA North",
+   "courtDate": "May 20, 2026",
+   "attorney": {
+    "name": "Helen Vance",
+    "rating": 4.9
+   },
+   "action": "reassign-loe"
+  }
+ },
+ "STATE": {
+  "Los Angeles": "CA",
+  "Brooklyn": "NY",
+  "Sacramento": "CA",
+  "Austin": "TX",
+  "Houston": "TX",
+  "San Diego": "CA",
+  "Fresno": "CA",
+  "Long Beach": "CA",
+  "San Jose": "CA",
+  "Oakland": "CA",
+  "Pasadena": "CA",
+  "Riverside": "CA",
+  "El Paso": "TX",
+  "Anaheim": "CA",
+  "Modesto": "CA",
+  "Bakersfield": "CA",
+  "Stockton": "CA",
+  "Glendale": "CA"
+ },
+ "OTR_STATUS": {
+  "incomplete": {
+   "label": "Incomplete",
+   "icon": "new-folder",
+   "tone": "red",
+   "fill": "light",
+   "series": 1
+  },
+  "deadline": {
+   "label": "Deadline",
+   "icon": "alarm-solo",
+   "tone": "red",
+   "fill": "solid",
+   "series": 1
+  },
+  "missed": {
+   "label": "Court missed",
+   "icon": "warning-triangle",
+   "tone": "red",
+   "fill": "solid",
+   "series": 1
+  },
+  "analyzing": {
+   "label": "SmartMatch'n…",
+   "icon": "triangle-arrow-synchronize-1",
+   "tone": "gray",
+   "fill": "light",
+   "series": 2,
+   "loading": true
+  },
+  "remarketing": {
+   "label": "Re-SmartMatching",
+   "icon": "magnifying-glass-square",
+   "tone": "gray",
+   "fill": "light",
+   "series": 2,
+   "loading": true
+  },
+  "smartmatchd": {
+   "label": "SmartMatch'd",
+   "icon": "check-thick",
+   "tone": "grad",
+   "fill": "solid",
+   "lockup": true,
+   "series": 2
+  },
+  "almostgone": {
+   "label": "Last Chance",
+   "icon": "warning-triangle",
+   "tone": "red",
+   "fill": "solid",
+   "series": 2
+  },
+  "counter": {
+   "label": "Counter offer",
+   "icon": "tag-empty",
+   "tone": "amber",
+   "fill": "solid",
+   "series": 2
+  },
+  "expired": {
+   "label": "Expired",
+   "icon": "delete-circle",
+   "tone": "gray",
+   "fill": "light",
+   "series": 2
+  },
+  "active": {
+   "label": "Active",
+   "icon": "open-folder",
+   "tone": "blue",
+   "fill": "light",
+   "series": 3
+  },
+  "active-action": {
+   "label": "Active",
+   "icon": "open-folder",
+   "tone": "blue",
+   "fill": "light",
+   "series": 3
+  },
+  "reassigned": {
+   "label": "Active",
+   "icon": "open-folder",
+   "tone": "blue",
+   "fill": "light",
+   "series": 3
+  },
+  "resolved": {
+   "label": "Resolved",
+   "icon": "folder-check",
+   "tone": "green",
+   "fill": "light",
+   "series": 3
+  },
+  "dismissed": {
+   "label": "Dismissed!",
+   "icon": "folder-star-favorite",
+   "tone": "green",
+   "fill": "solid",
+   "confetti": true,
+   "series": 3
+  },
+  "cancelled": {
+   "label": "Cancelled",
+   "icon": "folder-remove",
+   "tone": "gray",
+   "fill": "light",
+   "series": 3
+  }
+ },
+ "OTR_TONE": {
+  "gray": {
+   "light": [
+    "#eef0f4",
+    "#67707e",
+    "#98a1ae"
+   ],
+   "solid": [
+    "#3b3e46",
+    "#fff"
+   ]
+  },
+  "red": {
+   "light": [
+    "#fdeceb",
+    "#e5463a",
+    "#e5463a"
+   ],
+   "solid": [
+    "#ef4338",
+    "#fff"
+   ]
+  },
+  "amber": {
+   "light": [
+    "#fff4e3",
+    "#b96a06",
+    "#e08a14"
+   ],
+   "solid": [
+    "#c2680a",
+    "#fff"
+   ]
+  },
+  "blue": {
+   "light": [
+    "#e9f1ff",
+    "#2e6bff",
+    "#2e6bff"
+   ],
+   "solid": [
+    "#2e6bff",
+    "#fff"
+   ]
+  },
+  "green": {
+   "light": [
+    "#e4f7ec",
+    "#179a55",
+    "#19a558"
+   ],
+   "solid": [
+    "#19a558",
+    "#fff"
+   ]
+  }
+ },
+ "LIFECYCLE": {
+  "incomplete": "incomplete",
+  "deadline": "incomplete",
+  "dismissed": "dismissed",
+  "resolved": "resolved",
+  "cancelled": "cancelled",
+  "missed": "cancelled"
+ },
+ "TRANSIENT": {
+  "analyzing": true,
+  "smartmatchd": true
+ },
+ "DETAIL": {
+  "active": {
+   "status": "active",
+   "caseId": "OTR-47210",
+   "cls": "Infraction",
+   "photo": "hatch",
+   "place": "Fresno, CA",
+   "issued": "Jan 14, 2026",
+   "title": "Ticket issued in Fresno — Jan 2026",
+   "attorney": {
+    "name": "Priya Nair",
+    "firm": "Nair Law Group",
+    "rating": 4.9
+   },
+   "statusLine": {
+    "t": "Your case is active",
+    "b": "Priya is preparing your defense. There’s nothing you need to do right now — we’ll update you here as it moves."
+   },
+   "violations": [
+    {
+     "label": "Failure to stop",
+     "code": "VC 22450",
+     "note": "Stop sign / limit line"
+    }
+   ],
+   "court": {
+    "name": "Fresno Superior Court",
+    "addr": "1100 Van Ness Ave, Fresno, CA 93724",
+    "date": "Apr 18, 2026",
+    "days": 81
+   },
+   "documents": [
+    {
+     "n": "Letter of engagement",
+     "t": "Signed",
+     "d": "Jan 16, 2026",
+     "ic": "file-check"
+    },
+    {
+     "n": "Citation #C-22450",
+     "t": "On file",
+     "d": "Jan 14, 2026",
+     "ic": "file-document-info-quick-reference"
+    }
+   ],
+   "payments": [
+    {
+     "l": "Legal fee",
+     "a": 250,
+     "d": "Jan 16, 2026",
+     "s": "Paid"
+    }
+   ],
+   "balance": 0,
+   "timeline": [
+    {
+     "t": "Attorney assigned",
+     "b": "Priya Nair · Nair Law Group",
+     "d": "Jan 16",
+     "ic": "user-square-single",
+     "done": true
+    },
+    {
+     "t": "Engagement signed",
+     "b": "You accepted representation",
+     "d": "Jan 16",
+     "ic": "file-check",
+     "done": true
+    },
+    {
+     "t": "Case filed with court",
+     "b": "Fresno Superior Court",
+     "d": "Jan 22",
+     "ic": "building-1",
+     "done": true
+    },
+    {
+     "t": "Court date",
+     "b": "Priya appears on your behalf — you don’t attend",
+     "d": "Apr 18",
+     "ic": "gavel",
+     "future": true
+    }
+   ]
+  },
+  "loe": {
+   "status": "active-action",
+   "caseId": "OTR-48090",
+   "cls": "Misdemeanor",
+   "photo": "tall",
+   "place": "Austin, TX",
+   "issued": "Mar 03, 2026",
+   "title": "Ticket issued in Austin — Mar 2026",
+   "attorney": {
+    "name": "Dana Whitfield",
+    "firm": "Whitfield & Reyes",
+    "rating": 4.9
+   },
+   "statusLine": {
+    "t": "One step left to begin",
+    "b": "Dana is ready to represent you. Accept the letter of engagement below and your case becomes active."
+   },
+   "actions": [
+    {
+     "sev": "warning",
+     "kind": "loe",
+     "title": "Accept representation to proceed",
+     "body": "Sign your letter of engagement so Dana can act on your behalf."
+    }
+   ],
+   "violations": [
+    {
+     "label": "Reckless driving",
+     "code": "TC 545.401",
+     "note": "Class B misdemeanor"
+    },
+    {
+     "label": "Unsafe lane change",
+     "code": "TC 545.060"
+    }
+   ],
+   "court": {
+    "name": "Travis County Justice Court",
+    "addr": "1000 Guadalupe St, Austin, TX 78701",
+    "date": "May 14, 2026",
+    "days": 69
+   },
+   "documents": [
+    {
+     "n": "Letter of engagement",
+     "t": "Awaiting signature",
+     "d": "Mar 06, 2026",
+     "ic": "file-edit",
+     "pending": true
+    }
+   ],
+   "payments": [
+    {
+     "l": "Legal fee",
+     "a": 0,
+     "d": "Quoted",
+     "s": "Due on signing",
+     "q": 299
+    }
+   ],
+   "balance": 0,
+   "timeline": [
+    {
+     "t": "Attorney proposed",
+     "b": "Dana Whitfield · Whitfield & Reyes",
+     "d": "Mar 06",
+     "ic": "user-square-single",
+     "done": true
+    },
+    {
+     "t": "Awaiting your signature",
+     "b": "Accept the letter of engagement",
+     "d": "Now",
+     "ic": "file-edit",
+     "current": true,
+     "tone": "warning"
+    },
+    {
+     "t": "Case becomes active",
+     "b": "Dana files and prepares your defense",
+     "d": "—",
+     "ic": "open-folder",
+     "future": true
+    }
+   ]
+  },
+  "counter": {
+   "status": "counter",
+   "caseId": "OTR-48510",
+   "cls": "Infraction",
+   "photo": "hatch",
+   "place": "Anaheim, CA",
+   "issued": "Feb 09, 2026",
+   "title": "Ticket issued in Anaheim — Feb 2026",
+   "attorney": {
+    "name": "Carla Reyes",
+    "firm": "Reyes Traffic Law",
+    "rating": 4.8
+   },
+   "statusLine": {
+    "t": "You received a counter offer",
+    "b": "Carla reviewed your case and proposed adjusted terms. Review the details and decide before the offer expires."
+   },
+   "actions": [
+    {
+     "sev": "warning",
+     "kind": "counter",
+     "when": "Expires in 2 days",
+     "title": "Review your counter offer",
+     "body": "Carla proposed $189 (was $149). See what changed before you accept or decline."
+    }
+   ],
+   "violations": [
+    {
+     "label": "Speeding",
+     "code": "VC 22349(a)",
+     "note": "16–25 mph over the posted limit"
+    }
+   ],
+   "court": {
+    "name": "Orange County Superior Court",
+    "addr": "700 Civic Center Dr W, Santa Ana, CA 92701",
+    "date": "May 02, 2026",
+    "days": 57
+   },
+   "documents": [
+    {
+     "n": "Counter offer terms",
+     "t": "New",
+     "d": "Feb 24, 2026",
+     "ic": "file-report",
+     "pending": true
+    },
+    {
+     "n": "Citation #A-1149",
+     "t": "On file",
+     "d": "Feb 09, 2026",
+     "ic": "file-document-info-quick-reference"
+    }
+   ],
+   "payments": [
+    {
+     "l": "Original quote",
+     "a": 149,
+     "d": "Feb 12, 2026",
+     "s": "Superseded"
+    }
+   ],
+   "balance": 0,
+   "timeline": [
+    {
+     "t": "Attorney assigned",
+     "b": "Carla Reyes · Reyes Traffic Law",
+     "d": "Feb 12",
+     "ic": "user-square-single",
+     "done": true
+    },
+    {
+     "t": "Counter offer received",
+     "b": "Adjusted terms proposed — your review needed",
+     "d": "Feb 24",
+     "ic": "scale-balanced",
+     "current": true,
+     "tone": "warning"
+    },
+    {
+     "t": "Court date",
+     "b": "Carla appears on your behalf",
+     "d": "May 02",
+     "ic": "gavel",
+     "future": true
+    }
+   ]
+  },
+  "concurrent": {
+   "status": "active-action",
+   "caseId": "OTR-48144",
+   "cls": "Misdemeanor",
+   "photo": "tall",
+   "place": "Glendale, CA",
+   "issued": "Mar 11, 2026",
+   "title": "Ticket issued in Glendale — Mar 2026",
+   "attorney": {
+    "name": "Helen Vance",
+    "firm": "Park & Vance",
+    "rating": 4.9
+   },
+   "statusLine": {
+    "t": "Two things need your attention",
+    "b": "Sign your engagement first — then you can act on the counter offer Helen proposed."
+   },
+   "actions": [
+    {
+     "sev": "warning",
+     "kind": "loe",
+     "title": "Accept representation to proceed",
+     "body": "Sign your letter of engagement so Helen can act on your behalf."
+    },
+    {
+     "sev": "warning",
+     "kind": "counter",
+     "when": "Expires in 4 days",
+     "title": "Review your counter offer",
+     "dep": "Sign your engagement first",
+     "body": "Helen proposed $229 (was $189). You can review it now and accept once you’ve signed."
+    }
+   ],
+   "violations": [
+    {
+     "label": "Reckless driving",
+     "code": "VC 23103",
+     "note": "Willful disregard for safety"
+    },
+    {
+     "label": "Speeding",
+     "code": "VC 22349",
+     "note": "Over posted limit"
+    }
+   ],
+   "court": {
+    "name": "Los Angeles Superior — North",
+    "addr": "600 E Broadway, Glendale, CA 91206",
+    "date": "May 20, 2026",
+    "days": 75
+   },
+   "documents": [
+    {
+     "n": "Letter of engagement",
+     "t": "Awaiting signature",
+     "d": "Mar 14, 2026",
+     "ic": "file-edit",
+     "pending": true
+    },
+    {
+     "n": "Counter offer terms",
+     "t": "New",
+     "d": "Mar 15, 2026",
+     "ic": "file-report",
+     "pending": true
+    }
+   ],
+   "payments": [
+    {
+     "l": "Legal fee",
+     "a": 0,
+     "d": "Quoted",
+     "s": "Due on signing",
+     "q": 229
+    }
+   ],
+   "balance": 0,
+   "timeline": [
+    {
+     "t": "Attorney proposed",
+     "b": "Helen Vance · Park & Vance",
+     "d": "Mar 14",
+     "ic": "user-square-single",
+     "done": true
+    },
+    {
+     "t": "Awaiting your signature",
+     "b": "Sign the letter of engagement so Helen can represent you",
+     "d": "Now",
+     "ic": "file-edit",
+     "current": true,
+     "tone": "warning"
+    },
+    {
+     "t": "Counter offer to review",
+     "b": "Helen proposed adjusted terms — review when you’re ready",
+     "d": "Now",
+     "ic": "scale-balanced",
+     "current": true,
+     "tone": "warning"
+    },
+    {
+     "t": "Case becomes active",
+     "b": "Helen prepares your defense",
+     "d": "—",
+     "ic": "open-folder",
+     "future": true
+    }
+   ]
+  },
+  "overdue": {
+   "status": "active",
+   "caseId": "OTR-46622",
+   "cls": "Wobbler",
+   "photo": "hatch",
+   "place": "Houston, TX",
+   "issued": "Dec 02, 2025",
+   "title": "Ticket issued in Houston — Dec 2025",
+   "attorney": {
+    "name": "Marcus Brail",
+    "firm": "Briggs Traffic",
+    "rating": 4.7
+   },
+   "statusLine": {
+    "t": "Your case is at risk",
+    "b": "A payment is past due. Cases with overdue balances are paused and can be cancelled — clear the balance to keep Marcus on your case."
+   },
+   "accountRail": {
+    "sev": "critical",
+    "text": "A payment of $109 is past due on this case.",
+    "cta": "Pay now"
+   },
+   "actions": [
+    {
+     "sev": "critical",
+     "kind": "pay",
+     "when": "5 days overdue",
+     "title": "Make a payment to avoid cancellation",
+     "body": "Balance of $109 is past due. Pay now to keep your representation active.",
+     "amount": 109
+    }
+   ],
+   "violations": [
+    {
+     "label": "No insurance",
+     "code": "TC 601.191",
+     "note": "Failure to maintain financial responsibility"
+    }
+   ],
+   "court": {
+    "name": "Harris County Justice Court",
+    "addr": "1001 Preston St, Houston, TX 77002",
+    "date": "Apr 02, 2026",
+    "days": 5
+   },
+   "documents": [
+    {
+     "n": "Letter of engagement",
+     "t": "Signed",
+     "d": "Dec 05, 2025",
+     "ic": "file-check"
+    },
+    {
+     "n": "Invoice #4421",
+     "t": "Past due",
+     "d": "Mar 14, 2026",
+     "ic": "bill-dollar-2",
+     "pending": true
+    }
+   ],
+   "payments": [
+    {
+     "l": "Retainer",
+     "a": 150,
+     "d": "Dec 05, 2025",
+     "s": "Paid"
+    },
+    {
+     "l": "Court filing fee",
+     "a": 109,
+     "d": "Mar 14, 2026",
+     "s": "Past due",
+     "overdue": true
+    }
+   ],
+   "balance": 109,
+   "timeline": [
+    {
+     "t": "Attorney assigned",
+     "b": "Marcus Brail · Briggs Traffic",
+     "d": "Dec 05",
+     "ic": "user-square-single",
+     "done": true
+    },
+    {
+     "t": "Payment past due",
+     "b": "Invoice #4421 · $109",
+     "d": "Mar 14",
+     "ic": "bill-dollar-2",
+     "current": true,
+     "sev": "critical"
+    },
+    {
+     "t": "Court date",
+     "b": "At risk if balance not cleared",
+     "d": "Apr 02",
+     "ic": "gavel",
+     "future": true
+    }
+   ]
+  },
+  "remarket": {
+   "status": "remarketing",
+   "caseId": "OTR-48533",
+   "cls": "Infraction",
+   "photo": "hatch",
+   "place": "Modesto, CA",
+   "issued": "Mar 09, 2026",
+   "title": "Ticket issued in Modesto — Mar 2026",
+   "attorney": null,
+   "reassure": {
+    "t": "We’re finding you a new law firm",
+    "b": "Your initial firm was unavailable. We’re re-SmartMatching you with a local traffic attorney — no action needed.",
+    "ic": "triangle-arrow-synchronize-1"
+   },
+   "statusLine": {
+    "t": "Re-SmartMatching in progress",
+    "b": "This usually takes a day or two. We’ll let you know the moment a new attorney is ready."
+   },
+   "violations": [
+    {
+     "label": "Speeding",
+     "code": "VC 22349",
+     "note": "Over posted limit"
+    }
+   ],
+   "court": {
+    "name": "Stanislaus Superior Court",
+    "addr": "800 11th St, Modesto, CA 95354",
+    "date": "Apr 27, 2026",
+    "days": 49
+   },
+   "documents": [
+    {
+     "n": "Citation #M-2271",
+     "t": "On file",
+     "d": "Mar 09, 2026",
+     "ic": "file-document-info-quick-reference"
+    }
+   ],
+   "payments": [],
+   "balance": 0,
+   "timeline": [
+    {
+     "t": "Case submitted",
+     "b": "Citation uploaded",
+     "d": "Mar 09",
+     "ic": "open-folder",
+     "done": true
+    },
+    {
+     "t": "Initial firm unavailable",
+     "b": "We’re re-SmartMatching you",
+     "d": "Mar 12",
+     "ic": "triangle-arrow-synchronize-1",
+     "current": true
+    },
+    {
+     "t": "New attorney assigned",
+     "b": "We’ll notify you",
+     "d": "—",
+     "ic": "user-square-single",
+     "future": true
+    }
+   ]
+  },
+  "dismissed": {
+   "status": "dismissed",
+   "caseId": "OTR-45533",
+   "cls": "Infraction",
+   "photo": "hatch",
+   "place": "Riverside, CA",
+   "issued": "Oct 09, 2025",
+   "title": "Ticket issued in Riverside — Oct 2025",
+   "attorney": {
+    "name": "David Okonkwo",
+    "firm": "Okonkwo Legal",
+    "rating": 5
+   },
+   "celebrate": {
+    "t": "🎉 Your ticket was dismissed",
+    "s": "No points, no fine. David got the charge thrown out."
+   },
+   "statusLine": {
+    "t": "Case resolved — dismissed",
+    "b": "Nothing further is required. Your record stays clean and the documents below are yours to keep."
+   },
+   "review": true,
+   "violations": [
+    {
+     "label": "Speeding",
+     "code": "VC 22349",
+     "note": "Over posted limit — dismissed"
+    }
+   ],
+   "court": {
+    "name": "Riverside Superior Court",
+    "addr": "4100 Main St, Riverside, CA 92501",
+    "date": "Oct 09, 2025",
+    "days": null,
+    "past": true
+   },
+   "documents": [
+    {
+     "n": "Dismissal confirmation",
+     "t": "Final",
+     "d": "Nov 12, 2025",
+     "ic": "file-check"
+    },
+    {
+     "n": "Letter of engagement",
+     "t": "Signed",
+     "d": "Oct 11, 2025",
+     "ic": "file-check"
+    },
+    {
+     "n": "Receipt #8841",
+     "t": "Paid",
+     "d": "Oct 11, 2025",
+     "ic": "bill-dollar-2"
+    }
+   ],
+   "payments": [
+    {
+     "l": "Legal fee",
+     "a": 480,
+     "d": "Oct 11, 2025",
+     "s": "Paid"
+    }
+   ],
+   "balance": 0,
+   "outcome": {
+    "saved": 480,
+    "points": 2
+   },
+   "timeline": [
+    {
+     "t": "Attorney assigned",
+     "b": "David Okonkwo · Okonkwo Legal",
+     "d": "Oct 11",
+     "ic": "user-square-single",
+     "done": true
+    },
+    {
+     "t": "Appeared in court",
+     "b": "David represented you",
+     "d": "Oct 09",
+     "ic": "gavel",
+     "done": true
+    },
+    {
+     "t": "Charge dismissed",
+     "b": "No points, no fine",
+     "d": "Nov 12",
+     "ic": "folder-star-favorite",
+     "done": true,
+     "sev": "success"
+    }
+   ]
+  },
+  "notbooked": {
+   "status": "incomplete",
+   "caseId": "OTR-48377",
+   "cls": null,
+   "photo": "placeholder",
+   "place": null,
+   "issued": "Mar 18, 2026",
+   "title": "Ticket issued on Mar 18, 2026",
+   "attorney": null,
+   "reassure": {
+    "t": "Book now to be SmartMatch’d with an attorney",
+    "b": "Add a few details and get an instant quote — we’ll SmartMatch you with a local traffic attorney who can fight this ticket.",
+    "ic": "user-square-single",
+    "cta": "Get instant quote"
+   },
+   "statusLine": {
+    "t": "Finish setting up your case",
+    "b": "We need a little more before we can SmartMatch you. The more you add, the faster we move."
+   },
+   "booking": true,
+   "violations": [],
+   "court": null,
+   "documents": [],
+   "payments": [],
+   "balance": 0,
+   "timeline": [
+    {
+     "t": "Ticket added",
+     "b": "Mar 18, 2026",
+     "d": "Now",
+     "ic": "open-folder",
+     "current": true
+    },
+    {
+     "t": "Get SmartMatch’d",
+     "b": "Book to be SmartMatch’d with an attorney",
+     "d": "—",
+     "ic": "user-square-single",
+     "future": true
+    }
+   ]
+  }
+ },
+ "SEVERITY": {
+  "critical": {
+   "rank": 4,
+   "label": "Critical",
+   "bg": "var(--red-50)",
+   "line": "var(--red-200)",
+   "ink": "var(--red-900)",
+   "ic": "var(--red-600)",
+   "dot": "var(--red-600)",
+   "icon": "warning-octagon"
+  },
+  "warning": {
+   "rank": 3,
+   "label": "Warning",
+   "bg": "var(--amber-50)",
+   "line": "var(--amber-200)",
+   "ink": "var(--amber-900)",
+   "ic": "var(--amber-500)",
+   "dot": "var(--amber-500)",
+   "icon": "warning-triangle"
+  },
+  "info": {
+   "rank": 2,
+   "label": "Info",
+   "bg": "var(--blue-50)",
+   "line": "var(--blue-200)",
+   "ink": "var(--blue-900)",
+   "ic": "var(--blue-600)",
+   "dot": "var(--blue-600)",
+   "icon": "information-circle"
+  },
+  "success": {
+   "rank": 1,
+   "label": "Success",
+   "bg": "var(--green-50)",
+   "line": "var(--green-200)",
+   "ink": "var(--green-900)",
+   "ic": "var(--green-600)",
+   "dot": "var(--green-600)",
+   "icon": "chart-circle-up-growth"
+  }
+ },
+ "cases": [
+  {
+   "caseId": "OTR-48213",
+   "previewKey": "smart",
+   "preview": {
+    "status": "smartmatchd",
+    "city": "Los Angeles",
+    "mon": "Mar",
+    "year": "2026",
+    "cls": "Infraction",
+    "caseId": "OTR-48213",
+    "violation": "Speeding · VC 22349(a)",
+    "more": 1,
+    "firm": "Mendez & Cole",
+    "courtCity": "LA Metropolitan",
+    "courtDate": "Apr 24, 2026",
+    "attorney": {
+     "name": "your matched attorney",
+     "rating": 4.9,
+     "blurred": true
+    },
+    "quote": {
+     "amount": 149,
+     "expires": "24m 14s"
+    },
+    "state": "CA"
+   }
+  },
+  {
+   "caseId": "OTR-47980",
+   "previewKey": "almost",
+   "preview": {
+    "status": "almostgone",
+    "city": "Brooklyn",
+    "mon": "Feb",
+    "year": "2026",
+    "cls": "Infraction",
+    "caseId": "OTR-47980",
+    "violation": "Red light · VTL 1111(d)",
+    "more": 0,
+    "firm": "Okonkwo Legal",
+    "courtCity": "Kings County",
+    "courtDate": "Mar 19, 2026",
+    "attorney": {
+     "name": "your matched attorney",
+     "rating": 4.8,
+     "blurred": true
+    },
+    "quote": {
+     "amount": 129,
+     "expires": "4m 48s"
+    },
+    "state": "NY"
+   }
+  },
+  {
+   "caseId": "OTR-47551",
+   "previewKey": "expired",
+   "preview": {
+    "status": "expired",
+    "city": "Sacramento",
+    "mon": "Jan",
+    "year": "2026",
+    "cls": "Infraction",
+    "caseId": "OTR-47551",
+    "violation": "Speeding · VC 22350",
+    "more": 0,
+    "firm": "—",
+    "courtCity": "Sacramento Superior",
+    "courtDate": "Feb 11, 2026",
+    "state": "CA"
+   }
+  },
+  {
+   "caseId": "OTR-48090",
+   "previewKey": "loe",
+   "preview": {
+    "status": "active-action",
+    "city": "Austin",
+    "mon": "Mar",
+    "year": "2026",
+    "cls": "Misdemeanor",
+    "caseId": "OTR-48090",
+    "violation": "Reckless driving · TC 545.401",
+    "more": 2,
+    "firm": "Whitfield & Reyes",
+    "courtCity": "Travis County",
+    "courtDate": "May 14, 2026",
+    "attorney": {
+     "name": "Dana Whitfield",
+     "rating": 4.9
+    },
+    "action": "loe",
+    "state": "TX"
+   },
+   "detailKey": "loe",
+   "detail": {
+    "status": "active-action",
+    "caseId": "OTR-48090",
+    "cls": "Misdemeanor",
+    "photo": "tall",
+    "place": "Austin, TX",
+    "issued": "Mar 03, 2026",
+    "title": "Ticket issued in Austin — Mar 2026",
+    "attorney": {
+     "name": "Dana Whitfield",
+     "firm": "Whitfield & Reyes",
+     "rating": 4.9
+    },
+    "statusLine": {
+     "t": "One step left to begin",
+     "b": "Dana is ready to represent you. Accept the letter of engagement below and your case becomes active."
+    },
+    "actions": [
+     {
+      "sev": "warning",
+      "kind": "loe",
+      "title": "Accept representation to proceed",
+      "body": "Sign your letter of engagement so Dana can act on your behalf."
+     }
+    ],
+    "violations": [
+     {
+      "label": "Reckless driving",
+      "code": "TC 545.401",
+      "note": "Class B misdemeanor"
+     },
+     {
+      "label": "Unsafe lane change",
+      "code": "TC 545.060"
+     }
+    ],
+    "court": {
+     "name": "Travis County Justice Court",
+     "addr": "1000 Guadalupe St, Austin, TX 78701",
+     "date": "May 14, 2026",
+     "days": 69
+    },
+    "documents": [
+     {
+      "n": "Letter of engagement",
+      "t": "Awaiting signature",
+      "d": "Mar 06, 2026",
+      "ic": "file-edit",
+      "pending": true
+     }
+    ],
+    "payments": [
+     {
+      "l": "Legal fee",
+      "a": 0,
+      "d": "Quoted",
+      "s": "Due on signing",
+      "q": 299
+     }
+    ],
+    "balance": 0,
+    "timeline": [
+     {
+      "t": "Attorney proposed",
+      "b": "Dana Whitfield · Whitfield & Reyes",
+      "d": "Mar 06",
+      "ic": "user-square-single",
+      "done": true
+     },
+     {
+      "t": "Awaiting your signature",
+      "b": "Accept the letter of engagement",
+      "d": "Now",
+      "ic": "file-edit",
+      "current": true,
+      "tone": "warning"
+     },
+     {
+      "t": "Case becomes active",
+      "b": "Dana files and prepares your defense",
+      "d": "—",
+      "ic": "open-folder",
+      "future": true
+     }
+    ]
+   }
+  },
+  {
+   "caseId": "OTR-46622",
+   "previewKey": "overdue",
+   "preview": {
+    "status": "active",
+    "city": "Houston",
+    "mon": "Dec",
+    "year": "2025",
+    "cls": "Wobbler",
+    "caseId": "OTR-46622",
+    "violation": "No insurance · TC 601.191",
+    "more": 1,
+    "firm": "Briggs Traffic",
+    "courtCity": "Harris County",
+    "courtDate": "Apr 02, 2026",
+    "attorney": {
+     "name": "Marcus Brail",
+     "rating": 4.7
+    },
+    "balance": {
+     "amount": 109,
+     "overdue": true
+    },
+    "state": "TX"
+   },
+   "detailKey": "overdue",
+   "detail": {
+    "status": "active",
+    "caseId": "OTR-46622",
+    "cls": "Wobbler",
+    "photo": "hatch",
+    "place": "Houston, TX",
+    "issued": "Dec 02, 2025",
+    "title": "Ticket issued in Houston — Dec 2025",
+    "attorney": {
+     "name": "Marcus Brail",
+     "firm": "Briggs Traffic",
+     "rating": 4.7
+    },
+    "statusLine": {
+     "t": "Your case is at risk",
+     "b": "A payment is past due. Cases with overdue balances are paused and can be cancelled — clear the balance to keep Marcus on your case."
+    },
+    "accountRail": {
+     "sev": "critical",
+     "text": "A payment of $109 is past due on this case.",
+     "cta": "Pay now"
+    },
+    "actions": [
+     {
+      "sev": "critical",
+      "kind": "pay",
+      "when": "5 days overdue",
+      "title": "Make a payment to avoid cancellation",
+      "body": "Balance of $109 is past due. Pay now to keep your representation active.",
+      "amount": 109
+     }
+    ],
+    "violations": [
+     {
+      "label": "No insurance",
+      "code": "TC 601.191",
+      "note": "Failure to maintain financial responsibility"
+     }
+    ],
+    "court": {
+     "name": "Harris County Justice Court",
+     "addr": "1001 Preston St, Houston, TX 77002",
+     "date": "Apr 02, 2026",
+     "days": 5
+    },
+    "documents": [
+     {
+      "n": "Letter of engagement",
+      "t": "Signed",
+      "d": "Dec 05, 2025",
+      "ic": "file-check"
+     },
+     {
+      "n": "Invoice #4421",
+      "t": "Past due",
+      "d": "Mar 14, 2026",
+      "ic": "bill-dollar-2",
+      "pending": true
+     }
+    ],
+    "payments": [
+     {
+      "l": "Retainer",
+      "a": 150,
+      "d": "Dec 05, 2025",
+      "s": "Paid"
+     },
+     {
+      "l": "Court filing fee",
+      "a": 109,
+      "d": "Mar 14, 2026",
+      "s": "Past due",
+      "overdue": true
+     }
+    ],
+    "balance": 109,
+    "timeline": [
+     {
+      "t": "Attorney assigned",
+      "b": "Marcus Brail · Briggs Traffic",
+      "d": "Dec 05",
+      "ic": "user-square-single",
+      "done": true
+     },
+     {
+      "t": "Payment past due",
+      "b": "Invoice #4421 · $109",
+      "d": "Mar 14",
+      "ic": "bill-dollar-2",
+      "current": true,
+      "sev": "critical"
+     },
+     {
+      "t": "Court date",
+      "b": "At risk if balance not cleared",
+      "d": "Apr 02",
+      "ic": "gavel",
+      "future": true
+     }
+    ]
+   }
+  },
+  {
+   "caseId": "OTR-47802",
+   "previewKey": "unread",
+   "preview": {
+    "status": "active",
+    "city": "San Diego",
+    "mon": "Feb",
+    "year": "2026",
+    "cls": "Infraction",
+    "caseId": "OTR-47802",
+    "violation": "Speeding · VC 22349(a)",
+    "more": 0,
+    "firm": "Coastal Defense",
+    "courtCity": "San Diego Superior",
+    "courtDate": "Mar 30, 2026",
+    "attorney": {
+     "name": "Lena Park",
+     "rating": 4.8
+    },
+    "unread": 2,
+    "state": "CA"
+   }
+  },
+  {
+   "caseId": "OTR-47210",
+   "previewKey": "active",
+   "preview": {
+    "status": "active",
+    "city": "Fresno",
+    "mon": "Jan",
+    "year": "2026",
+    "cls": "Infraction",
+    "caseId": "OTR-47210",
+    "violation": "Failure to stop · VC 22450",
+    "more": 0,
+    "firm": "Nair Law Group",
+    "courtCity": "Fresno Superior",
+    "courtDate": "Apr 18, 2026",
+    "attorney": {
+     "name": "Priya Nair",
+     "rating": 4.9
+    },
+    "state": "CA"
+   },
+   "detailKey": "active",
+   "detail": {
+    "status": "active",
+    "caseId": "OTR-47210",
+    "cls": "Infraction",
+    "photo": "hatch",
+    "place": "Fresno, CA",
+    "issued": "Jan 14, 2026",
+    "title": "Ticket issued in Fresno — Jan 2026",
+    "attorney": {
+     "name": "Priya Nair",
+     "firm": "Nair Law Group",
+     "rating": 4.9
+    },
+    "statusLine": {
+     "t": "Your case is active",
+     "b": "Priya is preparing your defense. There’s nothing you need to do right now — we’ll update you here as it moves."
+    },
+    "violations": [
+     {
+      "label": "Failure to stop",
+      "code": "VC 22450",
+      "note": "Stop sign / limit line"
+     }
+    ],
+    "court": {
+     "name": "Fresno Superior Court",
+     "addr": "1100 Van Ness Ave, Fresno, CA 93724",
+     "date": "Apr 18, 2026",
+     "days": 81
+    },
+    "documents": [
+     {
+      "n": "Letter of engagement",
+      "t": "Signed",
+      "d": "Jan 16, 2026",
+      "ic": "file-check"
+     },
+     {
+      "n": "Citation #C-22450",
+      "t": "On file",
+      "d": "Jan 14, 2026",
+      "ic": "file-document-info-quick-reference"
+     }
+    ],
+    "payments": [
+     {
+      "l": "Legal fee",
+      "a": 250,
+      "d": "Jan 16, 2026",
+      "s": "Paid"
+     }
+    ],
+    "balance": 0,
+    "timeline": [
+     {
+      "t": "Attorney assigned",
+      "b": "Priya Nair · Nair Law Group",
+      "d": "Jan 16",
+      "ic": "user-square-single",
+      "done": true
+     },
+     {
+      "t": "Engagement signed",
+      "b": "You accepted representation",
+      "d": "Jan 16",
+      "ic": "file-check",
+      "done": true
+     },
+     {
+      "t": "Case filed with court",
+      "b": "Fresno Superior Court",
+      "d": "Jan 22",
+      "ic": "building-1",
+      "done": true
+     },
+     {
+      "t": "Court date",
+      "b": "Priya appears on your behalf — you don’t attend",
+      "d": "Apr 18",
+      "ic": "gavel",
+      "future": true
+     }
+    ]
+   }
+  },
+  {
+   "caseId": "OTR-48402",
+   "previewKey": "deadline",
+   "preview": {
+    "status": "deadline",
+    "city": "Long Beach",
+    "mon": "Apr",
+    "year": "2026",
+    "cls": "Infraction",
+    "caseId": "OTR-48402",
+    "violation": "Speeding · VC 22349",
+    "more": 0,
+    "firm": "—",
+    "courtCity": "Long Beach Courthouse",
+    "courtDate": "Apr 29, 2026",
+    "daysToCourt": 9,
+    "state": "CA"
+   }
+  },
+  {
+   "caseId": "OTR-48377",
+   "previewKey": "incomp",
+   "preview": {
+    "status": "incomplete",
+    "city": "San Jose",
+    "mon": "Mar",
+    "year": "2026",
+    "cls": "—",
+    "caseId": "OTR-48377",
+    "violation": "Not provided",
+    "more": 0,
+    "firm": "—",
+    "complete": 40,
+    "courtDate": "Unknown",
+    "state": "CA"
+   },
+   "detailKey": "notbooked",
+   "detail": {
+    "status": "incomplete",
+    "caseId": "OTR-48377",
+    "cls": null,
+    "photo": "placeholder",
+    "place": null,
+    "issued": "Mar 18, 2026",
+    "title": "Ticket issued on Mar 18, 2026",
+    "attorney": null,
+    "reassure": {
+     "t": "Book now to be SmartMatch’d with an attorney",
+     "b": "Add a few details and get an instant quote — we’ll SmartMatch you with a local traffic attorney who can fight this ticket.",
+     "ic": "user-square-single",
+     "cta": "Get instant quote"
+    },
+    "statusLine": {
+     "t": "Finish setting up your case",
+     "b": "We need a little more before we can SmartMatch you. The more you add, the faster we move."
+    },
+    "booking": true,
+    "violations": [],
+    "court": null,
+    "documents": [],
+    "payments": [],
+    "balance": 0,
+    "timeline": [
+     {
+      "t": "Ticket added",
+      "b": "Mar 18, 2026",
+      "d": "Now",
+      "ic": "open-folder",
+      "current": true
+     },
+     {
+      "t": "Get SmartMatch’d",
+      "b": "Book to be SmartMatch’d with an attorney",
+      "d": "—",
+      "ic": "user-square-single",
+      "future": true
+     }
+    ]
+   }
+  },
+  {
+   "caseId": "OTR-48355",
+   "previewKey": "analyze",
+   "preview": {
+    "status": "analyzing",
+    "city": "Oakland",
+    "mon": "Mar",
+    "year": "2026",
+    "cls": "Infraction",
+    "caseId": "OTR-48355",
+    "violation": "Speeding · VC 22349",
+    "more": 0,
+    "firm": "—",
+    "courtCity": "Alameda Superior",
+    "courtDate": "Apr 21, 2026",
+    "state": "CA"
+   }
+  },
+  {
+   "caseId": "OTR-45980",
+   "previewKey": "resolved",
+   "preview": {
+    "status": "resolved",
+    "city": "Pasadena",
+    "mon": "Nov",
+    "year": "2025",
+    "cls": "Infraction",
+    "caseId": "OTR-45980",
+    "violation": "Speeding · VC 22349(a)",
+    "more": 0,
+    "firm": "Mendez & Cole",
+    "courtCity": "Pasadena Courthouse",
+    "courtDate": "Nov 12, 2025",
+    "attorney": {
+     "name": "Sofia Mendez",
+     "rating": 4.8
+    },
+    "outcome": {
+     "result": "Reduced to non-moving",
+     "saved": 240,
+     "points": 1
+    },
+    "state": "CA"
+   }
+  },
+  {
+   "caseId": "OTR-45533",
+   "previewKey": "dismiss",
+   "preview": {
+    "status": "dismissed",
+    "city": "Riverside",
+    "mon": "Oct",
+    "year": "2025",
+    "cls": "Infraction",
+    "caseId": "OTR-45533",
+    "violation": "Speeding · VC 22349",
+    "more": 0,
+    "firm": "Okonkwo Legal",
+    "courtCity": "Riverside Superior",
+    "courtDate": "Oct 09, 2025",
+    "attorney": {
+     "name": "David Okonkwo",
+     "rating": 5
+    },
+    "outcome": {
+     "result": "Charge dismissed",
+     "saved": 480,
+     "points": 2
+    },
+    "state": "CA"
+   },
+   "detailKey": "dismissed",
+   "detail": {
+    "status": "dismissed",
+    "caseId": "OTR-45533",
+    "cls": "Infraction",
+    "photo": "hatch",
+    "place": "Riverside, CA",
+    "issued": "Oct 09, 2025",
+    "title": "Ticket issued in Riverside — Oct 2025",
+    "attorney": {
+     "name": "David Okonkwo",
+     "firm": "Okonkwo Legal",
+     "rating": 5
+    },
+    "celebrate": {
+     "t": "🎉 Your ticket was dismissed",
+     "s": "No points, no fine. David got the charge thrown out."
+    },
+    "statusLine": {
+     "t": "Case resolved — dismissed",
+     "b": "Nothing further is required. Your record stays clean and the documents below are yours to keep."
+    },
+    "review": true,
+    "violations": [
+     {
+      "label": "Speeding",
+      "code": "VC 22349",
+      "note": "Over posted limit — dismissed"
+     }
+    ],
+    "court": {
+     "name": "Riverside Superior Court",
+     "addr": "4100 Main St, Riverside, CA 92501",
+     "date": "Oct 09, 2025",
+     "days": null,
+     "past": true
+    },
+    "documents": [
+     {
+      "n": "Dismissal confirmation",
+      "t": "Final",
+      "d": "Nov 12, 2025",
+      "ic": "file-check"
+     },
+     {
+      "n": "Letter of engagement",
+      "t": "Signed",
+      "d": "Oct 11, 2025",
+      "ic": "file-check"
+     },
+     {
+      "n": "Receipt #8841",
+      "t": "Paid",
+      "d": "Oct 11, 2025",
+      "ic": "bill-dollar-2"
+     }
+    ],
+    "payments": [
+     {
+      "l": "Legal fee",
+      "a": 480,
+      "d": "Oct 11, 2025",
+      "s": "Paid"
+     }
+    ],
+    "balance": 0,
+    "outcome": {
+     "saved": 480,
+     "points": 2
+    },
+    "timeline": [
+     {
+      "t": "Attorney assigned",
+      "b": "David Okonkwo · Okonkwo Legal",
+      "d": "Oct 11",
+      "ic": "user-square-single",
+      "done": true
+     },
+     {
+      "t": "Appeared in court",
+      "b": "David represented you",
+      "d": "Oct 09",
+      "ic": "gavel",
+      "done": true
+     },
+     {
+      "t": "Charge dismissed",
+      "b": "No points, no fine",
+      "d": "Nov 12",
+      "ic": "folder-star-favorite",
+      "done": true,
+      "sev": "success"
+     }
+    ]
+   }
+  },
+  {
+   "caseId": "OTR-45102",
+   "previewKey": "dismissPay",
+   "preview": {
+    "status": "dismissed",
+    "city": "El Paso",
+    "mon": "Sep",
+    "year": "2025",
+    "cls": "Infraction",
+    "caseId": "OTR-45102",
+    "violation": "Speeding · TC 545.351",
+    "more": 0,
+    "firm": "Briggs Traffic",
+    "courtCity": "El Paso County",
+    "attorney": {
+     "name": "Marcus Brail",
+     "rating": 4.7
+    },
+    "outcome": {
+     "result": "Charge dismissed",
+     "saved": 300,
+     "points": 2
+    },
+    "balance": {
+     "amount": 89,
+     "overdue": true
+    },
+    "state": "TX"
+   }
+  },
+  {
+   "caseId": "OTR-48510",
+   "previewKey": "counter",
+   "preview": {
+    "status": "counter",
+    "city": "Anaheim",
+    "mon": "Feb",
+    "year": "2026",
+    "cls": "Infraction",
+    "caseId": "OTR-48510",
+    "violation": "Speeding · VC 22349(a)",
+    "more": 0,
+    "firm": "Reyes Traffic Law",
+    "courtCity": "Orange County",
+    "courtDate": "May 02, 2026",
+    "attorney": {
+     "name": "Carla Reyes",
+     "rating": 4.8
+    },
+    "counter": {
+     "from": 149,
+     "to": 189
+    },
+    "state": "CA"
+   },
+   "detailKey": "counter",
+   "detail": {
+    "status": "counter",
+    "caseId": "OTR-48510",
+    "cls": "Infraction",
+    "photo": "hatch",
+    "place": "Anaheim, CA",
+    "issued": "Feb 09, 2026",
+    "title": "Ticket issued in Anaheim — Feb 2026",
+    "attorney": {
+     "name": "Carla Reyes",
+     "firm": "Reyes Traffic Law",
+     "rating": 4.8
+    },
+    "statusLine": {
+     "t": "You received a counter offer",
+     "b": "Carla reviewed your case and proposed adjusted terms. Review the details and decide before the offer expires."
+    },
+    "actions": [
+     {
+      "sev": "warning",
+      "kind": "counter",
+      "when": "Expires in 2 days",
+      "title": "Review your counter offer",
+      "body": "Carla proposed $189 (was $149). See what changed before you accept or decline."
+     }
+    ],
+    "violations": [
+     {
+      "label": "Speeding",
+      "code": "VC 22349(a)",
+      "note": "16–25 mph over the posted limit"
+     }
+    ],
+    "court": {
+     "name": "Orange County Superior Court",
+     "addr": "700 Civic Center Dr W, Santa Ana, CA 92701",
+     "date": "May 02, 2026",
+     "days": 57
+    },
+    "documents": [
+     {
+      "n": "Counter offer terms",
+      "t": "New",
+      "d": "Feb 24, 2026",
+      "ic": "file-report",
+      "pending": true
+     },
+     {
+      "n": "Citation #A-1149",
+      "t": "On file",
+      "d": "Feb 09, 2026",
+      "ic": "file-document-info-quick-reference"
+     }
+    ],
+    "payments": [
+     {
+      "l": "Original quote",
+      "a": 149,
+      "d": "Feb 12, 2026",
+      "s": "Superseded"
+     }
+    ],
+    "balance": 0,
+    "timeline": [
+     {
+      "t": "Attorney assigned",
+      "b": "Carla Reyes · Reyes Traffic Law",
+      "d": "Feb 12",
+      "ic": "user-square-single",
+      "done": true
+     },
+     {
+      "t": "Counter offer received",
+      "b": "Adjusted terms proposed — your review needed",
+      "d": "Feb 24",
+      "ic": "scale-balanced",
+      "current": true,
+      "tone": "warning"
+     },
+     {
+      "t": "Court date",
+      "b": "Carla appears on your behalf",
+      "d": "May 02",
+      "ic": "gavel",
+      "future": true
+     }
+    ]
+   }
+  },
+  {
+   "caseId": "OTR-48533",
+   "previewKey": "remarket",
+   "preview": {
+    "status": "remarketing",
+    "city": "Modesto",
+    "mon": "Mar",
+    "year": "2026",
+    "cls": "Infraction",
+    "caseId": "OTR-48533",
+    "violation": "Speeding · VC 22349",
+    "more": 0,
+    "firm": "—",
+    "courtCity": "Stanislaus Superior",
+    "courtDate": "Apr 27, 2026",
+    "state": "CA"
+   },
+   "detailKey": "remarket",
+   "detail": {
+    "status": "remarketing",
+    "caseId": "OTR-48533",
+    "cls": "Infraction",
+    "photo": "hatch",
+    "place": "Modesto, CA",
+    "issued": "Mar 09, 2026",
+    "title": "Ticket issued in Modesto — Mar 2026",
+    "attorney": null,
+    "reassure": {
+     "t": "We’re finding you a new law firm",
+     "b": "Your initial firm was unavailable. We’re re-SmartMatching you with a local traffic attorney — no action needed.",
+     "ic": "triangle-arrow-synchronize-1"
+    },
+    "statusLine": {
+     "t": "Re-SmartMatching in progress",
+     "b": "This usually takes a day or two. We’ll let you know the moment a new attorney is ready."
+    },
+    "violations": [
+     {
+      "label": "Speeding",
+      "code": "VC 22349",
+      "note": "Over posted limit"
+     }
+    ],
+    "court": {
+     "name": "Stanislaus Superior Court",
+     "addr": "800 11th St, Modesto, CA 95354",
+     "date": "Apr 27, 2026",
+     "days": 49
+    },
+    "documents": [
+     {
+      "n": "Citation #M-2271",
+      "t": "On file",
+      "d": "Mar 09, 2026",
+      "ic": "file-document-info-quick-reference"
+     }
+    ],
+    "payments": [],
+    "balance": 0,
+    "timeline": [
+     {
+      "t": "Case submitted",
+      "b": "Citation uploaded",
+      "d": "Mar 09",
+      "ic": "open-folder",
+      "done": true
+     },
+     {
+      "t": "Initial firm unavailable",
+      "b": "We’re re-SmartMatching you",
+      "d": "Mar 12",
+      "ic": "triangle-arrow-synchronize-1",
+      "current": true
+     },
+     {
+      "t": "New attorney assigned",
+      "b": "We’ll notify you",
+      "d": "—",
+      "ic": "user-square-single",
+      "future": true
+     }
+    ]
+   }
+  },
+  {
+   "caseId": "OTR-48201",
+   "previewKey": "cancelled",
+   "preview": {
+    "status": "cancelled",
+    "city": "Bakersfield",
+    "mon": "Feb",
+    "year": "2026",
+    "cls": "Infraction",
+    "caseId": "OTR-48201",
+    "violation": "Speeding · VC 22349",
+    "more": 0,
+    "firm": "—",
+    "courtCity": "Kern County",
+    "courtDate": "Apr 10, 2026",
+    "state": "CA"
+   }
+  },
+  {
+   "caseId": "OTR-48088",
+   "previewKey": "missed",
+   "preview": {
+    "status": "missed",
+    "city": "Stockton",
+    "mon": "Mar",
+    "year": "2026",
+    "cls": "Infraction",
+    "caseId": "OTR-48088",
+    "violation": "Speeding · VC 22349",
+    "more": 0,
+    "firm": "—",
+    "courtCity": "San Joaquin Superior",
+    "courtDate": "Mar 18, 2026",
+    "daysToCourt": 0,
+    "state": "CA"
+   }
+  },
+  {
+   "caseId": "OTR-48144",
+   "previewKey": "reassign",
+   "preview": {
+    "status": "reassigned",
+    "city": "Glendale",
+    "mon": "Mar",
+    "year": "2026",
+    "cls": "Misdemeanor",
+    "caseId": "OTR-48144",
+    "violation": "Reckless driving · VC 23103",
+    "more": 1,
+    "firm": "Park & Vance",
+    "courtCity": "LA North",
+    "courtDate": "May 20, 2026",
+    "attorney": {
+     "name": "Helen Vance",
+     "rating": 4.9
+    },
+    "action": "reassign-loe",
+    "state": "CA"
+   },
+   "detailKey": "concurrent",
+   "detail": {
+    "status": "active-action",
+    "caseId": "OTR-48144",
+    "cls": "Misdemeanor",
+    "photo": "tall",
+    "place": "Glendale, CA",
+    "issued": "Mar 11, 2026",
+    "title": "Ticket issued in Glendale — Mar 2026",
+    "attorney": {
+     "name": "Helen Vance",
+     "firm": "Park & Vance",
+     "rating": 4.9
+    },
+    "statusLine": {
+     "t": "Two things need your attention",
+     "b": "Sign your engagement first — then you can act on the counter offer Helen proposed."
+    },
+    "actions": [
+     {
+      "sev": "warning",
+      "kind": "loe",
+      "title": "Accept representation to proceed",
+      "body": "Sign your letter of engagement so Helen can act on your behalf."
+     },
+     {
+      "sev": "warning",
+      "kind": "counter",
+      "when": "Expires in 4 days",
+      "title": "Review your counter offer",
+      "dep": "Sign your engagement first",
+      "body": "Helen proposed $229 (was $189). You can review it now and accept once you’ve signed."
+     }
+    ],
+    "violations": [
+     {
+      "label": "Reckless driving",
+      "code": "VC 23103",
+      "note": "Willful disregard for safety"
+     },
+     {
+      "label": "Speeding",
+      "code": "VC 22349",
+      "note": "Over posted limit"
+     }
+    ],
+    "court": {
+     "name": "Los Angeles Superior — North",
+     "addr": "600 E Broadway, Glendale, CA 91206",
+     "date": "May 20, 2026",
+     "days": 75
+    },
+    "documents": [
+     {
+      "n": "Letter of engagement",
+      "t": "Awaiting signature",
+      "d": "Mar 14, 2026",
+      "ic": "file-edit",
+      "pending": true
+     },
+     {
+      "n": "Counter offer terms",
+      "t": "New",
+      "d": "Mar 15, 2026",
+      "ic": "file-report",
+      "pending": true
+     }
+    ],
+    "payments": [
+     {
+      "l": "Legal fee",
+      "a": 0,
+      "d": "Quoted",
+      "s": "Due on signing",
+      "q": 229
+     }
+    ],
+    "balance": 0,
+    "timeline": [
+     {
+      "t": "Attorney proposed",
+      "b": "Helen Vance · Park & Vance",
+      "d": "Mar 14",
+      "ic": "user-square-single",
+      "done": true
+     },
+     {
+      "t": "Awaiting your signature",
+      "b": "Sign the letter of engagement so Helen can represent you",
+      "d": "Now",
+      "ic": "file-edit",
+      "current": true,
+      "tone": "warning"
+     },
+     {
+      "t": "Counter offer to review",
+      "b": "Helen proposed adjusted terms — review when you’re ready",
+      "d": "Now",
+      "ic": "scale-balanced",
+      "current": true,
+      "tone": "warning"
+     },
+     {
+      "t": "Case becomes active",
+      "b": "Helen prepares your defense",
+      "d": "—",
+      "ic": "open-folder",
+      "future": true
+     }
+    ]
+   }
+  }
+ ]
+}

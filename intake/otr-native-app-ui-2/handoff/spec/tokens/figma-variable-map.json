@@ -1,0 +1,7456 @@
+{
+ "meta": {
+  "generated": "2026-07-28T17:26:33.363Z",
+  "source": "OTR • Native App UI (Claude design project)",
+  "designSystem": "OffTheRecordDesignSystem_6eff96",
+  "figmaTokenSource": "_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fig-tokens.css",
+  "targetFigmaFile": "Native App / Design (variables consumed from the Customer side / Guidelines library)"
+ },
+ "howToUse": [
+  "css is authoritative. figmaCandidate is a GUESS at the Figma variable path: fig-tokens.css slugifies Figma names, so '/' and '-' are both flattened to '-'. Resolve by NORMALIZED name match against the live collections (strip / - _ and lowercase), never by exact string.",
+  "action per value: BIND = exact variable exists, bind it. BIND_NEAREST = perceptually identical (deltaE<2), bind nearest and move on. BIND_NEAREST_AND_FLAG = visible drift, bind nearest and print a diff note beside the frame. DS_REQUEST = no honest match, use the raw hex AND print a diff swatch on the canvas for human review. RAW_OK = board scaffolding, never ships, raw hex is fine.",
+  "Never invent a variable. If no candidate clears the bar, raw hex plus a printed diff is the correct outcome."
+ ],
+ "summary": {
+  "total": 119,
+  "exact": 5,
+  "near": 35,
+  "drift": 40,
+  "divergent": 29,
+  "scaffolding": 10
+ },
+ "figmaTokens": {
+  "count": 1045,
+  "colors": 894,
+  "floats": 100
+ },
+ "dsPalette": [
+  {
+   "css": "--white",
+   "hex": "#ffffff",
+   "figmaMatches": [
+    "background/screen",
+    "base/light/01/white",
+    "base/white",
+    "color/white/solid",
+    "colors/background/bg/primary/2",
+    "colors/background/bg/primary/3",
+    "colors/background/bg/primary/alt",
+    "colors/background/bg/primary",
+    "colors/base/white/2",
+    "colors/base/white/3",
+    "colors/base/white",
+    "colors/foreground/fg/white/2",
+    "colors/foreground/fg/white/3",
+    "colors/foreground/fg/white",
+    "colors/text/text/primary/on/brand",
+    "component/colors/alpha/alpha/white/100",
+    "component/colors/components/avatars/avatar/profile/photo/border",
+    "component/colors/components/buttons/primary/button/primary/fg/2",
+    "component/colors/components/buttons/primary/button/primary/fg/hover/2",
+    "component/colors/components/buttons/primary/button/primary/fg/hover",
+    "component/colors/components/buttons/primary/button/primary/fg",
+    "component/colors/components/buttons/secondary/button/secondary/bg/2",
+    "component/colors/components/buttons/secondary/button/secondary/bg",
+    "component/colors/components/buttons/secondary/color/button/secondary/color/bg/2",
+    "component/colors/components/buttons/secondary/color/button/secondary/color/bg",
+    "component/colors/components/icons/featured/icons/dark/featured/icon/dark/fg/brand",
+    "component/colors/components/icons/featured/icons/dark/featured/icon/dark/fg/error",
+    "component/colors/components/icons/featured/icons/dark/featured/icon/dark/fg/gray",
+    "component/colors/components/icons/featured/icons/dark/featured/icon/dark/fg/success",
+    "component/colors/components/icons/featured/icons/dark/featured/icon/dark/fg/warning",
+    "content/ad/background/white",
+    "content/grayscale/white",
+    "content/light/primary",
+    "lights/white/2",
+    "lights/white/3",
+    "lights/white",
+    "white/2",
+    "white"
+   ]
+  },
+  {
+   "css": "--black",
+   "hex": "#000000",
+   "figmaMatches": [
+    "colors/base/black",
+    "component/colors/alpha/alpha/black/100/2",
+    "component/colors/alpha/alpha/black/100",
+    "content/grayscale/black",
+    "darks/black/100",
+    "labels/primary"
+   ]
+  },
+  {
+   "css": "--neutral-25",
+   "hex": "#f9fafb",
+   "figmaMatches": [
+    "background/neutral",
+    "colors/background/bg/active/2",
+    "colors/background/bg/active",
+    "colors/background/bg/disabled/subtle/2",
+    "colors/background/bg/disabled/subtle",
+    "colors/background/bg/primary/hover/2",
+    "colors/background/bg/primary/hover",
+    "colors/background/bg/secondary",
+    "colors/gray/light/mode/50/2",
+    "colors/gray/light/mode/50/3",
+    "colors/gray/light/mode/50",
+    "component/colors/components/buttons/secondary/button/secondary/bg/hover/2",
+    "component/colors/components/buttons/secondary/button/secondary/bg/hover",
+    "component/colors/components/buttons/tertiary/button/tertiary/bg/hover/2",
+    "component/colors/components/buttons/tertiary/button/tertiary/bg/hover",
+    "component/colors/components/toggles/toggle/button/fg/disabled",
+    "component/colors/utility/gray/utility/gray/50/2",
+    "component/colors/utility/gray/utility/gray/50",
+    "content/grayscale/25"
+   ]
+  },
+  {
+   "css": "--neutral-50",
+   "hex": "#f5f5f6",
+   "figmaMatches": [
+    "colors/gray/dark/mode/50/2",
+    "colors/gray/dark/mode/50/3",
+    "colors/gray/dark/mode/50/4",
+    "colors/gray/dark/mode/50",
+    "content/grayscale/50",
+    "content/light/secondary",
+    "interactive/primary"
+   ]
+  },
+  {
+   "css": "--neutral-100",
+   "hex": "#ececed",
+   "figmaMatches": [
+    "border/overlay",
+    "colors/gray/dark/mode/200/2",
+    "colors/gray/dark/mode/200",
+    "content/grayscale/100",
+    "interactive/secondary"
+   ]
+  },
+  {
+   "css": "--neutral-200",
+   "hex": "#cecfd2",
+   "figmaMatches": [
+    "border/neutral",
+    "colors/gray/dark/mode/300/2",
+    "colors/gray/dark/mode/300/3",
+    "colors/gray/dark/mode/300/4",
+    "colors/gray/dark/mode/300",
+    "content/grayscale/200"
+   ]
+  },
+  {
+   "css": "--neutral-300",
+   "hex": "#b9bbc0",
+   "figmaMatches": []
+  },
+  {
+   "css": "--neutral-400",
+   "hex": "#85888e",
+   "figmaMatches": [
+    "colors/gray/dark/mode/500/2",
+    "colors/gray/dark/mode/500/3",
+    "colors/gray/dark/mode/500",
+    "content/dark/quateary",
+    "content/grayscale/500",
+    "quaternary"
+   ]
+  },
+  {
+   "css": "--neutral-500",
+   "hex": "#61646c",
+   "figmaMatches": [
+    "colors/gray/dark/mode/600/2",
+    "colors/gray/dark/mode/600/3",
+    "colors/gray/dark/mode/600",
+    "content/dark/tertiary",
+    "content/grayscale/700"
+   ]
+  },
+  {
+   "css": "--neutral-600",
+   "hex": "#4a4d55",
+   "figmaMatches": []
+  },
+  {
+   "css": "--neutral-700",
+   "hex": "#333741",
+   "figmaMatches": [
+    "colors/gray/dark/mode/700/2",
+    "colors/gray/dark/mode/700/3",
+    "colors/gray/dark/mode/700/4",
+    "colors/gray/dark/mode/700",
+    "content/dark/secondary",
+    "content/grayscale/900"
+   ]
+  },
+  {
+   "css": "--neutral-800",
+   "hex": "#1f242f",
+   "figmaMatches": [
+    "colors/gray/dark/mode/800/2",
+    "colors/gray/dark/mode/800"
+   ]
+  },
+  {
+   "css": "--neutral-900",
+   "hex": "#161b26",
+   "figmaMatches": [
+    "colors/gray/dark/mode/900/2",
+    "colors/gray/dark/mode/900/3",
+    "colors/gray/dark/mode/900/4",
+    "colors/gray/dark/mode/900"
+   ]
+  },
+  {
+   "css": "--neutral-950",
+   "hex": "#0c111d",
+   "figmaMatches": [
+    "colors/gray/dark/mode/950/2",
+    "colors/gray/dark/mode/950/3",
+    "colors/gray/dark/mode/950",
+    "colors/gray/light/mode/950",
+    "content/dark/primary",
+    "content/grayscale/950"
+   ]
+  },
+  {
+   "css": "--blue-25",
+   "hex": "#f5f8ff",
+   "figmaMatches": [
+    "colors/blue/dark/25",
+    "core/blue/25"
+   ]
+  },
+  {
+   "css": "--blue-50",
+   "hex": "#eff4ff",
+   "figmaMatches": [
+    "colors/blue/dark/50",
+    "core/blue/50"
+   ]
+  },
+  {
+   "css": "--blue-100",
+   "hex": "#d1e0ff",
+   "figmaMatches": [
+    "b2c/colors/blue/100",
+    "colors/blue/dark/100",
+    "component/colors/utility/blue/dark/utility/blue/dark/100",
+    "core/blue/100",
+    "marketing/blue/100",
+    "marketing/colors/blue/100"
+   ]
+  },
+  {
+   "css": "--blue-200",
+   "hex": "#b2ccff",
+   "figmaMatches": [
+    "colors/blue/dark/200",
+    "core/blue/200"
+   ]
+  },
+  {
+   "css": "--blue-300",
+   "hex": "#84adff",
+   "figmaMatches": [
+    "colors/blue/dark/300",
+    "component/colors/utility/blue/dark/utility/blue/dark/300",
+    "core/blue/300"
+   ]
+  },
+  {
+   "css": "--blue-400",
+   "hex": "#528bff",
+   "figmaMatches": [
+    "colors/blue/dark/400",
+    "core/blue/400"
+   ]
+  },
+  {
+   "css": "--blue-500",
+   "hex": "#2970ff",
+   "figmaMatches": [
+    "colors/blue/dark/500",
+    "core/blue/500"
+   ]
+  },
+  {
+   "css": "--blue-600",
+   "hex": "#155eef",
+   "figmaMatches": [
+    "b2c/colors/blue/300",
+    "colors/blue/dark/600/2",
+    "colors/blue/dark/600",
+    "core/blue/600",
+    "interactive/blue",
+    "marketing/blue/300",
+    "marketing/colors/blue/300"
+   ]
+  },
+  {
+   "css": "--blue-700",
+   "hex": "#004eeb",
+   "figmaMatches": [
+    "colors/blue/dark/700",
+    "core/blue/700"
+   ]
+  },
+  {
+   "css": "--blue-800",
+   "hex": "#0040c1",
+   "figmaMatches": [
+    "colors/blue/dark/800",
+    "core/blue/800"
+   ]
+  },
+  {
+   "css": "--blue-900",
+   "hex": "#00359e",
+   "figmaMatches": [
+    "colors/blue/dark/900"
+   ]
+  },
+  {
+   "css": "--blue-950",
+   "hex": "#002266",
+   "figmaMatches": [
+    "colors/blue/dark/950"
+   ]
+  },
+  {
+   "css": "--bluegray-25",
+   "hex": "#fcfcfd",
+   "figmaMatches": [
+    "colors/gray/blue/25",
+    "core/blue/gray/25"
+   ]
+  },
+  {
+   "css": "--bluegray-50",
+   "hex": "#f8f9fc",
+   "figmaMatches": [
+    "colors/gray/blue/50/2",
+    "colors/gray/blue/50",
+    "component/colors/utility/gray/blue/utility/gray/blue/50/2",
+    "component/colors/utility/gray/blue/utility/gray/blue/50",
+    "core/blue/gray/50"
+   ]
+  },
+  {
+   "css": "--bluegray-100",
+   "hex": "#eaecf5",
+   "figmaMatches": [
+    "colors/gray/blue/100/2",
+    "colors/gray/blue/100",
+    "component/colors/utility/gray/blue/utility/gray/blue/100/2",
+    "component/colors/utility/gray/blue/utility/gray/blue/100",
+    "core/blue/gray/100"
+   ]
+  },
+  {
+   "css": "--bluegray-200",
+   "hex": "#d5d9eb",
+   "figmaMatches": [
+    "colors/gray/blue/200/2",
+    "colors/gray/blue/200",
+    "component/colors/utility/gray/blue/utility/gray/blue/200/2",
+    "component/colors/utility/gray/blue/utility/gray/blue/200",
+    "core/blue/gray/200"
+   ]
+  },
+  {
+   "css": "--bluegray-300",
+   "hex": "#b3b8db",
+   "figmaMatches": [
+    "colors/gray/blue/300/2",
+    "colors/gray/blue/300",
+    "component/colors/utility/gray/blue/utility/gray/blue/300",
+    "core/blue/gray/300"
+   ]
+  },
+  {
+   "css": "--bluegray-400",
+   "hex": "#717bbc",
+   "figmaMatches": [
+    "colors/gray/blue/400/2",
+    "colors/gray/blue/400/3",
+    "colors/gray/blue/400",
+    "component/colors/utility/gray/blue/utility/gray/blue/400/2",
+    "component/colors/utility/gray/blue/utility/gray/blue/400/3",
+    "component/colors/utility/gray/blue/utility/gray/blue/400",
+    "core/blue/gray/400"
+   ]
+  },
+  {
+   "css": "--bluegray-500",
+   "hex": "#4e5ba6",
+   "figmaMatches": [
+    "colors/gray/blue/500/2",
+    "colors/gray/blue/500",
+    "component/colors/utility/gray/blue/utility/gray/blue/500/2",
+    "component/colors/utility/gray/blue/utility/gray/blue/500",
+    "core/blue/gray/500"
+   ]
+  },
+  {
+   "css": "--bluegray-600",
+   "hex": "#3e4784",
+   "figmaMatches": [
+    "colors/gray/blue/600/2",
+    "colors/gray/blue/600/3",
+    "colors/gray/blue/600",
+    "component/colors/utility/gray/blue/utility/gray/blue/600/2",
+    "component/colors/utility/gray/blue/utility/gray/blue/600",
+    "core/blue/gray/600"
+   ]
+  },
+  {
+   "css": "--bluegray-700",
+   "hex": "#363f72",
+   "figmaMatches": [
+    "colors/gray/blue/700/2",
+    "colors/gray/blue/700",
+    "component/colors/utility/gray/blue/utility/gray/blue/700/2",
+    "component/colors/utility/gray/blue/utility/gray/blue/700",
+    "core/blue/gray/700"
+   ]
+  },
+  {
+   "css": "--bluegray-800",
+   "hex": "#293056",
+   "figmaMatches": [
+    "colors/gray/blue/800/2",
+    "colors/gray/blue/800",
+    "core/blue/gray/800"
+   ]
+  },
+  {
+   "css": "--bluegray-900",
+   "hex": "#101323",
+   "figmaMatches": [
+    "colors/gray/blue/900/2",
+    "colors/gray/blue/900",
+    "core/blue/gray/900"
+   ]
+  },
+  {
+   "css": "--purple-25",
+   "hex": "#f6f2ff",
+   "figmaMatches": []
+  },
+  {
+   "css": "--purple-50",
+   "hex": "#efe8ff",
+   "figmaMatches": []
+  },
+  {
+   "css": "--purple-100",
+   "hex": "#d5c2ff",
+   "figmaMatches": [
+    "secondary/purple/100"
+   ]
+  },
+  {
+   "css": "--purple-200",
+   "hex": "#c0a6ff",
+   "figmaMatches": []
+  },
+  {
+   "css": "--purple-300",
+   "hex": "#a685ff",
+   "figmaMatches": []
+  },
+  {
+   "css": "--purple-400",
+   "hex": "#8a5df5",
+   "figmaMatches": []
+  },
+  {
+   "css": "--purple-500",
+   "hex": "#7641ee",
+   "figmaMatches": []
+  },
+  {
+   "css": "--purple-600",
+   "hex": "#662fe5",
+   "figmaMatches": [
+    "marketing/colors/purple/300",
+    "marketing/purple/300",
+    "secondary/purple/600"
+   ]
+  },
+  {
+   "css": "--purple-700",
+   "hex": "#5620c4",
+   "figmaMatches": []
+  },
+  {
+   "css": "--purple-800",
+   "hex": "#431a98",
+   "figmaMatches": []
+  },
+  {
+   "css": "--purple-900",
+   "hex": "#2e1268",
+   "figmaMatches": []
+  },
+  {
+   "css": "--coral-25",
+   "hex": "#fff4f0",
+   "figmaMatches": [
+    "secondary/coral/25"
+   ]
+  },
+  {
+   "css": "--coral-50",
+   "hex": "#feede9",
+   "figmaMatches": [
+    "secondary/coral/50"
+   ]
+  },
+  {
+   "css": "--coral-100",
+   "hex": "#ffe0d5",
+   "figmaMatches": [
+    "secondary/coral/100"
+   ]
+  },
+  {
+   "css": "--coral-200",
+   "hex": "#ffd0bf",
+   "figmaMatches": [
+    "secondary/coral/200"
+   ]
+  },
+  {
+   "css": "--coral-300",
+   "hex": "#ffb19c",
+   "figmaMatches": [
+    "secondary/coral/300"
+   ]
+  },
+  {
+   "css": "--coral-400",
+   "hex": "#ff8f70",
+   "figmaMatches": [
+    "secondary/coral/400"
+   ]
+  },
+  {
+   "css": "--coral-500",
+   "hex": "#ff6f49",
+   "figmaMatches": [
+    "secondary/coral/500"
+   ]
+  },
+  {
+   "css": "--coral-600",
+   "hex": "#f34822",
+   "figmaMatches": [
+    "color",
+    "secondary/coral/600"
+   ]
+  },
+  {
+   "css": "--coral-700",
+   "hex": "#d23e1f",
+   "figmaMatches": [
+    "secondary/coral/700"
+   ]
+  },
+  {
+   "css": "--coral-800",
+   "hex": "#942f17",
+   "figmaMatches": [
+    "secondary/coral/800"
+   ]
+  },
+  {
+   "css": "--coral-900",
+   "hex": "#57200d",
+   "figmaMatches": [
+    "secondary/coral/900"
+   ]
+  },
+  {
+   "css": "--coral-950",
+   "hex": "#3e1709",
+   "figmaMatches": [
+    "secondary/coral/950"
+   ]
+  },
+  {
+   "css": "--pink-25",
+   "hex": "#fef1f4",
+   "figmaMatches": []
+  },
+  {
+   "css": "--pink-50",
+   "hex": "#fee4ea",
+   "figmaMatches": []
+  },
+  {
+   "css": "--pink-100",
+   "hex": "#fecdd6",
+   "figmaMatches": []
+  },
+  {
+   "css": "--pink-200",
+   "hex": "#fea3b4",
+   "figmaMatches": []
+  },
+  {
+   "css": "--pink-300",
+   "hex": "#fd6f8e",
+   "figmaMatches": []
+  },
+  {
+   "css": "--pink-400",
+   "hex": "#f4527a",
+   "figmaMatches": []
+  },
+  {
+   "css": "--pink-500",
+   "hex": "#f1335c",
+   "figmaMatches": [
+    "marketing/colors/red/300",
+    "marketing/negative/300",
+    "tertiary/pink/600"
+   ]
+  },
+  {
+   "css": "--pink-600",
+   "hex": "#d81a49",
+   "figmaMatches": []
+  },
+  {
+   "css": "--pink-700",
+   "hex": "#b3123f",
+   "figmaMatches": []
+  },
+  {
+   "css": "--pink-800",
+   "hex": "#8d113a",
+   "figmaMatches": []
+  },
+  {
+   "css": "--pink-900",
+   "hex": "#510b27",
+   "figmaMatches": []
+  },
+  {
+   "css": "--green-25",
+   "hex": "#f2fde8",
+   "figmaMatches": []
+  },
+  {
+   "css": "--green-50",
+   "hex": "#ecfdd9",
+   "figmaMatches": []
+  },
+  {
+   "css": "--green-100",
+   "hex": "#e3fbcc",
+   "figmaMatches": [
+    "colors/green/light/100"
+   ]
+  },
+  {
+   "css": "--green-200",
+   "hex": "#d0f8ab",
+   "figmaMatches": [
+    "colors/green/light/200"
+   ]
+  },
+  {
+   "css": "--green-300",
+   "hex": "#a6ef67",
+   "figmaMatches": [
+    "colors/green/light/300",
+    "sentiment/positive/300"
+   ]
+  },
+  {
+   "css": "--green-400",
+   "hex": "#85e13a",
+   "figmaMatches": [
+    "colors/green/light/400"
+   ]
+  },
+  {
+   "css": "--green-500",
+   "hex": "#66c61c",
+   "figmaMatches": [
+    "colors/green/light/500",
+    "sentiment/positive/500"
+   ]
+  },
+  {
+   "css": "--green-600",
+   "hex": "#4ca30d",
+   "figmaMatches": [
+    "colors/green/light/600"
+   ]
+  },
+  {
+   "css": "--green-700",
+   "hex": "#3b7c0f",
+   "figmaMatches": [
+    "colors/green/light/700",
+    "sentiment/positive/700"
+   ]
+  },
+  {
+   "css": "--green-800",
+   "hex": "#326212",
+   "figmaMatches": [
+    "colors/green/light/800/2",
+    "colors/green/light/800",
+    "sentiment/positive/800"
+   ]
+  },
+  {
+   "css": "--green-900",
+   "hex": "#2b5314",
+   "figmaMatches": [
+    "colors/green/light/900/2",
+    "colors/green/light/900",
+    "sentiment/positive/900"
+   ]
+  },
+  {
+   "css": "--amber-25",
+   "hex": "#fffcf5",
+   "figmaMatches": [
+    "colors/warning/25",
+    "sentiment/warning/25"
+   ]
+  },
+  {
+   "css": "--amber-50",
+   "hex": "#fffaeb",
+   "figmaMatches": [
+    "colors/warning/50/2",
+    "colors/warning/50",
+    "component/colors/utility/warning/utility/warning/50/2",
+    "component/colors/utility/warning/utility/warning/50",
+    "sentiment/warning/50"
+   ]
+  },
+  {
+   "css": "--amber-100",
+   "hex": "#fef0c7",
+   "figmaMatches": [
+    "colors/background/bg/warning/secondary",
+    "colors/warning/100/2",
+    "colors/warning/100",
+    "component/colors/utility/warning/utility/warning/100/2",
+    "component/colors/utility/warning/utility/warning/100"
+   ]
+  },
+  {
+   "css": "--amber-200",
+   "hex": "#fedf89",
+   "figmaMatches": [
+    "colors/warning/200/2",
+    "colors/warning/200",
+    "component/colors/utility/warning/utility/warning/200/2",
+    "component/colors/utility/warning/utility/warning/200",
+    "sentiment/warning/200"
+   ]
+  },
+  {
+   "css": "--amber-300",
+   "hex": "#fec84b",
+   "figmaMatches": [
+    "colors/warning/300/2",
+    "colors/warning/300",
+    "sentiment/warning/300"
+   ]
+  },
+  {
+   "css": "--amber-400",
+   "hex": "#fdb022",
+   "figmaMatches": [
+    "colors/warning/400/2",
+    "colors/warning/400",
+    "component/colors/utility/warning/utility/warning/400/2",
+    "component/colors/utility/warning/utility/warning/400",
+    "sentiment/warning/400"
+   ]
+  },
+  {
+   "css": "--amber-500",
+   "hex": "#f79009",
+   "figmaMatches": [
+    "colors/warning/500/2",
+    "colors/warning/500/3",
+    "colors/warning/500",
+    "component/colors/utility/warning/utility/warning/500/2",
+    "component/colors/utility/warning/utility/warning/500",
+    "sentiment/warning/500"
+   ]
+  },
+  {
+   "css": "--amber-600",
+   "hex": "#dc6803",
+   "figmaMatches": [
+    "colors/background/bg/warning/solid",
+    "colors/warning/600/2",
+    "colors/warning/600",
+    "component/colors/components/icons/featured/icons/light/featured/icon/light/fg/warning",
+    "component/colors/utility/warning/utility/warning/600/2",
+    "component/colors/utility/warning/utility/warning/600",
+    "sentiment/warning/600"
+   ]
+  },
+  {
+   "css": "--amber-700",
+   "hex": "#b54708",
+   "figmaMatches": [
+    "colors/warning/700/2",
+    "colors/warning/700",
+    "component/colors/utility/warning/utility/warning/700/2",
+    "component/colors/utility/warning/utility/warning/700",
+    "sentiment/warning/700"
+   ]
+  },
+  {
+   "css": "--amber-800",
+   "hex": "#93370d",
+   "figmaMatches": [
+    "colors/warning/800/2",
+    "colors/warning/800",
+    "sentiment/warning/800"
+   ]
+  },
+  {
+   "css": "--amber-900",
+   "hex": "#7a2e0e",
+   "figmaMatches": [
+    "colors/warning/900/2",
+    "colors/warning/900"
+   ]
+  },
+  {
+   "css": "--red-25",
+   "hex": "#fffbfa",
+   "figmaMatches": [
+    "colors/error/25"
+   ]
+  },
+  {
+   "css": "--red-50",
+   "hex": "#fef3f2",
+   "figmaMatches": [
+    "colors/error/50/2",
+    "colors/error/50",
+    "component/colors/utility/error/utility/error/50/2",
+    "component/colors/utility/error/utility/error/50",
+    "sentiment/negative/50"
+   ]
+  },
+  {
+   "css": "--red-100",
+   "hex": "#fee4e2",
+   "figmaMatches": [
+    "colors/background/bg/error/secondary",
+    "colors/error/100/2",
+    "colors/error/100",
+    "component/colors/utility/error/utility/error/100/2",
+    "component/colors/utility/error/utility/error/100",
+    "sentiment/negative/100"
+   ]
+  },
+  {
+   "css": "--red-200",
+   "hex": "#fecdca",
+   "figmaMatches": [
+    "colors/error/200/2",
+    "colors/error/200",
+    "component/colors/utility/error/utility/error/200/2",
+    "component/colors/utility/error/utility/error/200"
+   ]
+  },
+  {
+   "css": "--red-300",
+   "hex": "#fda29b",
+   "figmaMatches": [
+    "colors/error/300/2",
+    "colors/error/300"
+   ]
+  },
+  {
+   "css": "--red-400",
+   "hex": "#f97066",
+   "figmaMatches": [
+    "colors/error/400/2",
+    "colors/error/400",
+    "component/colors/utility/error/utility/error/400/2",
+    "component/colors/utility/error/utility/error/400",
+    "sentiment/negative/400"
+   ]
+  },
+  {
+   "css": "--red-500",
+   "hex": "#f04438",
+   "figmaMatches": [
+    "colors/error/500/2",
+    "colors/error/500/3",
+    "colors/error/500",
+    "component/colors/utility/error/utility/error/500/2",
+    "component/colors/utility/error/utility/error/500",
+    "sentiment/negative/500"
+   ]
+  },
+  {
+   "css": "--red-600",
+   "hex": "#d92d20",
+   "figmaMatches": [
+    "colors/background/bg/error/solid",
+    "colors/error/600/2",
+    "colors/error/600",
+    "colors/foreground/fg/error/primary",
+    "component/colors/components/icons/featured/icons/light/featured/icon/light/fg/error",
+    "component/colors/utility/error/utility/error/600/2",
+    "component/colors/utility/error/utility/error/600",
+    "sentiment/negative/600"
+   ]
+  },
+  {
+   "css": "--red-700",
+   "hex": "#b42318",
+   "figmaMatches": [
+    "colors/error/700/2",
+    "colors/error/700",
+    "component/colors/utility/error/utility/error/700/2",
+    "component/colors/utility/error/utility/error/700",
+    "sentiment/negative/700"
+   ]
+  },
+  {
+   "css": "--red-800",
+   "hex": "#912018",
+   "figmaMatches": [
+    "colors/error/800/2",
+    "colors/error/800",
+    "sentiment/negative/800"
+   ]
+  },
+  {
+   "css": "--red-900",
+   "hex": "#7a271a",
+   "figmaMatches": [
+    "colors/error/900/2",
+    "colors/error/900",
+    "sentiment/negative/900"
+   ]
+  },
+  {
+   "css": "--surface-overlay",
+   "hex": "#0c111db3",
+   "figmaMatches": []
+  }
+ ],
+ "localPalette": [
+  {
+   "css": "--wf-ink",
+   "value": "#1b1c21",
+   "meaning": "primary text",
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-dark-mode-900-2",
+     "figmaCandidate": "colors/gray/dark/mode/900/2",
+     "hex": "#161b26",
+     "deltaE": 4.72
+    },
+    {
+     "css": "--colors-gray-dark-mode-900-3",
+     "figmaCandidate": "colors/gray/dark/mode/900/3",
+     "hex": "#161b26",
+     "deltaE": 4.72
+    },
+    {
+     "css": "--colors-gray-dark-mode-900-4",
+     "figmaCandidate": "colors/gray/dark/mode/900/4",
+     "hex": "#161b26",
+     "deltaE": 4.72
+    }
+   ]
+  },
+  {
+   "css": "--wf-strong",
+   "value": "#3b3e46",
+   "meaning": "secondary text / emphasis",
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-dark-mode-700-2",
+     "figmaCandidate": "colors/gray/dark/mode/700/2",
+     "hex": "#333741",
+     "deltaE": 3.48
+    },
+    {
+     "css": "--colors-gray-dark-mode-700-3",
+     "figmaCandidate": "colors/gray/dark/mode/700/3",
+     "hex": "#333741",
+     "deltaE": 3.48
+    },
+    {
+     "css": "--colors-gray-dark-mode-700-4",
+     "figmaCandidate": "colors/gray/dark/mode/700/4",
+     "hex": "#333741",
+     "deltaE": 3.48
+    }
+   ]
+  },
+  {
+   "css": "--wf-muted",
+   "value": "#6b7280",
+   "meaning": "tertiary text",
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "nearest": [
+    {
+     "css": "--colors-foreground-fg-quaternary-500-2",
+     "figmaCandidate": "colors/foreground/fg/quaternary/500/2",
+     "hex": "#667085",
+     "deltaE": 4.33
+    },
+    {
+     "css": "--colors-foreground-fg-quaternary-500",
+     "figmaCandidate": "colors/foreground/fg/quaternary/500",
+     "hex": "#667085",
+     "deltaE": 4.33
+    },
+    {
+     "css": "--colors-foreground-fg-quinary-hover-2",
+     "figmaCandidate": "colors/foreground/fg/quinary/hover/2",
+     "hex": "#667085",
+     "deltaE": 4.33
+    }
+   ]
+  },
+  {
+   "css": "--wf-faint",
+   "value": "#9aa1ad",
+   "meaning": "quaternary text / placeholder icon",
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "nearest": [
+    {
+     "css": "--colors-foreground-fg-disabled-2",
+     "figmaCandidate": "colors/foreground/fg/disabled/2",
+     "hex": "#98a2b3",
+     "deltaE": 2.93
+    },
+    {
+     "css": "--colors-foreground-fg-disabled",
+     "figmaCandidate": "colors/foreground/fg/disabled",
+     "hex": "#98a2b3",
+     "deltaE": 2.93
+    },
+    {
+     "css": "--colors-foreground-fg-quinary-400-2",
+     "figmaCandidate": "colors/foreground/fg/quinary/400/2",
+     "hex": "#98a2b3",
+     "deltaE": 2.93
+    }
+   ]
+  },
+  {
+   "css": "--wf-line",
+   "value": "#e6e8ec",
+   "meaning": "default hairline border",
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "nearest": [
+    {
+     "css": "--neutral-200",
+     "figmaCandidate": "neutral/200",
+     "hex": "#e5e7eb",
+     "deltaE": 0.35
+    },
+    {
+     "css": "--colors-background-bg-quaternary",
+     "figmaCandidate": "colors/background/bg/quaternary",
+     "hex": "#eaecf0",
+     "deltaE": 1.4
+    },
+    {
+     "css": "--colors-border-border-disabled-subtle-2",
+     "figmaCandidate": "colors/border/border/disabled/subtle/2",
+     "hex": "#eaecf0",
+     "deltaE": 1.4
+    }
+   ]
+  },
+  {
+   "css": "--wf-line2",
+   "value": "#eef0f3",
+   "meaning": "subtle divider",
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-cool-100",
+     "figmaCandidate": "colors/gray/cool/100",
+     "hex": "#eff1f5",
+     "deltaE": 0.63
+    },
+    {
+     "css": "--colors-background-bg-disabled-2",
+     "figmaCandidate": "colors/background/bg/disabled/2",
+     "hex": "#f2f4f7",
+     "deltaE": 1.39
+    },
+    {
+     "css": "--colors-background-bg-disabled",
+     "figmaCandidate": "colors/background/bg/disabled",
+     "hex": "#f2f4f7",
+     "deltaE": 1.39
+    }
+   ]
+  },
+  {
+   "css": "--wf-fill",
+   "value": "#f3f4f6",
+   "meaning": "neutral fill / chip background",
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "nearest": [
+    {
+     "css": "--colors-background-bg-disabled-2",
+     "figmaCandidate": "colors/background/bg/disabled/2",
+     "hex": "#f2f4f7",
+     "deltaE": 0.62
+    },
+    {
+     "css": "--colors-background-bg-disabled",
+     "figmaCandidate": "colors/background/bg/disabled",
+     "hex": "#f2f4f7",
+     "deltaE": 0.62
+    },
+    {
+     "css": "--colors-background-bg-secondary-hover",
+     "figmaCandidate": "colors/background/bg/secondary/hover",
+     "hex": "#f2f4f7",
+     "deltaE": 0.62
+    }
+   ]
+  },
+  {
+   "css": "--wf-bg",
+   "value": "#fbfcfd",
+   "meaning": "screen background",
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-blue-25",
+     "figmaCandidate": "colors/gray/blue/25",
+     "hex": "#fcfcfd",
+     "deltaE": 0.36
+    },
+    {
+     "css": "--core-blue-gray-25",
+     "figmaCandidate": "core/blue/gray/25",
+     "hex": "#fcfcfd",
+     "deltaE": 0.36
+    },
+    {
+     "css": "--background-neutral",
+     "figmaCandidate": "background/neutral",
+     "hex": "#f9fafb",
+     "deltaE": 0.69
+    }
+   ]
+  },
+  {
+   "css": "--wf-photo",
+   "value": "#d8dbe1",
+   "meaning": "photo placeholder hatch A",
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "nearest": [
+    {
+     "css": "--colors-border-border-disabled-2",
+     "figmaCandidate": "colors/border/border/disabled/2",
+     "hex": "#d0d5dd",
+     "deltaE": 2.56
+    },
+    {
+     "css": "--colors-border-border-disabled-3",
+     "figmaCandidate": "colors/border/border/disabled/3",
+     "hex": "#d0d5dd",
+     "deltaE": 2.56
+    },
+    {
+     "css": "--colors-border-border-disabled",
+     "figmaCandidate": "colors/border/border/disabled",
+     "hex": "#d0d5dd",
+     "deltaE": 2.56
+    }
+   ]
+  },
+  {
+   "css": "--wf-photo2",
+   "value": "#cfd3da",
+   "meaning": "photo placeholder hatch B",
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "nearest": [
+    {
+     "css": "--colors-border-border-disabled-2",
+     "figmaCandidate": "colors/border/border/disabled/2",
+     "hex": "#d0d5dd",
+     "deltaE": 0.91
+    },
+    {
+     "css": "--colors-border-border-disabled-3",
+     "figmaCandidate": "colors/border/border/disabled/3",
+     "hex": "#d0d5dd",
+     "deltaE": 0.91
+    },
+    {
+     "css": "--colors-border-border-disabled",
+     "figmaCandidate": "colors/border/border/disabled",
+     "hex": "#d0d5dd",
+     "deltaE": 0.91
+    }
+   ]
+  },
+  {
+   "css": "--money",
+   "value": "#e5463a",
+   "meaning": "money / overdue accent (the one sentiment accent on the CPC)",
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "nearest": [
+    {
+     "css": "--colors-error-500-2",
+     "figmaCandidate": "colors/error/500/2",
+     "hex": "#f04438",
+     "deltaE": 5.6
+    },
+    {
+     "css": "--colors-error-500-3",
+     "figmaCandidate": "colors/error/500/3",
+     "hex": "#f04438",
+     "deltaE": 5.6
+    },
+    {
+     "css": "--colors-error-500",
+     "figmaCandidate": "colors/error/500",
+     "hex": "#f04438",
+     "deltaE": 5.6
+    }
+   ]
+  },
+  {
+   "css": "--money-bg",
+   "value": "#fdeceb",
+   "meaning": "money surface",
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "nearest": [
+    {
+     "css": "--secondary-coral-50",
+     "figmaCandidate": "secondary/coral/50",
+     "hex": "#feede9",
+     "deltaE": 1.56
+    },
+    {
+     "css": "--colors-error-50-2",
+     "figmaCandidate": "colors/error/50/2",
+     "hex": "#fef3f2",
+     "deltaE": 2.95
+    },
+    {
+     "css": "--colors-error-50",
+     "figmaCandidate": "colors/error/50",
+     "hex": "#fef3f2",
+     "deltaE": 2.95
+    }
+   ]
+  },
+  {
+   "css": "--money-line",
+   "value": "#f7c9c4",
+   "meaning": "money border",
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "nearest": [
+    {
+     "css": "--sentiment-negative-200",
+     "figmaCandidate": "sentiment/negative/200",
+     "hex": "#fecdc9",
+     "deltaE": 2.08
+    },
+    {
+     "css": "--colors-error-200-2",
+     "figmaCandidate": "colors/error/200/2",
+     "hex": "#fecdca",
+     "deltaE": 2.26
+    },
+    {
+     "css": "--colors-error-200",
+     "figmaCandidate": "colors/error/200",
+     "hex": "#fecdca",
+     "deltaE": 2.26
+    }
+   ]
+  },
+  {
+   "css": "--otr-blue",
+   "value": "#2e6bff",
+   "meaning": "brand accent for links and blue actions",
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "nearest": [
+    {
+     "css": "--colors-blue-dark-500",
+     "figmaCandidate": "colors/blue/dark/500",
+     "hex": "#2970ff",
+     "deltaE": 4.11
+    },
+    {
+     "css": "--core-blue-500",
+     "figmaCandidate": "core/blue/500",
+     "hex": "#2970ff",
+     "deltaE": 4.11
+    },
+    {
+     "css": "--b2c-colors-blue-300",
+     "figmaCandidate": "b2c/colors/blue/300",
+     "hex": "#155eef",
+     "deltaE": 5.18
+    }
+   ]
+  },
+  {
+   "css": "--otr-grad",
+   "value": "linear-gradient(102deg,#5b63ff 6%,#8b5cf6 96%)",
+   "meaning": "SmartMatch'd sub-brand gradient (protected)",
+   "binding": "gradient",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "nearest": null
+  }
+ ],
+ "values": [
+  {
+   "hex": "#ffffff",
+   "count": 98,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "exact",
+   "action": "BIND",
+   "figmaExact": [
+    {
+     "css": "--background-screen",
+     "figmaCandidate": "background/screen",
+     "alias": null
+    },
+    {
+     "css": "--base-light-01-white",
+     "figmaCandidate": "base/light/01/white",
+     "alias": null
+    },
+    {
+     "css": "--base-white",
+     "figmaCandidate": "base/white",
+     "alias": null
+    },
+    {
+     "css": "--color-white-solid",
+     "figmaCandidate": "color/white/solid",
+     "alias": null
+    },
+    {
+     "css": "--colors-background-bg-primary-2",
+     "figmaCandidate": "colors/background/bg/primary/2",
+     "alias": "--colors-base-white-2"
+    },
+    {
+     "css": "--colors-background-bg-primary-3",
+     "figmaCandidate": "colors/background/bg/primary/3",
+     "alias": "--colors-base-white-3"
+    },
+    {
+     "css": "--colors-background-bg-primary-alt",
+     "figmaCandidate": "colors/background/bg/primary/alt",
+     "alias": "--colors-base-white-2"
+    },
+    {
+     "css": "--colors-background-bg-primary",
+     "figmaCandidate": "colors/background/bg/primary",
+     "alias": "--colors-base-white"
+    },
+    {
+     "css": "--colors-base-white-2",
+     "figmaCandidate": "colors/base/white/2",
+     "alias": null
+    },
+    {
+     "css": "--colors-base-white-3",
+     "figmaCandidate": "colors/base/white/3",
+     "alias": null
+    },
+    {
+     "css": "--colors-base-white",
+     "figmaCandidate": "colors/base/white",
+     "alias": null
+    },
+    {
+     "css": "--colors-foreground-fg-white-2",
+     "figmaCandidate": "colors/foreground/fg/white/2",
+     "alias": "--colors-base-white-2"
+    },
+    {
+     "css": "--colors-foreground-fg-white-3",
+     "figmaCandidate": "colors/foreground/fg/white/3",
+     "alias": "--colors-base-white-3"
+    },
+    {
+     "css": "--colors-foreground-fg-white",
+     "figmaCandidate": "colors/foreground/fg/white",
+     "alias": "--colors-base-white"
+    },
+    {
+     "css": "--colors-text-text-primary-on-brand",
+     "figmaCandidate": "colors/text/text/primary/on/brand",
+     "alias": "--colors-base-white"
+    },
+    {
+     "css": "--component-colors-alpha-alpha-white-100",
+     "figmaCandidate": "component/colors/alpha/alpha/white/100",
+     "alias": null
+    },
+    {
+     "css": "--component-colors-components-avatars-avatar-profile-photo-border",
+     "figmaCandidate": "component/colors/components/avatars/avatar/profile/photo/border",
+     "alias": "--colors-base-white"
+    },
+    {
+     "css": "--component-colors-components-buttons-primary-button-primary-fg-2",
+     "figmaCandidate": "component/colors/components/buttons/primary/button/primary/fg/2",
+     "alias": "--colors-base-white-2"
+    },
+    {
+     "css": "--component-colors-components-buttons-primary-button-primary-fg-hover-2",
+     "figmaCandidate": "component/colors/components/buttons/primary/button/primary/fg/hover/2",
+     "alias": "--colors-base-white-2"
+    },
+    {
+     "css": "--component-colors-components-buttons-primary-button-primary-fg-hover",
+     "figmaCandidate": "component/colors/components/buttons/primary/button/primary/fg/hover",
+     "alias": "--colors-base-white"
+    },
+    {
+     "css": "--component-colors-components-buttons-primary-button-primary-fg",
+     "figmaCandidate": "component/colors/components/buttons/primary/button/primary/fg",
+     "alias": "--colors-base-white"
+    },
+    {
+     "css": "--component-colors-components-buttons-secondary-button-secondary-bg-2",
+     "figmaCandidate": "component/colors/components/buttons/secondary/button/secondary/bg/2",
+     "alias": "--colors-base-white-2"
+    },
+    {
+     "css": "--component-colors-components-buttons-secondary-button-secondary-bg",
+     "figmaCandidate": "component/colors/components/buttons/secondary/button/secondary/bg",
+     "alias": "--colors-base-white"
+    },
+    {
+     "css": "--component-colors-components-buttons-secondary-color-button-secondary-color-bg-2",
+     "figmaCandidate": "component/colors/components/buttons/secondary/color/button/secondary/color/bg/2",
+     "alias": "--colors-base-white-2"
+    },
+    {
+     "css": "--component-colors-components-buttons-secondary-color-button-secondary-color-bg",
+     "figmaCandidate": "component/colors/components/buttons/secondary/color/button/secondary/color/bg",
+     "alias": "--colors-base-white"
+    },
+    {
+     "css": "--component-colors-components-icons-featured-icons-dark-featured-icon-dark-fg-brand",
+     "figmaCandidate": "component/colors/components/icons/featured/icons/dark/featured/icon/dark/fg/brand",
+     "alias": "--colors-base-white-2"
+    },
+    {
+     "css": "--component-colors-components-icons-featured-icons-dark-featured-icon-dark-fg-error",
+     "figmaCandidate": "component/colors/components/icons/featured/icons/dark/featured/icon/dark/fg/error",
+     "alias": "--colors-base-white-2"
+    },
+    {
+     "css": "--component-colors-components-icons-featured-icons-dark-featured-icon-dark-fg-gray",
+     "figmaCandidate": "component/colors/components/icons/featured/icons/dark/featured/icon/dark/fg/gray",
+     "alias": "--colors-base-white-2"
+    },
+    {
+     "css": "--component-colors-components-icons-featured-icons-dark-featured-icon-dark-fg-success",
+     "figmaCandidate": "component/colors/components/icons/featured/icons/dark/featured/icon/dark/fg/success",
+     "alias": "--colors-base-white-2"
+    },
+    {
+     "css": "--component-colors-components-icons-featured-icons-dark-featured-icon-dark-fg-warning",
+     "figmaCandidate": "component/colors/components/icons/featured/icons/dark/featured/icon/dark/fg/warning",
+     "alias": "--colors-base-white-2"
+    },
+    {
+     "css": "--content-ad-background-white",
+     "figmaCandidate": "content/ad/background/white",
+     "alias": "--white"
+    },
+    {
+     "css": "--content-grayscale-white",
+     "figmaCandidate": "content/grayscale/white",
+     "alias": null
+    },
+    {
+     "css": "--content-light-primary",
+     "figmaCandidate": "content/light/primary",
+     "alias": null
+    },
+    {
+     "css": "--lights-white-2",
+     "figmaCandidate": "lights/white/2",
+     "alias": null
+    },
+    {
+     "css": "--lights-white-3",
+     "figmaCandidate": "lights/white/3",
+     "alias": null
+    },
+    {
+     "css": "--lights-white",
+     "figmaCandidate": "lights/white",
+     "alias": null
+    },
+    {
+     "css": "--white-2",
+     "figmaCandidate": "white/2",
+     "alias": null
+    },
+    {
+     "css": "--white",
+     "figmaCandidate": "white",
+     "alias": null
+    }
+   ],
+   "dsToken": [],
+   "nearest": null,
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/cpc.jsx",
+    "cases/_ds-cases/kits/card-kit.jsx",
+    "cases/_ds-cases/kits/atoms.jsx",
+    "cases/screen-all_cases_feed/kits/feed-kit.jsx",
+    "cases/screen-all_cases_feed/kits/feed-assembled.jsx",
+    "cases/screen-single_case_details/kits/detail-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-record.jsx",
+    "cases/system-case_status_and_action/kits/status-doc.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 45,
+     "src": "border:1px solid var(--wf-line); color:var(--wf-muted); background:#fff; white-space:nowrap; }"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 46,
+     "src": ".otr-chip.on{ background:var(--wf-ink); color:#fff; border-color:var(--wf-ink); }"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 49,
+     "src": ".otr-chip.on .chip-num{ background:rgba(255,255,255,.22); color:#fff; }"
+    }
+   ]
+  },
+  {
+   "hex": "#000000",
+   "count": 10,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "exact",
+   "action": "BIND",
+   "figmaExact": [
+    {
+     "css": "--colors-base-black",
+     "figmaCandidate": "colors/base/black",
+     "alias": null
+    },
+    {
+     "css": "--component-colors-alpha-alpha-black-100-2",
+     "figmaCandidate": "component/colors/alpha/alpha/black/100/2",
+     "alias": null
+    },
+    {
+     "css": "--component-colors-alpha-alpha-black-100",
+     "figmaCandidate": "component/colors/alpha/alpha/black/100",
+     "alias": null
+    },
+    {
+     "css": "--content-grayscale-black",
+     "figmaCandidate": "content/grayscale/black",
+     "alias": null
+    },
+    {
+     "css": "--darks-black-100",
+     "figmaCandidate": "darks/black/100",
+     "alias": null
+    },
+    {
+     "css": "--labels-primary",
+     "figmaCandidate": "labels/primary",
+     "alias": null
+    }
+   ],
+   "dsToken": [],
+   "nearest": null,
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 71,
+     "src": "-webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 71,
+     "src": "-webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 168,
+     "src": "-webkit-mask:radial-gradient(circle 8px at 50% 0,#0000 8px,#000 8.5px) repeat-x top/22px 51%,"
+    }
+   ]
+  },
+  {
+   "hex": "#6a5bd0",
+   "count": 9,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-background-bg-brand-solid-2",
+     "figmaCandidate": "colors/background/bg/brand/solid/2",
+     "hex": "#7f56d9",
+     "deltaE": 10.34
+    },
+    {
+     "css": "--colors-background-bg-brand-solid-3",
+     "figmaCandidate": "colors/background/bg/brand/solid/3",
+     "hex": "#7f56d9",
+     "deltaE": 10.34
+    },
+    {
+     "css": "--colors-background-bg-brand-solid",
+     "figmaCandidate": "colors/background/bg/brand/solid",
+     "hex": "#7f56d9",
+     "deltaE": 10.34
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/card-kit.jsx",
+    "cases/_ds-cases/kits/atoms.jsx",
+    "cases/screen-all_cases_feed/kits/feed-assembled.jsx",
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 224,
+     "src": ".sbadge.analyzing{ color:#6a5bd0;"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 335,
+     "src": "? '#6a5bd0'"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 340,
+     "src": "? <SmartMatchMark size={sm ? 15 : 17} color={cfg.tone === 'grad' ? '#6a5bd0' : null} />"
+    }
+   ]
+  },
+  {
+   "hex": "#00000000",
+   "count": 8,
+   "hasAlpha": true,
+   "scaffolding": false,
+   "binding": "exact",
+   "action": "BIND",
+   "figmaExact": [
+    {
+     "css": "--colors-base-black",
+     "figmaCandidate": "colors/base/black",
+     "alias": null
+    },
+    {
+     "css": "--component-colors-alpha-alpha-black-100-2",
+     "figmaCandidate": "component/colors/alpha/alpha/black/100/2",
+     "alias": null
+    },
+    {
+     "css": "--component-colors-alpha-alpha-black-100",
+     "figmaCandidate": "component/colors/alpha/alpha/black/100",
+     "alias": null
+    },
+    {
+     "css": "--content-grayscale-black",
+     "figmaCandidate": "content/grayscale/black",
+     "alias": null
+    },
+    {
+     "css": "--darks-black-100",
+     "figmaCandidate": "darks/black/100",
+     "alias": null
+    },
+    {
+     "css": "--labels-primary",
+     "figmaCandidate": "labels/primary",
+     "alias": null
+    }
+   ],
+   "dsToken": [],
+   "nearest": null,
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 168,
+     "src": "-webkit-mask:radial-gradient(circle 8px at 50% 0,#0000 8px,#000 8.5px) repeat-x top/22px 51%,"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 169,
+     "src": "radial-gradient(circle 8px at 50% 100%,#0000 8px,#000 8.5px) repeat-x bottom/22px 51%;"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 170,
+     "src": "mask:radial-gradient(circle 8px at 50% 0,#0000 8px,#000 8.5px) repeat-x top/22px 51%,"
+    }
+   ]
+  },
+  {
+   "hex": "#2e6bff",
+   "count": 7,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-blue-dark-500",
+     "figmaCandidate": "colors/blue/dark/500",
+     "hex": "#2970ff",
+     "deltaE": 4.11
+    },
+    {
+     "css": "--core-blue-500",
+     "figmaCandidate": "core/blue/500",
+     "hex": "#2970ff",
+     "deltaE": 4.11
+    },
+    {
+     "css": "--b2c-colors-blue-300",
+     "figmaCandidate": "b2c/colors/blue/300",
+     "hex": "#155eef",
+     "deltaE": 5.18
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/atoms.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 20,
+     "src": "--otr-blue:#2e6bff;"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 253,
+     "src": "blue:  { light:['#e9f1ff','#2e6bff','#2e6bff'], solid:['#2e6bff','#fff'] },"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 253,
+     "src": "blue:  { light:['#e9f1ff','#2e6bff','#2e6bff'], solid:['#2e6bff','#fff'] },"
+    }
+   ]
+  },
+  {
+   "hex": "#3b3e46",
+   "count": 6,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-dark-mode-700-2",
+     "figmaCandidate": "colors/gray/dark/mode/700/2",
+     "hex": "#333741",
+     "deltaE": 3.48
+    },
+    {
+     "css": "--colors-gray-dark-mode-700-3",
+     "figmaCandidate": "colors/gray/dark/mode/700/3",
+     "hex": "#333741",
+     "deltaE": 3.48
+    },
+    {
+     "css": "--colors-gray-dark-mode-700-4",
+     "figmaCandidate": "colors/gray/dark/mode/700/4",
+     "hex": "#333741",
+     "deltaE": 3.48
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/card-kit.jsx",
+    "cases/_ds-cases/kits/atoms.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 16,
+     "src": "--wf-ink:#1b1c21; --wf-strong:#3b3e46; --wf-muted:#6b7280; --wf-faint:#9aa1ad;"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 154,
+     "src": ".spec .tag{ font-size:10.5px; font-weight:700; color:#3b3e46; background:#fff;"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 250,
+     "src": "gray:  { light:['#eef0f4','#67707e','#98a1ae'], solid:['#3b3e46','#fff'] },"
+    }
+   ]
+  },
+  {
+   "hex": "#e5463a",
+   "count": 5,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-error-500-2",
+     "figmaCandidate": "colors/error/500/2",
+     "hex": "#f04438",
+     "deltaE": 5.6
+    },
+    {
+     "css": "--colors-error-500-3",
+     "figmaCandidate": "colors/error/500/3",
+     "hex": "#f04438",
+     "deltaE": 5.6
+    },
+    {
+     "css": "--colors-error-500",
+     "figmaCandidate": "colors/error/500",
+     "hex": "#f04438",
+     "deltaE": 5.6
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/atoms.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 19,
+     "src": "--money:#e5463a; --money-bg:#fdeceb; --money-line:#f7c9c4;"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 251,
+     "src": "red:   { light:['#fdeceb','#e5463a','#e5463a'], solid:['#ef4338','#fff'] },"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 251,
+     "src": "red:   { light:['#fdeceb','#e5463a','#e5463a'], solid:['#ef4338','#fff'] },"
+    }
+   ]
+  },
+  {
+   "hex": "#5b63ff",
+   "count": 5,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-purple-500-2",
+     "figmaCandidate": "colors/purple/500/2",
+     "hex": "#7a5af8",
+     "deltaE": 8.73
+    },
+    {
+     "css": "--colors-purple-500",
+     "figmaCandidate": "colors/purple/500",
+     "hex": "#7a5af8",
+     "deltaE": 8.73
+    },
+    {
+     "css": "--component-colors-utility-purple-utility-purple-500-2",
+     "figmaCandidate": "component/colors/utility/purple/utility/purple/500/2",
+     "hex": "#7a5af8",
+     "deltaE": 8.73
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/atoms.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 21,
+     "src": "--otr-grad:linear-gradient(102deg,#5b63ff 6%,#8b5cf6 96%);"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 70,
+     "src": "padding:1.6px; background:linear-gradient(102deg,#5b63ff,#8b5cf6,#5b63ff,#8b5cf6); background-size:280% 100%;"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 70,
+     "src": "padding:1.6px; background:linear-gradient(102deg,#5b63ff,#8b5cf6,#5b63ff,#8b5cf6); background-size:280% 100%;"
+    }
+   ]
+  },
+  {
+   "hex": "#8b5cf6",
+   "count": 5,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--secondary-purple-500",
+     "figmaCandidate": "secondary/purple/500",
+     "hex": "#8c5cf1",
+     "deltaE": 2.66
+    },
+    {
+     "css": "--colors-purple-500-2",
+     "figmaCandidate": "colors/purple/500/2",
+     "hex": "#7a5af8",
+     "deltaE": 4.8
+    },
+    {
+     "css": "--colors-purple-500",
+     "figmaCandidate": "colors/purple/500",
+     "hex": "#7a5af8",
+     "deltaE": 4.8
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/atoms.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 21,
+     "src": "--otr-grad:linear-gradient(102deg,#5b63ff 6%,#8b5cf6 96%);"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 70,
+     "src": "padding:1.6px; background:linear-gradient(102deg,#5b63ff,#8b5cf6,#5b63ff,#8b5cf6); background-size:280% 100%;"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 70,
+     "src": "padding:1.6px; background:linear-gradient(102deg,#5b63ff,#8b5cf6,#5b63ff,#8b5cf6); background-size:280% 100%;"
+    }
+   ]
+  },
+  {
+   "hex": "#19a558",
+   "count": 5,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-foreground-fg-success-secondary-2",
+     "figmaCandidate": "colors/foreground/fg/success/secondary/2",
+     "hex": "#17b26a",
+     "deltaE": 5.98
+    },
+    {
+     "css": "--colors-foreground-fg-success-secondary",
+     "figmaCandidate": "colors/foreground/fg/success/secondary",
+     "hex": "#17b26a",
+     "deltaE": 5.98
+    },
+    {
+     "css": "--colors-success-500-2",
+     "figmaCandidate": "colors/success/500/2",
+     "hex": "#17b26a",
+     "deltaE": 5.98
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-record.jsx",
+    "cases/system-case_status_and_action/kits/status-doc.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 254,
+     "src": "green: { light:['#e4f7ec','#179a55','#19a558'], solid:['#19a558','#fff'] },"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 254,
+     "src": "green: { light:['#e4f7ec','#179a55','#19a558'], solid:['#19a558','#fff'] },"
+    },
+    {
+     "file": "detail-kit.jsx",
+     "line": 213,
+     "src": "margin-top:11px; border-radius:999px; background:#19a558; color:#fff; font-size:13.5px; font-weight:800;"
+    }
+   ]
+  },
+  {
+   "hex": "#fbfbfc",
+   "count": 5,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-blue-25",
+     "figmaCandidate": "colors/gray/blue/25",
+     "hex": "#fcfcfd",
+     "deltaE": 0.35
+    },
+    {
+     "css": "--core-blue-gray-25",
+     "figmaCandidate": "core/blue/gray/25",
+     "hex": "#fcfcfd",
+     "deltaE": 0.35
+    },
+    {
+     "css": "--background-neutral",
+     "figmaCandidate": "background/neutral",
+     "hex": "#f9fafb",
+     "deltaE": 0.55
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 148,
+     "src": ".ahub-h{ display:flex; align-items:center; gap:9px; padding:11px 14px; background:#fbfbfc;"
+    },
+    {
+     "file": "detail-kit.jsx",
+     "line": 169,
+     "src": ".esign .es-doc{ display:flex; align-items:center; gap:9px; padding:9px 11px; background:#fbfbfc;"
+    },
+    {
+     "file": "detail-kit.jsx",
+     "line": 182,
+     "src": ".facts-h{ display:flex; align-items:center; gap:9px; padding:11px 14px; background:#fbfbfc;"
+    }
+   ]
+  },
+  {
+   "hex": "#1b1c21",
+   "count": 4,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-dark-mode-900-2",
+     "figmaCandidate": "colors/gray/dark/mode/900/2",
+     "hex": "#161b26",
+     "deltaE": 4.72
+    },
+    {
+     "css": "--colors-gray-dark-mode-900-3",
+     "figmaCandidate": "colors/gray/dark/mode/900/3",
+     "hex": "#161b26",
+     "deltaE": 4.72
+    },
+    {
+     "css": "--colors-gray-dark-mode-900-4",
+     "figmaCandidate": "colors/gray/dark/mode/900/4",
+     "hex": "#161b26",
+     "deltaE": 4.72
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/atoms.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 16,
+     "src": "--wf-ink:#1b1c21; --wf-strong:#3b3e46; --wf-muted:#6b7280; --wf-faint:#9aa1ad;"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 152,
+     "src": ".spec .vt{ font-size:16px; font-weight:800; letter-spacing:-.3px; color:#1b1c21; margin:2px 0 7px; }"
+    },
+    {
+     "file": "atoms.jsx",
+     "line": 60,
+     "src": "<Sw c=\"#1b1c21\" name=\"Ink\" hex=\"#1B1C21\" />"
+    }
+   ]
+  },
+  {
+   "hex": "#9aa1ad",
+   "count": 4,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-foreground-fg-disabled-2",
+     "figmaCandidate": "colors/foreground/fg/disabled/2",
+     "hex": "#98a2b3",
+     "deltaE": 2.93
+    },
+    {
+     "css": "--colors-foreground-fg-disabled",
+     "figmaCandidate": "colors/foreground/fg/disabled",
+     "hex": "#98a2b3",
+     "deltaE": 2.93
+    },
+    {
+     "css": "--colors-foreground-fg-quinary-400-2",
+     "figmaCandidate": "colors/foreground/fg/quinary/400/2",
+     "hex": "#98a2b3",
+     "deltaE": 2.93
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/atoms.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 16,
+     "src": "--wf-ink:#1b1c21; --wf-strong:#3b3e46; --wf-muted:#6b7280; --wf-faint:#9aa1ad;"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 156,
+     "src": ".spec .tag b{ color:#9aa1ad; font-weight:700; }"
+    },
+    {
+     "file": "atoms.jsx",
+     "line": 63,
+     "src": "<Sw c=\"#9aa1ad\" name=\"Faint\" hex=\"#9AA1AD\" />"
+    }
+   ]
+  },
+  {
+   "hex": "#f3f4f6",
+   "count": 4,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-background-bg-disabled-2",
+     "figmaCandidate": "colors/background/bg/disabled/2",
+     "hex": "#f2f4f7",
+     "deltaE": 0.62
+    },
+    {
+     "css": "--colors-background-bg-disabled",
+     "figmaCandidate": "colors/background/bg/disabled",
+     "hex": "#f2f4f7",
+     "deltaE": 0.62
+    },
+    {
+     "css": "--colors-background-bg-secondary-hover",
+     "figmaCandidate": "colors/background/bg/secondary/hover",
+     "hex": "#f2f4f7",
+     "deltaE": 0.62
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/card-kit.jsx",
+    "cases/_ds-cases/kits/atoms.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 17,
+     "src": "--wf-line:#e6e8ec; --wf-line2:#eef0f3; --wf-fill:#f3f4f6; --wf-bg:#fbfcfd;"
+    },
+    {
+     "file": "card-kit.jsx",
+     "line": 87,
+     "src": "inactive:{ bg:'#f3f4f6',         line:'#e4e6ea',          ink:'#3b3e46',          icon:'#98a1ae' },"
+    },
+    {
+     "file": "atoms.jsx",
+     "line": 65,
+     "src": "<Sw c=\"#f3f4f6\" name=\"Fill\" hex=\"#F3F4F6\" />"
+    }
+   ]
+  },
+  {
+   "hex": "#cfd3da",
+   "count": 4,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-border-border-disabled-2",
+     "figmaCandidate": "colors/border/border/disabled/2",
+     "hex": "#d0d5dd",
+     "deltaE": 0.91
+    },
+    {
+     "css": "--colors-border-border-disabled-3",
+     "figmaCandidate": "colors/border/border/disabled/3",
+     "hex": "#d0d5dd",
+     "deltaE": 0.91
+    },
+    {
+     "css": "--colors-border-border-disabled",
+     "figmaCandidate": "colors/border/border/disabled",
+     "hex": "#d0d5dd",
+     "deltaE": 0.91
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 18,
+     "src": "--wf-photo:#d8dbe1; --wf-photo2:#cfd3da;"
+    },
+    {
+     "file": "detail-kit.jsx",
+     "line": 61,
+     "src": ".thero{ position:relative; height:208px; overflow:hidden; background:#cfd3da; flex:none; }"
+    },
+    {
+     "file": "detail-kit.jsx",
+     "line": 63,
+     "src": ".thero .ph.hatch{ background:repeating-linear-gradient(135deg,#d8dbe1 0 9px,#cfd3da 9px 18px); }"
+    }
+   ]
+  },
+  {
+   "hex": "#c2680a",
+   "count": 4,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-background-bg-warning-solid",
+     "figmaCandidate": "colors/background/bg/warning/solid",
+     "hex": "#dc6803",
+     "deltaE": 12.47
+    },
+    {
+     "css": "--colors-warning-600-2",
+     "figmaCandidate": "colors/warning/600/2",
+     "hex": "#dc6803",
+     "deltaE": 12.47
+    },
+    {
+     "css": "--colors-warning-600",
+     "figmaCandidate": "colors/warning/600",
+     "hex": "#dc6803",
+     "deltaE": 12.47
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-record.jsx",
+    "cases/system-case_status_and_action/kits/status-doc.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 252,
+     "src": "amber: { light:['#fff4e3','#b96a06','#e08a14'], solid:['#c2680a','#fff'] },"
+    },
+    {
+     "file": "detail-record.jsx",
+     "line": 168,
+     "src": "<FI name={d.ic} size={16} color={d.pending ? '#c2680a' : 'var(--wf-muted)'} /></div>"
+    },
+    {
+     "file": "detail-record.jsx",
+     "line": 357,
+     "src": ".xr-tag.pend{ color:#c2680a; }"
+    }
+   ]
+  },
+  {
+   "hex": "#e9f1ff",
+   "count": 4,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--brand-ice",
+     "figmaCandidate": "brand/ice",
+     "hex": "#eef4ff",
+     "deltaE": 2.01
+    },
+    {
+     "css": "--colors-indigo-50-2",
+     "figmaCandidate": "colors/indigo/50/2",
+     "hex": "#eef4ff",
+     "deltaE": 2.01
+    },
+    {
+     "css": "--colors-indigo-50",
+     "figmaCandidate": "colors/indigo/50",
+     "hex": "#eef4ff",
+     "deltaE": 2.01
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/atoms.jsx",
+    "cases/screen-single_case_details/kits/detail-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 253,
+     "src": "blue:  { light:['#e9f1ff','#2e6bff','#2e6bff'], solid:['#2e6bff','#fff'] },"
+    },
+    {
+     "file": "atoms.jsx",
+     "line": 112,
+     "src": "<span className=\"sbadge\" style={{ background:'#e9f1ff', color:'#2e6bff' }}>Pill badge</span>"
+    },
+    {
+     "file": "detail-kit.jsx",
+     "line": 194,
+     "src": "color:var(--otr-blue); background:#e9f1ff; border-radius:999px; padding:2px 8px; margin-top:4px; }"
+    }
+   ]
+  },
+  {
+   "hex": "#eef2fc",
+   "count": 4,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-blue-dark-50",
+     "figmaCandidate": "colors/blue/dark/50",
+     "hex": "#eff4ff",
+     "deltaE": 0.89
+    },
+    {
+     "css": "--core-blue-50",
+     "figmaCandidate": "core/blue/50",
+     "hex": "#eff4ff",
+     "deltaE": 0.89
+    },
+    {
+     "css": "--brand-ice",
+     "figmaCandidate": "brand/ice",
+     "hex": "#eef4ff",
+     "deltaE": 1.02
+    }
+   ],
+   "files": [
+    "cases/screen-all_cases_feed/kits/feed-assembled.jsx",
+    "cases/system-case_status_and_action/kits/status-doc.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "feed-assembled.jsx",
+     "line": 178,
+     "src": "<div style={{ width:96, height:96, borderRadius:28, background:'#eef2fc',"
+    },
+    {
+     "file": "status-doc.jsx",
+     "line": 380,
+     "src": "subtitle:'Booking not finished. A gentle nudge on a dotted card.', bg:'#eef2fc',"
+    },
+    {
+     "file": "status-doc.jsx",
+     "line": 387,
+     "src": "subtitle:'The two short lived SmartMatch badges plus the active quote states. The quote and loader live inside"
+    }
+   ]
+  },
+  {
+   "hex": "#6b7280",
+   "count": 3,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-foreground-fg-quaternary-500-2",
+     "figmaCandidate": "colors/foreground/fg/quaternary/500/2",
+     "hex": "#667085",
+     "deltaE": 4.33
+    },
+    {
+     "css": "--colors-foreground-fg-quaternary-500",
+     "figmaCandidate": "colors/foreground/fg/quaternary/500",
+     "hex": "#667085",
+     "deltaE": 4.33
+    },
+    {
+     "css": "--colors-foreground-fg-quinary-hover-2",
+     "figmaCandidate": "colors/foreground/fg/quinary/hover/2",
+     "hex": "#667085",
+     "deltaE": 4.33
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/atoms.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 16,
+     "src": "--wf-ink:#1b1c21; --wf-strong:#3b3e46; --wf-muted:#6b7280; --wf-faint:#9aa1ad;"
+    },
+    {
+     "file": "atoms.jsx",
+     "line": 62,
+     "src": "<Sw c=\"#6b7280\" name=\"Muted\" hex=\"#6B7280\" />"
+    },
+    {
+     "file": "atoms.jsx",
+     "line": 62,
+     "src": "<Sw c=\"#6b7280\" name=\"Muted\" hex=\"#6B7280\" />"
+    }
+   ]
+  },
+  {
+   "hex": "#e6e8ec",
+   "count": 3,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--neutral-200",
+     "figmaCandidate": "neutral/200",
+     "hex": "#e5e7eb",
+     "deltaE": 0.35
+    },
+    {
+     "css": "--colors-background-bg-quaternary",
+     "figmaCandidate": "colors/background/bg/quaternary",
+     "hex": "#eaecf0",
+     "deltaE": 1.4
+    },
+    {
+     "css": "--colors-border-border-disabled-subtle-2",
+     "figmaCandidate": "colors/border/border/disabled/subtle/2",
+     "hex": "#eaecf0",
+     "deltaE": 1.4
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/atoms.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 17,
+     "src": "--wf-line:#e6e8ec; --wf-line2:#eef0f3; --wf-fill:#f3f4f6; --wf-bg:#fbfcfd;"
+    },
+    {
+     "file": "atoms.jsx",
+     "line": 64,
+     "src": "<Sw c=\"#e6e8ec\" name=\"Line\" hex=\"#E6E8EC\" />"
+    },
+    {
+     "file": "atoms.jsx",
+     "line": 64,
+     "src": "<Sw c=\"#e6e8ec\" name=\"Line\" hex=\"#E6E8EC\" />"
+    }
+   ]
+  },
+  {
+   "hex": "#d8dbe1",
+   "count": 3,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-border-border-disabled-2",
+     "figmaCandidate": "colors/border/border/disabled/2",
+     "hex": "#d0d5dd",
+     "deltaE": 2.56
+    },
+    {
+     "css": "--colors-border-border-disabled-3",
+     "figmaCandidate": "colors/border/border/disabled/3",
+     "hex": "#d0d5dd",
+     "deltaE": 2.56
+    },
+    {
+     "css": "--colors-border-border-disabled",
+     "figmaCandidate": "colors/border/border/disabled",
+     "hex": "#d0d5dd",
+     "deltaE": 2.56
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 18,
+     "src": "--wf-photo:#d8dbe1; --wf-photo2:#cfd3da;"
+    },
+    {
+     "file": "detail-kit.jsx",
+     "line": 63,
+     "src": ".thero .ph.hatch{ background:repeating-linear-gradient(135deg,#d8dbe1 0 9px,#cfd3da 9px 18px); }"
+    },
+    {
+     "file": "detail-kit.jsx",
+     "line": 67,
+     "src": ".thero .ph.lowres{ background:repeating-linear-gradient(135deg,#d8dbe1 0 16px,#cfd3da 16px 32px); filter:blur("
+    }
+   ]
+  },
+  {
+   "hex": "#e2e6ec",
+   "count": 3,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--neutral-200",
+     "figmaCandidate": "neutral/200",
+     "hex": "#e5e7eb",
+     "deltaE": 1.32
+    },
+    {
+     "css": "--colors-background-bg-quaternary",
+     "figmaCandidate": "colors/background/bg/quaternary",
+     "hex": "#eaecf0",
+     "deltaE": 2.53
+    },
+    {
+     "css": "--colors-border-border-disabled-subtle-2",
+     "figmaCandidate": "colors/border/border/disabled/subtle/2",
+     "hex": "#eaecf0",
+     "deltaE": 2.53
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/screen-all_cases_feed/kits/feed-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 91,
+     "src": "background:linear-gradient(160deg,#e2e6ec 0%,#ccd1da 100%); }"
+    },
+    {
+     "file": "feed-kit.jsx",
+     "line": 33,
+     "src": "background:linear-gradient(160deg,#e2e6ec,#ccd1da); border:1px solid var(--wf-line); }"
+    },
+    {
+     "file": "detail-kit.jsx",
+     "line": 104,
+     "src": "background:linear-gradient(160deg,#e2e6ec 0%,#ccd1da 100%); width:52px; height:52px; }"
+    }
+   ]
+  },
+  {
+   "hex": "#ccd1da",
+   "count": 3,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-border-border-disabled-2",
+     "figmaCandidate": "colors/border/border/disabled/2",
+     "hex": "#d0d5dd",
+     "deltaE": 1.5
+    },
+    {
+     "css": "--colors-border-border-disabled-3",
+     "figmaCandidate": "colors/border/border/disabled/3",
+     "hex": "#d0d5dd",
+     "deltaE": 1.5
+    },
+    {
+     "css": "--colors-border-border-disabled",
+     "figmaCandidate": "colors/border/border/disabled",
+     "hex": "#d0d5dd",
+     "deltaE": 1.5
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/screen-all_cases_feed/kits/feed-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 91,
+     "src": "background:linear-gradient(160deg,#e2e6ec 0%,#ccd1da 100%); }"
+    },
+    {
+     "file": "feed-kit.jsx",
+     "line": 33,
+     "src": "background:linear-gradient(160deg,#e2e6ec,#ccd1da); border:1px solid var(--wf-line); }"
+    },
+    {
+     "file": "detail-kit.jsx",
+     "line": 104,
+     "src": "background:linear-gradient(160deg,#e2e6ec 0%,#ccd1da 100%); width:52px; height:52px; }"
+    }
+   ]
+  },
+  {
+   "hex": "#ecebff",
+   "count": 3,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-purple-100-2",
+     "figmaCandidate": "colors/purple/100/2",
+     "hex": "#ebe9fe",
+     "deltaE": 0.88
+    },
+    {
+     "css": "--colors-purple-100",
+     "figmaCandidate": "colors/purple/100",
+     "hex": "#ebe9fe",
+     "deltaE": 0.88
+    },
+    {
+     "css": "--component-colors-utility-purple-utility-purple-100-2",
+     "figmaCandidate": "component/colors/utility/purple/utility/purple/100/2",
+     "hex": "#ebe9fe",
+     "deltaE": 0.88
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 225,
+     "src": "background:linear-gradient(100deg,#ecebff 0%,#f4e9ff 25%,#e6ecff 50%,#f4e9ff 75%,#ecebff 100%);"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 225,
+     "src": "background:linear-gradient(100deg,#ecebff 0%,#f4e9ff 25%,#e6ecff 50%,#f4e9ff 75%,#ecebff 100%);"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 235,
+     "src": ".sk{ position:relative; overflow:hidden; border-radius:6px; background:#ecebff; }"
+    }
+   ]
+  },
+  {
+   "hex": "#f1eeff",
+   "count": 3,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-background-bg-brand-secondary",
+     "figmaCandidate": "colors/background/bg/brand/secondary",
+     "hex": "#f4ebff",
+     "deltaE": 2.67
+    },
+    {
+     "css": "--colors-brand-100-2",
+     "figmaCandidate": "colors/brand/100/2",
+     "hex": "#f4ebff",
+     "deltaE": 2.67
+    },
+    {
+     "css": "--colors-brand-100",
+     "figmaCandidate": "colors/brand/100",
+     "hex": "#f4ebff",
+     "deltaE": 2.67
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/card-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 327,
+     "src": "skin = { background: '#f1eeff', color: '#5b4bb8' };"
+    },
+    {
+     "file": "card-kit.jsx",
+     "line": 86,
+     "src": "match:   { bg:'#f1eeff',         line:'#dcd6f5',          ink:'#5b4bb8',          icon:'#6a5bd0' },"
+    },
+    {
+     "file": "detail-kit.jsx",
+     "line": 121,
+     "src": ".id-reassure.match{ background:#f1eeff; border-color:#dcd6f5; }"
+    }
+   ]
+  },
+  {
+   "hex": "#5b4bb8",
+   "count": 3,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-brand-800-2",
+     "figmaCandidate": "colors/brand/800/2",
+     "hex": "#53389e",
+     "deltaE": 8.33
+    },
+    {
+     "css": "--colors-brand-800",
+     "figmaCandidate": "colors/brand/800",
+     "hex": "#53389e",
+     "deltaE": 8.33
+    },
+    {
+     "css": "--component-colors-components-buttons-secondary-color-button-secondary-color-fg-hover-2",
+     "figmaCandidate": "component/colors/components/buttons/secondary/color/button/secondary/color/fg/hover/2",
+     "hex": "#53389e",
+     "deltaE": 8.33
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/card-kit.jsx",
+    "cases/system-case_status_and_action/kits/status-doc.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 327,
+     "src": "skin = { background: '#f1eeff', color: '#5b4bb8' };"
+    },
+    {
+     "file": "card-kit.jsx",
+     "line": 86,
+     "src": "match:   { bg:'#f1eeff',         line:'#dcd6f5',          ink:'#5b4bb8',          icon:'#6a5bd0' },"
+    },
+    {
+     "file": "status-doc.jsx",
+     "line": 128,
+     "src": "<span style={{ color:'#5b4bb8' }}>Two short lived SmartMatch badges sit beside the five lifecycle states.</spa"
+    }
+   ]
+  },
+  {
+   "hex": "#eef0f3",
+   "count": 2,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-cool-100",
+     "figmaCandidate": "colors/gray/cool/100",
+     "hex": "#eff1f5",
+     "deltaE": 0.63
+    },
+    {
+     "css": "--colors-background-bg-disabled-2",
+     "figmaCandidate": "colors/background/bg/disabled/2",
+     "hex": "#f2f4f7",
+     "deltaE": 1.39
+    },
+    {
+     "css": "--colors-background-bg-disabled",
+     "figmaCandidate": "colors/background/bg/disabled",
+     "hex": "#f2f4f7",
+     "deltaE": 1.39
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/system-case_status_and_action/kits/status-doc.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 17,
+     "src": "--wf-line:#e6e8ec; --wf-line2:#eef0f3; --wf-fill:#f3f4f6; --wf-bg:#fbfcfd;"
+    },
+    {
+     "file": "status-doc.jsx",
+     "line": 406,
+     "src": "subtitle:'Terminal states, calm and forward looking.', bg:'#eef0f3',"
+    }
+   ]
+  },
+  {
+   "hex": "#fdeceb",
+   "count": 2,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--secondary-coral-50",
+     "figmaCandidate": "secondary/coral/50",
+     "hex": "#feede9",
+     "deltaE": 1.56
+    },
+    {
+     "css": "--colors-error-50-2",
+     "figmaCandidate": "colors/error/50/2",
+     "hex": "#fef3f2",
+     "deltaE": 2.95
+    },
+    {
+     "css": "--colors-error-50",
+     "figmaCandidate": "colors/error/50",
+     "hex": "#fef3f2",
+     "deltaE": 2.95
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 19,
+     "src": "--money:#e5463a; --money-bg:#fdeceb; --money-line:#f7c9c4;"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 251,
+     "src": "red:   { light:['#fdeceb','#e5463a','#e5463a'], solid:['#ef4338','#fff'] },"
+    }
+   ]
+  },
+  {
+   "hex": "#dfe4ef",
+   "count": 2,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-blue-100-2",
+     "figmaCandidate": "colors/gray/blue/100/2",
+     "hex": "#eaecf5",
+     "deltaE": 3.32
+    },
+    {
+     "css": "--colors-gray-blue-100",
+     "figmaCandidate": "colors/gray/blue/100",
+     "hex": "#eaecf5",
+     "deltaE": 3.32
+    },
+    {
+     "css": "--component-colors-utility-gray-blue-utility-gray-blue-100-2",
+     "figmaCandidate": "component/colors/utility/gray/blue/utility/gray/blue/100/2",
+     "hex": "#eaecf5",
+     "deltaE": 3.32
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 32,
+     "src": ".otr-frame.screen{ border-radius:22px; border:1px solid #dfe4ef; box-shadow:0 8px 30px rgba(20,30,60,.12); }"
+    },
+    {
+     "file": "detail-kit.jsx",
+     "line": 26,
+     "src": "border-radius:22px; border:1px solid #dfe4ef; box-shadow:0 8px 30px rgba(20,30,60,.12);"
+    }
+   ]
+  },
+  {
+   "hex": "#f4e9ff",
+   "count": 2,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-background-bg-brand-secondary",
+     "figmaCandidate": "colors/background/bg/brand/secondary",
+     "hex": "#f4ebff",
+     "deltaE": 1.35
+    },
+    {
+     "css": "--colors-brand-100-2",
+     "figmaCandidate": "colors/brand/100/2",
+     "hex": "#f4ebff",
+     "deltaE": 1.35
+    },
+    {
+     "css": "--colors-brand-100",
+     "figmaCandidate": "colors/brand/100",
+     "hex": "#f4ebff",
+     "deltaE": 1.35
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 225,
+     "src": "background:linear-gradient(100deg,#ecebff 0%,#f4e9ff 25%,#e6ecff 50%,#f4e9ff 75%,#ecebff 100%);"
+    },
+    {
+     "file": "core-kit.jsx",
+     "line": 225,
+     "src": "background:linear-gradient(100deg,#ecebff 0%,#f4e9ff 25%,#e6ecff 50%,#f4e9ff 75%,#ecebff 100%);"
+    }
+   ]
+  },
+  {
+   "hex": "#eef0f4",
+   "count": 2,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-cool-100",
+     "figmaCandidate": "colors/gray/cool/100",
+     "hex": "#eff1f5",
+     "deltaE": 0.35
+    },
+    {
+     "css": "--colors-background-bg-quaternary",
+     "figmaCandidate": "colors/background/bg/quaternary",
+     "hex": "#eaecf0",
+     "deltaE": 1.4
+    },
+    {
+     "css": "--colors-border-border-disabled-subtle-2",
+     "figmaCandidate": "colors/border/border/disabled/subtle/2",
+     "hex": "#eaecf0",
+     "deltaE": 1.4
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 250,
+     "src": "gray:  { light:['#eef0f4','#67707e','#98a1ae'], solid:['#3b3e46','#fff'] },"
+    },
+    {
+     "file": "detail-record.jsx",
+     "line": 231,
+     "src": "neutral: { bg: '#eef0f4', line: '#dfe3ea', ic: '#7b8595' }"
+    }
+   ]
+  },
+  {
+   "hex": "#98a1ae",
+   "count": 2,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-foreground-fg-disabled-2",
+     "figmaCandidate": "colors/foreground/fg/disabled/2",
+     "hex": "#98a2b3",
+     "deltaE": 2.26
+    },
+    {
+     "css": "--colors-foreground-fg-disabled",
+     "figmaCandidate": "colors/foreground/fg/disabled",
+     "hex": "#98a2b3",
+     "deltaE": 2.26
+    },
+    {
+     "css": "--colors-foreground-fg-quinary-400-2",
+     "figmaCandidate": "colors/foreground/fg/quinary/400/2",
+     "hex": "#98a2b3",
+     "deltaE": 2.26
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/_ds-cases/kits/card-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 250,
+     "src": "gray:  { light:['#eef0f4','#67707e','#98a1ae'], solid:['#3b3e46','#fff'] },"
+    },
+    {
+     "file": "card-kit.jsx",
+     "line": 87,
+     "src": "inactive:{ bg:'#f3f4f6',         line:'#e4e6ea',          ink:'#3b3e46',          icon:'#98a1ae' },"
+    }
+   ]
+  },
+  {
+   "hex": "#ef4338",
+   "count": 2,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-error-500-2",
+     "figmaCandidate": "colors/error/500/2",
+     "hex": "#f04438",
+     "deltaE": 0.49
+    },
+    {
+     "css": "--colors-error-500-3",
+     "figmaCandidate": "colors/error/500/3",
+     "hex": "#f04438",
+     "deltaE": 0.49
+    },
+    {
+     "css": "--colors-error-500",
+     "figmaCandidate": "colors/error/500",
+     "hex": "#f04438",
+     "deltaE": 0.49
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/system-case_status_and_action/kits/status-doc.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 251,
+     "src": "red:   { light:['#fdeceb','#e5463a','#e5463a'], solid:['#ef4338','#fff'] },"
+    },
+    {
+     "file": "status-doc.jsx",
+     "line": 138,
+     "src": "<span className=\"sbadge solid\" style={{ background:'#ef4338', color:'#fff', textDecoration:'line-through' }}>D"
+    }
+   ]
+  },
+  {
+   "hex": "#fff4e3",
+   "count": 2,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-warning-50-2",
+     "figmaCandidate": "colors/warning/50/2",
+     "hex": "#fffaeb",
+     "deltaE": 2.97
+    },
+    {
+     "css": "--colors-warning-50",
+     "figmaCandidate": "colors/warning/50",
+     "hex": "#fffaeb",
+     "deltaE": 2.97
+    },
+    {
+     "css": "--component-colors-utility-warning-utility-warning-50-2",
+     "figmaCandidate": "component/colors/utility/warning/utility/warning/50/2",
+     "hex": "#fffaeb",
+     "deltaE": 2.97
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 252,
+     "src": "amber: { light:['#fff4e3','#b96a06','#e08a14'], solid:['#c2680a','#fff'] },"
+    },
+    {
+     "file": "detail-record.jsx",
+     "line": 167,
+     "src": "<div className=\"xr-doc-ic\" style={d.pending ? { background: '#fff4e3' } : null}>"
+    }
+   ]
+  },
+  {
+   "hex": "#dcd6f5",
+   "count": 2,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-purple-200-2",
+     "figmaCandidate": "colors/purple/200/2",
+     "hex": "#d9d6fe",
+     "deltaE": 4.78
+    },
+    {
+     "css": "--colors-purple-200",
+     "figmaCandidate": "colors/purple/200",
+     "hex": "#d9d6fe",
+     "deltaE": 4.78
+    },
+    {
+     "css": "--component-colors-utility-purple-utility-purple-200-2",
+     "figmaCandidate": "component/colors/utility/purple/utility/purple/200/2",
+     "hex": "#d9d6fe",
+     "deltaE": 4.78
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/card-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "card-kit.jsx",
+     "line": 86,
+     "src": "match:   { bg:'#f1eeff',         line:'#dcd6f5',          ink:'#5b4bb8',          icon:'#6a5bd0' },"
+    },
+    {
+     "file": "detail-kit.jsx",
+     "line": 121,
+     "src": ".id-reassure.match{ background:#f1eeff; border-color:#dcd6f5; }"
+    }
+   ]
+  },
+  {
+   "hex": "#f7f8fa",
+   "count": 2,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-blue-50-2",
+     "figmaCandidate": "colors/gray/blue/50/2",
+     "hex": "#f8f9fc",
+     "deltaE": 0.63
+    },
+    {
+     "css": "--colors-gray-blue-50",
+     "figmaCandidate": "colors/gray/blue/50",
+     "hex": "#f8f9fc",
+     "deltaE": 0.63
+    },
+    {
+     "css": "--component-colors-utility-gray-blue-utility-gray-blue-50-2",
+     "figmaCandidate": "component/colors/utility/gray/blue/utility/gray/blue/50/2",
+     "hex": "#f8f9fc",
+     "deltaE": 0.63
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/card-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "card-kit.jsx",
+     "line": 224,
+     "src": "<div style={{ marginTop:12, background:'#f7f8fa', border:'1px solid var(--wf-line)', borderRadius:14, padding:"
+    },
+    {
+     "file": "card-kit.jsx",
+     "line": 235,
+     "src": "<div style={{ marginTop:12, background:'#f7f8fa', border:'1px solid var(--wf-line)', borderRadius:14, padding:"
+    }
+   ]
+  },
+  {
+   "hex": "#9aa6bb",
+   "count": 2,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-foreground-fg-disabled-2",
+     "figmaCandidate": "colors/foreground/fg/disabled/2",
+     "hex": "#98a2b3",
+     "deltaE": 2.68
+    },
+    {
+     "css": "--colors-foreground-fg-disabled",
+     "figmaCandidate": "colors/foreground/fg/disabled",
+     "hex": "#98a2b3",
+     "deltaE": 2.68
+    },
+    {
+     "css": "--colors-foreground-fg-quinary-400-2",
+     "figmaCandidate": "colors/foreground/fg/quinary/400/2",
+     "hex": "#98a2b3",
+     "deltaE": 2.68
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 66,
+     "src": "display:flex; align-items:center; justify-content:center; flex-direction:column; gap:9px; color:#9aa6bb; }"
+    },
+    {
+     "file": "detail-kit.jsx",
+     "line": 454,
+     "src": "<span className=\"qmark\"><FI name=\"help-question-1\" size={22} color=\"#9aa6bb\" /></span>"
+    }
+   ]
+  },
+  {
+   "hex": "#eef1f6",
+   "count": 2,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-cool-100",
+     "figmaCandidate": "colors/gray/cool/100",
+     "hex": "#eff1f5",
+     "deltaE": 0.62
+    },
+    {
+     "css": "--colors-background-bg-disabled-2",
+     "figmaCandidate": "colors/background/bg/disabled/2",
+     "hex": "#f2f4f7",
+     "deltaE": 1.52
+    },
+    {
+     "css": "--colors-background-bg-disabled",
+     "figmaCandidate": "colors/background/bg/disabled",
+     "hex": "#f2f4f7",
+     "deltaE": 1.52
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 110,
+     "src": ".att-ph.none{ background:linear-gradient(160deg,#eef1f6,#e0e5ee); }"
+    },
+    {
+     "file": "detail-record.jsx",
+     "line": 359,
+     "src": "background:#eef1f6; border:1px solid var(--wf-line2); }"
+    }
+   ]
+  },
+  {
+   "hex": "#fbfcff",
+   "count": 2,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-blue-50-2",
+     "figmaCandidate": "colors/gray/blue/50/2",
+     "hex": "#f8f9fc",
+     "deltaE": 1.04
+    },
+    {
+     "css": "--colors-gray-blue-50",
+     "figmaCandidate": "colors/gray/blue/50",
+     "hex": "#f8f9fc",
+     "deltaE": 1.04
+    },
+    {
+     "css": "--component-colors-utility-gray-blue-utility-gray-blue-50-2",
+     "figmaCandidate": "component/colors/utility/gray/blue/utility/gray/blue/50/2",
+     "hex": "#f8f9fc",
+     "deltaE": 1.04
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx",
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 127,
+     "src": ".id-empty{ margin:-22px 14px 0; position:relative; z-index:2; background:#fbfcff; border:1.5px dashed #cfd6e6;"
+    },
+    {
+     "file": "detail-record.jsx",
+     "line": 370,
+     "src": ".docup{ margin:8px 2px 2px; padding:13px; border:1px dashed var(--wf-line); border-radius:13px; background:#fb"
+    }
+   ]
+  },
+  {
+   "hex": "#cfd6e2",
+   "count": 2,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-border-border-disabled-2",
+     "figmaCandidate": "colors/border/border/disabled/2",
+     "hex": "#d0d5dd",
+     "deltaE": 2.21
+    },
+    {
+     "css": "--colors-border-border-disabled-3",
+     "figmaCandidate": "colors/border/border/disabled/3",
+     "hex": "#d0d5dd",
+     "deltaE": 2.21
+    },
+    {
+     "css": "--colors-border-border-disabled",
+     "figmaCandidate": "colors/border/border/disabled",
+     "hex": "#d0d5dd",
+     "deltaE": 2.21
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-record.jsx",
+     "line": 242,
+     "src": "const dot = state === 'future' ? { background: '#fff', borderColor: '#cfd6e2', borderStyle: 'dashed' } :"
+    },
+    {
+     "file": "detail-record.jsx",
+     "line": 443,
+     "src": ".tl-row.future .tl-line{ background:repeating-linear-gradient(#cfd6e2 0 4px,transparent 4px 8px); }"
+    }
+   ]
+  },
+  {
+   "hex": "#fbfcfd",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-blue-25",
+     "figmaCandidate": "colors/gray/blue/25",
+     "hex": "#fcfcfd",
+     "deltaE": 0.36
+    },
+    {
+     "css": "--core-blue-gray-25",
+     "figmaCandidate": "core/blue/gray/25",
+     "hex": "#fcfcfd",
+     "deltaE": 0.36
+    },
+    {
+     "css": "--background-neutral",
+     "figmaCandidate": "background/neutral",
+     "hex": "#f9fafb",
+     "deltaE": 0.69
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 17,
+     "src": "--wf-line:#e6e8ec; --wf-line2:#eef0f3; --wf-fill:#f3f4f6; --wf-bg:#fbfcfd;"
+    }
+   ]
+  },
+  {
+   "hex": "#f7c9c4",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--sentiment-negative-200",
+     "figmaCandidate": "sentiment/negative/200",
+     "hex": "#fecdc9",
+     "deltaE": 2.08
+    },
+    {
+     "css": "--colors-error-200-2",
+     "figmaCandidate": "colors/error/200/2",
+     "hex": "#fecdca",
+     "deltaE": 2.26
+    },
+    {
+     "css": "--colors-error-200",
+     "figmaCandidate": "colors/error/200",
+     "hex": "#fecdca",
+     "deltaE": 2.26
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 19,
+     "src": "--money:#e5463a; --money-bg:#fdeceb; --money-line:#f7c9c4;"
+    }
+   ]
+  },
+  {
+   "hex": "#c4c9d2",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--border-neutral",
+     "figmaCandidate": "border/neutral",
+     "hex": "#cecfd2",
+     "deltaE": 4.16
+    },
+    {
+     "css": "--colors-gray-dark-mode-300-2",
+     "figmaCandidate": "colors/gray/dark/mode/300/2",
+     "hex": "#cecfd2",
+     "deltaE": 4.16
+    },
+    {
+     "css": "--colors-gray-dark-mode-300-3",
+     "figmaCandidate": "colors/gray/dark/mode/300/3",
+     "hex": "#cecfd2",
+     "deltaE": 4.16
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 63,
+     "src": ".cpc.unfinished{ border:1.6px dashed #c4c9d2; background:#fcfcfd; box-shadow:none; }"
+    }
+   ]
+  },
+  {
+   "hex": "#fcfcfd",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "exact",
+   "action": "BIND",
+   "figmaExact": [
+    {
+     "css": "--colors-gray-blue-25",
+     "figmaCandidate": "colors/gray/blue/25",
+     "alias": null
+    },
+    {
+     "css": "--core-blue-gray-25",
+     "figmaCandidate": "core/blue/gray/25",
+     "alias": null
+    }
+   ],
+   "dsToken": [],
+   "nearest": null,
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 63,
+     "src": ".cpc.unfinished{ border:1.6px dashed #c4c9d2; background:#fcfcfd; box-shadow:none; }"
+    }
+   ]
+  },
+  {
+   "hex": "#0b4ad0",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-blue-dark-800",
+     "figmaCandidate": "colors/blue/dark/800",
+     "hex": "#0040c1",
+     "deltaE": 4.56
+    },
+    {
+     "css": "--core-blue-800",
+     "figmaCandidate": "core/blue/800",
+     "hex": "#0040c1",
+     "deltaE": 4.56
+    },
+    {
+     "css": "--b2c-colors-blue-300",
+     "figmaCandidate": "b2c/colors/blue/300",
+     "hex": "#155eef",
+     "deltaE": 9.22
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 151,
+     "src": "color:var(--blue-700,#0b4ad0); }"
+    }
+   ]
+  },
+  {
+   "hex": "#e0e3e8",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--neutral-200",
+     "figmaCandidate": "neutral/200",
+     "hex": "#e5e7eb",
+     "deltaE": 1.59
+    },
+    {
+     "css": "--colors-background-bg-quaternary",
+     "figmaCandidate": "colors/background/bg/quaternary",
+     "hex": "#eaecf0",
+     "deltaE": 3.27
+    },
+    {
+     "css": "--colors-border-border-disabled-subtle-2",
+     "figmaCandidate": "colors/border/border/disabled/subtle/2",
+     "hex": "#eaecf0",
+     "deltaE": 3.27
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 155,
+     "src": "border:1px solid #e0e3e8; border-radius:6px; padding:3px 7px; }"
+    }
+   ]
+  },
+  {
+   "hex": "#fffdf3",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": true,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-warning-25",
+     "figmaCandidate": "colors/warning/25",
+     "hex": "#fffcf5",
+     "deltaE": 1.57
+    },
+    {
+     "css": "--sentiment-warning-25",
+     "figmaCandidate": "sentiment/warning/25",
+     "hex": "#fffcf5",
+     "deltaE": 1.57
+    },
+    {
+     "css": "--colors-green-light-25",
+     "figmaCandidate": "colors/green/light/25",
+     "hex": "#fafef5",
+     "deltaE": 2.18
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 157,
+     "src": ".note{ width:390px; margin-top:11px; padding:9px 12px; background:#fffdf3;"
+    }
+   ]
+  },
+  {
+   "hex": "#f1e6b8",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--sentiment-warning-100",
+     "figmaCandidate": "sentiment/warning/100",
+     "hex": "#feefc6",
+     "deltaE": 4.66
+    },
+    {
+     "css": "--colors-background-bg-warning-secondary",
+     "figmaCandidate": "colors/background/bg/warning/secondary",
+     "hex": "#fef0c7",
+     "deltaE": 4.79
+    },
+    {
+     "css": "--colors-warning-100-2",
+     "figmaCandidate": "colors/warning/100/2",
+     "hex": "#fef0c7",
+     "deltaE": 4.79
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 158,
+     "src": "border:1px solid #f1e6b8; border-radius:9px; font-family:-apple-system,system-ui,sans-serif;"
+    }
+   ]
+  },
+  {
+   "hex": "#6a5a17",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-yellow-950",
+     "figmaCandidate": "colors/yellow/950",
+     "hex": "#542c0d",
+     "deltaE": 26.19
+    },
+    {
+     "css": "--colors-green-light-900-2",
+     "figmaCandidate": "colors/green/light/900/2",
+     "hex": "#2b5314",
+     "deltaE": 27.45
+    },
+    {
+     "css": "--colors-green-light-900",
+     "figmaCandidate": "colors/green/light/900",
+     "hex": "#2b5314",
+     "deltaE": 27.45
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 159,
+     "src": "font-size:11.5px; line-height:1.45; color:#6a5a17; }"
+    }
+   ]
+  },
+  {
+   "hex": "#8a6d00",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": true,
+   "binding": "scaffolding",
+   "action": "RAW_OK",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-orange-300-2",
+     "figmaCandidate": "colors/orange/300/2",
+     "hex": "#f7b27a",
+     "deltaE": 37.95
+    },
+    {
+     "css": "--colors-orange-300",
+     "figmaCandidate": "colors/orange/300",
+     "hex": "#f7b27a",
+     "deltaE": 37.95
+    },
+    {
+     "css": "--colors-warning-800-2",
+     "figmaCandidate": "colors/warning/800/2",
+     "hex": "#93370d",
+     "deltaE": 38.07
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 160,
+     "src": ".note b{ color:#8a6d00; font-weight:800; }"
+    }
+   ]
+  },
+  {
+   "hex": "#6b4f1d",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-yellow-950",
+     "figmaCandidate": "colors/yellow/950",
+     "hex": "#542c0d",
+     "deltaE": 17.22
+    },
+    {
+     "css": "--secondary-coral-900",
+     "figmaCandidate": "secondary/coral/900",
+     "hex": "#57200d",
+     "deltaE": 25.14
+    },
+    {
+     "css": "--colors-warning-950-2",
+     "figmaCandidate": "colors/warning/950/2",
+     "hex": "#4e1d09",
+     "deltaE": 25.59
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 164,
+     "src": "--ink:#6b4f1d; --ink-line:rgba(107,79,29,.3); --ink-soft:rgba(107,79,29,.62); color:var(--ink);"
+    }
+   ]
+  },
+  {
+   "hex": "#fdf3c6",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-background-bg-warning-secondary",
+     "figmaCandidate": "colors/background/bg/warning/secondary",
+     "hex": "#fef0c7",
+     "deltaE": 2.54
+    },
+    {
+     "css": "--colors-warning-100-2",
+     "figmaCandidate": "colors/warning/100/2",
+     "hex": "#fef0c7",
+     "deltaE": 2.54
+    },
+    {
+     "css": "--colors-warning-100",
+     "figmaCandidate": "colors/warning/100",
+     "hex": "#fef0c7",
+     "deltaE": 2.54
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 165,
+     "src": "background:linear-gradient(176deg,#fdf3c6,#f6e6a2);"
+    }
+   ]
+  },
+  {
+   "hex": "#f6e6a2",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-warning-200-2",
+     "figmaCandidate": "colors/warning/200/2",
+     "hex": "#fedf89",
+     "deltaE": 11.58
+    },
+    {
+     "css": "--colors-warning-200",
+     "figmaCandidate": "colors/warning/200",
+     "hex": "#fedf89",
+     "deltaE": 11.58
+    },
+    {
+     "css": "--component-colors-utility-warning-utility-warning-200-2",
+     "figmaCandidate": "component/colors/utility/warning/utility/warning/200/2",
+     "hex": "#fedf89",
+     "deltaE": 11.58
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 165,
+     "src": "background:linear-gradient(176deg,#fdf3c6,#f6e6a2);"
+    }
+   ]
+  },
+  {
+   "hex": "#9b2a5a",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": true,
+   "binding": "scaffolding",
+   "action": "RAW_OK",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-pink-900-2",
+     "figmaCandidate": "colors/pink/900/2",
+     "hex": "#851651",
+     "deltaE": 8.41
+    },
+    {
+     "css": "--colors-pink-900",
+     "figmaCandidate": "colors/pink/900",
+     "hex": "#851651",
+     "deltaE": 8.41
+    },
+    {
+     "css": "--colors-pink-800-2",
+     "figmaCandidate": "colors/pink/800/2",
+     "hex": "#9e165f",
+     "deltaE": 8.96
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 172,
+     "src": ".tkt.pink{ --ink:#9b2a5a; --ink-line:rgba(155,42,90,.28); --ink-soft:rgba(155,42,90,.6); background:linear-gra"
+    }
+   ]
+  },
+  {
+   "hex": "#ffdcea",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": true,
+   "binding": "scaffolding",
+   "action": "RAW_OK",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--marketing-colors-red-100",
+     "figmaCandidate": "marketing/colors/red/100",
+     "hex": "#ffd1e4",
+     "deltaE": 5.57
+    },
+    {
+     "css": "--tertiary-pink-50",
+     "figmaCandidate": "tertiary/pink/50",
+     "hex": "#ffe8f3",
+     "deltaE": 5.64
+    },
+    {
+     "css": "--colors-pink-100-2",
+     "figmaCandidate": "colors/pink/100/2",
+     "hex": "#fce7f6",
+     "deltaE": 5.88
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 172,
+     "src": ".tkt.pink{ --ink:#9b2a5a; --ink-line:rgba(155,42,90,.28); --ink-soft:rgba(155,42,90,.6); background:linear-gra"
+    }
+   ]
+  },
+  {
+   "hex": "#ffc2da",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": true,
+   "binding": "scaffolding",
+   "action": "RAW_OK",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--tertiary-pink-200",
+     "figmaCandidate": "tertiary/pink/200",
+     "hex": "#ffb6d6",
+     "deltaE": 6.66
+    },
+    {
+     "css": "--marketing-colors-red-100",
+     "figmaCandidate": "marketing/colors/red/100",
+     "hex": "#ffd1e4",
+     "deltaE": 7.31
+    },
+    {
+     "css": "--tertiary-pink-100",
+     "figmaCandidate": "tertiary/pink/100",
+     "hex": "#ffd2e8",
+     "deltaE": 7.51
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 172,
+     "src": ".tkt.pink{ --ink:#9b2a5a; --ink-line:rgba(155,42,90,.28); --ink-soft:rgba(155,42,90,.6); background:linear-gra"
+    }
+   ]
+  },
+  {
+   "hex": "#234e86",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": true,
+   "binding": "scaffolding",
+   "action": "RAW_OK",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-blue-600-2",
+     "figmaCandidate": "colors/gray/blue/600/2",
+     "hex": "#3e4784",
+     "deltaE": 9.38
+    },
+    {
+     "css": "--colors-gray-blue-600-3",
+     "figmaCandidate": "colors/gray/blue/600/3",
+     "hex": "#3e4784",
+     "deltaE": 9.38
+    },
+    {
+     "css": "--colors-gray-blue-600",
+     "figmaCandidate": "colors/gray/blue/600",
+     "hex": "#3e4784",
+     "deltaE": 9.38
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 173,
+     "src": ".tkt.blue{ --ink:#234e86; --ink-line:rgba(35,78,134,.26); --ink-soft:rgba(35,78,134,.6); background:linear-gra"
+    }
+   ]
+  },
+  {
+   "hex": "#dde9fb",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": true,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-indigo-100-2",
+     "figmaCandidate": "colors/indigo/100/2",
+     "hex": "#e0eaff",
+     "deltaE": 1.81
+    },
+    {
+     "css": "--colors-indigo-100",
+     "figmaCandidate": "colors/indigo/100",
+     "hex": "#e0eaff",
+     "deltaE": 1.81
+    },
+    {
+     "css": "--component-colors-utility-indigo-utility-indigo-100-2",
+     "figmaCandidate": "component/colors/utility/indigo/utility/indigo/100/2",
+     "hex": "#e0eaff",
+     "deltaE": 1.81
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 173,
+     "src": ".tkt.blue{ --ink:#234e86; --ink-line:rgba(35,78,134,.26); --ink-soft:rgba(35,78,134,.6); background:linear-gra"
+    }
+   ]
+  },
+  {
+   "hex": "#bdd4f2",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": true,
+   "binding": "scaffolding",
+   "action": "RAW_OK",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--b2c-colors-blue-100",
+     "figmaCandidate": "b2c/colors/blue/100",
+     "hex": "#d1e0ff",
+     "deltaE": 5.52
+    },
+    {
+     "css": "--colors-blue-dark-100",
+     "figmaCandidate": "colors/blue/dark/100",
+     "hex": "#d1e0ff",
+     "deltaE": 5.52
+    },
+    {
+     "css": "--component-colors-utility-blue-dark-utility-blue-dark-100",
+     "figmaCandidate": "component/colors/utility/blue/dark/utility/blue/dark/100",
+     "hex": "#d1e0ff",
+     "deltaE": 5.52
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 173,
+     "src": ".tkt.blue{ --ink:#234e86; --ink-line:rgba(35,78,134,.26); --ink-soft:rgba(35,78,134,.6); background:linear-gra"
+    }
+   ]
+  },
+  {
+   "hex": "#356b2a",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": true,
+   "binding": "scaffolding",
+   "action": "RAW_OK",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-green-light-800-2",
+     "figmaCandidate": "colors/green/light/800/2",
+     "hex": "#326212",
+     "deltaE": 7.9
+    },
+    {
+     "css": "--colors-green-light-800",
+     "figmaCandidate": "colors/green/light/800",
+     "hex": "#326212",
+     "deltaE": 7.9
+    },
+    {
+     "css": "--sentiment-positive-800",
+     "figmaCandidate": "sentiment/positive/800",
+     "hex": "#326212",
+     "deltaE": 7.9
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 174,
+     "src": ".tkt.green{ --ink:#356b2a; --ink-line:rgba(53,107,42,.26); --ink-soft:rgba(53,107,42,.6); background:linear-gr"
+    }
+   ]
+  },
+  {
+   "hex": "#e3f0d4",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": true,
+   "binding": "scaffolding",
+   "action": "RAW_OK",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-green-light-50",
+     "figmaCandidate": "colors/green/light/50",
+     "hex": "#f3fee7",
+     "deltaE": 5.85
+    },
+    {
+     "css": "--sentiment-positive-50",
+     "figmaCandidate": "sentiment/positive/50",
+     "hex": "#f3fee7",
+     "deltaE": 5.85
+    },
+    {
+     "css": "--colors-background-bg-success-secondary-2",
+     "figmaCandidate": "colors/background/bg/success/secondary/2",
+     "hex": "#dcfae6",
+     "deltaE": 7.57
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 174,
+     "src": ".tkt.green{ --ink:#356b2a; --ink-line:rgba(53,107,42,.26); --ink-soft:rgba(53,107,42,.6); background:linear-gr"
+    }
+   ]
+  },
+  {
+   "hex": "#c6e2ad",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": true,
+   "binding": "scaffolding",
+   "action": "RAW_OK",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--sentiment-positive-100",
+     "figmaCandidate": "sentiment/positive/100",
+     "hex": "#e3fbcb",
+     "deltaE": 9.78
+    },
+    {
+     "css": "--colors-green-light-100",
+     "figmaCandidate": "colors/green/light/100",
+     "hex": "#e3fbcc",
+     "deltaE": 9.98
+    },
+    {
+     "css": "--marketing-colors-green-100",
+     "figmaCandidate": "marketing/colors/green/100",
+     "hex": "#c7f8cb",
+     "deltaE": 10.65
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 174,
+     "src": ".tkt.green{ --ink:#356b2a; --ink-line:rgba(53,107,42,.26); --ink-soft:rgba(53,107,42,.6); background:linear-gr"
+    }
+   ]
+  },
+  {
+   "hex": "#3d4452",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": true,
+   "binding": "scaffolding",
+   "action": "RAW_OK",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-foreground-fg-secondary-700",
+     "figmaCandidate": "colors/foreground/fg/secondary/700",
+     "hex": "#344054",
+     "deltaE": 4.66
+    },
+    {
+     "css": "--colors-gray-light-mode-700-2",
+     "figmaCandidate": "colors/gray/light/mode/700/2",
+     "hex": "#344054",
+     "deltaE": 4.66
+    },
+    {
+     "css": "--colors-gray-light-mode-700-3",
+     "figmaCandidate": "colors/gray/light/mode/700/3",
+     "hex": "#344054",
+     "deltaE": 4.66
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 175,
+     "src": ".tkt.slate{ --ink:#3d4452; --ink-line:rgba(61,68,82,.24); --ink-soft:rgba(61,68,82,.58); background:linear-gra"
+    }
+   ]
+  },
+  {
+   "hex": "#e9ecf2",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": true,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-background-bg-quaternary",
+     "figmaCandidate": "colors/background/bg/quaternary",
+     "hex": "#eaecf0",
+     "deltaE": 1.08
+    },
+    {
+     "css": "--colors-border-border-disabled-subtle-2",
+     "figmaCandidate": "colors/border/border/disabled/subtle/2",
+     "hex": "#eaecf0",
+     "deltaE": 1.08
+    },
+    {
+     "css": "--colors-border-border-disabled-subtle",
+     "figmaCandidate": "colors/border/border/disabled/subtle",
+     "hex": "#eaecf0",
+     "deltaE": 1.08
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 175,
+     "src": ".tkt.slate{ --ink:#3d4452; --ink-line:rgba(61,68,82,.24); --ink-soft:rgba(61,68,82,.58); background:linear-gra"
+    }
+   ]
+  },
+  {
+   "hex": "#d2d8e2",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": true,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-border-border-disabled-2",
+     "figmaCandidate": "colors/border/border/disabled/2",
+     "hex": "#d0d5dd",
+     "deltaE": 1.51
+    },
+    {
+     "css": "--colors-border-border-disabled-3",
+     "figmaCandidate": "colors/border/border/disabled/3",
+     "hex": "#d0d5dd",
+     "deltaE": 1.51
+    },
+    {
+     "css": "--colors-border-border-disabled",
+     "figmaCandidate": "colors/border/border/disabled",
+     "hex": "#d0d5dd",
+     "deltaE": 1.51
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 175,
+     "src": ".tkt.slate{ --ink:#3d4452; --ink-line:rgba(61,68,82,.24); --ink-soft:rgba(61,68,82,.58); background:linear-gra"
+    }
+   ]
+  },
+  {
+   "hex": "#e6ecff",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-indigo-100-2",
+     "figmaCandidate": "colors/indigo/100/2",
+     "hex": "#e0eaff",
+     "deltaE": 1.91
+    },
+    {
+     "css": "--colors-indigo-100",
+     "figmaCandidate": "colors/indigo/100",
+     "hex": "#e0eaff",
+     "deltaE": 1.91
+    },
+    {
+     "css": "--component-colors-utility-indigo-utility-indigo-100-2",
+     "figmaCandidate": "component/colors/utility/indigo/utility/indigo/100/2",
+     "hex": "#e0eaff",
+     "deltaE": 1.91
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 225,
+     "src": "background:linear-gradient(100deg,#ecebff 0%,#f4e9ff 25%,#e6ecff 50%,#f4e9ff 75%,#ecebff 100%);"
+    }
+   ]
+  },
+  {
+   "hex": "#67707e",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-foreground-fg-quaternary-500-2",
+     "figmaCandidate": "colors/foreground/fg/quaternary/500/2",
+     "hex": "#667085",
+     "deltaE": 4.16
+    },
+    {
+     "css": "--colors-foreground-fg-quaternary-500",
+     "figmaCandidate": "colors/foreground/fg/quaternary/500",
+     "hex": "#667085",
+     "deltaE": 4.16
+    },
+    {
+     "css": "--colors-foreground-fg-quinary-hover-2",
+     "figmaCandidate": "colors/foreground/fg/quinary/hover/2",
+     "hex": "#667085",
+     "deltaE": 4.16
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 250,
+     "src": "gray:  { light:['#eef0f4','#67707e','#98a1ae'], solid:['#3b3e46','#fff'] },"
+    }
+   ]
+  },
+  {
+   "hex": "#b96a06",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-background-bg-warning-solid",
+     "figmaCandidate": "colors/background/bg/warning/solid",
+     "hex": "#dc6803",
+     "deltaE": 17.18
+    },
+    {
+     "css": "--colors-warning-600-2",
+     "figmaCandidate": "colors/warning/600/2",
+     "hex": "#dc6803",
+     "deltaE": 17.18
+    },
+    {
+     "css": "--colors-warning-600",
+     "figmaCandidate": "colors/warning/600",
+     "hex": "#dc6803",
+     "deltaE": 17.18
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 252,
+     "src": "amber: { light:['#fff4e3','#b96a06','#e08a14'], solid:['#c2680a','#fff'] },"
+    }
+   ]
+  },
+  {
+   "hex": "#e08a14",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-warning-500-2",
+     "figmaCandidate": "colors/warning/500/2",
+     "hex": "#f79009",
+     "deltaE": 9.82
+    },
+    {
+     "css": "--colors-warning-500-3",
+     "figmaCandidate": "colors/warning/500/3",
+     "hex": "#f79009",
+     "deltaE": 9.82
+    },
+    {
+     "css": "--colors-warning-500",
+     "figmaCandidate": "colors/warning/500",
+     "hex": "#f79009",
+     "deltaE": 9.82
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 252,
+     "src": "amber: { light:['#fff4e3','#b96a06','#e08a14'], solid:['#c2680a','#fff'] },"
+    }
+   ]
+  },
+  {
+   "hex": "#e4f7ec",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-success-50-2",
+     "figmaCandidate": "colors/success/50/2",
+     "hex": "#ecfdf3",
+     "deltaE": 2.42
+    },
+    {
+     "css": "--colors-success-50",
+     "figmaCandidate": "colors/success/50",
+     "hex": "#ecfdf3",
+     "deltaE": 2.42
+    },
+    {
+     "css": "--component-colors-utility-success-utility-success-50-2",
+     "figmaCandidate": "component/colors/utility/success/utility/success/50/2",
+     "hex": "#ecfdf3",
+     "deltaE": 2.42
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 254,
+     "src": "green: { light:['#e4f7ec','#179a55','#19a558'], solid:['#19a558','#fff'] },"
+    }
+   ]
+  },
+  {
+   "hex": "#179a55",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-background-bg-success-solid-2",
+     "figmaCandidate": "colors/background/bg/success/solid/2",
+     "hex": "#079455",
+     "deltaE": 3.68
+    },
+    {
+     "css": "--colors-background-bg-success-solid",
+     "figmaCandidate": "colors/background/bg/success/solid",
+     "hex": "#079455",
+     "deltaE": 3.68
+    },
+    {
+     "css": "--colors-foreground-fg-success-primary",
+     "figmaCandidate": "colors/foreground/fg/success/primary",
+     "hex": "#079455",
+     "deltaE": 3.68
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 254,
+     "src": "green: { light:['#e4f7ec','#179a55','#19a558'], solid:['#19a558','#fff'] },"
+    }
+   ]
+  },
+  {
+   "hex": "#8b86d6",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-blue-400-2",
+     "figmaCandidate": "colors/gray/blue/400/2",
+     "hex": "#717bbc",
+     "deltaE": 11.1
+    },
+    {
+     "css": "--colors-gray-blue-400-3",
+     "figmaCandidate": "colors/gray/blue/400/3",
+     "hex": "#717bbc",
+     "deltaE": 11.1
+    },
+    {
+     "css": "--colors-gray-blue-400",
+     "figmaCandidate": "colors/gray/blue/400",
+     "hex": "#717bbc",
+     "deltaE": 11.1
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 333,
+     "src": "? '#8b86d6'"
+    }
+   ]
+  },
+  {
+   "hex": "#1f9d57",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-background-bg-success-solid-2",
+     "figmaCandidate": "colors/background/bg/success/solid/2",
+     "hex": "#079455",
+     "deltaE": 4.68
+    },
+    {
+     "css": "--colors-background-bg-success-solid",
+     "figmaCandidate": "colors/background/bg/success/solid",
+     "hex": "#079455",
+     "deltaE": 4.68
+    },
+    {
+     "css": "--colors-foreground-fg-success-primary",
+     "figmaCandidate": "colors/foreground/fg/success/primary",
+     "hex": "#079455",
+     "deltaE": 4.68
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 391,
+     "src": "const cols = ['#1f9d57', '#22c55e', '#4ade80', '#15803d', '#86efac', '#2e74ff', '#7da9ff'];"
+    }
+   ]
+  },
+  {
+   "hex": "#22c55e",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--marketing-colors-green-300",
+     "figmaCandidate": "marketing/colors/green/300",
+     "hex": "#01b64d",
+     "deltaE": 5.56
+    },
+    {
+     "css": "--marketing-positive-300",
+     "figmaCandidate": "marketing/positive/300",
+     "hex": "#01b64d",
+     "deltaE": 5.56
+    },
+    {
+     "css": "--colors-foreground-fg-success-secondary-2",
+     "figmaCandidate": "colors/foreground/fg/success/secondary/2",
+     "hex": "#17b26a",
+     "deltaE": 16.91
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 391,
+     "src": "const cols = ['#1f9d57', '#22c55e', '#4ade80', '#15803d', '#86efac', '#2e74ff', '#7da9ff'];"
+    }
+   ]
+  },
+  {
+   "hex": "#4ade80",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-success-400-2",
+     "figmaCandidate": "colors/success/400/2",
+     "hex": "#47cd89",
+     "deltaE": 14.67
+    },
+    {
+     "css": "--colors-success-400",
+     "figmaCandidate": "colors/success/400",
+     "hex": "#47cd89",
+     "deltaE": 14.67
+    },
+    {
+     "css": "--component-colors-utility-success-utility-success-400-2",
+     "figmaCandidate": "component/colors/utility/success/utility/success/400/2",
+     "hex": "#47cd89",
+     "deltaE": 14.67
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 391,
+     "src": "const cols = ['#1f9d57', '#22c55e', '#4ade80', '#15803d', '#86efac', '#2e74ff', '#7da9ff'];"
+    }
+   ]
+  },
+  {
+   "hex": "#15803d",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--marketing-colors-green-400",
+     "figmaCandidate": "marketing/colors/green/400",
+     "hex": "#008b3b",
+     "deltaE": 8.66
+    },
+    {
+     "css": "--marketing-positive-400",
+     "figmaCandidate": "marketing/positive/400",
+     "hex": "#008b3b",
+     "deltaE": 8.66
+    },
+    {
+     "css": "--colors-background-bg-success-solid-2",
+     "figmaCandidate": "colors/background/bg/success/solid/2",
+     "hex": "#079455",
+     "deltaE": 9.03
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 391,
+     "src": "const cols = ['#1f9d57', '#22c55e', '#4ade80', '#15803d', '#86efac', '#2e74ff', '#7da9ff'];"
+    }
+   ]
+  },
+  {
+   "hex": "#86efac",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-success-300-2",
+     "figmaCandidate": "colors/success/300/2",
+     "hex": "#75e0a7",
+     "deltaE": 6.96
+    },
+    {
+     "css": "--colors-success-300",
+     "figmaCandidate": "colors/success/300",
+     "hex": "#75e0a7",
+     "deltaE": 6.96
+    },
+    {
+     "css": "--colors-success-400-2",
+     "figmaCandidate": "colors/success/400/2",
+     "hex": "#47cd89",
+     "deltaE": 14.57
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 391,
+     "src": "const cols = ['#1f9d57', '#22c55e', '#4ade80', '#15803d', '#86efac', '#2e74ff', '#7da9ff'];"
+    }
+   ]
+  },
+  {
+   "hex": "#2e74ff",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-blue-dark-500",
+     "figmaCandidate": "colors/blue/dark/500",
+     "hex": "#2970ff",
+     "deltaE": 3.07
+    },
+    {
+     "css": "--core-blue-500",
+     "figmaCandidate": "core/blue/500",
+     "hex": "#2970ff",
+     "deltaE": 3.07
+    },
+    {
+     "css": "--colors-blue",
+     "figmaCandidate": "colors/blue",
+     "hex": "#007aff",
+     "deltaE": 6.05
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 391,
+     "src": "const cols = ['#1f9d57', '#22c55e', '#4ade80', '#15803d', '#86efac', '#2e74ff', '#7da9ff'];"
+    }
+   ]
+  },
+  {
+   "hex": "#7da9ff",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-blue-dark-300",
+     "figmaCandidate": "colors/blue/dark/300",
+     "hex": "#84adff",
+     "deltaE": 2.79
+    },
+    {
+     "css": "--component-colors-utility-blue-dark-utility-blue-dark-300",
+     "figmaCandidate": "component/colors/utility/blue/dark/utility/blue/dark/300",
+     "hex": "#84adff",
+     "deltaE": 2.79
+    },
+    {
+     "css": "--core-blue-300",
+     "figmaCandidate": "core/blue/300",
+     "hex": "#84adff",
+     "deltaE": 2.79
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/core-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "core-kit.jsx",
+     "line": 391,
+     "src": "const cols = ['#1f9d57', '#22c55e', '#4ade80', '#15803d', '#86efac', '#2e74ff', '#7da9ff'];"
+    }
+   ]
+  },
+  {
+   "hex": "#fdb022",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "exact",
+   "action": "BIND",
+   "figmaExact": [
+    {
+     "css": "--colors-warning-400-2",
+     "figmaCandidate": "colors/warning/400/2",
+     "alias": null
+    },
+    {
+     "css": "--colors-warning-400",
+     "figmaCandidate": "colors/warning/400",
+     "alias": null
+    },
+    {
+     "css": "--component-colors-utility-warning-utility-warning-400-2",
+     "figmaCandidate": "component/colors/utility/warning/utility/warning/400/2",
+     "alias": "--colors-warning-400"
+    },
+    {
+     "css": "--component-colors-utility-warning-utility-warning-400",
+     "figmaCandidate": "component/colors/utility/warning/utility/warning/400",
+     "alias": "--colors-warning-400-2"
+    },
+    {
+     "css": "--sentiment-warning-400",
+     "figmaCandidate": "sentiment/warning/400",
+     "alias": null
+    }
+   ],
+   "dsToken": [],
+   "nearest": null,
+   "files": [
+    "cases/_ds-cases/kits/card-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "card-kit.jsx",
+     "line": 31,
+     "src": "<span style={{ fontSize:12.5, fontWeight:800 }}>{rating}</span><FI name=\"star-1\" size={13} color=\"var(--amber-"
+    }
+   ]
+  },
+  {
+   "hex": "#e4e6ea",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--neutral-200",
+     "figmaCandidate": "neutral/200",
+     "hex": "#e5e7eb",
+     "deltaE": 0.35
+    },
+    {
+     "css": "--colors-background-bg-quaternary",
+     "figmaCandidate": "colors/background/bg/quaternary",
+     "hex": "#eaecf0",
+     "deltaE": 2.11
+    },
+    {
+     "css": "--colors-border-border-disabled-subtle-2",
+     "figmaCandidate": "colors/border/border/disabled/subtle/2",
+     "hex": "#eaecf0",
+     "deltaE": 2.11
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/card-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "card-kit.jsx",
+     "line": 87,
+     "src": "inactive:{ bg:'#f3f4f6',         line:'#e4e6ea',          ink:'#3b3e46',          icon:'#98a1ae' },"
+    }
+   ]
+  },
+  {
+   "hex": "#087443",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-success-700-2",
+     "figmaCandidate": "colors/success/700/2",
+     "hex": "#067647",
+     "deltaE": 1.51
+    },
+    {
+     "css": "--colors-success-700",
+     "figmaCandidate": "colors/success/700",
+     "hex": "#067647",
+     "deltaE": 1.51
+    },
+    {
+     "css": "--component-colors-utility-success-utility-success-700-2",
+     "figmaCandidate": "component/colors/utility/success/utility/success/700/2",
+     "hex": "#067647",
+     "deltaE": 1.51
+    }
+   ],
+   "files": [
+    "cases/_ds-cases/kits/card-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "card-kit.jsx",
+     "line": 214,
+     "src": "<span style={{ fontSize:11.5, color:'var(--green-700,#087443)' }}>{c.firm}</span>"
+    }
+   ]
+  },
+  {
+   "hex": "#aa2233",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-error-800-2",
+     "figmaCandidate": "colors/error/800/2",
+     "hex": "#912018",
+     "deltaE": 13.09
+    },
+    {
+     "css": "--colors-error-800",
+     "figmaCandidate": "colors/error/800",
+     "hex": "#912018",
+     "deltaE": 13.09
+    },
+    {
+     "css": "--sentiment-negative-800",
+     "figmaCandidate": "sentiment/negative/800",
+     "hex": "#912018",
+     "deltaE": 13.09
+    }
+   ],
+   "files": [
+    "cases/screen-all_cases_feed/kits/feed-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "feed-kit.jsx",
+     "line": 82,
+     "src": ".att-banner .ab-s{ font-size:11.5px; color:#a23; opacity:.85; }"
+    }
+   ]
+  },
+  {
+   "hex": "#7b5cf0",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--secondary-purple-500",
+     "figmaCandidate": "secondary/purple/500",
+     "hex": "#8c5cf1",
+     "deltaE": 4.53
+    },
+    {
+     "css": "--colors-purple-500-2",
+     "figmaCandidate": "colors/purple/500/2",
+     "hex": "#7a5af8",
+     "deltaE": 5.38
+    },
+    {
+     "css": "--colors-purple-500",
+     "figmaCandidate": "colors/purple/500",
+     "hex": "#7a5af8",
+     "deltaE": 5.38
+    }
+   ],
+   "files": [
+    "cases/screen-all_cases_feed/kits/feed-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "feed-kit.jsx",
+     "line": 270,
+     "src": "if (cfg.tone === 'grad') return '#7b5cf0';"
+    }
+   ]
+  },
+  {
+   "hex": "#3a1714",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--secondary-coral-950",
+     "figmaCandidate": "secondary/coral/950",
+     "hex": "#3e1709",
+     "deltaE": 6.72
+    },
+    {
+     "css": "--colors-orange-950-2",
+     "figmaCandidate": "colors/orange/950/2",
+     "hex": "#511c10",
+     "deltaE": 13.55
+    },
+    {
+     "css": "--colors-orange-950",
+     "figmaCandidate": "colors/orange/950",
+     "hex": "#511c10",
+     "deltaE": 13.55
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 51,
+     "src": ".acct-rail{ display:flex; align-items:center; gap:11px; padding:11px 16px; background:#3a1714;"
+    }
+   ]
+  },
+  {
+   "hex": "#ffe3de",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-background-bg-error-secondary",
+     "figmaCandidate": "colors/background/bg/error/secondary",
+     "hex": "#fee4e2",
+     "deltaE": 1.76
+    },
+    {
+     "css": "--colors-error-100-2",
+     "figmaCandidate": "colors/error/100/2",
+     "hex": "#fee4e2",
+     "deltaE": 1.76
+    },
+    {
+     "css": "--colors-error-100",
+     "figmaCandidate": "colors/error/100",
+     "hex": "#fee4e2",
+     "deltaE": 1.76
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 52,
+     "src": "color:#ffe3de; font-size:12.5px; position:relative; z-index:3; }"
+    }
+   ]
+  },
+  {
+   "hex": "#3a2c10",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-yellow-950",
+     "figmaCandidate": "colors/yellow/950",
+     "hex": "#542c0d",
+     "deltaE": 15.27
+    },
+    {
+     "css": "--secondary-coral-950",
+     "figmaCandidate": "secondary/coral/950",
+     "hex": "#3e1709",
+     "deltaE": 16.69
+    },
+    {
+     "css": "--colors-green-light-950",
+     "figmaCandidate": "colors/green/light/950",
+     "hex": "#15290a",
+     "deltaE": 18.82
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 53,
+     "src": ".acct-rail.warn{ background:#3a2c10; color:#ffeccb; }"
+    }
+   ]
+  },
+  {
+   "hex": "#ffeccb",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--sentiment-warning-100",
+     "figmaCandidate": "sentiment/warning/100",
+     "hex": "#feefc6",
+     "deltaE": 4.27
+    },
+    {
+     "css": "--colors-background-bg-warning-secondary",
+     "figmaCandidate": "colors/background/bg/warning/secondary",
+     "hex": "#fef0c7",
+     "deltaE": 4.44
+    },
+    {
+     "css": "--colors-warning-100-2",
+     "figmaCandidate": "colors/warning/100/2",
+     "hex": "#fef0c7",
+     "deltaE": 4.44
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 53,
+     "src": ".acct-rail.warn{ background:#3a2c10; color:#ffeccb; }"
+    }
+   ]
+  },
+  {
+   "hex": "#cdd6e6",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-blue-200-2",
+     "figmaCandidate": "colors/gray/blue/200/2",
+     "hex": "#d5d9eb",
+     "deltaE": 2.53
+    },
+    {
+     "css": "--colors-gray-blue-200",
+     "figmaCandidate": "colors/gray/blue/200",
+     "hex": "#d5d9eb",
+     "deltaE": 2.53
+    },
+    {
+     "css": "--component-colors-utility-gray-blue-utility-gray-blue-200-2",
+     "figmaCandidate": "component/colors/utility/gray/blue/utility/gray/blue/200/2",
+     "hex": "#d5d9eb",
+     "deltaE": 2.53
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 64,
+     "src": ".thero .ph.tall{ background:repeating-linear-gradient(135deg,#cdd6e6 0 9px,#c2cce0 9px 18px); }"
+    }
+   ]
+  },
+  {
+   "hex": "#c2cce0",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-blue-200-2",
+     "figmaCandidate": "colors/gray/blue/200/2",
+     "hex": "#d5d9eb",
+     "deltaE": 5.54
+    },
+    {
+     "css": "--colors-gray-blue-200",
+     "figmaCandidate": "colors/gray/blue/200",
+     "hex": "#d5d9eb",
+     "deltaE": 5.54
+    },
+    {
+     "css": "--component-colors-utility-gray-blue-utility-gray-blue-200-2",
+     "figmaCandidate": "component/colors/utility/gray/blue/utility/gray/blue/200/2",
+     "hex": "#d5d9eb",
+     "deltaE": 5.54
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 64,
+     "src": ".thero .ph.tall{ background:repeating-linear-gradient(135deg,#cdd6e6 0 9px,#c2cce0 9px 18px); }"
+    }
+   ]
+  },
+  {
+   "hex": "#e8ecf4",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-blue-100-2",
+     "figmaCandidate": "colors/gray/blue/100/2",
+     "hex": "#eaecf5",
+     "deltaE": 0.89
+    },
+    {
+     "css": "--colors-gray-blue-100",
+     "figmaCandidate": "colors/gray/blue/100",
+     "hex": "#eaecf5",
+     "deltaE": 0.89
+    },
+    {
+     "css": "--component-colors-utility-gray-blue-utility-gray-blue-100-2",
+     "figmaCandidate": "component/colors/utility/gray/blue/utility/gray/blue/100/2",
+     "hex": "#eaecf5",
+     "deltaE": 0.89
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 65,
+     "src": ".thero .ph.placeholder{ background:linear-gradient(160deg,#e8ecf4,#d6dce8);"
+    }
+   ]
+  },
+  {
+   "hex": "#d6dce8",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-border-border-disabled-2",
+     "figmaCandidate": "colors/border/border/disabled/2",
+     "hex": "#d0d5dd",
+     "deltaE": 3.28
+    },
+    {
+     "css": "--colors-border-border-disabled-3",
+     "figmaCandidate": "colors/border/border/disabled/3",
+     "hex": "#d0d5dd",
+     "deltaE": 3.28
+    },
+    {
+     "css": "--colors-border-border-disabled",
+     "figmaCandidate": "colors/border/border/disabled",
+     "hex": "#d0d5dd",
+     "deltaE": 3.28
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 65,
+     "src": ".thero .ph.placeholder{ background:linear-gradient(160deg,#e8ecf4,#d6dce8);"
+    }
+   ]
+  },
+  {
+   "hex": "#e0e5ee",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-blue-100-2",
+     "figmaCandidate": "colors/gray/blue/100/2",
+     "hex": "#eaecf5",
+     "deltaE": 2.87
+    },
+    {
+     "css": "--colors-gray-blue-100",
+     "figmaCandidate": "colors/gray/blue/100",
+     "hex": "#eaecf5",
+     "deltaE": 2.87
+    },
+    {
+     "css": "--component-colors-utility-gray-blue-utility-gray-blue-100-2",
+     "figmaCandidate": "component/colors/utility/gray/blue/utility/gray/blue/100/2",
+     "hex": "#eaecf5",
+     "deltaE": 2.87
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 110,
+     "src": ".att-ph.none{ background:linear-gradient(160deg,#eef1f6,#e0e5ee); }"
+    }
+   ]
+  },
+  {
+   "hex": "#e4dcfa",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--secondary-purple-25",
+     "figmaCandidate": "secondary/purple/25",
+     "hex": "#eee6ff",
+     "deltaE": 4.32
+    },
+    {
+     "css": "--colors-purple-200-2",
+     "figmaCandidate": "colors/purple/200/2",
+     "hex": "#d9d6fe",
+     "deltaE": 5.94
+    },
+    {
+     "css": "--colors-purple-200",
+     "figmaCandidate": "colors/purple/200",
+     "hex": "#d9d6fe",
+     "deltaE": 5.94
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 122,
+     "src": ".id-reassure.match .ir-ic{ background:#e4dcfa; }"
+    }
+   ]
+  },
+  {
+   "hex": "#4a3aa0",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-brand-800-2",
+     "figmaCandidate": "colors/brand/800/2",
+     "hex": "#53389e",
+     "deltaE": 2.91
+    },
+    {
+     "css": "--colors-brand-800",
+     "figmaCandidate": "colors/brand/800",
+     "hex": "#53389e",
+     "deltaE": 2.91
+    },
+    {
+     "css": "--component-colors-components-buttons-secondary-color-button-secondary-color-fg-hover-2",
+     "figmaCandidate": "component/colors/components/buttons/secondary/color/button/secondary/color/fg/hover/2",
+     "hex": "#53389e",
+     "deltaE": 2.91
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 123,
+     "src": ".id-reassure.match .ir-t{ color:#4a3aa0; }"
+    }
+   ]
+  },
+  {
+   "hex": "#cfd6e6",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-blue-200-2",
+     "figmaCandidate": "colors/gray/blue/200/2",
+     "hex": "#d5d9eb",
+     "deltaE": 2
+    },
+    {
+     "css": "--colors-gray-blue-200",
+     "figmaCandidate": "colors/gray/blue/200",
+     "hex": "#d5d9eb",
+     "deltaE": 2
+    },
+    {
+     "css": "--component-colors-utility-gray-blue-utility-gray-blue-200-2",
+     "figmaCandidate": "component/colors/utility/gray/blue/utility/gray/blue/200/2",
+     "hex": "#d5d9eb",
+     "deltaE": 2
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 127,
+     "src": ".id-empty{ margin:-22px 14px 0; position:relative; z-index:2; background:#fbfcff; border:1.5px dashed #cfd6e6;"
+    }
+   ]
+  },
+  {
+   "hex": "#eef1f8",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-cool-100",
+     "figmaCandidate": "colors/gray/cool/100",
+     "hex": "#eff1f5",
+     "deltaE": 1.57
+    },
+    {
+     "css": "--colors-gray-blue-100-2",
+     "figmaCandidate": "colors/gray/blue/100/2",
+     "hex": "#eaecf5",
+     "deltaE": 1.96
+    },
+    {
+     "css": "--colors-gray-blue-100",
+     "figmaCandidate": "colors/gray/blue/100",
+     "hex": "#eaecf5",
+     "deltaE": 1.96
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 131,
+     "src": "justify-content:center; background:#eef1f8; border:1.5px dashed #c4ccdc; }"
+    }
+   ]
+  },
+  {
+   "hex": "#c4ccdc",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-blue-200-2",
+     "figmaCandidate": "colors/gray/blue/200/2",
+     "hex": "#d5d9eb",
+     "deltaE": 5.29
+    },
+    {
+     "css": "--colors-gray-blue-200",
+     "figmaCandidate": "colors/gray/blue/200",
+     "hex": "#d5d9eb",
+     "deltaE": 5.29
+    },
+    {
+     "css": "--component-colors-utility-gray-blue-utility-gray-blue-200-2",
+     "figmaCandidate": "component/colors/utility/gray/blue/utility/gray/blue/200/2",
+     "hex": "#d5d9eb",
+     "deltaE": 5.29
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 131,
+     "src": "justify-content:center; background:#eef1f8; border:1.5px dashed #c4ccdc; }"
+    }
+   ]
+  },
+  {
+   "hex": "#e8f8ee",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-success-50-2",
+     "figmaCandidate": "colors/success/50/2",
+     "hex": "#ecfdf3",
+     "deltaE": 1.7
+    },
+    {
+     "css": "--colors-success-50",
+     "figmaCandidate": "colors/success/50",
+     "hex": "#ecfdf3",
+     "deltaE": 1.7
+    },
+    {
+     "css": "--component-colors-utility-success-utility-success-50-2",
+     "figmaCandidate": "component/colors/utility/success/utility/success/50/2",
+     "hex": "#ecfdf3",
+     "deltaE": 1.7
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 209,
+     "src": "background:linear-gradient(135deg,#e8f8ee,#d6f2e1); border:1px solid #bfe8cf; }"
+    }
+   ]
+  },
+  {
+   "hex": "#d6f2e1",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-background-bg-success-secondary-2",
+     "figmaCandidate": "colors/background/bg/success/secondary/2",
+     "hex": "#dcfae6",
+     "deltaE": 3.06
+    },
+    {
+     "css": "--colors-background-bg-success-secondary",
+     "figmaCandidate": "colors/background/bg/success/secondary",
+     "hex": "#dcfae6",
+     "deltaE": 3.06
+    },
+    {
+     "css": "--colors-success-100-2",
+     "figmaCandidate": "colors/success/100/2",
+     "hex": "#dcfae6",
+     "deltaE": 3.06
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 209,
+     "src": "background:linear-gradient(135deg,#e8f8ee,#d6f2e1); border:1px solid #bfe8cf; }"
+    }
+   ]
+  },
+  {
+   "hex": "#bfe8cf",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-background-bg-success-secondary-2",
+     "figmaCandidate": "colors/background/bg/success/secondary/2",
+     "hex": "#dcfae6",
+     "deltaE": 8.65
+    },
+    {
+     "css": "--colors-background-bg-success-secondary",
+     "figmaCandidate": "colors/background/bg/success/secondary",
+     "hex": "#dcfae6",
+     "deltaE": 8.65
+    },
+    {
+     "css": "--colors-success-100-2",
+     "figmaCandidate": "colors/success/100/2",
+     "hex": "#dcfae6",
+     "deltaE": 8.65
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 209,
+     "src": "background:linear-gradient(135deg,#e8f8ee,#d6f2e1); border:1px solid #bfe8cf; }"
+    }
+   ]
+  },
+  {
+   "hex": "#127a43",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-success-700-2",
+     "figmaCandidate": "colors/success/700/2",
+     "hex": "#067647",
+     "deltaE": 4.63
+    },
+    {
+     "css": "--colors-success-700",
+     "figmaCandidate": "colors/success/700",
+     "hex": "#067647",
+     "deltaE": 4.63
+    },
+    {
+     "css": "--component-colors-utility-success-utility-success-700-2",
+     "figmaCandidate": "component/colors/utility/success/utility/success/700/2",
+     "hex": "#067647",
+     "deltaE": 4.63
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 210,
+     "src": ".celebrate .cb-t{ font-size:16px; font-weight:800; color:#127a43; letter-spacing:-.3px; }"
+    }
+   ]
+  },
+  {
+   "hex": "#2c7a52",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-success-700-2",
+     "figmaCandidate": "colors/success/700/2",
+     "hex": "#067647",
+     "deltaE": 7.23
+    },
+    {
+     "css": "--colors-success-700",
+     "figmaCandidate": "colors/success/700",
+     "hex": "#067647",
+     "deltaE": 7.23
+    },
+    {
+     "css": "--component-colors-utility-success-utility-success-700-2",
+     "figmaCandidate": "component/colors/utility/success/utility/success/700/2",
+     "hex": "#067647",
+     "deltaE": 7.23
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 211,
+     "src": ".celebrate .cb-s{ font-size:12.5px; color:#2c7a52; margin-top:2px; }"
+    }
+   ]
+  },
+  {
+   "hex": "#ffd591",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-warning-200-2",
+     "figmaCandidate": "colors/warning/200/2",
+     "hex": "#fedf89",
+     "deltaE": 9.57
+    },
+    {
+     "css": "--colors-warning-200",
+     "figmaCandidate": "colors/warning/200",
+     "hex": "#fedf89",
+     "deltaE": 9.57
+    },
+    {
+     "css": "--component-colors-utility-warning-utility-warning-200-2",
+     "figmaCandidate": "component/colors/utility/warning/utility/warning/200/2",
+     "hex": "#fedf89",
+     "deltaE": 9.57
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 410,
+     "src": "<span className=\"ar-ic\"><FI name={warn ? 'warning-triangle' : 'warning-octagon'} size={17} color={warn ? '#ffd"
+    }
+   ]
+  },
+  {
+   "hex": "#ff9e92",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-error-300-2",
+     "figmaCandidate": "colors/error/300/2",
+     "hex": "#fda29b",
+     "deltaE": 4.33
+    },
+    {
+     "css": "--colors-error-300",
+     "figmaCandidate": "colors/error/300",
+     "hex": "#fda29b",
+     "deltaE": 4.33
+    },
+    {
+     "css": "--sentiment-negative-300",
+     "figmaCandidate": "sentiment/negative/300",
+     "hex": "#fda19b",
+     "deltaE": 4.38
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 410,
+     "src": "<span className=\"ar-ic\"><FI name={warn ? 'warning-triangle' : 'warning-octagon'} size={17} color={warn ? '#ffd"
+    }
+   ]
+  },
+  {
+   "hex": "#aab4c8",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-foreground-fg-disabled-2",
+     "figmaCandidate": "colors/foreground/fg/disabled/2",
+     "hex": "#98a2b3",
+     "deltaE": 6.94
+    },
+    {
+     "css": "--colors-foreground-fg-disabled",
+     "figmaCandidate": "colors/foreground/fg/disabled",
+     "hex": "#98a2b3",
+     "deltaE": 6.94
+    },
+    {
+     "css": "--colors-foreground-fg-quinary-400-2",
+     "figmaCandidate": "colors/foreground/fg/quinary/400/2",
+     "hex": "#98a2b3",
+     "deltaE": 6.94
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 432,
+     "src": "<div className=\"ph placeholder\"><FI name=\"ticket-1\" size={34} color=\"#aab4c8\" /><span style={{ fontSize: 11, f"
+    }
+   ]
+  },
+  {
+   "hex": "#aeb6c6",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--content-grayscale-300",
+     "figmaCandidate": "content/grayscale/300",
+     "hex": "#b3b5bb",
+     "deltaE": 5.76
+    },
+    {
+     "css": "--colors-foreground-fg-disabled-2",
+     "figmaCandidate": "colors/foreground/fg/disabled/2",
+     "hex": "#98a2b3",
+     "deltaE": 7.61
+    },
+    {
+     "css": "--colors-foreground-fg-disabled",
+     "figmaCandidate": "colors/foreground/fg/disabled",
+     "hex": "#98a2b3",
+     "deltaE": 7.61
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-kit.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-kit.jsx",
+     "line": 487,
+     "src": "<div className=\"ie-ph\"><FI name=\"user-square-single\" size={22} color=\"#aeb6c6\" /></div>"
+    }
+   ]
+  },
+  {
+   "hex": "#dfe3ea",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--neutral-200",
+     "figmaCandidate": "neutral/200",
+     "hex": "#e5e7eb",
+     "deltaE": 2.25
+    },
+    {
+     "css": "--colors-gray-blue-100-2",
+     "figmaCandidate": "colors/gray/blue/100/2",
+     "hex": "#eaecf5",
+     "deltaE": 3.58
+    },
+    {
+     "css": "--colors-gray-blue-100",
+     "figmaCandidate": "colors/gray/blue/100",
+     "hex": "#eaecf5",
+     "deltaE": 3.58
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-record.jsx",
+     "line": 231,
+     "src": "neutral: { bg: '#eef0f4', line: '#dfe3ea', ic: '#7b8595' }"
+    }
+   ]
+  },
+  {
+   "hex": "#7b8595",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-gray-dark-mode-500-2",
+     "figmaCandidate": "colors/gray/dark/mode/500/2",
+     "hex": "#85888e",
+     "deltaE": 6.37
+    },
+    {
+     "css": "--colors-gray-dark-mode-500-3",
+     "figmaCandidate": "colors/gray/dark/mode/500/3",
+     "hex": "#85888e",
+     "deltaE": 6.37
+    },
+    {
+     "css": "--colors-gray-dark-mode-500",
+     "figmaCandidate": "colors/gray/dark/mode/500",
+     "hex": "#85888e",
+     "deltaE": 6.37
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-record.jsx",
+     "line": 231,
+     "src": "neutral: { bg: '#eef0f4', line: '#dfe3ea', ic: '#7b8595' }"
+    }
+   ]
+  },
+  {
+   "hex": "#f1f3f7",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-background-bg-disabled-2",
+     "figmaCandidate": "colors/background/bg/disabled/2",
+     "hex": "#f2f4f7",
+     "deltaE": 0.61
+    },
+    {
+     "css": "--colors-background-bg-disabled",
+     "figmaCandidate": "colors/background/bg/disabled",
+     "hex": "#f2f4f7",
+     "deltaE": 0.61
+    },
+    {
+     "css": "--colors-background-bg-secondary-hover",
+     "figmaCandidate": "colors/background/bg/secondary/hover",
+     "hex": "#f2f4f7",
+     "deltaE": 0.61
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-record.jsx",
+     "line": 243,
+     "src": "state === 'done' ? { background: '#f1f3f7', borderColor: '#e4e8ee' } :"
+    }
+   ]
+  },
+  {
+   "hex": "#e4e8ee",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--neutral-200",
+     "figmaCandidate": "neutral/200",
+     "hex": "#e5e7eb",
+     "deltaE": 1.26
+    },
+    {
+     "css": "--colors-background-bg-quaternary",
+     "figmaCandidate": "colors/background/bg/quaternary",
+     "hex": "#eaecf0",
+     "deltaE": 1.95
+    },
+    {
+     "css": "--colors-border-border-disabled-subtle-2",
+     "figmaCandidate": "colors/border/border/disabled/subtle/2",
+     "hex": "#eaecf0",
+     "deltaE": 1.95
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-record.jsx",
+     "line": 243,
+     "src": "state === 'done' ? { background: '#f1f3f7', borderColor: '#e4e8ee' } :"
+    }
+   ]
+  },
+  {
+   "hex": "#aab2bf",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--content-grayscale-300",
+     "figmaCandidate": "content/grayscale/300",
+     "hex": "#b3b5bb",
+     "deltaE": 4.53
+    },
+    {
+     "css": "--colors-foreground-fg-disabled-2",
+     "figmaCandidate": "colors/foreground/fg/disabled/2",
+     "hex": "#98a2b3",
+     "deltaE": 6.46
+    },
+    {
+     "css": "--colors-foreground-fg-disabled",
+     "figmaCandidate": "colors/foreground/fg/disabled",
+     "hex": "#98a2b3",
+     "deltaE": 6.46
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-record.jsx",
+     "line": 249,
+     "src": "{state === 'done' && <FI name=\"check-thick\" size={12} color=\"#aab2bf\" />}"
+    }
+   ]
+  },
+  {
+   "hex": "#eaf1ff",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--brand-ice",
+     "figmaCandidate": "brand/ice",
+     "hex": "#eef4ff",
+     "deltaE": 1.89
+    },
+    {
+     "css": "--colors-indigo-50-2",
+     "figmaCandidate": "colors/indigo/50/2",
+     "hex": "#eef4ff",
+     "deltaE": 1.89
+    },
+    {
+     "css": "--colors-indigo-50",
+     "figmaCandidate": "colors/indigo/50",
+     "hex": "#eef4ff",
+     "deltaE": 1.89
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-record.jsx",
+     "line": 373,
+     "src": "background:#eaf1ff; }"
+    }
+   ]
+  },
+  {
+   "hex": "#cfe0ff",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--b2c-colors-blue-100",
+     "figmaCandidate": "b2c/colors/blue/100",
+     "hex": "#d1e0ff",
+     "deltaE": 0.66
+    },
+    {
+     "css": "--colors-blue-dark-100",
+     "figmaCandidate": "colors/blue/dark/100",
+     "hex": "#d1e0ff",
+     "deltaE": 0.66
+    },
+    {
+     "css": "--component-colors-utility-blue-dark-utility-blue-dark-100",
+     "figmaCandidate": "component/colors/utility/blue/dark/utility/blue/dark/100",
+     "hex": "#d1e0ff",
+     "deltaE": 0.66
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-record.jsx",
+     "line": 397,
+     "src": "background:#e9f1ff; border:1px solid #cfe0ff; }"
+    }
+   ]
+  },
+  {
+   "hex": "#1d52cc",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-blue-700-2",
+     "figmaCandidate": "colors/blue/700/2",
+     "hex": "#175cd3",
+     "deltaE": 5.28
+    },
+    {
+     "css": "--colors-blue-700",
+     "figmaCandidate": "colors/blue/700",
+     "hex": "#175cd3",
+     "deltaE": 5.28
+    },
+    {
+     "css": "--component-colors-utility-blue-utility-blue-700-2",
+     "figmaCandidate": "component/colors/utility/blue/utility/blue/700/2",
+     "hex": "#175cd3",
+     "deltaE": 5.28
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-record.jsx",
+     "line": 398,
+     "src": ".xr-quote .xr-t{ color:#1d52cc; }"
+    }
+   ]
+  },
+  {
+   "hex": "#3a6bd0",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "divergent",
+   "action": "DS_REQUEST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--color-azure-45",
+     "figmaCandidate": "color/azure/45",
+     "hex": "#007be3",
+     "deltaE": 8.96
+    },
+    {
+     "css": "--colors-blue-700-2",
+     "figmaCandidate": "colors/blue/700/2",
+     "hex": "#175cd3",
+     "deltaE": 13.19
+    },
+    {
+     "css": "--colors-blue-700",
+     "figmaCandidate": "colors/blue/700",
+     "hex": "#175cd3",
+     "deltaE": 13.19
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-record.jsx",
+     "line": 399,
+     "src": ".xr-quote .xr-s{ color:#3a6bd0; }"
+    }
+   ]
+  },
+  {
+   "hex": "#c4cad4",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "drift",
+   "action": "BIND_NEAREST_AND_FLAG",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-border-border-disabled-2",
+     "figmaCandidate": "colors/border/border/disabled/2",
+     "hex": "#d0d5dd",
+     "deltaE": 4.13
+    },
+    {
+     "css": "--colors-border-border-disabled-3",
+     "figmaCandidate": "colors/border/border/disabled/3",
+     "hex": "#d0d5dd",
+     "deltaE": 4.13
+    },
+    {
+     "css": "--colors-border-border-disabled",
+     "figmaCandidate": "colors/border/border/disabled",
+     "hex": "#d0d5dd",
+     "deltaE": 4.13
+    }
+   ],
+   "files": [
+    "cases/screen-single_case_details/kits/detail-record.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "detail-record.jsx",
+     "line": 448,
+     "src": ".tl-row.done .tl-d{ color:#c4cad4; }"
+    }
+   ]
+  },
+  {
+   "hex": "#faf9ff",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-purple-25",
+     "figmaCandidate": "colors/purple/25",
+     "hex": "#fafaff",
+     "deltaE": 0.67
+    },
+    {
+     "css": "--colors-blue-dark-25",
+     "figmaCandidate": "colors/blue/dark/25",
+     "hex": "#f5f8ff",
+     "deltaE": 1.59
+    },
+    {
+     "css": "--core-blue-25",
+     "figmaCandidate": "core/blue/25",
+     "hex": "#f5f8ff",
+     "deltaE": 1.59
+    }
+   ],
+   "files": [
+    "cases/system-case_status_and_action/kits/status-doc.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "status-doc.jsx",
+     "line": 122,
+     "src": "<div style={{ marginTop:24, padding:'15px 16px', borderRadius:14, background:'#faf9ff', border:'1px solid #ece"
+    }
+   ]
+  },
+  {
+   "hex": "#ece8fb",
+   "count": 1,
+   "hasAlpha": false,
+   "scaffolding": false,
+   "binding": "near",
+   "action": "BIND_NEAREST",
+   "figmaExact": [],
+   "dsToken": [],
+   "nearest": [
+    {
+     "css": "--colors-purple-100-2",
+     "figmaCandidate": "colors/purple/100/2",
+     "hex": "#ebe9fe",
+     "deltaE": 1.25
+    },
+    {
+     "css": "--colors-purple-100",
+     "figmaCandidate": "colors/purple/100",
+     "hex": "#ebe9fe",
+     "deltaE": 1.25
+    },
+    {
+     "css": "--component-colors-utility-purple-utility-purple-100-2",
+     "figmaCandidate": "component/colors/utility/purple/utility/purple/100/2",
+     "hex": "#ebe9fe",
+     "deltaE": 1.25
+    }
+   ],
+   "files": [
+    "cases/system-case_status_and_action/kits/status-doc.jsx"
+   ],
+   "contexts": [
+    {
+     "file": "status-doc.jsx",
+     "line": 122,
+     "src": "<div style={{ marginTop:24, padding:'15px 16px', borderRadius:14, background:'#faf9ff', border:'1px solid #ece"
+    }
+   ]
+  }
+ ],
+ "numbers": {
+  "spacing": [
+   {
+    "css": "--space-0",
+    "value": "0"
+   },
+   {
+    "css": "--space-0-5",
+    "value": "2px"
+   },
+   {
+    "css": "--space-1",
+    "value": "4px"
+   },
+   {
+    "css": "--space-1-5",
+    "value": "6px"
+   },
+   {
+    "css": "--space-2",
+    "value": "8px"
+   },
+   {
+    "css": "--space-3",
+    "value": "12px"
+   },
+   {
+    "css": "--space-4",
+    "value": "16px"
+   },
+   {
+    "css": "--space-5",
+    "value": "20px"
+   },
+   {
+    "css": "--space-6",
+    "value": "24px"
+   },
+   {
+    "css": "--space-8",
+    "value": "32px"
+   },
+   {
+    "css": "--space-10",
+    "value": "40px"
+   },
+   {
+    "css": "--space-12",
+    "value": "48px"
+   },
+   {
+    "css": "--space-14",
+    "value": "56px"
+   },
+   {
+    "css": "--space-16",
+    "value": "64px"
+   },
+   {
+    "css": "--space-20",
+    "value": "80px"
+   },
+   {
+    "css": "--space-24",
+    "value": "96px"
+   },
+   {
+    "css": "--space-32",
+    "value": "128px"
+   },
+   {
+    "css": "--space-40",
+    "value": "160px"
+   },
+   {
+    "css": "--container-max",
+    "value": "1200px"
+   },
+   {
+    "css": "--layout-margin",
+    "value": "24px"
+   },
+   {
+    "css": "--layout-gutter",
+    "value": "24px"
+   }
+  ],
+  "radius": [
+   {
+    "css": "--radius-xs",
+    "value": "4px"
+   },
+   {
+    "css": "--radius-sm",
+    "value": "6px"
+   },
+   {
+    "css": "--radius-md",
+    "value": "8px"
+   },
+   {
+    "css": "--radius-lg",
+    "value": "10px"
+   },
+   {
+    "css": "--radius-xl",
+    "value": "12px"
+   },
+   {
+    "css": "--radius-2xl",
+    "value": "16px"
+   },
+   {
+    "css": "--radius-3xl",
+    "value": "20px"
+   },
+   {
+    "css": "--radius-4xl",
+    "value": "24px"
+   },
+   {
+    "css": "--radius-full",
+    "value": "9999px"
+   },
+   {
+    "css": "--shadow-xs",
+    "value": "0"
+   },
+   {
+    "css": "--shadow-sm",
+    "value": "0"
+   },
+   {
+    "css": "--shadow-md",
+    "value": "0"
+   },
+   {
+    "css": "--shadow-lg",
+    "value": "0"
+   },
+   {
+    "css": "--shadow-xl",
+    "value": "0"
+   },
+   {
+    "css": "--shadow-2xl",
+    "value": "0"
+   },
+   {
+    "css": "--shadow-card",
+    "value": "0"
+   }
+  ],
+  "type": [
+   {
+    "css": "--fs-display-2xl",
+    "value": "64px"
+   },
+   {
+    "css": "--fs-display-xl",
+    "value": "40px"
+   },
+   {
+    "css": "--fs-display-lg",
+    "value": "36px"
+   },
+   {
+    "css": "--fs-display-md",
+    "value": "32px"
+   },
+   {
+    "css": "--fs-heading-xl",
+    "value": "28px"
+   },
+   {
+    "css": "--fs-heading-lg",
+    "value": "24px"
+   },
+   {
+    "css": "--fs-heading-md",
+    "value": "20px"
+   },
+   {
+    "css": "--fs-heading-sm",
+    "value": "18px"
+   },
+   {
+    "css": "--fs-body-lg",
+    "value": "16px"
+   },
+   {
+    "css": "--fs-body-md",
+    "value": "14px"
+   },
+   {
+    "css": "--fs-body-sm",
+    "value": "12px"
+   },
+   {
+    "css": "--lh-display-2xl",
+    "value": "80px"
+   },
+   {
+    "css": "--lh-display-xl",
+    "value": "48px"
+   },
+   {
+    "css": "--lh-display-lg",
+    "value": "44px"
+   },
+   {
+    "css": "--lh-display-md",
+    "value": "40px"
+   },
+   {
+    "css": "--lh-heading-xl",
+    "value": "36px"
+   },
+   {
+    "css": "--lh-heading-lg",
+    "value": "32px"
+   },
+   {
+    "css": "--lh-heading-md",
+    "value": "24px"
+   },
+   {
+    "css": "--lh-heading-sm",
+    "value": "24px"
+   },
+   {
+    "css": "--lh-body-lg",
+    "value": "24px"
+   },
+   {
+    "css": "--lh-body-md",
+    "value": "20px"
+   },
+   {
+    "css": "--lh-body-sm",
+    "value": "18px"
+   },
+   {
+    "css": "--tracking-tight",
+    "value": "0"
+   },
+   {
+    "css": "--tracking-normal",
+    "value": "0.01em"
+   }
+  ]
+ },
+ "figmaFloatTokens": [
+  {
+   "css": "--0",
+   "figmaCandidate": "0",
+   "value": "0"
+  },
+  {
+   "css": "--10",
+   "figmaCandidate": "10",
+   "value": "24"
+  },
+  {
+   "css": "--11",
+   "figmaCandidate": "11",
+   "value": "28"
+  },
+  {
+   "css": "--12",
+   "figmaCandidate": "12",
+   "value": "32"
+  },
+  {
+   "css": "--13",
+   "figmaCandidate": "13",
+   "value": "36"
+  },
+  {
+   "css": "--14",
+   "figmaCandidate": "14",
+   "value": "40"
+  },
+  {
+   "css": "--15",
+   "figmaCandidate": "15",
+   "value": "44"
+  },
+  {
+   "css": "--16",
+   "figmaCandidate": "16",
+   "value": "48"
+  },
+  {
+   "css": "--17",
+   "figmaCandidate": "17",
+   "value": "52"
+  },
+  {
+   "css": "--18",
+   "figmaCandidate": "18",
+   "value": "56"
+  },
+  {
+   "css": "--19",
+   "figmaCandidate": "19",
+   "value": "64"
+  },
+  {
+   "css": "--1",
+   "figmaCandidate": "1",
+   "value": "2"
+  },
+  {
+   "css": "--20",
+   "figmaCandidate": "20",
+   "value": "80"
+  },
+  {
+   "css": "--21",
+   "figmaCandidate": "21",
+   "value": "96"
+  },
+  {
+   "css": "--22",
+   "figmaCandidate": "22",
+   "value": "128"
+  },
+  {
+   "css": "--23",
+   "figmaCandidate": "23",
+   "value": "140"
+  },
+  {
+   "css": "--2",
+   "figmaCandidate": "2",
+   "value": "4"
+  },
+  {
+   "css": "--2xl",
+   "figmaCandidate": "2xl",
+   "value": "24"
+  },
+  {
+   "css": "--2xs",
+   "figmaCandidate": "2xs",
+   "value": "8"
+  },
+  {
+   "css": "--3",
+   "figmaCandidate": "3",
+   "value": "6"
+  },
+  {
+   "css": "--3xs",
+   "figmaCandidate": "3xs",
+   "value": "6"
+  },
+  {
+   "css": "--4",
+   "figmaCandidate": "4",
+   "value": "8"
+  },
+  {
+   "css": "--4xl",
+   "figmaCandidate": "4xl",
+   "value": "32"
+  },
+  {
+   "css": "--5",
+   "figmaCandidate": "5",
+   "value": "12"
+  },
+  {
+   "css": "--5xl",
+   "figmaCandidate": "5xl",
+   "value": "36"
+  },
+  {
+   "css": "--6",
+   "figmaCandidate": "6",
+   "value": "14"
+  },
+  {
+   "css": "--7",
+   "figmaCandidate": "7",
+   "value": "16"
+  },
+  {
+   "css": "--8",
+   "figmaCandidate": "8",
+   "value": "18"
+  },
+  {
+   "css": "--9",
+   "figmaCandidate": "9",
+   "value": "20"
+  },
+  {
+   "css": "--container-max-width-desktop",
+   "figmaCandidate": "container/max/width/desktop",
+   "value": "1280"
+  },
+  {
+   "css": "--container-padding-desktop",
+   "figmaCandidate": "container/padding/desktop",
+   "value": "32"
+  },
+  {
+   "css": "--full",
+   "figmaCandidate": "full",
+   "value": "10000"
+  },
+  {
+   "css": "--horisontal-gutter",
+   "figmaCandidate": "horisontal/gutter",
+   "value": "16"
+  },
+  {
+   "css": "--lg",
+   "figmaCandidate": "lg",
+   "value": "18"
+  },
+  {
+   "css": "--margins",
+   "figmaCandidate": "margins",
+   "value": "24"
+  },
+  {
+   "css": "--md",
+   "figmaCandidate": "md",
+   "value": "16"
+  },
+  {
+   "css": "--sm",
+   "figmaCandidate": "sm",
+   "value": "14"
+  },
+  {
+   "css": "--spacing-0-0px-2",
+   "figmaCandidate": "spacing/0/0px/2",
+   "value": "0"
+  },
+  {
+   "css": "--spacing-0-0px",
+   "figmaCandidate": "spacing/0/0px",
+   "value": "0"
+  },
+  {
+   "css": "--spacing-0-5-2px-2",
+   "figmaCandidate": "spacing/0/5/2px/2",
+   "value": "2"
+  },
+  {
+   "css": "--spacing-0-5-2px-3",
+   "figmaCandidate": "spacing/0/5/2px/3",
+   "value": "2"
+  },
+  {
+   "css": "--spacing-0-5-2px",
+   "figmaCandidate": "spacing/0/5/2px",
+   "value": "2"
+  },
+  {
+   "css": "--spacing-1-4px-2",
+   "figmaCandidate": "spacing/1/4px/2",
+   "value": "4"
+  },
+  {
+   "css": "--spacing-1-4px-3",
+   "figmaCandidate": "spacing/1/4px/3",
+   "value": "4"
+  },
+  {
+   "css": "--spacing-1-4px",
+   "figmaCandidate": "spacing/1/4px",
+   "value": "4"
+  },
+  {
+   "css": "--spacing-1-5-6px-2",
+   "figmaCandidate": "spacing/1/5/6px/2",
+   "value": "6"
+  },
+  {
+   "css": "--spacing-1-5-6px-3",
+   "figmaCandidate": "spacing/1/5/6px/3",
+   "value": "6"
+  },
+  {
+   "css": "--spacing-1-5-6px",
+   "figmaCandidate": "spacing/1/5/6px",
+   "value": "6"
+  },
+  {
+   "css": "--spacing-10xl",
+   "figmaCandidate": "spacing/10xl",
+   "value": "128"
+  },
+  {
+   "css": "--spacing-11xl",
+   "figmaCandidate": "spacing/11xl",
+   "value": "160"
+  },
+  {
+   "css": "--spacing-16-64px",
+   "figmaCandidate": "spacing/16/64px",
+   "value": "64"
+  },
+  {
+   "css": "--spacing-192-768px",
+   "figmaCandidate": "spacing/192/768px",
+   "value": "768"
+  },
+  {
+   "css": "--spacing-2-8px-2",
+   "figmaCandidate": "spacing/2/8px/2",
+   "value": "8"
+  },
+  {
+   "css": "--spacing-2-8px-3",
+   "figmaCandidate": "spacing/2/8px/3",
+   "value": "8"
+  },
+  {
+   "css": "--spacing-2-8px",
+   "figmaCandidate": "spacing/2/8px",
+   "value": "8"
+  },
+  {
+   "css": "--spacing-2xl-2",
+   "figmaCandidate": "spacing/2xl/2",
+   "value": "20"
+  },
+  {
+   "css": "--spacing-2xl",
+   "figmaCandidate": "spacing/2xl",
+   "value": "20"
+  },
+  {
+   "css": "--spacing-3-12px-2",
+   "figmaCandidate": "spacing/3/12px/2",
+   "value": "12"
+  },
+  {
+   "css": "--spacing-3-12px-3",
+   "figmaCandidate": "spacing/3/12px/3",
+   "value": "12"
+  },
+  {
+   "css": "--spacing-3-12px",
+   "figmaCandidate": "spacing/3/12px",
+   "value": "12"
+  },
+  {
+   "css": "--spacing-32-128px",
+   "figmaCandidate": "spacing/32/128px",
+   "value": "128"
+  },
+  {
+   "css": "--spacing-320-1-280px",
+   "figmaCandidate": "spacing/320/1/280px",
+   "value": "1280"
+  },
+  {
+   "css": "--spacing-3xl-2",
+   "figmaCandidate": "spacing/3xl/2",
+   "value": "24"
+  },
+  {
+   "css": "--spacing-3xl",
+   "figmaCandidate": "spacing/3xl",
+   "value": "24"
+  },
+  {
+   "css": "--spacing-4-16px-2",
+   "figmaCandidate": "spacing/4/16px/2",
+   "value": "16"
+  },
+  {
+   "css": "--spacing-4-16px",
+   "figmaCandidate": "spacing/4/16px",
+   "value": "16"
+  },
+  {
+   "css": "--spacing-40-160px",
+   "figmaCandidate": "spacing/40/160px",
+   "value": "160"
+  },
+  {
+   "css": "--spacing-4xl",
+   "figmaCandidate": "spacing/4xl",
+   "value": "32"
+  },
+  {
+   "css": "--spacing-5-20px-2",
+   "figmaCandidate": "spacing/5/20px/2",
+   "value": "20"
+  },
+  {
+   "css": "--spacing-5-20px",
+   "figmaCandidate": "spacing/5/20px",
+   "value": "20"
+  },
+  {
+   "css": "--spacing-6-24px-2",
+   "figmaCandidate": "spacing/6/24px/2",
+   "value": "24"
+  },
+  {
+   "css": "--spacing-6-24px",
+   "figmaCandidate": "spacing/6/24px",
+   "value": "24"
+  },
+  {
+   "css": "--spacing-7xl",
+   "figmaCandidate": "spacing/7xl",
+   "value": "64"
+  },
+  {
+   "css": "--spacing-8-32px",
+   "figmaCandidate": "spacing/8/32px",
+   "value": "32"
+  },
+  {
+   "css": "--spacing-gutter",
+   "figmaCandidate": "spacing/gutter",
+   "value": "12"
+  },
+  {
+   "css": "--spacing-inner-gutter",
+   "figmaCandidate": "spacing/inner/gutter",
+   "value": "8"
+  },
+  {
+   "css": "--spacing-lg-2",
+   "figmaCandidate": "spacing/lg/2",
+   "value": "12"
+  },
+  {
+   "css": "--spacing-lg-3",
+   "figmaCandidate": "spacing/lg/3",
+   "value": "12"
+  },
+  {
+   "css": "--spacing-lg",
+   "figmaCandidate": "spacing/lg",
+   "value": "12"
+  },
+  {
+   "css": "--spacing-margin",
+   "figmaCandidate": "spacing/margin",
+   "value": "16"
+  },
+  {
+   "css": "--spacing-md-2",
+   "figmaCandidate": "spacing/md/2",
+   "value": "8"
+  },
+  {
+   "css": "--spacing-md-3",
+   "figmaCandidate": "spacing/md/3",
+   "value": "8"
+  },
+  {
+   "css": "--spacing-md",
+   "figmaCandidate": "spacing/md",
+   "value": "8"
+  },
+  {
+   "css": "--spacing-none-2",
+   "figmaCandidate": "spacing/none/2",
+   "value": "0"
+  },
+  {
+   "css": "--spacing-none",
+   "figmaCandidate": "spacing/none",
+   "value": "0"
+  },
+  {
+   "css": "--spacing-sm-2",
+   "figmaCandidate": "spacing/sm/2",
+   "value": "6"
+  },
+  {
+   "css": "--spacing-sm-3",
+   "figmaCandidate": "spacing/sm/3",
+   "value": "6"
+  },
+  {
+   "css": "--spacing-sm",
+   "figmaCandidate": "spacing/sm",
+   "value": "6"
+  },
+  {
+   "css": "--spacing-vertical-padding",
+   "figmaCandidate": "spacing/vertical/padding",
+   "value": "24"
+  },
+  {
+   "css": "--spacing-xl-2",
+   "figmaCandidate": "spacing/xl/2",
+   "value": "16"
+  },
+  {
+   "css": "--spacing-xl",
+   "figmaCandidate": "spacing/xl",
+   "value": "16"
+  },
+  {
+   "css": "--spacing-xs-2",
+   "figmaCandidate": "spacing/xs/2",
+   "value": "4"
+  },
+  {
+   "css": "--spacing-xs-3",
+   "figmaCandidate": "spacing/xs/3",
+   "value": "4"
+  },
+  {
+   "css": "--spacing-xs",
+   "figmaCandidate": "spacing/xs",
+   "value": "4"
+  },
+  {
+   "css": "--spacing-xxs-2",
+   "figmaCandidate": "spacing/xxs/2",
+   "value": "2"
+  },
+  {
+   "css": "--spacing-xxs-3",
+   "figmaCandidate": "spacing/xxs/3",
+   "value": "2"
+  },
+  {
+   "css": "--spacing-xxs",
+   "figmaCandidate": "spacing/xxs",
+   "value": "2"
+  },
+  {
+   "css": "--width-xl",
+   "figmaCandidate": "width/xl",
+   "value": "768"
+  },
+  {
+   "css": "--xl",
+   "figmaCandidate": "xl",
+   "value": "20"
+  },
+  {
+   "css": "--xs",
+   "figmaCandidate": "xs",
+   "value": "12"
+  }
+ ]
+}

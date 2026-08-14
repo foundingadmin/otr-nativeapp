@@ -1,0 +1,652 @@
+{
+ "meta": {
+  "generated": "2026-07-28T17:27:14.706Z",
+  "source": "cases/_ds-cases/kits/core-kit.jsx (OTR_STATUS, OTR_TONE, LIFECYCLE, TRANSIENT_BADGE) + cases/_ds-cases/kits/cpc.jsx (primaryAction) + cases/screen-single_case_details/kits/detail-kit.jsx (SEVERITY)"
+ },
+ "readMeFirst": [
+  "This is the single highest-value artifact in the pack. 15 status keys drive badge form, badge weight, tone, the card's primary action, and the detail record.",
+  "series: 1 = unfinished (user owes something), 2 = matching/quote lifecycle, 3 = engaged/concluded.",
+  "form: light | solid. Weight and form rules are ratified in DR-X-006.",
+  "lifecycleBadge: what the badge collapses to on the calm surfaces. Only the two transient SmartMatch states keep their own badge.",
+  "decisionStatus open = print it into Figma with an OPEN marker; the decision happens on the Figma canvas with the CEO, not here."
+ ],
+ "seriesLegend": {
+  "1": "Unfinished, the user owes an action",
+  "2": "SmartMatch / quote lifecycle",
+  "3": "Engaged or concluded"
+ },
+ "tones": {
+  "gray": {
+   "light": [
+    "#eef0f4",
+    "#67707e",
+    "#98a1ae"
+   ],
+   "solid": [
+    "#3b3e46",
+    "#fff"
+   ]
+  },
+  "red": {
+   "light": [
+    "#fdeceb",
+    "#e5463a",
+    "#e5463a"
+   ],
+   "solid": [
+    "#ef4338",
+    "#fff"
+   ]
+  },
+  "amber": {
+   "light": [
+    "#fff4e3",
+    "#b96a06",
+    "#e08a14"
+   ],
+   "solid": [
+    "#c2680a",
+    "#fff"
+   ]
+  },
+  "blue": {
+   "light": [
+    "#e9f1ff",
+    "#2e6bff",
+    "#2e6bff"
+   ],
+   "solid": [
+    "#2e6bff",
+    "#fff"
+   ]
+  },
+  "green": {
+   "light": [
+    "#e4f7ec",
+    "#179a55",
+    "#19a558"
+   ],
+   "solid": [
+    "#19a558",
+    "#fff"
+   ]
+  }
+ },
+ "tonesNote": "Source comment: 'Hues tuned to the CEO-approved badge board (friendlier than raw DS tokens).' These hues are DELIBERATE divergences from the DS ramps. See tokens/binding-report.json ds_requests before binding them.",
+ "severity": {
+  "critical": {
+   "rank": 4,
+   "label": "Critical",
+   "bg": "var(--red-50)",
+   "line": "var(--red-200)",
+   "ink": "var(--red-900)",
+   "ic": "var(--red-600)",
+   "dot": "var(--red-600)",
+   "icon": "warning-octagon"
+  },
+  "warning": {
+   "rank": 3,
+   "label": "Warning",
+   "bg": "var(--amber-50)",
+   "line": "var(--amber-200)",
+   "ink": "var(--amber-900)",
+   "ic": "var(--amber-500)",
+   "dot": "var(--amber-500)",
+   "icon": "warning-triangle"
+  },
+  "info": {
+   "rank": 2,
+   "label": "Info",
+   "bg": "var(--blue-50)",
+   "line": "var(--blue-200)",
+   "ink": "var(--blue-900)",
+   "ic": "var(--blue-600)",
+   "dot": "var(--blue-600)",
+   "icon": "information-circle"
+  },
+  "success": {
+   "rank": 1,
+   "label": "Success",
+   "bg": "var(--green-50)",
+   "line": "var(--green-200)",
+   "ink": "var(--green-900)",
+   "ic": "var(--green-600)",
+   "dot": "var(--green-600)",
+   "icon": "chart-circle-up-growth"
+  }
+ },
+ "statuses": [
+  {
+   "key": "incomplete",
+   "label": "Incomplete",
+   "icon": "new-folder",
+   "tone": "red",
+   "form": "light",
+   "series": 1,
+   "loading": false,
+   "lockup": false,
+   "confetti": false,
+   "toneColors": {
+    "light": [
+     "#fdeceb",
+     "#e5463a",
+     "#e5463a"
+    ],
+    "solid": [
+     "#ef4338",
+     "#fff"
+    ]
+   },
+   "lifecycleBadge": "incomplete",
+   "decisionStatus": "ratified",
+   "decisionRecord": null,
+   "hasDetailRecord": true
+  },
+  {
+   "key": "deadline",
+   "label": "Deadline",
+   "icon": "alarm-solo",
+   "tone": "red",
+   "form": "solid",
+   "series": 1,
+   "loading": false,
+   "lockup": false,
+   "confetti": false,
+   "toneColors": {
+    "light": [
+     "#fdeceb",
+     "#e5463a",
+     "#e5463a"
+    ],
+    "solid": [
+     "#ef4338",
+     "#fff"
+    ]
+   },
+   "lifecycleBadge": "incomplete",
+   "decisionStatus": "ratified",
+   "decisionRecord": null,
+   "hasDetailRecord": false
+  },
+  {
+   "key": "missed",
+   "label": "Court missed",
+   "icon": "warning-triangle",
+   "tone": "red",
+   "form": "solid",
+   "series": 1,
+   "loading": false,
+   "lockup": false,
+   "confetti": false,
+   "toneColors": {
+    "light": [
+     "#fdeceb",
+     "#e5463a",
+     "#e5463a"
+    ],
+    "solid": [
+     "#ef4338",
+     "#fff"
+    ]
+   },
+   "lifecycleBadge": "cancelled",
+   "decisionStatus": "ratified",
+   "decisionRecord": null,
+   "hasDetailRecord": false
+  },
+  {
+   "key": "analyzing",
+   "label": "SmartMatch'n…",
+   "icon": "triangle-arrow-synchronize-1",
+   "tone": "gray",
+   "form": "light",
+   "series": 2,
+   "loading": true,
+   "lockup": false,
+   "confetti": false,
+   "toneColors": {
+    "light": [
+     "#eef0f4",
+     "#67707e",
+     "#98a1ae"
+    ],
+    "solid": [
+     "#3b3e46",
+     "#fff"
+    ]
+   },
+   "lifecycleBadge": "analyzing",
+   "decisionStatus": "ratified",
+   "decisionRecord": null,
+   "hasDetailRecord": false
+  },
+  {
+   "key": "remarketing",
+   "label": "Re-SmartMatching",
+   "icon": "magnifying-glass-square",
+   "tone": "gray",
+   "form": "light",
+   "series": 2,
+   "loading": true,
+   "lockup": false,
+   "confetti": false,
+   "toneColors": {
+    "light": [
+     "#eef0f4",
+     "#67707e",
+     "#98a1ae"
+    ],
+    "solid": [
+     "#3b3e46",
+     "#fff"
+    ]
+   },
+   "lifecycleBadge": "active",
+   "decisionStatus": "open",
+   "decisionRecord": "DR-X-005 Blocked and Archived parked.md",
+   "hasDetailRecord": true
+  },
+  {
+   "key": "smartmatchd",
+   "label": "SmartMatch'd",
+   "icon": "check-thick",
+   "tone": "grad",
+   "form": "solid",
+   "series": 2,
+   "loading": false,
+   "lockup": true,
+   "confetti": false,
+   "toneColors": null,
+   "lifecycleBadge": "smartmatchd",
+   "decisionStatus": "ratified",
+   "decisionRecord": null,
+   "hasDetailRecord": false
+  },
+  {
+   "key": "almostgone",
+   "label": "Last Chance",
+   "icon": "warning-triangle",
+   "tone": "red",
+   "form": "solid",
+   "series": 2,
+   "loading": false,
+   "lockup": false,
+   "confetti": false,
+   "toneColors": {
+    "light": [
+     "#fdeceb",
+     "#e5463a",
+     "#e5463a"
+    ],
+    "solid": [
+     "#ef4338",
+     "#fff"
+    ]
+   },
+   "lifecycleBadge": "active",
+   "decisionStatus": "ratified",
+   "decisionRecord": null,
+   "hasDetailRecord": false
+  },
+  {
+   "key": "counter",
+   "label": "Counter offer",
+   "icon": "tag-empty",
+   "tone": "amber",
+   "form": "solid",
+   "series": 2,
+   "loading": false,
+   "lockup": false,
+   "confetti": false,
+   "toneColors": {
+    "light": [
+     "#fff4e3",
+     "#b96a06",
+     "#e08a14"
+    ],
+    "solid": [
+     "#c2680a",
+     "#fff"
+    ]
+   },
+   "lifecycleBadge": "active",
+   "decisionStatus": "open",
+   "decisionRecord": "DR-X-005 Blocked and Archived parked.md",
+   "hasDetailRecord": true
+  },
+  {
+   "key": "expired",
+   "label": "Expired",
+   "icon": "delete-circle",
+   "tone": "gray",
+   "form": "light",
+   "series": 2,
+   "loading": false,
+   "lockup": false,
+   "confetti": false,
+   "toneColors": {
+    "light": [
+     "#eef0f4",
+     "#67707e",
+     "#98a1ae"
+    ],
+    "solid": [
+     "#3b3e46",
+     "#fff"
+    ]
+   },
+   "lifecycleBadge": "active",
+   "decisionStatus": "ratified",
+   "decisionRecord": null,
+   "hasDetailRecord": false
+  },
+  {
+   "key": "active",
+   "label": "Active",
+   "icon": "open-folder",
+   "tone": "blue",
+   "form": "light",
+   "series": 3,
+   "loading": false,
+   "lockup": false,
+   "confetti": false,
+   "toneColors": {
+    "light": [
+     "#e9f1ff",
+     "#2e6bff",
+     "#2e6bff"
+    ],
+    "solid": [
+     "#2e6bff",
+     "#fff"
+    ]
+   },
+   "lifecycleBadge": "active",
+   "decisionStatus": "ratified",
+   "decisionRecord": null,
+   "hasDetailRecord": true
+  },
+  {
+   "key": "active-action",
+   "label": "Active",
+   "icon": "open-folder",
+   "tone": "blue",
+   "form": "light",
+   "series": 3,
+   "loading": false,
+   "lockup": false,
+   "confetti": false,
+   "toneColors": {
+    "light": [
+     "#e9f1ff",
+     "#2e6bff",
+     "#2e6bff"
+    ],
+    "solid": [
+     "#2e6bff",
+     "#fff"
+    ]
+   },
+   "lifecycleBadge": "active",
+   "decisionStatus": "ratified",
+   "decisionRecord": null,
+   "hasDetailRecord": true
+  },
+  {
+   "key": "reassigned",
+   "label": "Active",
+   "icon": "open-folder",
+   "tone": "blue",
+   "form": "light",
+   "series": 3,
+   "loading": false,
+   "lockup": false,
+   "confetti": false,
+   "toneColors": {
+    "light": [
+     "#e9f1ff",
+     "#2e6bff",
+     "#2e6bff"
+    ],
+    "solid": [
+     "#2e6bff",
+     "#fff"
+    ]
+   },
+   "lifecycleBadge": "active",
+   "decisionStatus": "ratified",
+   "decisionRecord": null,
+   "hasDetailRecord": false
+  },
+  {
+   "key": "resolved",
+   "label": "Resolved",
+   "icon": "folder-check",
+   "tone": "green",
+   "form": "light",
+   "series": 3,
+   "loading": false,
+   "lockup": false,
+   "confetti": false,
+   "toneColors": {
+    "light": [
+     "#e4f7ec",
+     "#179a55",
+     "#19a558"
+    ],
+    "solid": [
+     "#19a558",
+     "#fff"
+    ]
+   },
+   "lifecycleBadge": "resolved",
+   "decisionStatus": "ratified",
+   "decisionRecord": null,
+   "hasDetailRecord": false
+  },
+  {
+   "key": "dismissed",
+   "label": "Dismissed!",
+   "icon": "folder-star-favorite",
+   "tone": "green",
+   "form": "solid",
+   "series": 3,
+   "loading": false,
+   "lockup": false,
+   "confetti": true,
+   "toneColors": {
+    "light": [
+     "#e4f7ec",
+     "#179a55",
+     "#19a558"
+    ],
+    "solid": [
+     "#19a558",
+     "#fff"
+    ]
+   },
+   "lifecycleBadge": "dismissed",
+   "decisionStatus": "ratified",
+   "decisionRecord": null,
+   "hasDetailRecord": true
+  },
+  {
+   "key": "cancelled",
+   "label": "Cancelled",
+   "icon": "folder-remove",
+   "tone": "gray",
+   "form": "light",
+   "series": 3,
+   "loading": false,
+   "lockup": false,
+   "confetti": false,
+   "toneColors": {
+    "light": [
+     "#eef0f4",
+     "#67707e",
+     "#98a1ae"
+    ],
+    "solid": [
+     "#3b3e46",
+     "#fff"
+    ]
+   },
+   "lifecycleBadge": "cancelled",
+   "decisionStatus": "open",
+   "decisionRecord": "DR-X-005 Blocked and Archived parked.md",
+   "hasDetailRecord": false
+  }
+ ],
+ "lifecycleCollapse": {
+  "incomplete": "incomplete",
+  "deadline": "incomplete",
+  "dismissed": "dismissed",
+  "resolved": "resolved",
+  "cancelled": "cancelled",
+  "missed": "cancelled"
+ },
+ "transientBadges": [
+  "analyzing",
+  "smartmatchd"
+ ],
+ "signalPrecedence": {
+  "rule": "money > legal gate > outcome > info (§7.2 of the Cases PRD)",
+  "implementedAs": [
+   {
+    "rank": 1,
+    "when": "case.balance.overdue === true",
+    "action": {
+     "label": "Make a payment · $<amount>",
+     "kind": "money",
+     "icon": "bill-dollar-2"
+    },
+    "note": "Evaluated before status. Overrides every status action."
+   },
+   {
+    "rank": 2,
+    "when": "status === 'smartmatchd'",
+    "action": {
+     "label": "Accept or deny quote",
+     "kind": "grad"
+    }
+   },
+   {
+    "rank": 2,
+    "when": "status === 'almostgone'",
+    "action": {
+     "label": "Accept or deny now",
+     "kind": "grad"
+    }
+   },
+   {
+    "rank": 2,
+    "when": "status === 'expired'",
+    "action": {
+     "label": "Get SmartMatch'd",
+     "kind": "primary",
+     "icon": "triangle-arrow-synchronize-1"
+    }
+   },
+   {
+    "rank": 2,
+    "when": "status === 'active-action'",
+    "action": {
+     "label": "Review & sign engagement",
+     "kind": "primary",
+     "icon": "file-edit"
+    }
+   },
+   {
+    "rank": 2,
+    "when": "status === 'incomplete'",
+    "action": {
+     "label": "Complete booking",
+     "kind": "primary"
+    }
+   },
+   {
+    "rank": 2,
+    "when": "status === 'deadline'",
+    "action": {
+     "label": "Finish before court date",
+     "kind": "primary"
+    }
+   },
+   {
+    "rank": 3,
+    "when": "status === 'active' && unread",
+    "action": {
+     "label": "View update",
+     "kind": "ghost"
+    }
+   },
+   {
+    "rank": 3,
+    "when": "status === 'resolved' || status === 'dismissed'",
+    "action": {
+     "label": "Review your attorney",
+     "kind": "ghost"
+    }
+   },
+   {
+    "rank": 4,
+    "when": "anything else",
+    "action": null,
+    "note": "No action button. The card is calm."
+   }
+  ],
+  "actionKinds": {
+   "money": "--money fill, white label",
+   "grad": "--otr-grad fill (SmartMatch'd sub-brand), white label",
+   "primary": "--wf-ink fill, white label",
+   "ghost": "white fill, --wf-line border, --wf-ink label",
+   "blue": "--otr-blue fill, white label"
+  }
+ },
+ "badgeAnatomy": {
+  "height": 25,
+  "paddingX": 10,
+  "radius": 8,
+  "fontSize": 13,
+  "fontWeight": 700,
+  "gap": 5,
+  "letterSpacing": 0.1,
+  "unreadDot": {
+   "size": 9,
+   "offset": -3,
+   "fill": "var(--money)",
+   "ring": "2px #fff"
+  },
+  "tiltVariant": {
+   "rotate": -3.5,
+   "shadow": "0 3px 11px rgba(16,24,40,.2)"
+  },
+  "note": "radius 8 is intentional here, NOT the pill radius the wider DS uses for badges. Ratified on the badge board."
+ },
+ "openQuestions": [
+  {
+   "states": [
+    "counter",
+    "remarketing",
+    "cancelled"
+   ],
+   "question": "Badge form, weight and tone are provisional. Not ratified.",
+   "carryTo": "Print into Figma with an OPEN marker so the call can be made live on canvas."
+  },
+  {
+   "states": [
+    "deadline",
+    "missed",
+    "analyzing",
+    "smartmatchd",
+    "almostgone",
+    "expired",
+    "reassigned",
+    "resolved",
+    "cancelled"
+   ],
+   "question": "No detail record fixture exists for these statuses.",
+   "carryTo": "Detail frames for these states need content decisions, not just layout."
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>OTR • The design pipeline, at a glance</title>
+<link rel="stylesheet" href="design/_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fonts.css">
+<link rel="stylesheet" href="design/_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/colors.css">
+<style>
+:root{--ai:var(--blue-600);--ai-bg:var(--blue-50);--cc:var(--neutral-900);--cc-bg:var(--neutral-50);--hum:var(--purple-600);--hum-bg:var(--purple-50);--you:var(--coral-600);--you-bg:var(--coral-50);--dev:var(--green-700);--dev-bg:var(--green-50)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--neutral-25);font-family:'Figtree',system-ui,sans-serif;color:var(--neutral-950);letter-spacing:.01em;-webkit-font-smoothing:antialiased}
+a{color:var(--blue-700);text-decoration:none}a:hover{color:var(--blue-800)}
+.page{width:1440px;margin:0 auto;padding:52px 44px 80px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--neutral-400)}
+h1{font-size:44px;line-height:1.04;font-weight:800;letter-spacing:-1.4px;margin:10px 0 12px}
+.lede{font-size:19px;line-height:1.5;color:var(--neutral-600);margin:0;max-width:70ch}
+.lede b{color:var(--neutral-950);font-weight:700}
+h2{font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--neutral-400);margin:0 0 16px}
+section{margin-top:52px}
+/* legend */
+.legend{display:flex;gap:22px;margin-top:26px;flex-wrap:wrap}
+.leg{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--neutral-600)}
+.sw{width:12px;height:12px;border-radius:4px}
+.sw.ai{background:var(--ai)}.sw.cc{background:var(--cc)}.sw.hum{background:var(--hum)}.sw.you{background:var(--you)}.sw.dev{background:var(--dev)}
+/* chart */
+.chart{background:#fff;border:1px solid var(--neutral-100);border-radius:20px;padding:26px 28px 30px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.stages,.lane{display:grid;grid-template-columns:172px repeat(6,1fr);gap:10px;align-items:center}
+.stages{padding-bottom:14px;border-bottom:1px solid var(--neutral-100);margin-bottom:6px}
+.stage{display:flex;align-items:baseline;gap:7px}
+.stage i{font-style:normal;font-size:11px;font-weight:800;color:var(--neutral-300)}
+.stage span{font-size:14px;font-weight:800;letter-spacing:-.2px}
+.lane{position:relative;padding:13px 0}
+.rail{position:absolute;left:182px;right:0;top:50%;height:2px;background:var(--neutral-50);z-index:0}
+.who{display:flex;align-items:center;gap:11px;font-size:13px;font-weight:800;line-height:1.2;z-index:1}
+.tile{width:32px;height:32px;border-radius:9px;flex:none;display:flex;align-items:center;justify-content:center;border:1px solid transparent}
+.tile.ai{background:var(--ai-bg);border-color:var(--blue-200);color:var(--ai)}
+.tile.cc{background:var(--neutral-900);color:#fff}
+.tile.hum{background:var(--hum-bg);border-color:var(--purple-200);color:var(--hum)}
+.tile.you{background:#fff;border-color:var(--coral-300);color:var(--you)}
+.tile.dev{background:var(--dev-bg);border-color:var(--green-200);color:var(--dev)}
+.tile b{font-size:15px;font-weight:800;line-height:1}
+.who small{display:block;font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--neutral-400);margin-top:3px}
+.node{z-index:1;background:#fff;border:1.5px solid var(--neutral-100);border-radius:999px;padding:11px 16px;font-size:14px;font-weight:700;line-height:1.25;text-align:center;box-shadow:0 1px 2px rgba(16,24,40,.05)}
+.node.ai{border-color:var(--blue-200);background:var(--ai-bg);color:var(--blue-900)}
+.node.cc{border-color:var(--neutral-800);background:var(--neutral-900);color:#fff}
+.node.hum{border-color:var(--purple-200);background:var(--hum-bg);color:var(--purple-900)}
+.node.you{border-color:var(--coral-300);background:var(--you-bg);color:var(--coral-900)}
+.node.dev{border-color:var(--green-200);background:var(--dev-bg);color:var(--green-900)}
+.stack{display:flex;flex-direction:column;gap:8px;z-index:1}
+.lane.spotlight{background:var(--you-bg);border-radius:16px;margin:6px -12px;padding:14px 12px}
+.lane.spotlight .rail{background:var(--coral-200);left:194px}
+.lane.spotlight .who{color:var(--coral-900);font-size:15px}
+.lane.spotlight .who small{color:var(--coral-700)}
+.inout{display:grid;grid-template-columns:172px repeat(6,1fr);gap:10px;margin-top:6px}
+.mark{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:var(--you);display:flex;align-items:center;gap:6px}
+.mark.out{color:var(--neutral-400);justify-content:flex-end}
+.mark .tick{width:2px;height:12px;background:currentColor;border-radius:2px}
+/* cards */
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#fff;border:1px solid var(--neutral-100);border-radius:18px;padding:24px 26px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.card .k{font-size:11px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;color:var(--you)}
+.card h4{font-size:19px;font-weight:800;letter-spacing:-.4px;margin:11px 0 7px}
+.card p{margin:0;font-size:14.5px;line-height:1.5;color:var(--neutral-600)}
+.card.off .k{color:var(--neutral-400)}
+/* speed */
+.bar{display:grid;grid-template-columns:128px 1fr;align-items:center;gap:16px;margin-bottom:14px}
+.bar .name{font-size:13.5px;font-weight:800;color:var(--neutral-600)}
+.track{display:flex;height:40px;border-radius:12px;overflow:hidden;border:1px solid var(--neutral-100)}
+.seg{display:flex;align-items:center;padding:0 13px;font-size:12.5px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.hand{background:var(--hum)}.seg.mach{background:var(--ai)}.seg.rev{background:var(--you)}.seg.flat{background:var(--neutral-100);color:var(--neutral-500)}
+.kicker{background:var(--neutral-950);color:#fff;border-radius:20px;padding:32px 36px;margin-top:52px;display:flex;align-items:center;gap:36px}
+.kicker h3{font-size:25px;font-weight:800;letter-spacing:-.6px;margin:0;flex:none;max-width:15ch;line-height:1.15}
+.kicker p{margin:0;font-size:16.5px;line-height:1.55;color:rgba(255,255,255,.7)}
+.small{font-size:13.5px;color:var(--neutral-500);margin:16px 0 0;line-height:1.55}
+</style>
+</head>
+<body>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="18" fill="#155EEF"/><rect x="20" y="30" width="24" height="10" rx="5" fill="#fff"/><rect x="52" y="46" width="28" height="10" rx="5" fill="#fff" opacity=".75"/><rect x="20" y="62" width="34" height="10" rx="5" fill="#F34822"/></svg>
+</template>
+<div class="page">
+
+<div class="eyebrow">Off The Record • native app design</div>
+<h1>How design gets made</h1>
+<p class="lede">Machines cover every state fast. A designer makes it feel like OTR. <b>Stakeholders step in once, on the Figma canvas.</b></p>
+
+<div class="legend">
+  <div class="leg"><span class="sw ai"></span>AI design</div>
+  <div class="leg"><span class="sw cc"></span>Claude Code</div>
+  <div class="leg"><span class="sw hum"></span>Designer</div>
+  <div class="leg"><span class="sw you"></span>Stakeholder</div>
+  <div class="leg"><span class="sw dev"></span>Dev</div>
+</div>
+
+<section>
+  <div class="chart">
+    <div class="stages">
+      <div></div>
+      <div class="stage"><i>01</i><span>Explore</span></div>
+      <div class="stage"><i>02</i><span>Print</span></div>
+      <div class="stage"><i>03</i><span>Polish</span></div>
+      <div class="stage"><i>04</i><span>Review</span></div>
+      <div class="stage"><i>05</i><span>Stamp</span></div>
+      <div class="stage"><i>06</i><span>Build</span></div>
+    </div>
+
+    <div class="lane">
+      <div class="rail"></div>
+      <div class="who"><span class="tile ai"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9L12 2z"/><circle cx="19" cy="18" r="2.2"/></svg></span><span>Claude Design<small>AI + design</small></span></div>
+      <div class="node ai">Every state, in hours</div>
+      <div></div><div></div><div></div><div></div><div></div>
+    </div>
+
+    <div class="lane">
+      <div class="rail"></div>
+      <div class="who"><span class="tile cc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8l4 4-4 4"/><path d="M13 16h5"/></svg></span><span>Claude Code<small>Operator</small></span></div>
+      <div class="node cc">Extract</div>
+      <div class="node cc">Print with brand variables</div>
+      <div></div><div></div>
+      <div class="node cc">Read back, record</div>
+      <div></div>
+    </div>
+
+    <div class="lane">
+      <div class="rail"></div>
+      <div class="who"><span class="tile hum"><b>F</b></span><span>Figma<small>Designer</small></span></div>
+      <div></div><div></div>
+      <div class="node hum">Polish to brand</div>
+      <div></div>
+      <div class="node hum">Stamp ready for dev</div>
+      <div></div>
+    </div>
+
+    <div class="lane spotlight">
+      <div class="rail"></div>
+      <div class="who"><span class="tile you"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c0-3.9 3.4-6.4 7.5-6.4s7.5 2.5 7.5 6.4z"/></svg></span><span>Stakeholder<small>15 minutes, weekly</small></span></div>
+      <div></div><div></div><div></div>
+      <div class="stack">
+        <div class="node you">Comment on frames</div>
+        <div class="node you">Settle open calls</div>
+      </div>
+      <div></div><div></div>
+    </div>
+
+    <div class="inout">
+      <div></div><div></div><div></div><div></div>
+      <div class="mark"><span class="tick"></span><span>stakeholder steps in</span></div>
+      <div class="mark out"><span>stakeholder steps out</span><span class="tick"></span></div>
+      <div></div>
+    </div>
+
+    <div class="lane">
+      <div class="rail"></div>
+      <div class="who"><span class="tile dev"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4C6.5 4 7 8.5 4.5 8.5 7 8.5 6.5 20 9 20"/><path d="M15 4c2.5 0 2 4.5 4.5 4.5C17 8.5 17.5 20 15 20"/></svg></span><span>Engineering<small>Dev</small></span></div>
+      <div></div><div></div><div></div><div></div><div></div>
+      <div class="node dev">Build stamped frames only</div>
+    </div>
+  </div>
+  <p class="small">Claude Code runs between all three surfaces and keeps one source of truth in the repo, so nothing drifts and nobody works from a stale copy.</p>
+</section>
+
+<section>
+  <h2>The stakeholder part, in three lines</h2>
+  <div class="three">
+    <div class="card">
+      <div class="k">Stakeholder sees</div>
+      <h4>One Figma page</h4>
+      <p>Every screen, every state, printed fresh each week.</p>
+    </div>
+    <div class="card">
+      <div class="k">Stakeholder does</div>
+      <h4>Comment on the frame</h4>
+      <p>Pin it to the element. That is the whole protocol.</p>
+    </div>
+    <div class="card off">
+      <div class="k">Stakeholder never</div>
+      <h4>Chase a file</h4>
+      <p>No new tool, no downloads, no version questions.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Why it is faster</h2>
+  <div class="card">
+    <div class="bar">
+      <div class="name">Before</div>
+      <div class="track">
+        <div class="seg hand" style="flex:4">Draw every state by hand</div>
+        <div class="seg rev" style="flex:1.1">Review</div>
+        <div class="seg hand" style="flex:1.7">Rework</div>
+        <div class="seg rev" style="flex:1">Review</div>
+        <div class="seg flat" style="flex:.8">Handoff</div>
+      </div>
+    </div>
+    <div class="bar" style="margin-bottom:0">
+      <div class="name">Now</div>
+      <div class="track" style="width:58%">
+        <div class="seg mach" style="flex:1.4">Machine covers every state</div>
+        <div class="seg hand" style="flex:1.6">Designer polishes</div>
+        <div class="seg rev" style="flex:.9">Stakeholder review</div>
+        <div class="seg flat" style="flex:.5">Stamp</div>
+      </div>
+    </div>
+    <p class="small">Coverage is the expensive part, not craft. Machines do breadth in minutes, so the designer's hours go into making it look like OTR.</p>
+  </div>
+</section>
+
+<div class="kicker">
+  <h3>The trade, in one line</h3>
+  <p>Machines do breadth. Humans do taste. Nothing reaches engineering that a designer has not stamped.</p>
+</div>
+
+</div>
+</body>
+</html>

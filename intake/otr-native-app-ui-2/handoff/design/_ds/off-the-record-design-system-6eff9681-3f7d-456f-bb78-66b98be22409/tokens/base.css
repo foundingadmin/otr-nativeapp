@@ -1,0 +1,16 @@
+/* Light base reset — opt-in foundations for OTR surfaces */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-body-lg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Brand utility helpers */
+.ds-surface { background: var(--surface-page); }
+.ds-surface-subtle { background: var(--surface-subtle); }

@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Handoff Plan · OTR Native App UI</title>
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fig-tokens.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fonts.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/colors.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/typography.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/spacing.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/radius.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/base.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/styles.css">
+<style>
+html,body{margin:0;padding:0;background:var(--surface-subtle)}
+body{font-family:var(--font-sans,'Figtree',sans-serif);color:var(--text-primary);letter-spacing:.01em}
+a{color:var(--text-link);text-decoration:none}a:hover{color:var(--blue-800);text-decoration:underline}
+.page{max-width:900px;margin:0 auto;padding:64px 24px 120px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px}
+h1{font-size:46px;font-weight:800;margin:0 0 8px;letter-spacing:-.01em;line-height:1.08}
+.stamp{font-size:13px;font-weight:700;color:var(--text-tertiary);margin-bottom:22px}
+.intro{font-size:18px;line-height:1.55;color:var(--text-secondary);max-width:660px;margin:0 0 14px;text-wrap:pretty}
+h2{font-size:15px;font-weight:800;letter-spacing:.02em;margin:0 0 6px}
+h3{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-tertiary);margin:0 0 18px}
+.sec{margin-top:44px}
+.sec>.hd{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border-secondary)}
+.sec>.hd .n{font-size:13px;font-weight:800;color:var(--blue-600);font-variant-numeric:tabular-nums;min-width:22px}
+.sec>.hd h2{font-size:26px;font-weight:800;letter-spacing:-.005em}
+.sec>.hd .sub{font-size:14px;color:var(--text-tertiary);margin-left:auto;white-space:nowrap}
+p{font-size:16px;line-height:1.6;color:var(--text-secondary);margin:0 0 14px;max-width:680px;text-wrap:pretty}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:1fr 1fr}
+.card{background:var(--white);border:1px solid var(--border-secondary);border-radius:18px;box-shadow:var(--shadow-card,0 1px 2px rgba(16,24,40,.05));padding:20px 22px}
+.card .t{font-size:15.5px;font-weight:800;margin-bottom:6px;display:flex;align-items:center;gap:9px}
+.card p{font-size:14.5px;margin:0;color:var(--text-secondary)}
+.card p+p{margin-top:9px}
+.k{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:999px;background:var(--red-50,#FEF3F2);color:var(--red-700,#B42318);font-size:12px;font-weight:800;flex:none}
+.k.ok{background:var(--green-50,#ECFDF3);color:var(--green-700,#087443)}
+.k.b{background:var(--blue-50);color:var(--blue-700)}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px 0 4px}
+.stat{background:var(--white);border:1px solid var(--border-secondary);border-radius:16px;padding:16px 14px}
+.stat .v{font-size:28px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.stat .l{font-size:12.5px;color:var(--text-tertiary);margin-top:7px;line-height:1.35}
+ul{margin:0;padding-left:20px}li{font-size:16px;line-height:1.6;color:var(--text-secondary);margin-bottom:9px;max-width:660px;text-wrap:pretty}
+li b,p b,.card p b{font-weight:700;color:var(--text-primary)}
+.tbl{background:var(--white);border:1px solid var(--border-secondary);border-radius:18px;box-shadow:var(--shadow-card,0 1px 2px rgba(16,24,40,.05));overflow:hidden}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+thead th{text-align:left;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-tertiary);background:var(--neutral-25);padding:13px 18px;border-bottom:1px solid var(--border-secondary)}
+tbody td{padding:16px 18px;border-bottom:1px solid var(--border-secondary);vertical-align:top;font-size:14.5px;line-height:1.55;color:var(--text-secondary)}
+tbody tr:last-child td{border-bottom:none}
+td .ph{font-weight:800;color:var(--text-primary);font-size:15px}
+.pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;border-radius:999px;padding:4px 11px;white-space:nowrap;border:1px solid transparent}
+.pill .dot{width:7px;height:7px;border-radius:999px}
+.pill.me{background:var(--blue-50);color:var(--blue-700);border-color:var(--blue-100)}.pill.me .dot{background:var(--blue-500)}
+.pill.cc{background:var(--neutral-50);color:var(--text-tertiary);border-color:var(--border-secondary)}.pill.cc .dot{background:var(--neutral-300)}
+pre{background:var(--neutral-25);border:1px solid var(--border-secondary);border-radius:16px;padding:20px 22px;overflow:auto;font-size:13px;line-height:1.65;color:var(--text-primary);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;margin:0 0 16px}
+.note{background:var(--blue-50);border:1px solid var(--blue-100);border-radius:16px;padding:18px 20px;margin:18px 0}
+.note p{color:var(--blue-900,#0B2C6F);margin:0;font-size:15px;max-width:none}
+.dec{counter-reset:d}
+.dec .row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--border-secondary)}
+.dec .row:last-child{border-bottom:none}
+.dec .row .n{font-size:13px;font-weight:800;color:var(--blue-600);flex:none;width:20px;padding-top:2px}
+.dec .row .q{font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:4px}
+.dec .row .w{font-size:14.5px;color:var(--text-tertiary);line-height:1.5}
+.foot{margin-top:56px;padding-top:20px;border-top:1px solid var(--border-secondary);font-size:14px;color:var(--text-tertiary)}
+@media (max-width:720px){.g2{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}h1{font-size:34px}}
+</style>
+</head>
+<body>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="18" fill="#155EEF"/><rect x="22" y="26" width="24" height="48" rx="6" fill="#fff" opacity=".95"/><rect x="54" y="26" width="24" height="48" rx="6" fill="#fff" opacity=".45"/><path d="M46 50h10" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/><path d="M52 45l5 5-5 5" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+</template>
+<div id="__boardPath" aria-hidden="true" style="position:fixed;top:0;left:0;z-index:2147483000;font-family:'Figtree',var(--font-sans),sans-serif;font-size:11px;line-height:1;letter-spacing:.02em;color:var(--text-tertiary,#667085);background:rgba(255,255,255,.82);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:6px 11px;border:1px solid var(--border-secondary,#ECECED);border-top:none;border-left:none;border-radius:0 0 10px 0;pointer-events:none;user-select:none;white-space:nowrap;max-width:80vw;overflow:hidden;text-overflow:ellipsis;">&nbsp;</div>
+<script>(function(){var p=decodeURIComponent(location.pathname).split('/serve/');var rel=p.length>1?p[1]:(location.pathname.split('/').pop()||'');var el=document.getElementById('__boardPath');if(el)el.textContent=rel;})();</script>
+
+<div class="page">
+<div class="eyebrow">Plan</div>
+<h1>Handoff to a coded repo</h1>
+<div class="stamp">Updated • Mon Jul 27, 2026</div>
+<p class="intro">Standing up a repo where Claude Code wires the Cases workflow into a real coded prototype, deploys it to Vercel, and makes it reviewable on a phone. Built to absorb months of updates, versions, explorations, and tests rather than one handoff.</p>
+<p class="intro">Canonical source for this page: <a href="HANDOFF-PLAN.md">HANDOFF-PLAN.md</a>.</p>
+
+<div class="stats">
+<div class="stat"><div class="v">4</div><div class="l">workstreams, one workflow</div></div>
+<div class="stat"><div class="v">12</div><div class="l">decision records, two series</div></div>
+<div class="stat"><div class="v">5</div><div class="l">open explorations</div></div>
+<div class="stat"><div class="v">18</div><div class="l">case statuses specified</div></div>
+<div class="stat"><div class="v">0</div><div class="l">navigable prototypes</div></div>
+</div>
+
+<div class="sec">
+<div class="hd"><span class="n">01</span><h2>Where the project stands</h2></div>
+<p>One workflow, four canonical boards, five open explorations, nine archived ones, two PRDs, and a design system consumed as tokens plus a single component. The design work is far ahead of the delivery mechanism.</p>
+<p>Four things are genuinely strong and should survive the move intact.</p>
+<div class="grid g2">
+<div class="card"><div class="t"><span class="k ok">1</span>The governance model</div><p>Workflow to workstream to board, with a closed category set of screen, component, and system. That is already a repo hierarchy.</p></div>
+<div class="card"><div class="t"><span class="k ok">2</span>The decision trail</div><p>Every exploration closes in a DR, ledgers roll up, archive is append only. Most design projects never have this, and it is what makes a months long build safe.</p></div>
+<div class="card"><div class="t"><span class="k ok">3</span>The DS delta discipline</div><p>The Cases manifest already names what each kit becomes in engineering terms. That document is a port map in draft.</p></div>
+<div class="card"><div class="t"><span class="k ok">4</span>The design language</div><p>Status registry, signal precedence, severity hierarchy, badge form and weight. Real product logic, worked out and ratified.</p></div>
+</div>
+</div>
+
+<div class="sec">
+<div class="hd"><span class="n">02</span><h2>Seven things that block a code handoff</h2></div>
+<div class="grid">
+<div class="card"><div class="t"><span class="k">a</span>There is no running app</div><p>Every artifact is a pan and zoom canvas of artboards. The README names a workflow demo as the standard and it does not exist. Nothing navigates from a feed card into that card's own detail screen. The prototype is net new assembly, not a port.</p></div>
+<div class="card"><div class="t"><span class="k">b</span>There is no build</div><p>Babel in the browser, IIFE modules, globals on window. Correct for boards, unusable as a deployed app: transpile on every load, no module graph, no types, nowhere to hang a test.</p></div>
+<div class="card"><div class="t"><span class="k">c</span>The case data is forked</div><p><b>CASES</b> in cpc.jsx holds eighteen states shaped for a preview card. <b>DETAIL</b> in detail-kit.jsx holds a handful of landmark states shaped for a full record. They share no ids and no schema, so a card cannot open its own case.</p></div>
+<div class="card"><div class="t"><span class="k">d</span>Snapshot duplication is heavy</div><p>design-canvas.jsx, 1,039 lines, exists in eleven places. core-kit.jsx exists in eight, in three divergent lengths. Rule 1 working as designed, and it means canon is a per file judgment call I have to make rather than something Claude Code can infer.</p></div>
+<div class="card"><div class="t"><span class="k">e</span>Product code and board scaffolding are tangled</div><p>DScreen, FScreen, ZLabel, explore pins, and the tweaks panel sit in the same files as the CPC, the status badge, and the action hub. The port needs them cleanly separated.</p></div>
+<div class="card"><div class="t"><span class="k">f</span>Assets are inlined</div><p>A 71 KB base64 image inside core-kit.jsx, and 344 KB more in a text file beside it.</p></div>
+<div class="card"><div class="t"><span class="k">g</span>There is no review mechanism outside this tool</div><p>Pinned comments are how feedback works today. On Vercel that layer does not exist, so the CEO loop has to be designed deliberately rather than assumed.</p></div>
+</div>
+<div class="note"><p>One large piece of good news. The only thing the kits take from the design system bundle is FeatureIcon. Everything else is authored directly against token CSS variables, so the design system dependency is small and portable. That removes the usual biggest risk in a handoff like this.</p></div>
+</div>
+
+<div class="sec">
+<div class="hd"><span class="n">03</span><h2>Two trees, one repo</h2></div>
+<p>The repo holds two trees that must never be confused.</p>
+<div class="grid g2">
+<div class="card"><div class="t"><span class="k b">S</span>design/ is the studio</div><p>The board system, moved across verbatim and served as static HTML. Explorations continue exactly as they do now, unchanged.</p></div>
+<div class="card"><div class="t"><span class="k b">B</span>apps/ and packages/ are the build</div><p>Only decided work enters here. The bridge is the decision record, as it is today. A pattern enters when a DR says adopt, and the DR records the commit and preview URL where that happened.</p></div>
+</div>
+</div>
+
+<div class="sec">
+<div class="hd"><span class="n">04</span><h2>Target repo architecture</h2></div>
+<pre>otr-native-app/
+  apps/
+    prototype/          Next.js App Router, TypeScript. The deployed demo.
+    boards/             the design/ tree, served as static HTML on its own URL.
+  packages/
+    tokens/             DS token CSS, pinned and versioned, plus typed token names.
+    icons/              FeatureIcon and the Streamline set, extracted from the DS bundle.
+    ui/                 the OTR primitives the app actually uses.
+    cases/              status registry, precedence, severity, CPC, detail zones.
+    fixtures/           one typed case dataset plus named scenarios.
+  design/               the board system, verbatim.
+  docs/                 PRDs, decisions, ledgers, roadmap, lessons, port map.</pre>
+<ul>
+<li><b>Next.js App Router with TypeScript.</b> Routing gives the demo real URLs, which is what makes a review link precise.</li>
+<li><b>CSS Modules over the DS custom properties, no Tailwind.</b> The design system ships tokens as CSS variables and every kit already authors against them. A utility framework would mean translating a token system that works.</li>
+<li><b>pnpm workspaces with Turborepo.</b> Packages keep domain logic testable on its own and stop the app from becoming the only place code can live.</li>
+<li><b>Vitest, Playwright, GitHub Actions, Changesets.</b> Unit tests on logic, screenshots per status, typecheck and build on every PR, a version number on every review build.</li>
+</ul>
+<p>Routes: <b>/cases</b> the feed, <b>/cases/[caseId]</b> the detail screen, <b>/cases/[caseId]/chat</b> the privileged channel when it lands, <b>/lab/&lt;workstream&gt;/&lt;exploration&gt;</b> for coded explorations behind flags, and <b>/review</b> for the current build and what changed.</p>
+</div>
+
+<div class="sec">
+<div class="hd"><span class="n">05</span><h2>The demo, scoped</h2></div>
+<p>The thing the CEO opens on a phone.</p>
+<ul>
+<li>Full bleed mobile web with a PWA manifest, so it installs to the home screen and runs without browser chrome. On desktop it renders inside a device frame.</li>
+<li>The feed wired from the real fixture set: grouping, Active and Resolved tabs, sub chips, search, sort sheet, density.</li>
+<li>Every card taps through to that case's own detail screen and back.</li>
+<li>Full status coverage. All eighteen states reachable, each with its correct badge, primary action, and detail record.</li>
+<li>A scenario switcher, honoring the existing rule that demo tweaks are user state cohorts and never design divergences. Personas: single incomplete case, multi case with money overdue, action needed on a legal gate, a won case, and a QA mode showing every status. Scenario travels in the URL so a review link is reproducible.</li>
+<li>Session state persists locally, so unread clearing and a signed LOE survive a refresh mid review.</li>
+</ul>
+</div>
+
+<div class="sec">
+<div class="hd"><span class="n">06</span><h2>How updates, versions, explorations, and tests wire in</h2><span class="sub">the part that has to hold for months</span></div>
+<div class="grid g2">
+<div class="card"><div class="t">Design explorations</div><p>Continue in design/, untouched. Nothing changes about how you work today.</p></div>
+<div class="card"><div class="t">Coded explorations</div><p>Get a /lab route and a flag, so a divergence ships to the same preview URL without touching the canonical demo. Same BRIEF and DR discipline, same ledger.</p></div>
+<div class="card"><div class="t">Adoption</div><p>A pull request that moves the pattern from /lab into packages/cases, flips the DR to integrated, and deletes nothing.</p></div>
+<div class="card"><div class="t">Versions</div><p>Changesets and git tags. Every DR from here records the tag and preview URL it was decided on, so which version he saw is never a question.</p></div>
+</div>
+<p style="margin-top:16px">Tests come in three tiers, in this order. Pure logic first, because it is the highest value and the easiest: badge registry completeness, primaryAction precedence, sortActions, feedGroup, urgency. Then component level per status. Then Playwright flows with a screenshot per status, which is the regression net that lets you refactor without fear.</p>
+</div>
+
+<div class="sec">
+<div class="hd"><span class="n">07</span><h2>The CEO review loop</h2></div>
+<ul>
+<li>Every pull request produces a Vercel preview URL. Nothing is reviewed on a local machine.</li>
+<li>Primary path: Vercel preview comments, which pin to elements much like the comments here. Requires a seat on the Vercel team for him.</li>
+<li>Fallback if he will not sign in: a small in app feedback pin that captures route, scenario, viewport, and build sha, and opens a GitHub issue through a serverless route. Two days of work, worth it only if the seat is a problem.</li>
+<li>Cadence: a tagged review build with a short changelog on /review, then triage into DRs, then the roadmap. Same shape as today, on a URL instead of in a tool.</li>
+</ul>
+</div>
+
+<div class="sec">
+<div class="hd"><span class="n">08</span><h2>Phases</h2></div>
+<div class="tbl"><table>
+<colgroup><col style="width:130px"><col style="width:auto"><col style="width:120px"><col style="width:130px"></colgroup>
+<thead><tr><th>Phase</th><th>Scope and success</th><th>Rough time</th><th>Owner</th></tr></thead>
+<tbody>
+<tr><td><span class="ph">0 · Handoff pack</span></td><td>Everything in section 9. Success: Claude Code can start without asking a design question.</td><td>1 to 2 weeks</td><td><span class="pill me"><span class="dot"></span>Me</span></td></tr>
+<tr><td><span class="ph">1 · Repo scaffold</span></td><td>Workspace, tokens, icons, CI, both Vercel projects live. Success: two URLs exist and the boards render.</td><td>1 week</td><td><span class="pill cc"><span class="dot"></span>Claude Code</span></td></tr>
+<tr><td><span class="ph">2 · Cases demo</span></td><td>Feed, detail, all statuses, scenario switcher, PWA. Success: the CEO taps through every status on his phone.</td><td>3 to 5 weeks</td><td><span class="pill cc"><span class="dot"></span>Claude Code</span></td></tr>
+<tr><td><span class="ph">3 · Review and tests</span></td><td>Vitest suite, Playwright per status screenshots, changesets, /review, feedback path live.</td><td>1 to 2 weeks</td><td><span class="pill cc"><span class="dot"></span>Claude Code</span></td></tr>
+<tr><td><span class="ph">4 · Explorations land</span></td><td>Case chat, record content, LOE action UI, the three gap state badges. Each arrives as a /lab route, closes in a DR, merges.</td><td>ongoing</td><td><span class="pill me"><span class="dot"></span>Both</span></td></tr>
+<tr><td><span class="ph">5 · Next workflow</span></td><td>Home and onboarding reuse the pipeline. Success is the second workflow costing a fraction of the first.</td><td>later</td><td><span class="pill me"><span class="dot"></span>Both</span></td></tr>
+</tbody></table></div>
+</div>
+
+<div class="sec">
+<div class="hd"><span class="n">09</span><h2>What I do before handoff</h2></div>
+<div class="grid">
+<div class="card"><div class="t"><span class="k b">1</span>Pick canon, file by file</div><p>Resolve the three divergent core-kit copies and every other duplicated kit, and record the choice in a port map. Nothing is deleted; the losing copies stay exactly where they are.</p></div>
+<div class="card"><div class="t"><span class="k b">2</span>Unify the case model</div><p>Merge CASES and DETAIL into one typed shape covering all eighteen states with the record fields the detail page needs. Ships as a spec plus a JSON fixture Claude Code imports directly.</p></div>
+<div class="card"><div class="t"><span class="k b">3</span>Extract the status registry to data</div><p>Eighteen states with badge form, weight, tone, primary action, and severity, as a JSON file rather than a component. The single highest value artifact in the handoff.</p></div>
+<div class="card"><div class="t"><span class="k b">4</span>Build Cases Demo.html</div><p>The missing workflow demo, wired from frozen kits only. Feed to detail and back, all statuses, scenario switcher. It is the reference the coded port has to match, and building it proves the unified model works before anyone writes TypeScript.</p></div>
+<div class="card"><div class="t"><span class="k b">5</span>Unpack the assets</div><p>Base64 out of source and into real image files.</p></div>
+<div class="card"><div class="t"><span class="k b">6</span>Write the handoff docs</div><p>HANDOFF, ARCHITECTURE, PORT-MAP mapping every kit to its target module, and a CLAUDE.md for the new repo carrying the rules this project runs on, including the copy standards and the never delete rule.</p></div>
+<div class="card"><div class="t"><span class="k b">7</span>Tidy the root</div><p>The orphaned record-content.jsx at the project root, plus the stray upload and screenshot folders.</p></div>
+</div>
+</div>
+
+<div class="sec">
+<div class="hd"><span class="n">10</span><h2>Decisions I need from you</h2></div>
+<div class="card dec">
+<div class="row"><div class="n">1</div><div><div class="q">Does the repo hold both trees?</div><div class="w">Or does the board system stay here, and only the coded prototype travels.</div></div></div>
+<div class="row"><div class="n">2</div><div><div class="q">Vercel seat for the CEO, yes or no</div><div class="w">This picks the review path: native preview comments, or a custom feedback pin.</div></div></div>
+<div class="row"><div class="n">3</div><div><div class="q">Does the demo need case chat in Phase 2?</div><div class="w">Or is Phase 4 soon enough. It is still an open exploration.</div></div></div>
+<div class="row"><div class="n">4</div><div><div class="q">The three gap state badges</div><div class="w">Counter offer, Remarketing, Cancelled are undecided and block full status coverage. Decide in Phase 0, or ship behind a flag.</div></div></div>
+<div class="row"><div class="n">5</div><div><div class="q">Production code, or a demo engineering rebuilds?</div><div class="w">This sets how much rigor goes into the packages, and how hard Phase 3 pushes.</div></div></div>
+</div>
+</div>
+
+<div class="sec">
+<div class="hd"><span class="n">11</span><h2>Risks</h2></div>
+<ul>
+<li>The gap state badges are a known hole. Full coverage cannot be claimed until they close.</li>
+<li>Merging the two fixture models will surface detail record fields never specified for the rarer statuses. Expect content decisions, not just code.</li>
+<li>The design system bundle is a compiled artifact from another project. Pin a version in the repo and record it, or the port silently drifts.</li>
+<li>FeatureIcon coverage and font loading need a real check on iOS Safari early, not at the end.</li>
+<li>Canon selection is a design call. Claude Code must not guess it, which is why item 1 of section 9 comes first.</li>
+</ul>
+</div>
+
+<div class="foot">OTR Native App UI • Handoff plan • see also <a href="../roadmap/Roadmap.html">Roadmap</a>, <a href="../LEDGER.md">master ledger</a>, <a href="../LESSONS.md">lessons</a>.</div>
+</div>
+</body>
+</html>

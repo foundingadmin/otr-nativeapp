@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How It Works · OTR Native App UI</title>
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fig-tokens.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/fonts.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/colors.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/typography.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/spacing.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/radius.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/tokens/base.css">
+<link rel="stylesheet" href="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+  html, body { margin: 0; padding: 0; background: var(--surface-subtle); }
+  body { font-family: var(--font-sans, 'Figtree', sans-serif); color: var(--text-primary); }
+  a { color: var(--text-link); text-decoration: none; }
+  a:hover { color: var(--blue-800); text-decoration: underline; }
+  .page { max-width: 760px; margin: 0 auto; padding: 56px 24px 96px; }
+  .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 16px; }
+  h1 { font-size: 40px; font-weight: 800; margin: 0 0 18px; }
+  .intro { font-size: 16.5px; line-height: 1.55; color: var(--text-secondary); max-width: 560px; margin: 0 0 32px; text-wrap: pretty; }
+  .tree { background: var(--white); border: 1px solid var(--border-secondary); border-radius: 18px; padding: 14px 10px;
+          box-shadow: var(--shadow-card, 0 1px 2px rgba(16,24,40,0.05)); }
+  .t-row { display: flex; align-items: center; gap: 9px; padding: 8px 12px; border-radius: 9px; font-size: 14.5px;
+           font-weight: 600; letter-spacing: 0.01em; white-space: nowrap; }
+  .t-row.fold { cursor: pointer; }
+  .t-row.fold:hover { background: var(--neutral-50); }
+  .t-caret { width: 14px; flex: 0 0 14px; text-align: center; color: var(--neutral-400); font-size: 11px; }
+  .t-name { overflow: hidden; text-overflow: ellipsis; }
+  .t-name.dim { color: var(--text-tertiary); }
+  .t-name.demo { color: var(--blue-950, #002266); font-weight: 800; }
+  .t-name.lead { color: var(--blue-700); font-weight: 700; }
+  .t-role { margin-left: auto; font-size: 10.5px; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase;
+            color: var(--neutral-400); padding-left: 14px; }
+  .t-kids { border-left: 1px solid var(--border-secondary); margin-left: 25px; }
+  .foot { margin-top: 44px; font-size: 13.5px; color: var(--text-tertiary); }
+</style>
+</head>
+<body>
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" rx="18" fill="#155EEF"/>
+    <rect x="22" y="26" width="40" height="9" rx="4.5" fill="#fff" opacity="0.95"/>
+    <rect x="34" y="43" width="40" height="9" rx="4.5" fill="#fff" opacity="0.65"/>
+    <rect x="46" y="60" width="32" height="9" rx="4.5" fill="#fff" opacity="0.4"/>
+  </svg>
+</template>
+<!-- board-path chip: auto-updates from the file's own location -->
+<div id="__boardPath" aria-hidden="true" style="position:fixed;top:0;left:0;z-index:2147483000;font-family:'Figtree',var(--font-sans),sans-serif;font-size:11px;line-height:1;letter-spacing:.02em;color:var(--text-tertiary,#667085);background:rgba(255,255,255,.82);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:6px 11px;border:1px solid var(--border-secondary,#ECECED);border-top:none;border-left:none;border-radius:0 0 10px 0;pointer-events:none;user-select:none;white-space:nowrap;max-width:80vw;overflow:hidden;text-overflow:ellipsis;">&nbsp;</div>
+<script>(function(){var p=decodeURIComponent(location.pathname).split('/serve/');var rel=p.length>1?p[1]:(location.pathname.split('/').pop()||'');var el=document.getElementById('__boardPath');if(el)el.textContent=rel;})();</script>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="../../_ds/off-the-record-design-system-6eff9681-3f7d-456f-bb78-66b98be22409/_ds_bundle.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="hierarchy-data.js"></script>
+
+<script type="text/babel" data-presets="react">
+;(function () {
+  const H = window.HIERARCHY;
+
+  function Caret({ open }) {
+    return <span className="t-caret"><i className={'fa-solid fa-chevron-' + (open ? 'down' : 'right')} aria-hidden="true"></i></span>;
+  }
+  const Leaf = () => <span className="t-caret"></span>;
+
+  function App() {
+    const [open, setOpen] = React.useState(() => new Set(['otr-app', 'cases', 'cases/screen-all_cases_feed']));
+    const toggle = (id) => setOpen((prev) => {
+      const s = new Set(prev);
+      s.has(id) ? s.delete(id) : s.add(id);
+      return s;
+    });
+
+    const Row = ({ id, depth, name, role, cls, kids }) => (
+      <div>
+        <div className={'t-row' + (kids ? ' fold' : '')} onClick={kids ? () => toggle(id) : undefined}>
+          {kids ? <Caret open={open.has(id)} /> : <Leaf />}
+          <span className={'t-name ' + (cls || '')}>{name}</span>
+          {role && <span className="t-role">{role}</span>}
+        </div>
+        {kids && open.has(id) && <div className="t-kids">{kids}</div>}
+      </div>
+    );
+
+    return (
+      <div className="page" data-screen-label="How It Works">
+        <div className="eyebrow">Off The Record · Native App UI</div>
+        <h1>How It Works</h1>
+        <p className="intro">
+          The whole structure as one tree. Open any folder; every layer down, the shape repeats.
+        </p>
+
+        <div className="tree">
+          <Row id="otr-app" depth={0} name="otr-app/" role="product" kids={
+            H.order.map((wfk) => (
+              <Row key={wfk} id={wfk} depth={1} name={wfk + '/'} role="workflow" kids={[
+                <Row key="demo" id={wfk + '-demo'} depth={2} name="demo.html" cls="demo" role="decided work" />,
+                <Row key="docs" id={wfk + '-docs'} depth={2} name={'_docs-' + wfk + '/'} cls="dim" role="no design" />,
+                <Row key="ds" id={wfk + '-ds'} depth={2} name={'_ds-' + wfk + '/'} cls="dim" role="no design" />,
+                ...H.workflows[wfk].map(([cat, name]) => (
+                  <Row key={name} id={wfk + '/' + name} depth={2} name={name + '/'} role={cat} kids={
+                    H.insides.map(([n, r, lead]) => (
+                      <Row key={n} id={wfk + '/' + name + '/' + n} depth={3} name={n} cls={lead ? 'lead' : 'dim'} />
+                    ))
+                  } />
+                )),
+              ]} />
+            ))
+          } />
+        </div>
+
+        <p className="foot">
+          <a href="../roadmap/Roadmap.html">Roadmap</a> · <a href="../../File Navigator.html">File Navigator</a>
+        </p>
+      </div>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+})();
+</script>
+</body>
+</html>

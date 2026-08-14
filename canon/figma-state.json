@@ -127,7 +127,7 @@
       "id": "11389:13975",
       "variants": 8,
       "axes": "part(status|home) x os(apple|android) x tone(dark|light)",
-      "note": "session 4n: all 8 masters rebuilt as stretchy auto layout (status: HORIZONTAL SPACE_BETWEEN, home: centered pill) and verified at 360/440 widths; lives in shelf \u00b7 Chrome on the Proto section; fix-position is a manual toggle (scrollBehavior not in plugin API)"
+      "note": "session 4n: all 8 masters rebuilt as stretchy auto layout (status: HORIZONTAL SPACE_BETWEEN, home: centered pill) and verified at 360/440 widths; lives in shelf · Chrome on the Proto section; fix-position is a manual toggle (scrollBehavior not in plugin API)"
     },
     "OTR/Cases/CaseFacts (exploration)": {
       "id": "11569:2111",
@@ -173,6 +173,51 @@
       "id": "11566:1917",
       "variants": 2,
       "axes": "removable=false/true + BOOLEAN 'show self tag' (default false)"
+    },
+    "OTR/Cases/CaseAppBar": {
+      "id": "11588:2305",
+      "variants": 2,
+      "axes": "chat=false/true",
+      "note": "chat variant carries the counted icon; DR-CD-006 did not take it · full case details board, session 8, pending DR-CD-005"
+    },
+    "OTR/Cases/CaseHero": {
+      "id": "11588:2308",
+      "variants": 1,
+      "note": "no ticket photo; issued eyebrow, location headline, StatusBadge, court date line. Headline prints Native/Title/Page 25 against CD's 32, display rung is a DS ask · full case details board, session 8, pending DR-CD-005"
+    },
+    "OTR/Cases/LegalTeamCard": {
+      "id": "11588:2367",
+      "variants": 2,
+      "axes": "preview=true/false",
+      "note": "DR-CD-006: the whole card is the door into case chat · full case details board, session 8, pending DR-CD-005"
+    },
+    "OTR/Cases/ActionToast": {
+      "id": "11588:2370",
+      "variants": 1,
+      "note": "persistent, above the tabs; brand ramp ladder, DS Button Solid-brand extra small · full case details board, session 8, pending DR-CD-005"
+    },
+    "OTR/Cases/TabsPrimary": {
+      "id": "11590:1580",
+      "variants": 2,
+      "axes": "active=ticket/case",
+      "note": "segmented pill track, white active pill · full case details board, session 8, pending DR-CD-005"
+    },
+    "OTR/Cases/TabsSecondary": {
+      "id": "11590:1610",
+      "variants": 3,
+      "axes": "active=overview/docs/pay",
+      "note": "underline style, brand indicator; count badge only on Documents · full case details board, session 8, pending DR-CD-005"
+    },
+    "OTR/Cases/SortToggle": {
+      "id": "11590:1623",
+      "variants": 2,
+      "axes": "order=newest/oldest",
+      "note": "Justified-Alignment stands in for the Font Awesome sort caret, flagged · full case details board, session 8, pending DR-CD-005"
+    },
+    "OTR/Cases/BalanceCard": {
+      "id": "11590:1626",
+      "variants": 1,
+      "note": "head of divergences B and D; progress reads as installments, never a percentage · full case details board, session 8, pending DR-CD-005"
     }
   },
   "screens": {
@@ -220,11 +265,11 @@
         "outerFrame": "11500:409",
         "structure": "Lexicon template, widened to 2950 so five 390px screens compare in one row: outer > group > column > header + shelf Surface approaches + shelf Parts",
         "screens": {
-          "A \u00b7 unified thread": "11495:136",
-          "B \u00b7 log-led, day dividers": "11498:195",
-          "C \u00b7 split \u00b7 pinned + log": "11498:470",
-          "D \u00b7 compact system chips": "11499:320",
-          "E \u00b7 compact chips + pinned toast": "11499:557"
+          "A · unified thread": "11495:136",
+          "B · log-led, day dividers": "11498:195",
+          "C · split · pinned + log": "11498:470",
+          "D · compact system chips": "11499:320",
+          "E · compact chips + pinned toast": "11499:557"
         },
         "status": "OPEN - awaiting verdict on which approach anchors the build"
       },
@@ -243,6 +288,23 @@
         },
         "irJoinKeys": "in each specimen's museum caption (rc-collapsed, rc-expanded, rc-firm-block, rc-receipt-paid, rc-receipt-plan, rc-txns, rc-txn-detail, rc-participants-card, rc-participants-manage)",
         "status": "OPEN - closes with DR-CD-002; F-2 and F-3 blocked"
+      },
+      "full case details": {
+        "outerFrame": "11586:1537",
+        "printed": "2026-08-14 session 8, from the 06-full-case-details JSX source (no IR extract exists for this board yet)",
+        "structure": "Lexicon/D-013 template: plate frame (brand/50, radius/5XL, pad spacing/13xl 96, stroke border/neutral/default) > GROUP 'full case details' 11586:1583 > column 11586:1538 (gap 64) > header + 8 shelves, all 2208 wide (index 400 + stage 1680 + gap 48 + pad 80)",
+        "shelves": {
+          "The parts": "11586:1543 (8 masters live here pending verdict)",
+          "Case Details · Ticket and Case": "11586:1548 (fcd-ticket, fcd-overview, fcd-docs, fcd-pay)",
+          "Case · Payments · the open decision": "11586:1553 (fcd-pay-a, fcd-pay-b, fcd-pay-d)",
+          "Payments · the deeper states": "11586:1558 (fcd-receipt, fcd-pay-overdue, fcd-pay-paid)",
+          "Getting into case chat": "11586:1563 (fcd-chat-card, fcd-chat-bar, fcd-chat-both)",
+          "Ticket tab · no photo yet": "11586:1568 (fcd-ticket-nophoto)",
+          "Open questions": "11586:1573 (6 OPEN cards)",
+          "Bindings & gaps": "11586:1578 (16 FLAG/RAW/GAP/SUB/NOTE cards)"
+        },
+        "irJoinKeys": "in each artboard's museum caption (fcd-ticket, fcd-overview, fcd-docs, fcd-pay, fcd-pay-a, fcd-pay-b, fcd-pay-d, fcd-receipt, fcd-pay-overdue, fcd-pay-paid, fcd-chat-card, fcd-chat-bar, fcd-chat-both, fcd-ticket-nophoto)",
+        "status": "OPEN - closes with DR-CD-005; the Payments A/B/D pick blocks handoff"
       }
     }
   },
@@ -286,7 +348,7 @@
   },
   "proposedPage": "11368:3",
   "canvasSystem": {
-    "standard": "Shelves (proposal 2) is the default presentation. RATIFIED SHELF TEMPLATE (session 6, ported from the Lexicon page): shelf = HORIZONTAL auto layout, pad 40, gap 48, hug both axes, radius 32; left rail = 'index' at FIXED 400 (name + description, both FILL); right rail = 'right' frame at FIXED width, HORIZONTAL + WRAP, hug height, itemSpacing 40, counterAxisSpacing 40, counterAxisAlignItems MIN. Two fixed rails means hug width resolves to one number for every shelf on a surface. Rail width is set per surface by its widest content: \u2460 Components uses 2396, so every shelf there is 2924. Narrower shelves keep the whitespace; they never shrink. Columns group-wrapped so no Figma name labels render. All seven proposal wireframes remain on the Proposed page as the system toolbox.",
+    "standard": "Shelves (proposal 2) is the default presentation. RATIFIED SHELF TEMPLATE (session 6, ported from the Lexicon page): shelf = HORIZONTAL auto layout, pad 40, gap 48, hug both axes, radius 32; left rail = 'index' at FIXED 400 (name + description, both FILL); right rail = 'right' frame at FIXED width, HORIZONTAL + WRAP, hug height, itemSpacing 40, counterAxisSpacing 40, counterAxisAlignItems MIN. Two fixed rails means hug width resolves to one number for every shelf on a surface. Rail width is set per surface by its widest content: ① Components uses 2396, so every shelf there is 2924. Narrower shelves keep the whitespace; they never shrink. Columns group-wrapped so no Figma name labels render. All seven proposal wireframes remain on the Proposed page as the system toolbox.",
     "componentsShelves": "Incomplete(+draft), Active, Resolved, Dismissed, Cancelled, SmartMatch, Signal system, Status badge, Atoms, Identity & ticket, Detail kit. All 2924 wide since session 6.",
     "screensShelves": "Feed (4), Case detail (8)",
     "diffsShelves": "one per date group, cards in a wrapped grid",
@@ -296,8 +358,8 @@
   },
   "lexiconPage": {
     "id": "11415:3",
-    "reference": "11417:42077 \u00b7 \u2460 Lexicon (agent) \u00b7 Titus's hand-edited v2 (section converted to frame, demo wells applied) \u00b7 HUMAN-KEPT, do not reflow",
-    "v3Rebuild": "11444:177 \u00b7 \u2460 Lexicon (agent) \u00b7 v3 \u00b7 agent rebuild to D-013 recipe, sits right of the reference",
+    "reference": "11417:42077 · ① Lexicon (agent) · Titus's hand-edited v2 (section converted to frame, demo wells applied) · HUMAN-KEPT, do not reflow",
+    "v3Rebuild": "11444:177 · ① Lexicon (agent) · v3 · agent rebuild to D-013 recipe, sits right of the reference",
     "note": "Visual of the naming grammar (v2, session 4p, PROPOSAL awaiting verdict). Standardized shelf template: left rail 400 fixed (index + legend text), right rail 900 fixed (visualization), heights hug. Five shelves: The law, Sidebar, Canvas, Design, Everywhere. All text binds the DS semantic foreground/dark ramp (mode-aware): titles=primary, body=tertiary, captions/tags=quinary. Page unplaced in sidebar order; org later per user.",
     "textRamp": {
       "collection": "semantic variables (Customer side / Guidelines)",
@@ -310,11 +372,11 @@
   },
   "protoPage": {
     "id": "11382:38949",
-    "section": "11414:1529 \u00b7 \u2460 Tools (agent) \u00b7 blue plate, group-wrapped column (headline + guide + shelf \u00b7 Chrome), rigs as DIRECT section children so they stay presentable",
+    "section": "11414:1529 · ① Tools (agent) · blue plate, group-wrapped column (headline + guide + shelf · Chrome), rigs as DIRECT section children so they stay presentable",
     "rigs": {
-      "apple": "11410:4926 \u00b7 Rig \u00b7 apple \u00b7 resize me to any device size (393x852 start)",
-      "android": "11410:5405 \u00b7 Rig \u00b7 android \u00b7 resize me to any device size (412x917 start)",
-      "anatomy": "plain frame, clipsContent + overflowDirection VERTICAL; children: 'screen \u00b7 swap me' (STRETCH/MIN), 'chrome status \u00b7 fix position' (STRETCH/MIN), 'chrome home \u00b7 fix position' (STRETCH/MAX); stretch verified at 360x800 and 430x932"
+      "apple": "11410:4926 · Rig · apple · resize me to any device size (393x852 start)",
+      "android": "11410:5405 · Rig · android · resize me to any device size (412x917 start)",
+      "anatomy": "plain frame, clipsContent + overflowDirection VERTICAL; children: 'screen · swap me' (STRETCH/MIN), 'chrome status · fix position' (STRETCH/MIN), 'chrome home · fix position' (STRETCH/MAX); stretch verified at 360x800 and 430x932"
     }
   },
   "pages": {
