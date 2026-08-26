@@ -1,0 +1,54 @@
+{
+  "generated": "2026-08-26",
+  "session": 9,
+  "note": "PROTOCOL.md section 6 calls for this file; it did not exist before session 9. It records where CD and Figma disagree right now, and which side is authoritative. Human edits win on craft, geometry, type and colour. CD wins on product logic and state coverage. Nothing here is silently merged.",
+  "surface": {
+    "page": "11337:2087 Explore",
+    "cdSource": "intake/otr-native-app-ui-2/handoff/design/cases/screen-single_case_details/explorations/06-full-case-details",
+    "cdReprint": "11630:1492",
+    "designerBoard": "11602:3998"
+  },
+  "open": [
+    {
+      "id": "DRIFT-001",
+      "title": "The primary tab was renamed Ticket to Citation, in one variant only",
+      "cd": "case-shell.jsx labels the left tab Ticket in both states.",
+      "figma": "OTR/Cases/TabsPrimary 11590:1580 reads Ticket in active=ticket and Citation in active=case. The set contradicts itself.",
+      "authoritative": "unresolved",
+      "why": "This is a live move on DR-CD-005, which is still open. It is product logic, not craft, so CD would normally win; but the rename looks deliberate and the CEO may have called it on canvas.",
+      "needs": "a verdict, plus a fix to whichever variant is wrong",
+      "ridesOn": "OPEN card on shelf 11630:1533"
+    },
+    {
+      "id": "DRIFT-002",
+      "title": "The legal team card gained firm stats that canon still lists as open",
+      "cd": "the card shows the rating and the attorney of record only.",
+      "figma": "OTR/Cases/LegalTeamCard 11588:2367 carries 1,240 clients booked, 94 percent success rate and 8 years with OTR, and its sub line reads Your local professionals rather than Helen Vance.",
+      "authoritative": "figma, provisionally",
+      "why": "This answers OPEN item F-2, which canon has waiting on Alex's screenshot. The Figma frame can serve as the decision record, but F-2 has to be closed explicitly rather than by drift.",
+      "needs": "close F-2 against the Figma frame, or restore the CD card",
+      "ridesOn": "OPEN card F-2 and DRIFT card on shelf 11630:1545"
+    },
+    {
+      "id": "DRIFT-003",
+      "title": "Three session 8 masters are in the deleted-component store",
+      "cd": "the board assembles from eight modules.",
+      "figma": "CaseAppBar 11588:2305, ActionToast 11588:2370 and BalanceCard 11590:1626 resolve for their instances but have no parent on any page. CaseAppBar also lost its chat=true variant.",
+      "authoritative": "figma",
+      "why": "Deleting the chat=true variant matches DR-CD-006, which decided the firm card is the door. The cost is that the road-not-taken specimen is gone from the file.",
+      "needs": "nothing blocking. The CD re-print carries its own copies, and the chat=true specimen is restored there as fcd-chat-bar and fcd-chat-both.",
+      "ridesOn": "DRIFT card on shelf 11630:1545"
+    },
+    {
+      "id": "DRIFT-004",
+      "title": "Eleven surviving artboards lost their names and IR join keys",
+      "cd": "fourteen artboards, each with an fcd-* id.",
+      "figma": "the session 8 plate was dissolved; eleven artboards survive at page level all named spec, each about 48px taller than printed. The three chat crops and the no-photo ticket were removed.",
+      "authoritative": "figma on geometry, cd on coverage",
+      "why": "The rename is harmless to craft but it breaks read-back: there is no longer a key joining a frame to its IR artboard. The four removed frames are state coverage CD still calls for.",
+      "needs": "either restore join keys on the surviving frames, or treat the CD re-print plate as the join surface going forward",
+      "ridesOn": "DRIFT card on shelf 11630:1545"
+    }
+  ],
+  "resolved": []
+}
