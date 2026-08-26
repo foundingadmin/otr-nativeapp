@@ -13,14 +13,17 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
 |---|---|
 | Figma file | `Native App / Design`, key `JcqKNz1pMrEvxwExhb296r` |
 | Exploration prints | `↪ Explore` page `11337:2087` (renamed from `↪ Explorations` by the team, Aug 11) |
-| Record content board (OPEN) | plate `11570:797` on ↪ Explore; 9 masters + 9 artboards + OPEN/diff shelves, session 7 |
-| Full case details board (OPEN) | plate `11586:1537` on ↪ Explore; 8 masters + 14 artboards + OPEN/diff shelves, session 8 |
+| Record content board | plate `11570:797` **dissolved by the team before Aug 26**; only `shelf · Money` `11570:819` survives at page level |
+| Full case details board | plate `11586:1537` **dissolved by the team before Aug 26**; 11 of 14 artboards survive at page level on shelves `11586:1548` / `11586:1553` / `11586:1558`, all renamed `spec` and stripped of their IR join keys |
+| Designer's Case Details board | frame `11602:3998` on ↪ Explore; hand-built after the Aug 14 print, absorbed 5 of the 8 session 8 masters and added `OTR/Cases/TableHeader` + `Participant Label Pill`. **Human-owned, do not print into it.** |
+| CD source re-print (OPEN) | plate `11630:1492` on ↪ Explore; session 9, 2026-08-26. 8 `OTR/Cases/CD0826/*` masters + all 14 artboards + OPEN/DIFF/DRIFT shelves. Self contained, prints the CD source for side-by-side reading against the designer's board. |
 | Icon library | `Icon / Streamline Flex` frame `11530:6368` on the new `↪ Icons` page `11530:6367`; 180 fill-based 24px components. OTR/Icons frame archived. Instance these, never draw. |
 | RESTRUCTURE (Aug 11) | The team reorganized the file between sessions: ① Components section dissolved (shelves moved to ↪ Explore as bare frames), ④ Diffs + Proposed + Lexicon + Tools content moved to the Cases `↪ Archive` page, Case Chat board moved to the `↪ Cases` page (actively worked), Proto/Proposed pages gone, new Home/Onboard/Flows/PARKED pages. Full map: `figma-state.json` → `restructureAug11`. Diff swatches and OPEN markers now print on the exploration board itself. |
 | Node/style/variable registries | `brand/BRAND.md` |
-| Print history + policies | `print-log.json` (sessions 1–3, `buildChecks`) |
+| Print history + policies | `print-log.json` (sessions 1–9, `buildChecks`) |
 | Open DS asks | `variable-requests.md` + the cards on ④ Diffs |
 | Decision records | `decisions.json` |
+| CD against Figma disagreements | `drift.json` (created session 9) |
 | CD source of truth | `intake/otr-cd-handoff/handoff/` (spec/ generated, design/ mirror — never hand-edit) |
 
 ## Standing policies (user-ratified)
@@ -71,29 +74,39 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
 
 ## Open items (next session picks these up)
 
-- **Verdict needed: 06 Full case details board** (plate `11586:1537` on ↪ Explore,
-  printed session 8 from the Aug 14 CD package). Closes with DR-CD-005, the
-  Ticket/Case tab architecture, which every one of the fourteen artboards
-  depends on. The live sub-decision is the **Payments layout, A against B
-  against D**: handoff waits on that pick and the CEO has seen all three.
-  Four more OPEN cards ride on the board: sub-tab naming (Overview is a
-  placeholder), whether the coded ticket artifact carries data or is a
-  stand-in, and F-2/F-3 carried over from the record content board.
-  DR-CD-006 is already decided in the CD ledger, so the firm card is the door
-  into case chat and the app bar chat icon is printed only as the road not
-  taken. Three DS asks came out of it: a **Native/Title/Display rung** (D-014,
-  three separate 32 to 38px asks in one board), a **camera glyph**, and a
-  **sort glyph pair**. The 8 masters on the board's `The parts` shelf promote
-  to the components surface on adopt.
+- **Verdict needed: 06 Full case details board.** The Aug 14 plate `11586:1537`
+  is gone: the team dissolved it and reworked the board by hand into
+  `11602:3998`. Session 9 re-printed all fourteen artboards from the CD source
+  into a fresh plate `11630:1492` so the source and the polished board can be
+  read side by side. **Six OPEN cards ride on the new plate**, unchanged in
+  substance from session 8: DR-CD-005 the Ticket/Case tab architecture (which
+  every frame depends on), the **Payments layout A against B against D** (the
+  live sub-decision, CEO has seen all three), sub-tab naming, the ticket
+  artifact, and F-2/F-3 carried over from the record content board. DR-CD-006 is
+  decided, so the firm card is the door and the app bar chat icon prints only as
+  the road not taken. DS asks: the **Native/Title/Display rung** (D-014, now
+  asked by two boards), a **camera glyph**, and a **sort glyph pair**.
 
-- **Verdict needed: 03 Record content board** (plate `11570:797` on ↪ Explore,
-  printed session 7 from the Aug 11 CD package). Closes with DR-CD-002. Four
-  OPEN cards ride on the board: field order, F-2 firm stats, F-3 participant
-  permissions, the decision record itself. The `OTR/Cases/CaseFacts` set on the
-  board deliberately does NOT replace `OTR/Cases/Detail/CaseFacts`; on adopt it
-  folds in and the detail screens migrate. Two DS asks on the board: the
-  paid-tag emerald pair vs the lime success ramp, and five missing Streamline
-  Flex glyphs (hashtag, car, receipt, credit-card, bolt).
+- **Four drift items need a call (`drift.json`, new in session 9).** The
+  designer's board has moved past the CD source in ways canon had not recorded:
+  the primary tab renamed **Ticket to Citation in one variant only**, so the set
+  contradicts itself and DR-CD-005 is being answered on canvas; the legal team
+  card **gained firm stats**, which answers OPEN item F-2 without closing it;
+  three masters sit in the **deleted-component store**; and the eleven surviving
+  artboards **lost their names and IR join keys**, which breaks read-back. Human
+  edits win on craft, but each of these is product logic or canon hygiene, so
+  none was merged silently.
+
+- **Verdict needed: 03 Record content board.** Plate `11570:797` was also
+  dissolved by the team; only `shelf · Money` `11570:819` survives. Closes with
+  DR-CD-002. Four OPEN cards rode on it: field order, F-2 firm stats, F-3
+  participant permissions, and the decision record itself. F-2 and F-3 are now
+  restated on the session 9 plate. The `OTR/Cases/CaseFacts` set deliberately did
+  NOT replace `OTR/Cases/Detail/CaseFacts`; on adopt it folds in and the detail
+  screens migrate. Two DS asks: the paid-tag emerald pair vs the lime success
+  ramp (restated session 9), and five missing Streamline Flex glyphs (hashtag,
+  car, receipt, credit-card, bolt).
+
 - **Ask the user about the `Add participant` section** (`11555:9503` on
   ↪ Explore): a large human-pasted screenshot set (Mobile + Desktop) that looks
   like Alex's screenshots. If so it unblocks F-2/F-3 and the firm-stat set and

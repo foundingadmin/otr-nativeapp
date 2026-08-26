@@ -406,5 +406,95 @@
     "usage": "instance + resize + rebind vector fills to the tone variable (skipInvisibleInstanceChildren=false)",
     "missing": "hashtag, car, receipt, credit-card, bolt/flash (dashed placeholders printed, GAP card on the record content board)",
     "substitutions": "User-Friendship-Group for multiple-users-1; Folder-Document-Copy-Duplicate for copy-paste"
+  },
+  "readBackAug26": {
+    "date": "2026-08-26",
+    "scope": "Explore page 11337:2087, read before the session 9 print",
+    "finding": "The session 8 plate 11586:1537 and the session 7 plate 11570:797 are both gone, dissolved by the design team. Three of the full case details shelves survive at page level (11586:1548, 11586:1553, 11586:1558) plus shelf · Money 11570:819 from the record content board.",
+    "survivingArtboards": 11,
+    "lostArtboards": [
+      "fcd-chat-card",
+      "fcd-chat-bar",
+      "fcd-chat-both",
+      "fcd-ticket-nophoto"
+    ],
+    "renamed": "every surviving artboard is now named spec, so the session 8 frame names and their [fcd-*] IR join keys are gone",
+    "heightDelta": "each surviving artboard is about 48px taller than printed",
+    "integrity": "0 broken instances across all 11 surviving artboards",
+    "humanBoard": {
+      "id": "11602:3998",
+      "name": "Case Details",
+      "box": "3107x2933 at (5552, 4589)",
+      "built": "hand-authored after the Aug 14 print: header + a screens shelf 11602:4003 + a components shelf 11603:11085 whose stage 11603:11089 absorbed five session 8 masters",
+      "absorbedMasters": [
+        "11588:2308 CaseHero",
+        "11588:2367 LegalTeamCard",
+        "11590:1580 TabsPrimary",
+        "11590:1610 TabsSecondary",
+        "11590:1623 SortToggle"
+      ],
+      "newComponents": [
+        "11605:11864 OTR/Cases/TableHeader",
+        "11608:14880 Participant Label Pill"
+      ]
+    },
+    "deletedStoreMasters": {
+      "note": "resolve for their instances but have no parent on any page",
+      "ids": [
+        "11588:2305 CaseAppBar (also lost its chat=true variant)",
+        "11588:2370 ActionToast",
+        "11590:1626 BalanceCard"
+      ]
+    },
+    "drift": [
+      "OTR/Cases/TabsPrimary now reads Ticket in active=ticket and Citation in active=case, so the set contradicts itself. Live move on DR-CD-005.",
+      "OTR/Cases/LegalTeamCard gained firm stats (1,240 clients booked, 94% success rate, 8 yrs with OTR) and its sub line reads Your local professionals rather than the attorney name. That is OPEN item F-2 answered on canvas.",
+      "CaseAppBar chat=true deleted, which matches DR-CD-006 but removes the road-not-taken specimen."
+    ]
+  },
+  "cdReprintPlateAug26": {
+    "plate": "11630:1492",
+    "name": "2026-08-26 · Full case details · CD source re-print (OPEN)",
+    "box": "2400x10206 at (9206, 4357) on Explore 11337:2087",
+    "why": "user asked for a full side-by-side re-print of the otr-native-app-ui-2 package against the designer’s polished board. Self contained: it carries its own masters and touches nothing that already existed.",
+    "shelves": {
+      "parts": "11630:1497 (stage 11630:1502)",
+      "ticketAndCase": "11630:1503 (stage 11630:1508)",
+      "paymentsOpen": "11630:1509 (stage 11630:1514)",
+      "deeperStates": "11630:1515 (stage 11630:1520)",
+      "caseChat": "11630:1521 (stage 11630:1526)",
+      "noPhoto": "11630:1527 (stage 11630:1532)",
+      "open": "11630:1533 (stage 11630:1538)",
+      "diff": "11630:1539 (stage 11630:1544)",
+      "drift": "11630:1545 (stage 11630:1550)"
+    },
+    "masters": {
+      "note": "namespaced OTR/Cases/CD0826/* so the designer’s OTR/Cases/* set is untouched. On adopt they collapse into it.",
+      "OTR/Cases/CD0826/CaseAppBar": "11631:1500 (chat=false/true)",
+      "OTR/Cases/CD0826/CaseHero": "11631:1516",
+      "OTR/Cases/CD0826/LegalTeamCard": "11632:1528 (preview=true/false)",
+      "OTR/Cases/CD0826/ActionToast": "11632:2419",
+      "OTR/Cases/CD0826/TabsPrimary": "11633:1495 (active=ticket/case)",
+      "OTR/Cases/CD0826/TabsSecondary": "11633:1526 (active=overview/docs/pay)",
+      "OTR/Cases/CD0826/SortToggle": "11633:1539 (order=newest/oldest)",
+      "OTR/Cases/CD0826/BalanceCard": "11633:1558"
+    },
+    "artboards": {
+      "fcd-ticket": "11639:1486",
+      "fcd-overview": "11640:12172",
+      "fcd-docs": "11641:33415",
+      "fcd-pay": "11641:33702",
+      "fcd-pay-a": "11642:33647",
+      "fcd-pay-b": "11642:33769",
+      "fcd-pay-d": "11642:34014",
+      "fcd-receipt": "11646:2681",
+      "fcd-pay-overdue": "11646:2753",
+      "fcd-pay-paid": "11646:2837",
+      "fcd-chat-card": "11647:12869",
+      "fcd-chat-bar": "11647:13062",
+      "fcd-chat-both": "11647:13295",
+      "fcd-ticket-nophoto": "11647:13502"
+    },
+    "joinKey": "FRAME nodes carry no description property, so the IR id rides in the frame name as a trailing [fcd-*] token. That is the read-back join key for this plate."
   }
 }

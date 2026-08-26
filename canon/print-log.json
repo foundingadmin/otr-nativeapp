@@ -526,5 +526,47 @@
     ],
     "openCards": "6: DR-CD-005 tab architecture, Payments layout A/B/D, sub-tab naming, ticket artifact, F-3 participant permissions, F-2 firm stats",
     "plate": "11586:1537 · 2026-08-14 · Full case details (OPEN) · 2400x10150 at (-629, 9600) on Explore 11337:2087"
+  },
+  "session9": {
+    "date": "2026-08-26",
+    "brief": "User: print the handoff package intake/otr-native-app-ui-2/handoff into the Figma native file. Read-back showed the package was already printed in session 8 (Aug 14) and that the design team had since dissolved the plate and reworked the board by hand. Put the choice to the user; the user chose a full side-by-side re-print of all fourteen artboards into a new dated plate, leaving the designer’s board untouched.",
+    "readBackFindings": "Session 8 plate 11586:1537 dissolved; 11 of 14 artboards survive at page level renamed spec with their IR join keys gone; the 3 chat crops and the no-photo ticket are gone; a hand-built Case Details board 11602:3998 absorbed 5 of the 8 masters and added 2 new components; CaseAppBar, ActionToast and BalanceCard are in the deleted-component store; TabsPrimary and LegalTeamCard have drifted from CD. Full detail in figma-state.json → readBackAug26.",
+    "stanceCalls": [
+      "Asked before printing rather than printing over live human work, per PROTOCOL section 5. A straight re-print of the brief would have landed 14 frames on top of the designer’s board.",
+      "The plate is self contained: it builds its own OTR/Cases/CD0826/* master set from the CD source instead of instancing the designer’s masters, because two of those have drifted from CD (Citation rename, firm stats) and three are in the deleted store. Instancing them would have imported the designer’s edits into a print whose whole purpose is to show the CD source.",
+      "IR was still never extracted for this board, so the print is again from the JSX source: case-shell.jsx, case-record.jsx, payments-lab.jsx, full-case-details.jsx. Same stance as session 8.",
+      "FRAME nodes carry no description property, so the IR id rides in the frame name as a trailing [fcd-*] token rather than in a museum caption. That makes read-back a name parse instead of a caption read.",
+      "Hero 32, balance 34 and receipt 38 print at Native/Title/Page 25 again: the Native ladder still has no display rung. D-014 remains open and is now asked for by two boards.",
+      "The li total figure snapped to Native/Title/Section 16, not Hero 20: CD sets 17px and the ladder ties round to 16.",
+      "Screen ground stays raw #fbfcfd, carrying the session 8 stance: global/background/default is deltaE 1.25 away but binding it collapses the card-on-ground layering.",
+      "The no-photo artboard instances the existing cream OTR/Cases/Ticket master rather than forking it, so it again prints under-populated. Recorded as an OPEN card, not a defect."
+    ],
+    "components": "8 masters on The parts shelf, namespaced OTR/Cases/CD0826/* so nothing existing was touched: CaseAppBar 11631:1500 (chat=false/true), CaseHero 11631:1516, LegalTeamCard 11632:1528 (preview=true/false), ActionToast 11632:2419, TabsPrimary 11633:1495 (active=ticket/case), TabsSecondary 11633:1526 (active=overview/docs/pay), SortToggle 11633:1539 (order=newest/oldest), BalanceCard 11633:1558.",
+    "artboards": "All 14 from the brief’s frame inventory, all 390 wide, each at the brief’s height with the IR id in the frame name: fcd-ticket 1600, fcd-overview 1664, fcd-docs 1168, fcd-pay 1396, fcd-pay-a 1396, fcd-pay-b 1142, fcd-pay-d 1362, fcd-receipt 640, fcd-pay-overdue 528, fcd-pay-paid 536, fcd-chat-card 492, fcd-chat-bar 492, fcd-chat-both 492, fcd-ticket-nophoto 1670.",
+    "reuse": "DS Button (Solid-brand, extra small for the toast CTA, medium for the balance CTA); OTR/Cases/StatusBadge status=active,form=light,size=md in the hero; OTR/Cases/Ticket variant=cream on the no-photo state; the 180-component Icon / Streamline Flex library for every glyph. AttorneyLockup reuse was declined for the legal team card: the CD anatomy inserts a Your legal team eyebrow above the name and the lockup has no slot for it, so the portrait is a bespoke placeholder.",
+    "buildChecks": {
+      "pageOverlaps": "0 pairwise overlaps across the 11 page-level children of Explore",
+      "containment": "0 escapees: every node inside the plate stays in the plate box",
+      "shelfWidths": "all 9 shelves resolve to 2208 (index rail 400 + gap 48 + stage rail 1680 + pad 80), so the two-fixed-rails policy holds",
+      "stageGap": "stage itemSpacing set to 24 so four 390 artboards fit the 1680 rail; at 40 the fourth clipped",
+      "instances": "299 instances, 0 broken",
+      "unboundFills": "all remaining raws are accounted for: screen ground #fbfcfd x15 (deliberate), DS_REQUEST money #e5463a x8 and greens #19a558 x9 / #0f7a41 x3, protected ticket sepia #6b4f1d x12 inside the Ticket instance, and 7 single specimen swatches on the DIFF shelf. One stray raw white inside the ticket instance (tk-count) was bound to global/background/default, the same node session 8 caught.",
+      "artboardCount": "14 of 14"
+    },
+    "defectsFoundAndFixed": [
+      "The parts stage overflowed its 1680 rail with 8 masters in a row; set to WRAP.",
+      "lt-row inside LegalTeamCard hugged at 166px while holding a layoutGrow child, starving the identity column and clipping Park & Vance and Helen Vance. Repaired across the plate by filling every horizontal row that holds a grow child.",
+      "The li total figure printed at Native/Title/Hero 20; snapped to Native/Title/Section 16."
+    ],
+    "gaps": [
+      "camera-1 still absent from Icon / Streamline Flex, dashed PLACEHOLDER printed",
+      "cloud-upload substituted with Upload-Tray",
+      "sort caret substituted with Justified-Alignment (library carries no sort glyph)",
+      "chevrons remain drawn 2pt round-cap vectors"
+    ],
+    "openCards": "6 on the OPEN shelf: DR-CD-005 tab architecture, Payments layout A/B/D, sub-tab naming, ticket artifact, F-3 participant permissions, F-2 firm stats.",
+    "diffCards": "7 on the DIFF shelf: #e5463a money, #19a558 and #0f7a41 emerald against the lime success ramp, #3a6bd0 toast sub bound at brand/600, #fbfcfd deliberate raw ground, #fdf3c6 protected ticket paper, plus the four-glyph icon gap card.",
+    "driftCards": "4 on the DRIFT shelf: the Citation rename, the firm stats, the deleted-store masters, and the eleven renamed artboards.",
+    "plate": "11630:1492 · 2026-08-26 · Full case details · CD source re-print (OPEN) · 2400x10206 at (9206, 4357) on Explore 11337:2087"
   }
 }

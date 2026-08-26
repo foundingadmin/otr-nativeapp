@@ -159,3 +159,47 @@ OTR/Cases/Ticket • slot count (session 8)
               stand-in and carries no data (ties to the ticket-artifact OPEN)
   decided     open
   frame       NOTE card on the Bindings & gaps shelf, plate 11586:1537
+
+---
+
+## Session 9 · 2026-08-26 · CD source re-print (plate 11630:1492)
+
+Nothing new is asked for colour. Every gap below was already raised by session 7
+or session 8 and is restated here only so the DIFF shelf on the new plate and
+this list read the same twice.
+
+emerald against the lime success ramp (restated, sessions 7 and 8)
+  used        #19a558 on paid transaction status text, 9 places on the plate
+              #0f7a41 on the Paid badge ink of the transaction receipt, 3 places
+  nearest     success/400 #74c365 deltaE 18.45 · success/800 #196c00 deltaE 9.83
+  problem     the live success ramp is lime, every OTR design green is emerald
+  ask         adopt an emerald success ramp, or move the design onto lime
+  decided     open
+  frame       DIFF swatches on shelf 11630:1539
+
+money accent (restated, session 8)
+  used        #e5463a on the overdue block ink and CTA, the late progress fill
+              and the declined transaction status, 8 places on the plate
+  nearest     error/500 #e35545 deltaE 7.57
+  ask         adopt a semantic money token, or correct the design to error/500
+  decided     open
+  frame       DIFF swatch on shelf 11630:1539
+
+action toast secondary line
+  used        #3a6bd0 under the toast title
+  bound       brand/600, rather than left raw, per the D-013 amendment
+  ask         confirm brand/600 is right for the toast sub line, or add a rung
+              between brand/500 and brand/600
+  decided     open
+  frame       DIFF swatch on shelf 11630:1539
+
+Native/Title/Display rung (D-014, restated, second board to ask)
+  used        hero headline 32, balance figure 34, receipt amount 38
+  printed     all three at Native/Title/Page 25, the top of the ladder
+  ask         add a display rung to the Native collection, or concede the scale
+  decided     open
+
+camera-1, sort caret, cloud-upload, chevrons (restated, session 8)
+  unchanged from the session 8 entries above. The re-print prints the same
+  dashed PLACEHOLDER for camera-1 and the same two substitutions.
+  frame       ICON GAP card on shelf 11630:1539

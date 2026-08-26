@@ -63,6 +63,37 @@ the client's existing file structure:
 | ④ Diffs (agent) | `11287:1672` |
 | ⑤ Ready for dev | human-owned, not created by agents |
 
+**RE-PRINT (Aug 26, session 9).** The team dissolved both agent plates on
+↪ Explore before Aug 26 (`11570:797` record content, `11586:1537` full case
+details) and hand-built `Case Details` `11602:3998`, which absorbed five of the
+session 8 masters and added `OTR/Cases/TableHeader` `11605:11864` and
+`Participant Label Pill` `11608:14880`. Three session 8 masters
+(`CaseAppBar` `11588:2305`, `ActionToast` `11588:2370`, `BalanceCard`
+`11590:1626`) now live only in the deleted-component store.
+
+Session 9 re-printed the CD source into plate **`11630:1492`**
+(2400x10206 at 9206/4357), self contained and touching nothing that existed.
+Its master set is namespaced so it cannot collide with the designer's:
+
+| Component | Node ID | Variants |
+|---|---|---|
+| OTR/Cases/CD0826/CaseAppBar | `11631:1500` | chat=false/true |
+| OTR/Cases/CD0826/CaseHero | `11631:1516` | 1 |
+| OTR/Cases/CD0826/LegalTeamCard | `11632:1528` | preview=true/false |
+| OTR/Cases/CD0826/ActionToast | `11632:2419` | 1 |
+| OTR/Cases/CD0826/TabsPrimary | `11633:1495` | active=ticket/case |
+| OTR/Cases/CD0826/TabsSecondary | `11633:1526` | active=overview/docs/pay |
+| OTR/Cases/CD0826/SortToggle | `11633:1539` | order=newest/oldest |
+| OTR/Cases/CD0826/BalanceCard | `11633:1558` | 1 |
+
+On adopt the `CD0826` namespace collapses into `OTR/Cases/*`. Full shelf and
+artboard registry in `canon/figma-state.json` → `cdReprintPlateAug26`; the
+CD-against-Figma disagreements are in `canon/drift.json`.
+
+**Join key note.** FRAME nodes carry no `description` property, so the IR
+artboard id rides in the frame name as a trailing `[fcd-*]` token. Read-back
+against this plate is a name parse, not a caption read.
+
 **RESTRUCTURE (Aug 11, session 7):** the design team reorganized the file.
 `↪ Explorations` is now `↪ Explore` (same id); the ① Components section is
 dissolved (its shelves sit on ↪ Explore as bare frames); ④ Diffs, Proposed,
