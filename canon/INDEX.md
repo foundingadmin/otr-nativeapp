@@ -15,6 +15,7 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
 | Exploration prints | `↪ Explore` page `11337:2087` (renamed from `↪ Explorations` by the team, Aug 11) |
 | Record content board (OPEN) | plate `11570:797` on ↪ Explore; 9 masters + 9 artboards + OPEN/diff shelves, session 7 |
 | Full case details board (OPEN) | plate `11586:1537` on ↪ Explore; 8 masters + 14 artboards + OPEN/diff shelves, session 8 |
+| Case chat divergences (OPEN) | plate `11640:1405` on ↪ Explore; the linked A artboard reprinted as reference plus D1 to D5, session 9 |
 | Icon library | `Icon / Streamline Flex` frame `11530:6368` on the new `↪ Icons` page `11530:6367`; 180 fill-based 24px components. OTR/Icons frame archived. Instance these, never draw. |
 | RESTRUCTURE (Aug 11) | The team reorganized the file between sessions: ① Components section dissolved (shelves moved to ↪ Explore as bare frames), ④ Diffs + Proposed + Lexicon + Tools content moved to the Cases `↪ Archive` page, Case Chat board moved to the `↪ Cases` page (actively worked), Proto/Proposed pages gone, new Home/Onboard/Flows/PARKED pages. Full map: `figma-state.json` → `restructureAug11`. Diff swatches and OPEN markers now print on the exploration board itself. |
 | Node/style/variable registries | `brand/BRAND.md` |
@@ -70,6 +71,24 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
   traps in `lessons.md` 6e/6f/8b/8c.
 
 ## Open items (next session picks these up)
+
+- **Verdict needed: case chat, five divergences** (plate `11640:1405` on
+  ↪ Explore, printed session 9 from the artboard the user linked,
+  `11533:4405` on the Cases ↪ Archive page). One question in five answers:
+  how much room does the case record get inside a conversation. D1 shrinks
+  an action to a line and collapses the offer to a chip; D2 gives actions
+  the speaker's side and an avatar gutter; D3 lifts the one live action
+  into the PinnedBar and quiets the history behind it; D4 filters the same
+  surface into All and Updates with a TabsPrimary instance; D5 rolls a busy
+  day into one Case activity card. Fixtures are held constant except where
+  the caption says otherwise (D2 adds one customer-side action, D5 gives
+  Mar 18 three). This board feeds, and does not replace, the standing
+  A-through-E question below. Two sub-questions ride on it: the compact
+  ActionEntry density axis (D1 would add it, doubling the set to 18
+  variants) and whether the pinned CTA keeps DS brand blue or takes the bar
+  tone (D3). Note for the next read-back: the artboard the user linked is
+  archived, while the team's live chat board is `11500:409` on ↪ Cases and
+  has moved on to three demos; confirm which surface a verdict applies to.
 
 - **Verdict needed: 06 Full case details board** (plate `11586:1537` on ↪ Explore,
   printed session 8 from the Aug 14 CD package). Closes with DR-CD-005, the

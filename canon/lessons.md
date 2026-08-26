@@ -214,6 +214,40 @@ one again costs more.
     not fork the master to win a screenshot; the under-populated artifact is
     itself evidence for the open decision.
 
+12k. **Clone the convention, inherit its debt (session 9).** Cloning a
+    previous board's plate is the cheapest way to keep every piece of
+    furniture bound, but it also copies whatever was raw there: the
+    session-8 plate's shelves and stages all carried RAW radius 20. The
+    divergence board's paints were clean on the first audit and its
+    corners were not. Sweep radii AND paints on any clone before calling
+    the board bound.
+12l. **Harvest bound paints off live parts instead of re-resolving keys
+    (session 9).** Every new node on the divergence board took its fill by
+    reading an already-bound paint from a master (SystemChip tone=neutral
+    for the neutral ladder, tone=success and PinnedBar tone=warning for
+    the tone rungs, ActionEntry for neutral/600) and reassigning that paint
+    object. No key lookup, no CIEDE2000 pass, and no drift when library
+    keys move (12f). Radius still needs the runtime enumeration, because
+    radius is a number, not a paint.
+12m. **The Message portrait hides one level down, and half the variants
+    have none.** `OTR/Cases/Chat/Message` puts the photo on a nested
+    `avatar` inside a `Frame 1` wrapper on first=true; on first=false the
+    `avatar` is an EMPTY 28px spacer that only holds the gutter open.
+    `findOne(n => n.name === 'avatar')` on whichever instance is nearest
+    returns the spacer, and the clone renders invisible with no error.
+    Harvest from a first=true instance and check `fills.length`.
+12n. **`componentPropertyDefinitions` throws on a set with duplicate
+    variant names.** `Component set has existing errors` came from
+    PinnedBar and SystemChip, which each carry two `tone=tone5` variants.
+    When all you need is the variant list, read
+    `set.children.map(c => c.name)`; the getter cannot be made safe with
+    optional chaining past this error either (extends rule 18).
+12o. **A hugging caption block breaks the artboard baseline.** Artboards
+    sitting in one row stage each hug their own caption, so a three-line
+    note drops its screen below its two-line neighbours and the row reads
+    ragged. After the copy is final, fix every caption block to the
+    tallest in the row.
+
 ## Process
 
 13. **Recency before printing (D-009).** CD root HTMLs can trail ratified

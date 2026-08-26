@@ -305,6 +305,26 @@
         },
         "irJoinKeys": "in each artboard's museum caption (fcd-ticket, fcd-overview, fcd-docs, fcd-pay, fcd-pay-a, fcd-pay-b, fcd-pay-d, fcd-receipt, fcd-pay-overdue, fcd-pay-paid, fcd-chat-card, fcd-chat-bar, fcd-chat-both, fcd-ticket-nophoto)",
         "status": "OPEN - closes with DR-CD-005; the Payments A/B/D pick blocks handoff"
+      },
+      "case chat divergences": {
+        "outerFrame": "11640:1405",
+        "printed": "2026-08-26 session 9, diverged from archived artboard 11533:4405 (A . unified thread) on the Cases Archive page",
+        "structure": "D-013 plate (brand/50, radius/5XL, pad 96, stroke border/neutral/default) > header + 3 shelves, all 2686 wide (index 400 + gap 48 + stage 2158 + pad 80)",
+        "shelves": {
+          "The screen today": "11640:11971",
+          "The divergences": "11640:11977",
+          "OPEN . what each divergence asks": "11640:11983"
+        },
+        "screens": {
+          "A . Unified thread (today)": "11640:33606",
+          "D1 . Quiet spine": "11640:33671",
+          "D2 . Sided actions": "11640:33736",
+          "D3 . Live above, history quiet": "11640:33801",
+          "D4 . Two views, one surface": "11640:33866",
+          "D5 . Day roll-up": "11640:33931"
+        },
+        "irJoinKeys": "in each artboard's museum caption (chat-a, chat-d1, chat-d2, chat-d3, chat-d4, chat-d5)",
+        "status": "OPEN - five divergences of the case chat surface, no verdict. Feeds the standing A-through-E question on which chat approach anchors the build."
       }
     }
   },
