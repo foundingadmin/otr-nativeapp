@@ -130,6 +130,16 @@ Retired session 4n to Archive as DEPRECATED/: `OTR/Mock/Device`
 | OTR/Cases/SortToggle | `11590:1623` | 2 (order=newest/oldest). `Justified-Alignment` stands in for the Font Awesome sort caret, flagged. |
 | OTR/Cases/BalanceCard | `11590:1626` | 1. Head of Payments divergences B and D. Progress reads as installments, never a percentage. |
 
+Session-9 divergence board (`11640:1405` on ↪ Explore, printed 2026-08-26):
+five divergences of the case chat surface, built by cloning the archived
+`A · Unified thread` artboard `11533:4405`. It adds no components. Its two
+new parts are frames pending a verdict and promote only on adopt: the
+collapsed offer chip in D1 (`11641:2138`, warning ramp, `radius/FULL`) and
+the day roll-up card in D5 (`11646:2651`, neutral ladder 25/100/800/900,
+`radius/SM`). D4's All/Updates filter is an instance of
+`OTR/Cases/TabsPrimary` with the glyphs hidden and the labels overridden,
+not a new control. Full registry in `canon/print-log.json` → `session9`.
+
 Session-8 masters live on the full case details board's `The parts` shelf
 (`11586:1543` on ↪ Explore) pending the DR-CD-005 verdict; promote on adopt.
 

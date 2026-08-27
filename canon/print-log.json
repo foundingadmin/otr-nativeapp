@@ -526,5 +526,34 @@
     ],
     "openCards": "6: DR-CD-005 tab architecture, Payments layout A/B/D, sub-tab naming, ticket artifact, F-3 participant permissions, F-2 firm stats",
     "plate": "11586:1537 · 2026-08-14 · Full case details (OPEN) · 2400x10150 at (-629, 9600) on Explore 11337:2087"
+  },
+  "session9": {
+    "date": "2026-08-26",
+    "brief": "User: build 5 divergence variations of this screen, linked to node 11533:4405 in the Native App file.",
+    "readBackFindings": "The linked node is A / Unified thread, a 390x938 artboard sitting loose at page level on the Cases ARCHIVE page (11158:8460) at (11104, -6653), next to an archived 'shelf . Surface approaches'. It is not the live chat surface: the team's working Case Chat board is 11500:409 on the Cases page and now carries three demos (Private chat, Case actions inline, Case actions banner). Explore page 11337:2087 had 10 page-level children, rightmost edge x 11400. New plate seated at (12000, 4589), clear of every sibling; pairwise overlap check at page level returned zero.",
+    "stanceCalls": [
+      "Diverged from the artboard the user linked, archived or not, rather than silently substituting the live board. The reference artboard is reprinted as the board's first shelf so the comparison is on canvas, and the caption dates it Aug 12, 2026 and says where it now lives.",
+      "Built by CLONING the source artboard six times rather than rebuilding it, so every instance, text style and variable binding on the screen survives untouched and the only difference between artboards is the divergence itself.",
+      "Fixtures held constant across all five so form is the only variable. Two exceptions, both stated in the artboard caption: D2 adds one customer-side action (a neutral spine cannot show sidedness with only firm actions), and D5 gives Mar 18 three actions (a roll-up of one proves nothing).",
+      "D4's filter is an instance of the existing OTR/Cases/TabsPrimary with its glyphs switched off and the labels overridden, not a new control. DS-first reuse per the standing policy.",
+      "The plate was cloned from the session-8 board to inherit its bound furniture; that also inherited its RAW radius 20 on every shelf and stage. Swept afterwards and bound all twelve to radius/XL, plus the new count pill to radius/FULL."
+    ],
+    "board": "Plate 11640:1405 '2026-08-26 . Case chat . five divergences (OPEN)' on Explore 11337:2087 at (12000, 4589), 2878 x 2966. brand/50, radius/5XL, pad 96, stroke border/neutral/default. Rails set for this surface: index 400, stage 2158 (5 x 390 + 4 x 40 gap + 48 pad), shelf 2686.",
+    "shelves": {
+      "The screen today": "11640:11971 / stage 11640:11976",
+      "The divergences": "11640:11977 / stage 11640:11982",
+      "OPEN . what each divergence asks": "11640:11983 / stage 11640:11988, 5 cards 11647:34814 / 34818 / 34822 / 34826 / 34830"
+    },
+    "artboards": {
+      "A . Unified thread (today)": "11640:33602, screen 11640:33606, join key chat-a",
+      "D1 . Quiet spine": "11640:33667, screen 11640:33671, join key chat-d1",
+      "D2 . Sided actions": "11640:33732, screen 11640:33736, join key chat-d2",
+      "D3 . Live above, history quiet": "11640:33797, screen 11640:33801, join key chat-d3",
+      "D4 . Two views, one surface": "11640:33862, screen 11640:33866, join key chat-d4",
+      "D5 . Day roll-up": "11640:33927, screen 11640:33931, join key chat-d5"
+    },
+    "newParts": "Two parts on this board are not components yet and promote only on adopt: the collapsed offer chip in D1 (pill 11641:2138, warning ramp, radius/FULL) and the day roll-up card in D5 (11646:2651, neutral ladder 25/100/800/900, radius/SM 14, three event rows with tone dots). Everything else is an instance of an existing master: Chat/Message, Chat/DayDivider, Chat/SystemChip, Chat/PinnedBar, ActionEntry, TabsPrimary, composer.",
+    "bindings": "Zero raw paints and zero unstyled text on the plate. Every new paint was harvested from a live part's already-bound fill (SystemChip tone=neutral and tone=success, PinnedBar tone=warning, ActionEntry counterSent) rather than re-resolved by CIEDE2000, per lesson 16. Radius collection re-enumerated at runtime from the Guidelines library: FULL 10000, XL 20, SM 14, MD 16.",
+    "buildCheck": "Collapsed frames 0, raw paints 0, unstyled text 0, raw radii 12 found and all 12 bound, out-of-bounds children 0, page-level pairwise overlaps 0. Caption blocks fixed to 104 so all five divergence screens share one baseline."
   }
 }
