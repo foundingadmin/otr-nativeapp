@@ -16,6 +16,7 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
 | Record content board (OPEN) | plate `11570:797` on ↪ Explore; 9 masters + 9 artboards + OPEN/diff shelves, session 7 |
 | Full case details board (OPEN) | plate `11586:1537` on ↪ Explore; 8 masters + 14 artboards + OPEN/diff shelves, session 8 |
 | Case chat divergences (OPEN) | plate `11640:1405` on ↪ Explore; the linked A artboard reprinted as reference plus D1 to D5, session 9 |
+| Case payments divergences (OPEN) | plate `11663:2872` on ↪ Explore; the tab today plus D1 to D3, four payment-plan module variations, 4 OPEN cards, session 10 |
 | Icon library | `Icon / Streamline Flex` frame `11530:6368` on the new `↪ Icons` page `11530:6367`; 180 fill-based 24px components. OTR/Icons frame archived. Instance these, never draw. |
 | RESTRUCTURE (Aug 11) | The team reorganized the file between sessions: ① Components section dissolved (shelves moved to ↪ Explore as bare frames), ④ Diffs + Proposed + Lexicon + Tools content moved to the Cases `↪ Archive` page, Case Chat board moved to the `↪ Cases` page (actively worked), Proto/Proposed pages gone, new Home/Onboard/Flows/PARKED pages. Full map: `figma-state.json` → `restructureAug11`. Diff swatches and OPEN markers now print on the exploration board itself. |
 | Node/style/variable registries | `brand/BRAND.md` |
@@ -59,6 +60,26 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
   800, title 900. Uniform across tones, chosen so every rung clears its
   contrast bar in every ramp. Full keys in `brand/BRAND.md`.
 
+## Standing policy added session 10
+
+- **One fact, one place.** Every money fact on a screen appears exactly
+  once. The payments tab broke this three ways at once: Paid and Balance in
+  the Statement card restated the payment rows, and a `1/3` summary row
+  restated them again. The test to apply before printing any money surface:
+  name each fact, then name the single element that owns it. Plan position
+  belongs on the row title (`Payment 2 of 3`), never in a separate counter.
+- **A spine's connector line must FILL, and the spacing rides on the label
+  column.** A timeline marker row that carries its own vertical padding
+  breaks the line, because padding is outside the child that grows. Give
+  the marker row no vertical padding, let the gutter line grow, and pad the
+  label column instead. Verify by comparing dot and line centre x at
+  runtime, never by eye.
+- **Harvest paints by variable NAME, not by node id.** Lesson 12l said to
+  reuse a bound paint off a live part; session 10 found the failure mode,
+  which is that the team edits those parts mid-session and the id goes
+  null. Walk the board once, map variable name to paint, and resolve by
+  name. Immune to edits anywhere else in the file.
+
 ## Standing policy added session 6
 
 - **Shelves run on two fixed rails.** Index rail 400, stage rail fixed to
@@ -71,6 +92,44 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
   traps in `lessons.md` 6e/6f/8b/8c.
 
 ## Open items (next session picks these up)
+
+- **Verdict needed: case payments, three divergences plus four plan modules**
+  (plate `11663:2872` on ↪ Explore, printed session 10 from the live
+  Case / Payments demo the user linked, `11608:15975`). The architecture
+  question closed DURING the session, by the user: **the bill on top, then
+  the payment plan against it, and the plan IS the transaction history.**
+  Settled installments are the history, scheduled ones are the schedule, a
+  today marker is the only divider, so no payment is ever stated twice and
+  there is no separate history card. That retires D2's Payment history card
+  and confirms the one-list instinct in D1 and D3. The three screen
+  divergences stay on the board as the record of how the conclusion was
+  reached, not as live options.
+
+  What is still OPEN is the plan module itself, on the fourth shelf: V1
+  agenda rail, V2 collapse the settled and expand the live, V3 due now then
+  the spine, V4 stat pair with one CTA at the foot. Three axes to settle,
+  all named on the MODULE OPEN card: how an installment shows status (word
+  under the amount / row density / word in the row / the dot alone), where
+  the one live CTA sits and whether its label is driven by state, and which
+  number leads (balance / balance against total / amount past due / a paid
+  and balance pair). V3 is the only one that leads with what is owed today
+  rather than overall, which is the live question the moment a payment
+  fails. On adopt this promotes a **PlanRow** with four states, a spine
+  gutter, a today marker and a plan foot.
+
+  Two things are held constant and are NOT the variable: the fixtures
+  (three charges to $329, installments of $110/$109/$109, the Feb 14 ACH
+  payment declined, today Feb 18) and the grouped **Manage** list, which is
+  where payment method, autopay, billing details and the document archive
+  landed. That list is the credit-card-dashboard pattern and it absorbed
+  four of the six money blocks the user asked for without competing with
+  the transaction rows. D1 keeps method and autopay in Manage because it
+  has no plan card to hold them; D2 and D3 put them in the plan card.
+
+  Caution for the next read-back: the team was editing the live payments
+  demo DURING this session (two nodes harvested for paints were deleted
+  between calls). Artboard A on this board is a clone taken before those
+  edits, so re-read `11608:15969` before treating A as current.
 
 - **Verdict needed: case chat, five divergences** (plate `11640:1405` on
   ↪ Explore, printed session 9 from the artboard the user linked,

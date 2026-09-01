@@ -130,6 +130,40 @@ Retired session 4n to Archive as DEPRECATED/: `OTR/Mock/Device`
 | OTR/Cases/SortToggle | `11590:1623` | 2 (order=newest/oldest). `Justified-Alignment` stands in for the Font Awesome sort caret, flagged. |
 | OTR/Cases/BalanceCard | `11590:1626` | 1. Head of Payments divergences B and D. Progress reads as installments, never a percentage. |
 
+Session-10 divergence board (`11663:2872` on ↪ Explore, printed 2026-09-01):
+three divergences of the case payments tab plus four variations of the
+payment plan module. It adds no components. Every new part is a frame
+pending a verdict and promotes only on adopt:
+
+| Part | Where | Notes |
+|---|---|---|
+| Running balance frow | D1 card `11665:3318` | the standard `frow` with a second right-column line carrying `Balance $X` |
+| Card foot | inside `11665:3318` | `background/strong`, top `border/neutral/light`, Caption/Note eyebrow over `Native/Title/Page` over an `error/900` past-due line, DS Button Solid-brand small trailing |
+| Segmented installment tracker | D2 plan card `11668:3347` | three equal 6px segments at `radius/FULL`, bound `success/600` / `error/600` / `neutral/100`. One segment per installment, never a percentage |
+| Timeline spine | D3 `11670:3364`, all four modules | 14 to 18px gutter column per node: a state dot plus a 2px `radius/FULL` connector that FILLs the row height. Four dot states: done `success/600`, failed `error/600`, next hollow `neutral/100` 2px, end hollow dashed |
+| Today marker | all four modules | no vertical padding on the marker row, gutter line FILLs, breathing room rides on the label column. See the session-10 policy in `canon/INDEX.md` |
+| Manage row | all three divergences | Streamline Flex glyph at 16px, label over value, drawn 2pt round-cap chevron |
+| Plan stat pair | V4 `11677:3426` | paid and balance over a `neutral/100` divider, plan total demoted to a caption |
+
+The four module variations (`11674:3333`, `11676:3419`, `11676:3474`,
+`11677:3426`) are the live open question; on adopt they collapse into one
+**PlanRow** component with four states plus a spine gutter, a today marker
+and a plan foot. Everything else on the board is an instance of an existing
+master: CaseHero, LegalTeamCard, TabsPrimary, TabsSecondary, SignalBlock,
+Pills/Transactions, DS Button. Full registry in `canon/print-log.json` →
+`session10`.
+
+**Live payments card conventions (read back session 10, from the team's own
+build).** Card: `global/background/default`, 1px `global/border/neutral/light`,
+`radius/MD`, clipped. Header: `global/background/strong`, pad 12/14, title
+`Native/Text/Large/Action` on `global/foreground/dark/primary`, optional right
+meta `Native/Text/Small/Action`. `li` rows sit inside a padded body (pad
+4/14/12/14), H gap 12, pad 8 vertical, `accent/25` top hairline, main column
+V gap 2. `frow` rows are direct children of the card so they run full bleed
+with their own 14 side padding. Totals bind `Native/Title/Section`. Muted
+values bind `global/foreground/light/quinary`; links bind
+`colors/blueberry/600`.
+
 Session-9 divergence board (`11640:1405` on ↪ Explore, printed 2026-08-26):
 five divergences of the case chat surface, built by cloning the archived
 `A · Unified thread` artboard `11533:4405`. It adds no components. Its two
