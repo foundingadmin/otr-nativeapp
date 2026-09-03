@@ -284,3 +284,32 @@ one again costs more.
     each line short enough to never wrap (roughly 40 chars); no inline
     annotation tails on tree lines. Notes go below the tree. Wrapped
     tree lines are unreadable (user flag, Jul 29).
+
+12p. **A paint harvested by node id is a dangling reference (session 10).**
+    Lesson 12l said to reuse an already-bound paint off a live master
+    instead of re-resolving keys. Session 10 found its failure mode: the
+    team edited the live payments demo mid-session and two harvest sources
+    (`11656:7903`, `11656:8067`) went null between calls, throwing on
+    `.fills`. The durable form is to harvest by variable NAME, not node id:
+    walk your own board once, map variable name to the paint carrying it,
+    and look up by name thereafter. Self-contained, and immune to edits
+    anywhere else in the file.
+12q. **Padding is outside the child that grows, so it breaks a spine.**
+    A timeline marker row with `paddingBottom` cannot have a continuous
+    connector, because the gutter's FILL height stops at the content box
+    and the padding sits below it. Give the marker row no vertical padding,
+    let the gutter line grow, and put the breathing room on the LABEL
+    column instead. Verify continuity by comparing dot and line centre x at
+    runtime; the screenshot endpoint is too coarse to trust for a 2px line.
+12r. **Streamline Flex component roots ship an opaque `#ffffff` fill.**
+    Rebinding the vector fills makes the glyph the right colour and still
+    leaves a raw white square behind it, invisible on a white card and
+    obvious on any tinted surface. Clear `instance.fills = []` on every
+    icon instance. The retired `OTR/Icons/*` set shipped `fills = []` on the
+    root and did not have this problem; the masters should match.
+12s. **`resize()` on a hugging caption frame is the fix, not the enemy
+    (extends 12o).** Equalise caption blocks AFTER the copy is final by
+    setting every block in a row to `layoutSizingVertical = 'HUG'`, reading
+    the max, then pinning all of them FIXED at that height. Doing it before
+    the copy is final just re-breaks on the next edit. Session 10 ran it
+    twice, at 104 for the artboard row and 158 for the module row.
