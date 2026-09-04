@@ -13,6 +13,8 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
 |---|---|
 | Figma file | `Native App / Design`, key `JcqKNz1pMrEvxwExhb296r` |
 | Exploration prints | `↪ Explore` page `11337:2087` (renamed from `↪ Explorations` by the team, Aug 11) |
+| **Case Details plate (LIVE)** | `11602:3998` on `↪ Cases` at (11598, 18873), right of Case Chat, since session 11. Six shelves: tabs, states and drill-ins, participants flow, day 0, hero components. Pre-session copy on the Cases `↪ Archive` rail `11719:5086` |
+| Comment resolution board (DECIDED) | `11737:2473` on ↪ Explore at (11677, 4589), session 11: 16 cards, one per judgment, each naming the comment threads it closes |
 | Record content board (OPEN) | plate `11570:797` on ↪ Explore; 9 masters + 9 artboards + OPEN/diff shelves, session 7 |
 | Full case details board (OPEN) | plate `11586:1537` on ↪ Explore; 8 masters + 14 artboards + OPEN/diff shelves, session 8 |
 | Case chat divergences (OPEN) | plate `11640:1405` on ↪ Explore; the linked A artboard reprinted as reference plus D1 to D5, session 9 |
@@ -80,6 +82,24 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
   null. Walk the board once, map variable name to paint, and resolve by
   name. Immune to edits anywhere else in the file.
 
+## Standing policies added session 11
+
+- **Archive before edit (D-015).** A plate the team has touched gets cloned to
+  the area's Archive page before the first edit, with every master inside
+  the clone flattened to a plain frame (`createInstance().detachInstance()`
+  per component, a holder frame per set) so the assets panel gains no
+  duplicates. Verify the clone renders, then edit the original in place;
+  node ids and comment threads survive.
+- **Billing summary owns the state (D-016).** One CTA, label by state:
+  overdue = solid Pay now, on track = outline Pay early, paid = none. The
+  alert lives in the summary. Rows are titled by due date. Whole dollars
+  never show `.00`. Payment methods and autopay are Settings.
+- **Money statuses are six.** Paid, Declined, Scheduled, Pending (held until
+  the firm accepts), Refunded, Disputed. Due today is retired.
+- **Paint opacity dies at the binding.** `setBoundVariableForPaint` drops the
+  paint-level `opacity`; dim layers and translucent chips take `node.opacity`
+  instead (lesson 12t).
+
 ## Standing policy added session 6
 
 - **Shelves run on two fixed rails.** Index rail 400, stage rail fixed to
@@ -92,6 +112,18 @@ Preflight for any UI work in this repo (see `intake/otr-cd-handoff/handoff/PROTO
   traps in `lessons.md` 6e/6f/8b/8c.
 
 ## Open items (next session picks these up)
+
+- **Resolve the threads.** Comments cannot be resolved through the MCP. The
+  judgment board `11737:2473` on ↪ Explore lists every closed number; one
+  pass in the comments panel closes them all.
+- **Invitee card on Home.** `You have been invited` is printed on the Case
+  Details plate only; placing it on ↪ Home was out of scope this session.
+- **Inherited raw radii on the Case Details plate.** shelf 32, right 20,
+  screen 16, portrait 8.6 and icon 999 were raw before session 11 and were
+  left as found (lesson 12k). Rebind opportunistically.
+- **Component promotion.** LegalTeamCard chat variants, PaymentPlan six
+  statuses, PinnedBar transfer/loe/failed and Pills/Transactions Refunded and
+  Disputed live on the Cases plate masters; publish with the next DS push.
 
 - **Verdict needed: case payments, three divergences plus four plan modules**
   (plate `11663:2872` on ↪ Explore, printed session 10 from the live

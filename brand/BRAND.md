@@ -87,6 +87,17 @@ Retired session 4n to Archive as DEPRECATED/: `OTR/Mock/Device`
 
 ---
 
+## Session 11 (2026-09-04) · Case Details plate elevated to ↪ Cases
+
+The team's `Case Details` plate `11602:3998` now lives on `↪ Cases` at
+(11598, 18873), right of Case Chat, 3274x8403. Six shelves: `Tabs and pages`
+`11602:4003`, `States and drill-ins` `11725:1726`, `Participants · invite and
+manage` `11725:2871`, `Brand-new case · day 0` `11725:4006`, `Components ·
+Hero` `11603:11085`. Pre-session copies of this plate and of Case Chat sit
+on the Cases `↪ Archive` rail `11719:5086` with masters flattened. The
+comment resolution board is `11737:2473` on ↪ Explore. Full node registry in
+`canon/print-log.json` → `session11`.
+
 ## Component Node ID Reference
 
 | Component | Node ID | Variants |
@@ -123,10 +134,13 @@ Retired session 4n to Archive as DEPRECATED/: `OTR/Mock/Device`
 | OTR/Cases/ParticipantRow | `11566:1917` | 2 (removable=false/true) + BOOLEAN `show self tag`. Remove is a cherry outline pill; This is you is a neutral pill. |
 | OTR/Cases/CaseAppBar | `11588:2305` | 2 (chat=false/true). Full case details board, session 8. The chat variant carries the counted icon and is the alternative DR-CD-006 did not take. |
 | OTR/Cases/CaseHero | `11588:2308` | 1. The no-photo identity block: issued eyebrow, location headline, StatusBadge, court date line. Headline prints `Native/Title/Page` (25) against CD's 32; the display rung is a DS ask (D-014). |
-| OTR/Cases/LegalTeamCard | `11588:2367` | 2 (preview=true/false). DR-CD-006: the whole card is the door into case chat. preview=false is the quiet state once the thread is read. |
+| OTR/Cases/LegalTeamCard | `11588:2367` | 4 since session 11: `signal=true, chat=none`, `signal=false, chat=none`, `signal=false, chat=unread` `11723:20156`, `signal=false, chat=read` `11723:20387`. The chat strip (portrait 28, sender, time, one-line preview, brand count pill, chevron) is the second door: identity opens the firm profile, the strip opens chat (D-018). |
 | OTR/Cases/ActionToast | `11588:2370` | 1. Persistent, sits above the tabs. Binds the brand ramp ladder (surface 25, border 100, icon 700, secondary 800, title 900), not CD's hex pair. Trailing CTA is a DS Button Solid-brand extra small. |
 | OTR/Cases/TabsPrimary | `11590:1580` | 2 (active=ticket/case). Segmented pill track on `accent/25`, white active pill. |
-| OTR/Cases/TabsSecondary | `11590:1610` | 3 (active=overview/docs/pay). Underline style, `brand/600` indicator. Count badge only where the number is literal, Documents. |
+| OTR/Cases/PaymentPlan | `11678:14948` | 6 since session 11: Paid `11657:11786`, Declined `11678:14949` (carries a Solid-error XS DS Button `11723:1789`), Scheduled `11678:14998` (was Upcoming), Pending `11723:1802`, Refunded `11723:1830`, Disputed `11723:1855`. Default titles are dates (D-016). |
+| OTR/Cases/Pills/Transactions | `11656:7688` | 6: Pending, Paid, Declined, Scheduled, Refunded `11723:1776`, Disputed `11723:1778` |
+| OTR/Cases/Chat/PinnedBar | `11494:360` | 7: warning, transfer `11553:1781`, loe `11553:1792`, critical, success, neutral, failed `11726:1726` (the duplicate tone5 names are gone) |
+| OTR/Cases/TabsSecondary | `11590:1610` | 4 (active=overview/docs/pay/participants). Underline style, `brand/600` indicator. Count badge only where the number is literal, Documents. |
 | OTR/Cases/SortToggle | `11590:1623` | 2 (order=newest/oldest). `Justified-Alignment` stands in for the Font Awesome sort caret, flagged. |
 | OTR/Cases/BalanceCard | `11590:1626` | 1. Head of Payments divergences B and D. Progress reads as installments, never a percentage. |
 
