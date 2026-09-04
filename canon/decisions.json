@@ -114,6 +114,38 @@
       "detail": "CD's full case details board asks for a 32px hero headline, a 34px balance figure and a 38px receipt amount. The Native ladder tops out at Title/Page 25 and raw type is banned on product text (D-005), so all three printed at 25. Either a Native/Title/Display rung gets added or the board's hero scale is conceded. Three independent asks in one board is the argument for adding it.",
       "decidedBy": "pending user",
       "commit": "session 8"
+    },
+    {
+      "id": "D-015",
+      "title": "Archive before edit",
+      "verdict": "adopt",
+      "detail": "Before any edit to a plate the team has worked on, clone it to the area's Archive page with every master flattened to a plain frame, verify the clone renders, then edit the original in place so node ids and comment threads survive. Archive is the cutting-room floor; it does not need to be pretty.",
+      "decidedBy": "user (Titus), session 11 brief",
+      "commit": "session 11"
+    },
+    {
+      "id": "D-016",
+      "title": "Billing summary owns the state",
+      "verdict": "adopt",
+      "detail": "One CTA whose label is driven by state: overdue = solid Pay now, plan on track = outline Pay early, paid in full = none. The summary carries the alert (amount, since when, why) and a chip bar with one segment per installment (brand paid, error overdue, warning pending, neutral scheduled). Rows are titled by due date; Payment X of Y is retired; whole dollars drop the cents; payment methods and autopay move to Settings with one link row left behind. Statuses: Paid, Declined, Scheduled, Pending, Refunded, Disputed.",
+      "decidedBy": "Alex (CEO) comments 173 to 182 and the Sep 1 transcript; layout by agent",
+      "commit": "session 11"
+    },
+    {
+      "id": "D-017",
+      "title": "Participants are a tab with a seven-screen native flow",
+      "verdict": "adopt",
+      "detail": "Defendant stays on Overview; management lives on its own tab. Invite (defendant toggle + relationship select + email without owner autofill + names + financial access switch), invite sent, manage active, manage pending, remove via native action sheet, defendant-without-account invite. The invitee card belongs on Home and is printed on the Cases plate only to complete the flow.",
+      "decidedBy": "Alex (Aug 18) + Titus comments 153/154/169/170; screens by agent from the web Add participant flow",
+      "commit": "session 11"
+    },
+    {
+      "id": "D-018",
+      "title": "Legal team card has two doors",
+      "verdict": "adopt",
+      "detail": "Identity row opens the firm profile; a message strip in the iOS list idiom (portrait, sender, time, one-line preview, unread pill) opens chat. New variants chat=unread and chat=read on OTR/Cases/LegalTeamCard.",
+      "decidedBy": "Alex (Aug 18) + comments 146/167/168",
+      "commit": "session 11"
     }
   ]
 }

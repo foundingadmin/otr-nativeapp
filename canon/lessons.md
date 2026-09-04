@@ -313,3 +313,22 @@ one again costs more.
     the max, then pinning all of them FIXED at that height. Doing it before
     the copy is final just re-breaks on the next edit. Session 10 ran it
     twice, at 104 for the artboard row and 158 for the module row.
+
+12t. **`setBoundVariableForPaint` drops paint opacity (session 11).** A
+    `{type:'SOLID', color, opacity: 0.4}` paint comes back fully opaque
+    once the colour is bound, so dim layers and translucent chips render
+    solid. Put translucency on `node.opacity`, never on the paint.
+12u. **Node proxies are not identical across calls.** `n.parent === det`
+    is false for the same node reached two ways; compare `.id`. A
+    findAll-and-filter on parent identity silently returned nothing and
+    the overrides landed on the hidden pill's inner text instead.
+12v. **A hidden instance's texts are still visible to `findAll`.** Filtering
+    `visible !== false` on TEXT nodes does not exclude children of a hidden
+    parent; walk `parent.children` directly or check the ancestor chain.
+12w. **DS Button variants are a sparse grid.** `Ghost-neutral` has no
+    `small`; `setProperties` throws `Unable to find a variant` and the whole
+    script rolls back (12d). Read `componentPropertyDefinitions` on the set
+    once per session and only combine values seen there together.
+12x. **Cross-page moves keep ids.** `otherPage.appendChild(node)` relocates
+    a frame with every node id intact, so comment threads pinned to it
+    travel with it. Clone first if the origin needs a copy.
